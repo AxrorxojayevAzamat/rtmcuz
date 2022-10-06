@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32104.313
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rtmcuz", "rtmcuz\rtmcuz.csproj", "{66E9212F-E1F8-4349-8437-A1108F62BB7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66E9212F-E1F8-4349-8437-A1108F62BB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E9212F-E1F8-4349-8437-A1108F62BB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E9212F-E1F8-4349-8437-A1108F62BB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E9212F-E1F8-4349-8437-A1108F62BB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F5FB830-F932-4D77-BAD8-71B0FA82FA9E}
+	EndGlobalSection
+EndGlobal

@@ -1,15 +1,53 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Localization;
+using System.Reflection;
 using rtmcuz.Data;
+using rtmcuz.Utilities;
+using rtmcuz.Resources;
+using System.Globalization;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// DAL
 builder.Services.AddDbContext<RtmcUzContext>(options =>
               //options.UseMySql("server=localhost;port=3306;database=callcentercrm;uid=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.33-mysql"), x => x.UseNetTopologySuite())
               options.UseNpgsql(configuration.GetConnectionString("RtmcUzContext"), (x) => { })
               );
+
+// localization
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddSingleton<LocalizationService>();
+builder.Services.AddMvc()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization(options =>
+    {
+        options.DataAnnotationLocalizerProvider = (type, factory) =>
+        {
+            var assemblyName = new AssemblyName(typeof(ApplicationResource).GetTypeInfo().Assembly.FullName);
+            return factory.Create("ApplicationResource", assemblyName.Name);
+        };
+    });
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[]
+    {
+        new CultureInfo("uz"),
+        new CultureInfo("ru"),
+        new CultureInfo("en"),
+    };
+    options.DefaultRequestCulture = new RequestCulture(supportedCultures[0]);
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+
+
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,8 +63,17 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+var requestLocalizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(requestLocalizationOptions.Value);
+
 app.UseAuthorization();
 
+//app.MapControllerRoute(
+//    name: "CmsRoute",
+//    pattern: "{*permalink}",
+//    defaults: new { controller = "Page", action = "Index" },
+//    constraints: new { permalink = new CmsUrlConstraint() }
+//);
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

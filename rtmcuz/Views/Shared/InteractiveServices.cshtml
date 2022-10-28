@@ -1,0 +1,15 @@
+﻿@model IEnumerable<rtmcuz.Models.Section>
+
+<div class="section interactive-section">
+    @foreach (var item in Model)
+    {
+        <div class="section-card">
+            <span class="icon icon-@item.Icon"></span>
+            <h2 class="title">@item.Title</h2>
+            <div class="subtitle">
+                @item.Subtitle
+            </div>
+            <a href="">Details</a>
+        </div>
+    }
+</div>

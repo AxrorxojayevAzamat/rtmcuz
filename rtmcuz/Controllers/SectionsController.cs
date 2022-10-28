@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
-using rtmcuz.Models;
+using rtmcuz.Data.Models;
 
 namespace rtmcuz.Controllers
 {

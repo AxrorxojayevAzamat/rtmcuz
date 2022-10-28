@@ -1,6 +1,6 @@
 ﻿using rtmcuz.Data;
 
-namespace rtmcuz.Utilities
+namespace rtmcuz.Infrastructure.Utilities
 {
     public class CmsUrlConstraint : IRouteConstraint
     {

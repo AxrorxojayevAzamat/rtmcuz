@@ -1,4 +1,4 @@
-﻿using rtmcuz.Models;
+﻿using rtmcuz.Data.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.FormModels

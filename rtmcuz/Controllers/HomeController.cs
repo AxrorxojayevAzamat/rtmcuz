@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using rtmcuz.Models;
+using rtmcuz.Data.Models;
 using System.Diagnostics;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;

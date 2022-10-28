@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
+using rtmcuz.Data.Models;
 using rtmcuz.FormModels;
-using rtmcuz.Models;
 
 namespace rtmcuz.Controllers
 {

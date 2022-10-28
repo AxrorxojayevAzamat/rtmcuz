@@ -1,4 +1,4 @@
-namespace rtmcuz.Models
+namespace rtmcuz.Data.Models
 {
     public class ErrorViewModel
     {

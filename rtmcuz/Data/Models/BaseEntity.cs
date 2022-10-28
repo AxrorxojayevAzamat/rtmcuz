@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace rtmcuz.Models
+namespace rtmcuz.Data.Models
 {
     public class BaseEntity
     {

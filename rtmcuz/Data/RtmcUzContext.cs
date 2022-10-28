@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using rtmcuz.Models;
 using rtmcuz.FormModels;
 using rtmcuz.Data.Enums;
+using rtmcuz.Data.Models;
 
 namespace rtmcuz.Data
 {

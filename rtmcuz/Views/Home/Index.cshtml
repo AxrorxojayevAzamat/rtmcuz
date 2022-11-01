@@ -2,7 +2,12 @@
 @*@inject IViewLocalizer localizer*@
 
 <div class="text-center">
-    <h1 class="display-4">@localizer["Center"]</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    @await Html.PartialAsync("InteractiveServices", ViewData["InteractiveServices"])
+    @await Html.PartialAsync("Home/Banner")
+    @await Html.PartialAsync("Home/OurServices")
+    @await Html.PartialAsync("Home/InteractiveServices", ViewData["InteractiveServices"])
+    @await Html.PartialAsync("Home/News")
+    @await Html.PartialAsync("Home/NumbersAboutUs")
+    @await Html.PartialAsync("Home/Questions")
+    @await Html.PartialAsync("Home/Feedback")
+    @await Html.PartialAsync("Home/Map")
 </div>

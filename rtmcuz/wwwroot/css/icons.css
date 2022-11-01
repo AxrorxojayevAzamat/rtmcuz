@@ -1,8 +1,7 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic");
 
 @font-face {
-    font-family: "icomoon";
+    font-family: 'icomoon';
     src: url("../fonts/icomoon.eot?6zdbz4");
     src: url("../fonts/icomoon.eot?6zdbz4#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6zdbz4") format("truetype"), url("../fonts/icomoon.woff?6zdbz4") format("woff"), url("../fonts/icomoon.svg?6zdbz4#icomoon") format("svg");
     font-weight: normal;
@@ -10,9 +9,10 @@
     font-display: auto;
 }
 
-[class^=icon-], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icomoon" !important;
+    font-family: 'icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -25,342 +25,378 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-fttx:before {
-    content: "\e952";
+.icon-unit:before {
+    content: "\e900";
 }
 
-.icon-vdsl:before {
-    content: "\e953";
+.icon-vk:before {
+    content: "\e901";
 }
 
-.icon-fttxvdsl:before {
-    content: "\e954";
+.icon-chat:before {
+    content: "\e903";
 }
 
-.icon-tv-icon:before {
-    content: "\e951";
+.icon-chevrone-bottom:before {
+    content: "\e904";
 }
 
-.icon-link:before {
-    content: "\e950";
+.icon-chevrone-left:before {
+    content: "\e905";
 }
 
-.icon-path:before {
-    content: "\e94e";
+.icon-chevrone-right:before {
+    content: "\e906";
 }
 
-.icon-bus:before {
-    content: "\e94f";
+.icon-chevrone-top:before {
+    content: "\e907";
 }
 
-.icon-markerPin:before {
-    content: "\e94d";
+.icon-close:before {
+    content: "\e908";
 }
 
-.icon-opened:before {
-    content: "\e94a";
+.icon-connector:before {
+    content: "\e909";
 }
 
-.icon-closed:before {
-    content: "\e94b";
+.icon-earth:before {
+    content: "\e90a";
 }
 
-.icon-extended:before {
-    content: "\e94c";
+.icon-email:before {
+    content: "\e90b";
 }
 
-.icon-speed:before {
+.icon-et:before {
+    content: "\e90c";
+}
+
+.icon-eye:before {
+    content: "\e90d";
+}
+
+.icon-fb:before {
+    content: "\e90e";
+}
+
+.icon-fttb:before {
+    content: "\e90f";
+}
+
+.icon-Gear:before {
+    content: "\e910";
+}
+
+.icon-glasses:before {
+    content: "\e911";
+}
+
+.icon-globus:before {
+    content: "\e912";
+}
+
+.icon-gsm-icon:before {
+    content: "\e913";
+}
+
+.icon-house:before {
+    content: "\e914";
+}
+
+.icon-info:before {
+    content: "\e915";
+}
+
+.icon-layers-icon:before {
+    content: "\e916";
+}
+
+.icon-logo-uztelecom:before {
+    content: "\e917";
+}
+
+.icon-minus-fill:before {
+    content: "\e918";
+}
+
+.icon-mobile:before {
+    content: "\e919";
+}
+
+.icon-mobile-free:before {
+    content: "\e91a";
+}
+
+.icon-monitor:before {
+    content: "\e91b";
+}
+
+.icon-monitor-2:before {
+    content: "\e91c";
+}
+
+.icon-offices:before {
+    content: "\e91d";
+}
+
+.icon-ok:before {
+    content: "\e91e";
+}
+
+.icon-packet:before {
+    content: "\e91f";
+}
+
+.icon-person:before {
+    content: "\e920";
+}
+
+.icon-phone-0:before {
+    content: "\e921";
+}
+
+.icon-phone-1:before {
+    content: "\e922";
+}
+
+.icon-phone-2:before {
+    content: "\e923";
+}
+
+.icon-phone-3:before {
+    content: "\e924";
+}
+
+.icon-phone-4:before {
+    content: "\e925";
+}
+
+.icon-phone-call:before {
+    content: "\e926";
+}
+
+.icon-phone-code:before {
+    content: "\e927";
+}
+
+.icon-phones:before {
+    content: "\e928";
+}
+
+.icon-plus-fill:before {
+    content: "\e929";
+}
+
+.icon-printer:before {
+    content: "\e92a";
+}
+
+.icon-question:before {
+    content: "\e92b";
+}
+
+.icon-radar:before {
+    content: "\e92c";
+}
+
+.icon-router:before {
+    content: "\e92d";
+}
+
+.icon-rss:before {
+    content: "\e92e";
+}
+
+.icon-search:before {
+    content: "\e92f";
+}
+
+.icon-Shape-593x:before {
+    content: "\e930";
+}
+
+.icon-signal:before {
+    content: "\e931";
+}
+
+.icon-sms:before {
+    content: "\e932";
+}
+
+.icon-sms-2:before {
+    content: "\e933";
+}
+
+.icon-sms-code:before {
+    content: "\e934";
+}
+
+.icon-sort:before {
+    content: "\e935";
+}
+
+.icon-spanner:before {
+    content: "\e936";
+}
+
+.icon-tg:before {
+    content: "\e937";
+}
+
+.icon-tw:before {
+    content: "\e938";
+}
+
+.icon-unlimited:before {
+    content: "\e939";
+}
+
+.icon-user:before {
+    content: "\e93a";
+}
+
+.icon-wallet:before {
+    content: "\e93b";
+}
+
+.icon-warning:before {
+    content: "\e93c";
+}
+
+.icon-wave-line:before {
+    content: "\e93d";
+}
+
+.icon-wifi:before {
+    content: "\e93e";
+}
+
+.icon-www:before {
+    content: "\e93f";
+}
+
+.icon-www2:before {
+    content: "\e940";
+}
+
+.icon-yotube:before {
+    content: "\e941";
+}
+
+.icon-adsl:before {
+    content: "\e942";
+}
+
+.icon-archive:before {
+    content: "\e943";
+}
+
+.icon-arrow-in:before {
+    content: "\e944";
+}
+
+.icon-arrow-left:before {
+    content: "\e945";
+}
+
+.icon-arrow-out:before {
+    content: "\e946";
+}
+
+.icon-arrow-right:before {
+    content: "\e947";
+}
+
+.icon-builds:before {
     content: "\e948";
 }
 
-.icon-double-arrow:before {
+.icon-cdma-icon:before {
     content: "\e949";
 }
 
 .icon-check:before {
-    content: "\e947";
+    content: "\e94a";
 }
 
-.icon-chat:before {
-    content: "\e900";
+.icon-speed:before {
+    content: "\e94b";
 }
 
-.icon-chevrone-bottom:before {
-    content: "\e901";
+.icon-double-arrow:before {
+    content: "\e94c";
 }
 
-.icon-chevrone-left:before {
+.icon-opened:before {
+    content: "\e94d";
+}
+
+.icon-closed:before {
+    content: "\e94e";
+}
+
+.icon-extended:before {
+    content: "\e94f";
+}
+
+.icon-markerPin:before {
+    content: "\e950";
+}
+
+.icon-path:before {
+    content: "\e951";
+}
+
+.icon-bus:before {
+    content: "\e952";
+}
+
+.icon-link:before {
+    content: "\e953";
+}
+
+.icon-tv-icon:before {
+    content: "\e954";
+}
+
+.icon-fttx:before {
+    content: "\e955";
+}
+
+.icon-vdsl:before {
+    content: "\e956";
+}
+
+.icon-fttxvdsl:before {
+    content: "\e957";
+}
+
+.icon-android:before {
+    content: "\e958";
+}
+
+.icon-apple:before {
+    content: "\e959";
+}
+
+.icon-instagram:before {
+    content: "\e95a";
+}
+
+.icon-cinema:before {
     content: "\e902";
 }
 
-.icon-chevrone-right:before {
-    content: "\e903";
+.icon-computer:before {
+    content: "\e95b";
 }
 
-.icon-chevrone-top:before {
-    content: "\e904";
+.icon-phone:before {
+    content: "\e95c";
 }
 
-.icon-close:before {
-    content: "\e905";
-}
-
-.icon-connector:before {
-    content: "\e906";
-}
-
-.icon-earth:before {
-    content: "\e907";
-}
-
-.icon-email:before {
-    content: "\e908";
-}
-
-.icon-et:before {
-    content: "\e909";
-}
-
-.icon-eye:before {
-    content: "\e90a";
-}
-
-.icon-fb:before {
-    content: "\e90b";
-}
-
-.icon-fttb:before {
-    content: "\e90c";
-}
-
-.icon-Gear:before {
-    content: "\e90d";
-}
-
-.icon-glasses:before {
-    content: "\e90e";
-}
-
-.icon-globus:before {
-    content: "\e90f";
-}
-
-.icon-gsm-icon:before {
-    content: "\e910";
-}
-
-.icon-house:before {
-    content: "\e911";
-}
-
-.icon-info:before {
-    content: "\e912";
-}
-
-.icon-layers-icon:before {
-    content: "\e913";
-}
-
-.icon-logo-uztelecom:before {
-    content: "\e914";
-}
-
-.icon-minus-fill:before {
-    content: "\e915";
-}
-
-.icon-mobile:before {
-    content: "\e916";
-}
-
-.icon-mobile-free:before {
-    content: "\e917";
-}
-
-.icon-monitor:before {
-    content: "\e918";
-}
-
-.icon-monitor-2:before {
-    content: "\e919";
-}
-
-.icon-offices:before {
-    content: "\e91a";
-}
-
-.icon-ok:before {
-    content: "\e91b";
-}
-
-.icon-packet:before {
-    content: "\e91c";
-}
-
-.icon-person:before {
-    content: "\e91d";
-}
-
-.icon-phone-0:before {
-    content: "\e91e";
-}
-
-.icon-phone-1:before {
-    content: "\e91f";
-}
-
-.icon-phone-2:before {
-    content: "\e920";
-}
-
-.icon-phone-3:before {
-    content: "\e921";
-}
-
-.icon-phone-4:before {
-    content: "\e922";
-}
-
-.icon-phone-call:before {
-    content: "\e923";
-}
-
-.icon-phone-code:before {
-    content: "\e924";
-}
-
-.icon-phones:before {
-    content: "\e925";
-}
-
-.icon-plus-fill:before {
-    content: "\e926";
-}
-
-.icon-printer:before {
-    content: "\e927";
-}
-
-.icon-question:before {
-    content: "\e928";
-}
-
-.icon-radar:before {
-    content: "\e929";
-}
-
-.icon-router:before {
-    content: "\e92a";
-}
-
-.icon-rss:before {
-    content: "\e92b";
-}
-
-.icon-search:before {
-    content: "\e92c";
-}
-
-.icon-Shape-593x:before {
-    content: "\e92d";
-}
-
-.icon-signal:before {
-    content: "\e92e";
-}
-
-.icon-sms:before {
-    content: "\e92f";
-}
-
-.icon-sms-2:before {
-    content: "\e930";
-}
-
-.icon-sms-code:before {
-    content: "\e931";
-}
-
-.icon-sort:before {
-    content: "\e932";
-}
-
-.icon-spanner:before {
-    content: "\e933";
-}
-
-.icon-tg:before {
-    content: "\e934";
-}
-
-.icon-tw:before {
-    content: "\e935";
-}
-
-.icon-unlimited:before {
-    content: "\e936";
-}
-
-.icon-user:before {
-    content: "\e937";
-}
-
-.icon-wallet:before {
-    content: "\e938";
-}
-
-.icon-warning:before {
-    content: "\e939";
-}
-
-.icon-wave-line:before {
-    content: "\e93a";
-}
-
-.icon-wifi:before {
-    content: "\e93b";
-}
-
-.icon-www:before {
-    content: "\e93c";
-}
-
-.icon-www2:before {
-    content: "\e93d";
-}
-
-.icon-yotube:before {
-    content: "\e93e";
-}
-
-.icon-adsl:before {
-    content: "\e93f";
-}
-
-.icon-archive:before {
-    content: "\e940";
-}
-
-.icon-arrow-in:before {
-    content: "\e941";
-}
-
-.icon-arrow-left:before {
-    content: "\e942";
-}
-
-.icon-arrow-out:before {
-    content: "\e943";
-}
-
-.icon-arrow-right:before {
-    content: "\e944";
-}
-
-.icon-builds:before {
-    content: "\e945";
-}
-
-.icon-cdma-icon:before {
-    content: "\e946";
+.icon-tv:before {
+    content: "\e95d";
 }

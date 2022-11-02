@@ -1,5 +1,19 @@
 <header>
     <div class="container">
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="#">Bosh sahifa</a></li>
+                <li><a asp-controller="Home" asp-action="AboutCenter" class="menu__item">Markaz haqida</a></li>
+                <li><a asp-controller="Home" asp-action="News" class="menu__item">Yangiliklar</a></li>
+                <li><a asp-controller="Home" asp-action="Documents" class="menu__item">Hujjatlar</a></li>
+                <li><a class="menu__item" href="#">Bog’lanish</a></li>
+            </ul>
+        </div>
         <div class="header-top">
             <div class="contacts">
                 <a href="" class="contact"><span class="icon icon-email"></span>
@@ -22,12 +36,12 @@
             <a href="/" class="logo">
                 <img src="~/img/telegram-cloud-document-2-5300996950533872448 1.svg" class="logo-img">
             </a>
-            <nav>   
+            <nav>
                 <ul class="navbar">
                     <li class="navbar-item"> <a href=""> Bosh sahifa</a></li>
-                    <li class="navbar-item"> <a href=""> Markaz haqida</a></li>
-                    <li class="navbar-item"> <a href=""> Yangiliklar</a></li>
-                    <li class="navbar-item"> <a href=""> Hujjatlar</a></li>
+                    <li class="navbar-item"> <a asp-controller="Home" asp-action="AboutCenter" >Markaz haqida</a></li>
+                    <li class="navbar-item"> <a asp-controller="Home" asp-action="News" >Yangiliklar</a></li>
+                    <li class="navbar-item"> <a asp-controller="Home" asp-action="Documents" >Hujjatlar</a></li>
                     <li class="navbar-item"> <a href=""> Bog’lanish</a></li>
                 </ul>
                 <div class="searching">

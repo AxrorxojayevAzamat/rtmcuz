@@ -11,7 +11,13 @@
 }
 
 @media (max-width: 769px) {
+    .hamburger-menu {
+        display: block;
+    }
+
     .container {
-        width: 692px;
+        width: calc(100% - 30px);
     }
 }
+
+@media (max-width: 480px) {}

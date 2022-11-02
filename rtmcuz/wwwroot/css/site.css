@@ -301,12 +301,16 @@ footer .footer-top .right .column:last-child {
 
 footer .footer-top .right .column .header-title {
   /* color: var(--dark-main); */
+  display: block;
   font: var(--body-bold-1);
   margin-bottom: 18px;
+  cursor: pointer;
 }
 
 footer .footer-top .right .column .title {
+  display: block;
   font: var(--body-regular-2);
+  cursor: pointer;
   margin-bottom: 12px;
 }
 

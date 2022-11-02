@@ -3,7 +3,7 @@ using rtmcuz.FormModels;
 using SlugGenerator;
 using System.ComponentModel.DataAnnotations;
 
-namespace rtmcuz.Models
+namespace rtmcuz.Data.Models
 {
     public partial class Section : BaseEntity
     {

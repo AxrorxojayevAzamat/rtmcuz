@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
+using rtmcuz.Data.Models;
 using rtmcuz.FormModels;
-using rtmcuz.Models;
+using rtmcuz.Infrastructure.Exceptions;
 using SlugGenerator;
 namespace rtmcuz.Controllers
 {
@@ -57,7 +58,7 @@ namespace rtmcuz.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Subtitle,Icon")] Interactive interactive)
+        public async Task<IActionResult> Create(Interactive interactive)
         {
             if (ModelState.IsValid)
             {
@@ -80,6 +81,7 @@ namespace rtmcuz.Controllers
             var interactive = await _context.Sections.FindAsync(id);
             if (interactive == null)
             {
+                throw new NotFoundException("not found");
                 return NotFound();
             }
             return View(interactive);

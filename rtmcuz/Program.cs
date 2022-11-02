@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Localization;
 using System.Reflection;
 using rtmcuz.Data;
-using rtmcuz.Utilities;
 using rtmcuz.Resources;
 using System.Globalization;
 using Microsoft.Extensions.Options;
+using rtmcuz.Infrastructure.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 var provider = builder.Services.BuildServiceProvider();
@@ -23,7 +23,11 @@ builder.Services.AddDbContext<RtmcUzContext>(options =>
 // localization
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddSingleton<LocalizationService>();
-builder.Services.AddMvc()
+builder.Services.AddMvc(mvc =>
+{
+    mvc.Filters.Add<NotFoundExceptionFilter>();
+    mvc.Filters.Add<ValidateModelFilter>();
+})
     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
     .AddDataAnnotationsLocalization(options =>
     {

@@ -1,23 +1,26 @@
-﻿using rtmcuz.Models;
+﻿using rtmcuz.Data.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.FormModels
 {
-    public class Interactive
+    public class News
     {
+
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Image { get; set; }
         public string Subtitle { get; set; }
-        public string Icon { get; set; }
+        public string Content { get; set; }
+        public string Slug { get; set; }
 
-        public static Interactive FromSection(Section section)
+        public static News FromSection(Section section)
         {
-            return new Interactive()
-            {
+            return new News() { 
                 Id = section.Id,
                 Title = section.Title,
+                Image = section.Image,
                 Subtitle = section.Subtitle,
-                Icon = section.Icon,
+                Content = section.Content,
             };
         }
     }

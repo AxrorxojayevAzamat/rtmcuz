@@ -163,7 +163,7 @@ section h3.section-title {
 .social-media-bottom span.icon {
   color: var(--primary-main);
   font-size: 26px;
-  margin-right: 36px;
+  margin-right: 27px;
 }
 
 
@@ -235,18 +235,18 @@ header {
   align-items: center;
 }
 
-.header-bottom nav ul.navbar {
+.header-bottom nav ul.menu__box {
   display: flex;
   margin: 0;
 }
 
-.header-bottom nav ul.navbar li.navbar-item {
+.header-bottom nav ul.menu__box li {
   list-style-type: none;
   margin-right: 30px;
   text-transform: uppercase;
 }
 
-.header-bottom nav ul.navbar li.navbar-item a {
+.header-bottom nav ul.menu__box li a.menu__item {
   font: var(--body-regular-2);
 }
 
@@ -366,29 +366,29 @@ footer .footer-bottom .subtitle {
   display: none;
 }
 
-#menu__toggle {
+.hamburger-menu #menu__toggle {
   opacity: 0;
 }
 
-#menu__toggle:checked+.menu__btn>span {
+.hamburger-menu #menu__toggle:checked+.menu__btn>span {
   transform: rotate(45deg);
 }
 
-#menu__toggle:checked+.menu__btn>span::before {
+.hamburger-menu #menu__toggle:checked+.menu__btn>span::before {
   top: 0;
   transform: rotate(0deg);
 }
 
-#menu__toggle:checked+.menu__btn>span::after {
+.hamburger-menu #menu__toggle:checked+.menu__btn>span::after {
   top: 0;
   transform: rotate(90deg);
 }
 
-#menu__toggle:checked~.menu__box {
+.hamburger-menu #menu__toggle:checked~.menu__box {
   left: 0 !important;
 }
 
-.menu__btn {
+.hamburger-menu .menu__btn {
   position: fixed;
   top: 20px;
   left: 15px;
@@ -400,7 +400,7 @@ footer .footer-bottom .subtitle {
 
 .menu__btn>span,
 .menu__btn>span::before,
-.menu__btn>span::after {
+.hamburger-menu .menu__btn>span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -409,17 +409,17 @@ footer .footer-bottom .subtitle {
   transition-duration: .25s;
 }
 
-.menu__btn>span::before {
+.hamburger-menu .menu__btn>span::before {
   content: '';
   top: -8px;
 }
 
-.menu__btn>span::after {
+.hamburger-menu .menu__btn>span::after {
   content: '';
   top: 8px;
 }
 
-.menu__box {
+.hamburger-menu .menu__box {
   display: block;
   position: fixed;
   top: 0;
@@ -434,7 +434,7 @@ footer .footer-bottom .subtitle {
   transition-duration: .25s;
 }
 
-.menu__item {
+.hamburger-menu .menu__item {
   display: block;
   padding: 12px 24px;
   color: #333;
@@ -445,6 +445,6 @@ footer .footer-bottom .subtitle {
   transition-duration: .25s;
 }
 
-.menu__item:hover {
+.hamburger-menu .menu__item:hover {
   background-color: #CFD8DC;
 }

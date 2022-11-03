@@ -1,6 +1,8 @@
-﻿@*@using Microsoft.AspNetCore.Mvc.Localization*@
-@*@inject IViewLocalizer localizer*@
-
+﻿@section Styles {
+@{
+await Html.RenderPartialAsync("Styles/SwiperCss");
+}
+}
 <div class="text-center">
     @await Html.PartialAsync("Home/Banner")
     @await Html.PartialAsync("Home/OurServices")
@@ -11,3 +13,9 @@
     @await Html.PartialAsync("Home/Feedback")
     @await Html.PartialAsync("Home/Map")
 </div>
+
+@section Scripts {
+@{
+await Html.RenderPartialAsync("Scripts/SwiperJs");
+}
+}

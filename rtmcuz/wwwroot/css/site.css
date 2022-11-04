@@ -170,7 +170,7 @@ section h3.section-title {
 /* HEADER */
 header {
   position: sticky;
-  top: 0;
+  top: -1px;
   left: 0;
   background-color: var(--white-main);
   z-index: 2;
@@ -264,6 +264,7 @@ header {
 
 footer {
   padding: 33px 0;
+  box-shadow: 0px 0px 10px rgb(24 47 67 / 10%);
 }
 
 footer .footer-top {
@@ -368,6 +369,7 @@ footer .footer-bottom .subtitle {
 
 .hamburger-menu #menu__toggle {
   opacity: 0;
+  display: none;
 }
 
 .hamburger-menu #menu__toggle:checked+.menu__btn>span {
@@ -390,10 +392,10 @@ footer .footer-bottom .subtitle {
 
 .hamburger-menu .menu__btn {
   position: fixed;
-  top: 20px;
-  left: 15px;
-  width: 26px;
-  height: 26px;
+  top: 28px;
+  left: 18px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   z-index: 1;
 }
@@ -407,6 +409,7 @@ footer .footer-bottom .subtitle {
   height: 2px;
   background-color: #616161;
   transition-duration: .25s;
+  border-radius: 1px;
 }
 
 .hamburger-menu .menu__btn>span::before {
@@ -429,7 +432,7 @@ footer .footer-bottom .subtitle {
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: #ECEFF1;
+  background-color: var(--white-light);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
 }

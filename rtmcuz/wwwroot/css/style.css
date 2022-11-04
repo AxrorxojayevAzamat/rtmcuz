@@ -604,6 +604,10 @@
     width: 50%;
 }
 
+.feedback-wrapper .map img {
+    width: 100%;
+}
+
 .feedback .feedback-information {
     display: grid;
     width: 100%;

@@ -432,7 +432,7 @@ footer .footer-bottom .subtitle {
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: var(--white-light);
+  background-color: var(--custom-grey-6);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
 }

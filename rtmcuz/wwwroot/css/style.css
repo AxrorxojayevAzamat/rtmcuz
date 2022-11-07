@@ -403,6 +403,10 @@
     filter: contrast(120%) grayscale(100%);
 }
 
+.leaflet-right {
+    opacity: 0;
+}
+
 /* ABOUT CENTER */
 .about-center {
     margin: 100px 0;

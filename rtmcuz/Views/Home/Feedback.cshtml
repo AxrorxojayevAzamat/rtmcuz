@@ -1,3 +1,7 @@
+@section Styles {
+<link rel="stylesheet" href="~/css/leaflet.css" />
+}
+
 <div class="feedback">
     <div class="container">
         <div class="feedback-wrapper">
@@ -22,9 +26,7 @@
                     <textarea name="reason" id="reason" cols="30" rows="10" placeholder="Description"></textarea>
                 </div>
             </form>
-            <div class="map">
-                <img src="/img/Map 2.png" alt="">
-            </div>
+            <div class="map" id="map"></div>
         </div>
         <div class="feedback-information">
             <div class="card">
@@ -72,3 +74,8 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+<script src="~/js/leaflet.js"></script>
+<script src="~/js/leaflet-custom.js"></script>
+}

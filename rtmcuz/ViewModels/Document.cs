@@ -1,14 +1,13 @@
 ﻿using rtmcuz.Data.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.FormModels
 {
     public class Document
     {
-        [Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
+
         public static Document FromSection(Section section)
         {
             return new Document()
@@ -18,6 +17,5 @@ namespace rtmcuz.FormModels
                 Content = section.Content,
             };
         }
-
     }
 }

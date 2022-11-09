@@ -1,3 +1,4 @@
 ﻿@{
-    Layout = "_Layout";
+    var currentController = ViewContext.RouteData.Values["Controller"].ToString();
+    Layout = currentController == "Home" ? "_Layout" : "_LayoutDashboard";
 }

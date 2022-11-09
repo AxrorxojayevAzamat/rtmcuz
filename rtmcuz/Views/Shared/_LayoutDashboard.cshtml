@@ -1,0 +1,54 @@
+﻿
+<html lang="en">
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - rtmcuz</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/icons.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+
+
+
+
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3 justify-content-between">
+                <div class="header-logo">
+                    <img src="~/img/telegram-cloud-document-2-5300996950533872448 1.svg" class="logo-img"/>
+                </div>
+                <ul class="menu_box m-2">
+                    <li class="menu_item"><a asp-controller="Banners" asp-action="Index">Banners</a></li>
+                    <li class="menu_item"><a asp-controller="News" asp-action="Index">News</a></li>
+                    <li class="menu_item"><a asp-controller="InterActives" asp-action="Index">InterActives</a></li>
+                    <li class="menu_item"><a asp-controller="Questions" asp-action="Index">Questions</a></li>
+                    <li class="menu_item"><a asp-controller="Documents" asp-action="Index">Documents</a></li>
+                    <li class="menu_item"><a asp-controller="Leaderships" asp-action="Index">Leaderships</a></li>
+                    <li class="menu_item"><a asp-controller="Departments" asp-action="Index">Departments</a></li>
+                </ul>
+                <div class="profile">
+                    <span class="icon icon-user"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+@*     <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - rtmcuz - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+

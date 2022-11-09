@@ -1,5 +1,6 @@
 ﻿using rtmcuz.Data.Enums;
 using rtmcuz.FormModels;
+using rtmcuz.ViewModels;
 using SlugGenerator;
 using System.ComponentModel.DataAnnotations;
 
@@ -45,6 +46,69 @@ namespace rtmcuz.Data.Models
                 Subtitle = news.Subtitle,
                 Content = news.Content,
                 Type = SectionTypes.News,
+            };
+        }
+
+        public static Section FromBanner(Banner banner)
+        {
+            return new Section()
+            {
+                Id = banner.Id,
+                Title = banner.Title,
+                Slug = banner.Title.GenerateSlug(),
+                Subtitle = banner.Subtitle,
+                Content = banner.Content,
+                Image = banner.Image,
+                Type = SectionTypes.Banner,
+            };
+        }
+
+        public static Section FromDepartment(Department department)
+        {
+            return new Section()
+            {
+                Id = department.Id,
+                Title = department.Title,
+                Slug = department.Title.GenerateSlug(),
+                Content = department.Content,
+                Type = SectionTypes.Department,
+            };
+        }
+
+        public static Section FromDocument(Document document)
+        {
+            return new Section()
+            {
+                Id = document.Id,
+                Title = document.Title,
+                Slug = document.Title.GenerateSlug(),
+                Content = document.Content,
+                Type = SectionTypes.Document,
+            };
+        }
+
+        public static Section FromLeadership(Leadership leadership)
+        {
+            return new Section()
+            {
+                Id = leadership.Id,
+                Title = leadership.Title,
+                Slug = leadership.Title.GenerateSlug(),
+                Subtitle = leadership.Subtitle,
+                Content = leadership.Content,
+                Type = SectionTypes.Leadership,
+            };
+        }
+
+        public static Section FromQuestion(Question question)
+        {
+            return new Section()
+            {
+                Id = question.Id,
+                Title = question.Title,
+                Slug = question.Title.GenerateSlug(),
+                Content = question.Content,
+                Type = SectionTypes.Question,
             };
         }
     }

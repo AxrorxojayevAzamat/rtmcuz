@@ -1,16 +1,15 @@
 ﻿using rtmcuz.Data.Models;
 
-namespace rtmcuz.FormModels
+namespace rtmcuz.ViewModels
 {
-    public class Question
+    public class Department
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-
-        public static Question FromSection(Section section)
+        public static Department FromSection(Section section)
         {
-            return new Question()
+            return new Department()
             {
                 Id = section.Id,
                 Title = section.Title,

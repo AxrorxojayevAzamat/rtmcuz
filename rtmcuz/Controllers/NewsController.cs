@@ -12,6 +12,8 @@ using rtmcuz.FormModels;
 
 namespace rtmcuz.Controllers
 {
+    [Route("dashboard/{controller}/{action}")]
+
     public class NewsController : Controller
     {
         private readonly RtmcUzContext _context;
@@ -21,13 +23,11 @@ namespace rtmcuz.Controllers
             _context = context;
         }
 
-        // GET: News
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Sections.Where(s => s.Type == SectionTypes.News).ToListAsync());
+            return View(await _context.Sections.Where(s => s.Type == SectionTypes.News).ToListAsync());
         }
 
-        // GET: News/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
@@ -35,8 +35,7 @@ namespace rtmcuz.Controllers
                 return NotFound();
             }
 
-            var news = await _context.Sections
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var news = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
             {
                 return NotFound();
@@ -45,18 +44,14 @@ namespace rtmcuz.Controllers
             return View(news);
         }
 
-        // GET: News/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: News/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Image,Subtitle,Content")] News news)
+        public async Task<IActionResult> Create(News news)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +62,6 @@ namespace rtmcuz.Controllers
             return View(news);
         }
 
-        // GET: News/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
@@ -83,12 +77,9 @@ namespace rtmcuz.Controllers
             return View(News.FromSection(news));
         }
 
-        // POST: News/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Image,Subtitle,Content")] News news)
+        public async Task<IActionResult> Edit(int id, News news)
         {
             if (id != news.Id)
             {
@@ -118,7 +109,6 @@ namespace rtmcuz.Controllers
             return View(news);
         }
 
-        // GET: News/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
@@ -126,8 +116,7 @@ namespace rtmcuz.Controllers
                 return NotFound();
             }
 
-            var news = await _context.Sections
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var news = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
             {
                 return NotFound();
@@ -136,7 +125,6 @@ namespace rtmcuz.Controllers
             return View(news);
         }
 
-        // POST: News/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -150,14 +138,14 @@ namespace rtmcuz.Controllers
             {
                 _context.Sections.Remove(news);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool NewsExists(int id)
         {
-          return _context.Sections.Any(e => e.Id == id);
+            return _context.Sections.Any(e => e.Id == id);
         }
     }
 }

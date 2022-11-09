@@ -2,7 +2,7 @@
 {
     public enum SectionTypes
     {
-        Static, InterActive, Document, Question, Leadership, News
+        Static, Banner, News, InterActive, Question, Document, Leadership, Vacancy, Department
     }
 
     public enum SectionStatus

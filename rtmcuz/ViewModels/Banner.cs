@@ -1,8 +1,9 @@
 ﻿using rtmcuz.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace rtmcuz.FormModels
+namespace rtmcuz.ViewModels
 {
-    public class Leadership
+    public class Banner
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -10,16 +11,16 @@ namespace rtmcuz.FormModels
         public string Content { get; set; }
         public string Image { get; set; }
 
-        public static Leadership FromSection(Section section)
+        public static Banner FromSection(Section section)
         {
-            return new Leadership()
+            return new Banner()
             {
                 Id = section.Id,
                 Title = section.Title,
                 Subtitle = section.Subtitle,
                 Content = section.Content,
+                Image = section.Image,
             };
         }
-
     }
 }

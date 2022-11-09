@@ -2,6 +2,7 @@
 using rtmcuz.FormModels;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
+using rtmcuz.ViewModels;
 
 namespace rtmcuz.Data
 {
@@ -36,6 +37,16 @@ namespace rtmcuz.Data
         public DbSet<rtmcuz.FormModels.Interactive> Interactive { get; set; }
 
         public DbSet<rtmcuz.FormModels.News> News { get; set; }
+
+        public DbSet<rtmcuz.ViewModels.Banner> Banners { get; set; }
+
+        public DbSet<rtmcuz.FormModels.Leadership> Leadership { get; set; }
+
+        public DbSet<rtmcuz.ViewModels.Department> Department { get; set; }
+
+        public DbSet<rtmcuz.FormModels.Document> Document { get; set; }
+
+        public DbSet<rtmcuz.FormModels.Question> Question { get; set; }
         //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
 

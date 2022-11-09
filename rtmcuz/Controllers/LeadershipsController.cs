@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,39 +10,37 @@ using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
 using rtmcuz.FormModels;
-using rtmcuz.Infrastructure.Exceptions;
-using SlugGenerator;
+
 namespace rtmcuz.Controllers
 {
-    [Route("dashboard/{controller}/{action}")]
-    public class InteractivesController : Controller
+    public class LeadershipsController : Controller
     {
         private readonly RtmcUzContext _context;
 
-        public InteractivesController(RtmcUzContext context)
+        public LeadershipsController(RtmcUzContext context)
         {
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync());
+            return View(await _context.Sections.Where(s => s.Type == SectionTypes.Leadership).ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
-            if (interactive == null)
+            var leadership = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            if (leadership == null)
             {
                 return NotFound();
             }
 
-            return View(interactive);
+            return View(leadership);
         }
 
         public IActionResult Create()
@@ -49,42 +48,39 @@ namespace rtmcuz.Controllers
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Interactive interactive)
+        public async Task<IActionResult> Create(Leadership leadership)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(Section.FromInteractive(interactive));
-
+                _context.Add(Section.FromLeadership(leadership));
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(interactive);
+            return View(leadership);
         }
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FindAsync(id);
-            if (interactive == null)
+            var leadership = await _context.Sections.FindAsync(id);
+            if (leadership == null)
             {
-                throw new NotFoundException("not found");
                 return NotFound();
             }
-            return View(interactive);
+            return View(leadership);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Interactive interactive)
+        public async Task<IActionResult> Edit(int id, Leadership leadership)
         {
-            if (id != interactive.Id)
+            if (id != leadership.Id)
             {
                 return NotFound();
             }
@@ -93,12 +89,12 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _context.Update(interactive);
+                    _context.Update(Section.FromLeadership(leadership));
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InteractiveExists(interactive.Id))
+                    if (!LeadershipExists(leadership.Id))
                     {
                         return NotFound();
                     }
@@ -109,45 +105,44 @@ namespace rtmcuz.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(interactive);
+            return View(leadership);
         }
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
-            if (interactive == null)
+            var leadership = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            if (leadership == null)
             {
                 return NotFound();
             }
 
-            return View(interactive);
+            return View(leadership);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (_context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
             {
-                return Problem("Entity set 'RtmcUzContext.Interactive'  is null.");
+                return Problem("Entity set 'RtmcUzContext.Leadership'  is null.");
             }
-
-            var interactive = await _context.Sections.FindAsync(id);
-            if (interactive != null)
+            var leadership = await _context.Sections.FindAsync(id);
+            if (leadership != null)
             {
-                _context.Sections.Remove(interactive);
+                _context.Sections.Remove(leadership);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InteractiveExists(int id)
+        private bool LeadershipExists(int id)
         {
             return _context.Sections.Any(e => e.Id == id);
         }

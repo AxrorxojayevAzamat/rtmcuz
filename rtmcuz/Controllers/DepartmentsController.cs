@@ -8,40 +8,38 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.FormModels;
-using rtmcuz.Infrastructure.Exceptions;
-using SlugGenerator;
+using rtmcuz.ViewModels;
+
 namespace rtmcuz.Controllers
 {
-    [Route("dashboard/{controller}/{action}")]
-    public class InteractivesController : Controller
+    public class DepartmentsController : Controller
     {
         private readonly RtmcUzContext _context;
 
-        public InteractivesController(RtmcUzContext context)
+        public DepartmentsController(RtmcUzContext context)
         {
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync());
+            return View(await _context.Sections.Where(s => s.Type == SectionTypes.Department).ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Department) == null)
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
-            if (interactive == null)
+            var department = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            if (department == null)
             {
                 return NotFound();
             }
 
-            return View(interactive);
+            return View(department);
         }
 
         public IActionResult Create()
@@ -49,42 +47,39 @@ namespace rtmcuz.Controllers
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Interactive interactive)
+        public async Task<IActionResult> Create(Department department)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(Section.FromInteractive(interactive));
-
+                _context.Add(Section.FromDepartment(department));
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(interactive);
+            return View(department);
         }
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Department) == null)
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FindAsync(id);
-            if (interactive == null)
+            var department = await _context.Sections.FindAsync(id);
+            if (department == null)
             {
-                throw new NotFoundException("not found");
                 return NotFound();
             }
-            return View(interactive);
+            return View(department);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Interactive interactive)
+        public async Task<IActionResult> Edit(int id, Department department)
         {
-            if (id != interactive.Id)
+            if (id != department.Id)
             {
                 return NotFound();
             }
@@ -93,12 +88,12 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _context.Update(interactive);
+                    _context.Update(Section.FromDepartment(department));
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InteractiveExists(interactive.Id))
+                    if (!DepartmentExists(department.Id))
                     {
                         return NotFound();
                     }
@@ -109,45 +104,44 @@ namespace rtmcuz.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(interactive);
+            return View(department);
         }
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Department) == null)
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
-            if (interactive == null)
+            var department = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            if (department == null)
             {
                 return NotFound();
             }
 
-            return View(interactive);
+            return View(department);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (_context.Sections.Where(s => s.Type == SectionTypes.Department) == null)
             {
-                return Problem("Entity set 'RtmcUzContext.Interactive'  is null.");
+                return Problem("Entity set 'RtmcUzContext.Department'  is null.");
             }
-
-            var interactive = await _context.Sections.FindAsync(id);
-            if (interactive != null)
+            var department = await _context.Sections.FindAsync(id);
+            if (department != null)
             {
-                _context.Sections.Remove(interactive);
+                _context.Sections.Remove(department);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InteractiveExists(int id)
+        private bool DepartmentExists(int id)
         {
             return _context.Sections.Any(e => e.Id == id);
         }

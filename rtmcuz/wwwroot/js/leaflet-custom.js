@@ -13,19 +13,19 @@ function initMap() {
         zoom: 14,
         scrollWheelZoom: false
     });
+
     var myIcon = L.icon({
-        iconUrl: 'https://uztelecom.uz/images/marker-pin.png',
-        iconSize: [40, 57],
+        iconUrl: '/img/map-marker-48.png',
+        iconSize: [50, 50],
         popupAnchor: [0, -30]
     });
+
     for (i = 0; i < markers.length; i++) {
         var position = L.latLng(markers[i][1], markers[i][2]);
         L.marker(position, { icon: myIcon }).addTo(map)/* .bindPopup(infoWindowContent[i][0]) */;
     }
-    var tiles = new L.tileLayer('https://map.uztelecom.uz/hot/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    }).addTo(map);
-    // var tiles = new L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    var tiles = new L.tileLayer('https://map.uztelecom.uz/hot/{z}/{x}/{y}.png', {}).addTo(map);
 }
 
 initMap();

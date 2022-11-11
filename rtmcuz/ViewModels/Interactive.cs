@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Configuration;
 
-namespace rtmcuz.FormModels
+namespace rtmcuz.ViewModels
 {
     public class Interactive
     {

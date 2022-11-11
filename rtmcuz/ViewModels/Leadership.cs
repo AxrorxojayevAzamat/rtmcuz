@@ -1,6 +1,6 @@
 ﻿using rtmcuz.Data.Models;
 
-namespace rtmcuz.FormModels
+namespace rtmcuz.ViewModels
 {
     public class Leadership
     {

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.FormModels;
+using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
 {
@@ -57,6 +57,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(document);
         }
 
@@ -72,7 +73,8 @@ namespace rtmcuz.Controllers
             {
                 return NotFound();
             }
-            return View(document);
+
+            return View(Document.FromSection(document));
         }
 
         [HttpPost]
@@ -102,8 +104,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(document);
         }
 
@@ -131,6 +135,7 @@ namespace rtmcuz.Controllers
             {
                 return Problem("Entity set 'RtmcUzContext.Document'  is null.");
             }
+
             var document = await _context.Sections.FindAsync(id);
             if (document != null)
             {

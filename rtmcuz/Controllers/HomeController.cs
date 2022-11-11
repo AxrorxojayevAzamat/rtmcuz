@@ -20,7 +20,8 @@ namespace rtmcuz.Controllers
         //    new MenuItem() { Id = 2, Name = "Ef like", Slug = "ef-like" },
         //};
 
-        public HomeController(ILogger<HomeController> logger, RtmcUzContext context, LocalizationService localizationService)
+        public HomeController(ILogger<HomeController> logger, RtmcUzContext context,
+            LocalizationService localizationService)
         {
             _logger = logger;
             _context = context;
@@ -32,6 +33,8 @@ namespace rtmcuz.Controllers
             //var pages = _context.Pages.ToList();
             var center = _localizationService.GetLocalizedHtmlString("Center");
             var interactiveServices = _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToList();
+            if (interactiveServices == null)
+                return NotFound();
             ViewBag.InteractiveServices = interactiveServices;
             return View();
         }
@@ -54,23 +57,76 @@ namespace rtmcuz.Controllers
         {
             return View();
         }
+
         public IActionResult News()
         {
             return View();
         }
+
         public IActionResult Documents()
         {
             return View();
         }
+
         public IActionResult Feedback()
         {
             return View();
         }
 
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public JsonResult UploadCKEditorImage()
+        {
+            var files = Request.Form.Files;
+            if (files.Count == 0)
+            {
+                var rError = new
+                {
+                    uploaded = false,
+                    url = string.Empty
+                };
+                return Json(rError);
+            }
+
+            var formFile = files[0];
+            var upFileName = formFile.FileName;
+            // size, format check....
+            var fileName = Guid.NewGuid() + Path.GetExtension(upFileName);
+            var saveDir = @".\wwwroot\upload\";
+            var savePath = saveDir + fileName;
+            var previewPath = "/upload/" + fileName;
+
+            bool result = true;
+            try
+            {
+                if (!Directory.Exists(saveDir))
+                {
+                    Directory.CreateDirectory(saveDir);
+                }
+
+                using (FileStream fs = System.IO.File.Create(savePath))
+                {
+                    formFile.CopyTo(fs);
+                    fs.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
+
+            var rUpload = new
+            {
+                uploaded = result,
+                url = result ? previewPath : string.Empty
+            };
+            return Json(rUpload);
         }
     }
 }

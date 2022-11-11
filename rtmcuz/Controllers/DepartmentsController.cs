@@ -57,6 +57,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(department);
         }
 
@@ -72,7 +73,8 @@ namespace rtmcuz.Controllers
             {
                 return NotFound();
             }
-            return View(department);
+
+            return View(Department.FromSection(department));
         }
 
         [HttpPost]
@@ -102,8 +104,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(department);
         }
 
@@ -131,6 +135,7 @@ namespace rtmcuz.Controllers
             {
                 return Problem("Entity set 'RtmcUzContext.Department'  is null.");
             }
+
             var department = await _context.Sections.FindAsync(id);
             if (department != null)
             {

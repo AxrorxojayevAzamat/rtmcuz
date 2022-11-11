@@ -57,6 +57,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(banner);
         }
 
@@ -72,7 +73,8 @@ namespace rtmcuz.Controllers
             {
                 return NotFound();
             }
-            return View(banner);
+
+            return View(Banner.FromSection(banner));
         }
 
         [HttpPost]
@@ -102,8 +104,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(banner);
         }
 
@@ -132,6 +136,7 @@ namespace rtmcuz.Controllers
             {
                 return Problem("Entity set 'RtmcUzContext.Banners'  is null.");
             }
+
             var banner = await _context.Sections.FindAsync(id);
             if (banner != null)
             {

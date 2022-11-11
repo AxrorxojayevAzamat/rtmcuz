@@ -8,9 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.FormModels;
+using rtmcuz.ViewModels;
 using rtmcuz.Infrastructure.Exceptions;
 using SlugGenerator;
+
 namespace rtmcuz.Controllers
 {
     [Route("dashboard/{controller}/{action}")]
@@ -61,6 +62,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(interactive);
         }
 
@@ -74,10 +76,10 @@ namespace rtmcuz.Controllers
             var interactive = await _context.Sections.FindAsync(id);
             if (interactive == null)
             {
-                throw new NotFoundException("not found");
                 return NotFound();
             }
-            return View(interactive);
+
+            return View(Interactive.FromSection(interactive));
         }
 
         [HttpPost]
@@ -93,7 +95,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _context.Update(interactive);
+                    _context.Update(Section.FromInteractive(interactive));
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -107,8 +109,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(interactive);
         }
 

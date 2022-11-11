@@ -166,7 +166,7 @@
 //            {
 //                _context.Pages.Remove(page);
 //            }
-            
+
 //            await _context.SaveChangesAsync();
 //            return RedirectToAction(nameof(Index));
 //        }
@@ -177,3 +177,4 @@
 //        }
 //    }
 //}
+

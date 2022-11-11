@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.FormModels;
+using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
 {
@@ -58,6 +57,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(leadership);
         }
 
@@ -73,7 +73,8 @@ namespace rtmcuz.Controllers
             {
                 return NotFound();
             }
-            return View(leadership);
+
+            return View(Leadership.FromSection(leadership));
         }
 
         [HttpPost]
@@ -103,8 +104,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(leadership);
         }
 
@@ -132,6 +135,7 @@ namespace rtmcuz.Controllers
             {
                 return Problem("Entity set 'RtmcUzContext.Leadership'  is null.");
             }
+
             var leadership = await _context.Sections.FindAsync(id);
             if (leadership != null)
             {

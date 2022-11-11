@@ -22,3 +22,11 @@ li.menu_item a {
     text-decoration: none;
     color: black;
 }
+
+.form-group {
+    margin: .5em 0;
+}
+
+.ck-editor__editable {
+    min-height: 150px;
+}

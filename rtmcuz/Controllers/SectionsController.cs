@@ -22,7 +22,7 @@ namespace rtmcuz.Controllers
         // GET: Sections
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Sections.ToListAsync());
+            return View(await _context.Sections.ToListAsync());
         }
 
         // GET: Sections/Details/5
@@ -57,7 +57,10 @@ namespace rtmcuz.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Slug,Lang,GroupId,Content,Icon,Image,Subtitle,Title,Template,Type,Status,Url,ParentId,Id,CreatedDate,UpdatedDate")] Section section)
+        public async Task<IActionResult> Create(
+            [Bind(
+                "Slug,Lang,GroupId,Content,Icon,Image,Subtitle,Title,Template,Type,Status,Url,ParentId,Id,CreatedDate,UpdatedDate")]
+            Section section)
         {
             if (ModelState.IsValid)
             {
@@ -65,6 +68,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(section);
         }
 
@@ -81,6 +85,7 @@ namespace rtmcuz.Controllers
             {
                 return NotFound();
             }
+
             return View(section);
         }
 
@@ -89,7 +94,10 @@ namespace rtmcuz.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Slug,Lang,GroupId,Content,Icon,Image,Subtitle,Title,Template,Type,Status,Url,ParentId,Id,CreatedDate,UpdatedDate")] Section section)
+        public async Task<IActionResult> Edit(int id,
+            [Bind(
+                "Slug,Lang,GroupId,Content,Icon,Image,Subtitle,Title,Template,Type,Status,Url,ParentId,Id,CreatedDate,UpdatedDate")]
+            Section section)
         {
             if (id != section.Id)
             {
@@ -114,8 +122,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(section);
         }
 
@@ -146,19 +156,20 @@ namespace rtmcuz.Controllers
             {
                 return Problem("Entity set 'RtmcUzContext.Sections'  is null.");
             }
+
             var section = await _context.Sections.FindAsync(id);
             if (section != null)
             {
                 _context.Sections.Remove(section);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SectionExists(int id)
         {
-          return _context.Sections.Any(e => e.Id == id);
+            return _context.Sections.Any(e => e.Id == id);
         }
     }
 }

@@ -8,12 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.FormModels;
+using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
 {
     [Route("dashboard/{controller}/{action}")]
-
     public class NewsController : Controller
     {
         private readonly RtmcUzContext _context;
@@ -59,6 +58,7 @@ namespace rtmcuz.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(news);
         }
 
@@ -74,6 +74,7 @@ namespace rtmcuz.Controllers
             {
                 return NotFound();
             }
+
             return View(News.FromSection(news));
         }
 
@@ -104,8 +105,10 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(news);
         }
 
@@ -133,6 +136,7 @@ namespace rtmcuz.Controllers
             {
                 return Problem("Entity set 'RtmcUzContext.News'  is null.");
             }
+
             var news = await _context.Sections.FindAsync(id);
             if (news != null)
             {

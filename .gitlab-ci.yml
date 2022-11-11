@@ -3,7 +3,7 @@ stages:
 deploy_production:
   stage: deploy
   script:
-  - rsync -av * /var/www/rtmcuz/ --no-perms --no-owner --no-group
+  - rsync -av * /var/www/rtmcuz/
   - cd /var/www/rtmcuz/
   environment:
     name: production

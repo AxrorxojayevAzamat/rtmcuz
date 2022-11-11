@@ -9,8 +9,9 @@ namespace rtmcuz.ViewModels
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Content { get; set; }
-        public string Image { get; set; }
-
+        [Required]
+        public int? ImageId { get; set; }
+        public Attachment? Image { get; set; }
         public static Banner FromSection(Section section)
         {
             return new Banner()
@@ -19,6 +20,7 @@ namespace rtmcuz.ViewModels
                 Title = section.Title,
                 Subtitle = section.Subtitle,
                 Content = section.Content,
+                ImageId = section.ImageId,
                 Image = section.Image,
             };
         }

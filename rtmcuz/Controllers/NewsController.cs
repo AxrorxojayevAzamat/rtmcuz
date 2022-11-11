@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
+using rtmcuz.Interfaces;
 using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
@@ -16,15 +17,17 @@ namespace rtmcuz.Controllers
     public class NewsController : Controller
     {
         private readonly RtmcUzContext _context;
+        private readonly IAttachmentService _attachmentService;
 
-        public NewsController(RtmcUzContext context)
+        public NewsController(RtmcUzContext context, IAttachmentService attachmentService)
         {
             _context = context;
+            _attachmentService = attachmentService;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.News).ToListAsync());
+            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.News).ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -50,10 +53,22 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(News news)
+        public async Task<IActionResult> Create(News news, IFormFile image)
         {
             if (ModelState.IsValid)
             {
+                int imageId = -1;
+
+                if (image != null)
+                {
+                    imageId = _attachmentService.UploadFileToStorage(image);
+                }
+
+                if (imageId > -1)
+                {
+                    news.ImageId = imageId;
+                }
+
                 _context.Add(Section.FromNews(news));
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -69,7 +84,9 @@ namespace rtmcuz.Controllers
                 return NotFound();
             }
 
-            var news = await _context.Sections.FindAsync(id);
+            var news = await _context.Sections.Include(s => s.Image)
+                .Where(a => a.Id == id)
+                .FirstOrDefaultAsync();
             if (news == null)
             {
                 return NotFound();
@@ -80,7 +97,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, News news)
+        public async Task<IActionResult> Edit(int id, News news, IFormFile image)
         {
             if (id != news.Id)
             {
@@ -91,6 +108,18 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
+                    int imageId = -1;
+
+                    if (image != null)
+                    {
+                        imageId = _attachmentService.UploadFileToStorage(image);
+                    }
+
+                    if (imageId > -1)
+                    {
+                        news.ImageId = imageId;
+                    }
+
                     _context.Update(Section.FromNews(news));
                     await _context.SaveChangesAsync();
                 }

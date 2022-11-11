@@ -8,9 +8,11 @@
                     </div>
                     <div class="banner-content">
                         <div class="container">
-                            <h3 class="banner-title">TELEKOMMUNIKATSIYA
+                            <h3 class="banner-title">
+                                TELEKOMMUNIKATSIYA
                                 TARMOQLARINI BOSHQARISH
-                                RESPUBLIKA MARKAZI» </h3>
+                                RESPUBLIKA MARKAZI»
+                            </h3>
                             <div class="sub-title">
                                 «O'ZBEKISTON TELEKOMMUNIKATSIYA TARMOQLARINI BOSHQARISH RESPUBLIKA MARKAZI» DAVLAT
                                 UNITAR
@@ -24,54 +26,32 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="slide">
-                    <div class="bg">
-                        <img src="/img/Background2.png">
-                    </div>
-                    <div class="banner-content">
-                        <div class="container">
-                            <h3 class="banner-title">TELEKOMMUNIKATSIYA
-                                TARMOQLARINI BOSHQARISH
-                                RESPUBLIKA MARKAZI» </h3>
-                            <div class="sub-title">
-                                «O'ZBEKISTON TELEKOMMUNIKATSIYA TARMOQLARINI BOSHQARISH RESPUBLIKA MARKAZI» DAVLAT
-                                UNITAR
-                                KORXONASI
-                                RASMIY
-                                SAYTI
-                            </div>
+            @foreach (var banner in ViewBag.Banners)
+            {
+                <div class="swiper-slide">
+                    <div class="slide">
+                        <div class="bg">
+                            <img src="~/uploads/@banner.Image.Path">
+                        </div>
+                        <div class="banner-content">
+                            <div class="container">
+                                <h3 class="banner-title">
+                                    @banner.Title
+                                </h3>
+                                <div class="sub-title">
+                                    @banner.Subtitle
+                                </div>
 
-                            <button class="btn ">Узнать больше <span class="icon icon-arrow-right"></span></button>
+                                <button class="btn">
+                                    <a asp-action="Banner" asp-route-id=@banner.Id>
+                                        Узнать больше <span class="icon icon-arrow-right"></span>
+                                    </a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="swiper-slide">
-                <div class="slide">
-                    <div class="bg">
-                        <img src="/img/Background1.png">
-                    </div>
-                    <div class="banner-content">
-                        <div class="container">
-                            <h3 class="banner-title">TELEKOMMUNIKATSIYA
-                                TARMOQLARINI BOSHQARISH
-                                RESPUBLIKA MARKAZI» </h3>
-                            <div class="sub-title">
-                                «O'ZBEKISTON TELEKOMMUNIKATSIYA TARMOQLARINI BOSHQARISH RESPUBLIKA MARKAZI» DAVLAT
-                                UNITAR
-                                KORXONASI
-                                RASMIY
-                                SAYTI
-                            </div>
-
-                            <button class="btn ">Узнать больше <span class="icon icon-arrow-right"></span></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            }
         </div>
         <div class="banner-slide-prev swiper-button-prev">@* <img src="/img/ToPrevIcon.svg"> *@</div>
         <div class="banner-slide-next swiper-button-next">@* <img src="/img/ToNextIcon.svg"> *@</div>

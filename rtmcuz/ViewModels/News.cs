@@ -1,4 +1,5 @@
 ﻿using rtmcuz.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.ViewModels
 {
@@ -6,18 +7,22 @@ namespace rtmcuz.ViewModels
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Image { get; set; }
+        [Required]
+        public int? ImageId { get; set; }
         public string Subtitle { get; set; }
         public string Content { get; set; }
+        public Attachment? Image { get; set; }
 
         public static News FromSection(Section section)
         {
-            return new News() { 
+            return new News()
+            {
                 Id = section.Id,
                 Title = section.Title,
-                Image = section.Image,
+                ImageId = section.ImageId,
                 Subtitle = section.Subtitle,
                 Content = section.Content,
+                Image = section.Image,
             };
         }
     }

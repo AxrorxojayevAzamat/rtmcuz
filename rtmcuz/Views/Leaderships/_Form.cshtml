@@ -2,6 +2,7 @@
 
 <form asp-action=@ViewBag.Title>
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ImageId" />
     @if (ViewBag.Title == "Edit")
     {
         <input type="hidden" asp-for="Id" />
@@ -22,9 +23,23 @@
         <span asp-validation-for="Content" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Image" class="control-label"></label>
-        <input asp-for="Image" class="form-control" />
-        <span asp-validation-for="Image" class="text-danger"></span>
+        <div>
+            <label asp-for="ImageId" class="control-label"></label>
+            @if (ViewBag.Title == "Edit")
+            {
+
+                @if (Model.Image != null)
+                {
+                    <span id="attachmentUpdate">
+                        :
+                        <a href="~/uploads/@Model.Image.Path" target="_blank"
+                   class="attachment-name">@Model.Image.OriginName</a>
+                    </span>
+                }
+            }
+        </div>
+        <input type="file" name="image" id="image" class="form-control" />
+        <span asp-validation-for="ImageId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <input type="submit" value=@ViewBag.Title class="btn btn-primary" />

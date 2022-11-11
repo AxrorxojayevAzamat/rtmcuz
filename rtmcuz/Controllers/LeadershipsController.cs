@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
+using rtmcuz.Interfaces;
 using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
@@ -15,15 +16,17 @@ namespace rtmcuz.Controllers
     public class LeadershipsController : Controller
     {
         private readonly RtmcUzContext _context;
+        private readonly IAttachmentService _attachmentService;
 
-        public LeadershipsController(RtmcUzContext context)
+        public LeadershipsController(RtmcUzContext context, IAttachmentService attachmentService)
         {
             _context = context;
+            _attachmentService = attachmentService;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.Leadership).ToListAsync());
+            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.Leadership).ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -49,10 +52,22 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Leadership leadership)
+        public async Task<IActionResult> Create(Leadership leadership, IFormFile image)
         {
             if (ModelState.IsValid)
             {
+                int imageId = -1;
+
+                if (image != null)
+                {
+                    imageId = _attachmentService.UploadFileToStorage(image);
+                }
+
+                if (imageId > -1)
+                {
+                    leadership.ImageId = imageId;
+                }
+
                 _context.Add(Section.FromLeadership(leadership));
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -68,7 +83,9 @@ namespace rtmcuz.Controllers
                 return NotFound();
             }
 
-            var leadership = await _context.Sections.FindAsync(id);
+            var leadership = await _context.Sections.Include(s => s.Image)
+                .Where(a => a.Id == id)
+                .FirstOrDefaultAsync();
             if (leadership == null)
             {
                 return NotFound();
@@ -79,7 +96,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Leadership leadership)
+        public async Task<IActionResult> Edit(int id, Leadership leadership, IFormFile image)
         {
             if (id != leadership.Id)
             {
@@ -90,6 +107,18 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
+                    int imageId = -1;
+
+                    if (image != null)
+                    {
+                        imageId = _attachmentService.UploadFileToStorage(image);
+                    }
+
+                    if (imageId > -1)
+                    {
+                        leadership.ImageId = imageId;
+                    }
+
                     _context.Update(Section.FromLeadership(leadership));
                     await _context.SaveChangesAsync();
                 }

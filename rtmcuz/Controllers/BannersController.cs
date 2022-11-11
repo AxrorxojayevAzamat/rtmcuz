@@ -9,21 +9,24 @@ using rtmcuz.Data;
 using rtmcuz.Data.Models;
 using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
+using rtmcuz.Interfaces;
 
 namespace rtmcuz.Controllers
 {
     public class BannersController : Controller
     {
         private readonly RtmcUzContext _context;
+        private readonly IAttachmentService _attachmentService;
 
-        public BannersController(RtmcUzContext context)
+        public BannersController(RtmcUzContext context, IAttachmentService attachmentService)
         {
             _context = context;
+            _attachmentService = attachmentService;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.Banner).ToListAsync());
+            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -49,10 +52,22 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Banner banner)
+        public async Task<IActionResult> Create(Banner banner, IFormFile image)
         {
             if (ModelState.IsValid)
             {
+                int imageId = -1;
+
+                if (image != null)
+                {
+                    imageId = _attachmentService.UploadFileToStorage(image);
+                }
+
+                if (imageId > -1)
+                {
+                    banner.ImageId = imageId;
+                }
+
                 _context.Add(Section.FromBanner(banner));
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -68,7 +83,10 @@ namespace rtmcuz.Controllers
                 return NotFound();
             }
 
-            var banner = await _context.Sections.FindAsync(id);
+            var banner = await _context.Sections.Include(s => s.Image)
+                .Where(a => a.Id == id)
+                .FirstOrDefaultAsync();
+
             if (banner == null)
             {
                 return NotFound();
@@ -79,7 +97,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Banner banner)
+        public async Task<IActionResult> Edit(int id, Banner banner, IFormFile image)
         {
             if (id != banner.Id)
             {
@@ -90,6 +108,18 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
+                    int imageId = -1;
+
+                    if (image != null)
+                    {
+                        imageId = _attachmentService.UploadFileToStorage(image);
+                    }
+
+                    if (imageId > -1)
+                    {
+                        banner.ImageId = imageId;
+                    }
+
                     _context.Update(Section.FromBanner(banner));
                     await _context.SaveChangesAsync();
                 }

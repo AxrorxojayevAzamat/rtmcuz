@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.ViewModels;
 
 namespace rtmcuz.Data
 {
@@ -12,6 +11,7 @@ namespace rtmcuz.Data
         }
 
         public virtual DbSet<Section> Sections { get; set; } = null!;
+        public virtual DbSet<Attachment> Attachments { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,6 +31,14 @@ namespace rtmcuz.Data
 
             //new BasketMap().Map(builder);
             //OnModelCreatingPartial(modelBuilder);
+            modelBuilder.Entity<Section>(entity =>
+            {
+                entity.HasOne(d => d.Image)
+                    .WithOne(p => p.Section)
+                    .HasForeignKey<Section>(d => d.ImageId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("Sections_fk0");
+            });
         }
 
         //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

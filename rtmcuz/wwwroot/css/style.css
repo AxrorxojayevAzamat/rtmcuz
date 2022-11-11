@@ -34,6 +34,9 @@
     padding: 60px 0 100px;
     top: 0;
     width: 100%;
+    min-height: 530px;
+    display: flex;
+    align-items: center;
 }
 
 .banner-section .banner-content h3.banner-title {

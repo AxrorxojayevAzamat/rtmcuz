@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Localization;
 using System.Reflection;
 using rtmcuz.Data;
 using rtmcuz.Resources;
+using rtmcuz.Services;
 using System.Globalization;
 using Microsoft.Extensions.Options;
 using rtmcuz.Infrastructure.Filters;
+using rtmcuz.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 var provider = builder.Services.BuildServiceProvider();
@@ -23,6 +25,7 @@ builder.Services.AddDbContext<RtmcUzContext>(options =>
 // localization
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddSingleton<LocalizationService>();
+builder.Services.AddScoped<IAttachmentService, AttachmentService>();
 builder.Services.AddMvc(mvc =>
 {
     mvc.Filters.Add<NotFoundExceptionFilter>();

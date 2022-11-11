@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.Content)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Image)
+                @Html.DisplayNameFor(model => model.ImageId)
             </th>
             <th></th>
         </tr>
@@ -35,7 +35,7 @@
                     @Html.DisplayFor(modelItem => item.Content)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Image)
+                    <a href="~/uploads/@item.Image.Path" target="_blank" class="attachment-name">@item.Image.OriginName</a>
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

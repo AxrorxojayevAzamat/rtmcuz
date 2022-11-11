@@ -4,6 +4,7 @@ using System.Diagnostics;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Resources;
+using Microsoft.EntityFrameworkCore;
 
 namespace rtmcuz.Controllers
 {
@@ -28,14 +29,16 @@ namespace rtmcuz.Controllers
             _localizationService = localizationService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //var pages = _context.Pages.ToList();
             var center = _localizationService.GetLocalizedHtmlString("Center");
-            var interactiveServices = _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToList();
+            var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync();
+            var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync();
             if (interactiveServices == null)
                 return NotFound();
             ViewBag.InteractiveServices = interactiveServices;
+            ViewBag.Banners = banners;
             return View();
         }
 

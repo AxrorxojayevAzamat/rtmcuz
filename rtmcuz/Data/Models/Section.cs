@@ -2,6 +2,7 @@
 using rtmcuz.ViewModels;
 using SlugGenerator;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace rtmcuz.Data.Models
 {
@@ -12,7 +13,6 @@ namespace rtmcuz.Data.Models
         public int GroupId { get; set; }
         public string? Content { get; set; }
         public string? Icon { get; set; }
-        public string? Image { get; set; }
         public string? Subtitle { get; set; }
         public string? Title { get; set; }
         public string? Template { get; set; }
@@ -20,6 +20,11 @@ namespace rtmcuz.Data.Models
         public SectionStatus Status { get; set; }
         public string? Url { get; set; }
         public int? ParentId { get; set; }
+        public int? ImageId { get; set; }
+
+        [ForeignKey(nameof(ImageId))]
+        [InverseProperty("Section")]
+        public Attachment? Image { get; set; }
 
         public static Section FromInteractive(Interactive interactive)
         {
@@ -41,7 +46,7 @@ namespace rtmcuz.Data.Models
                 Id = news.Id,
                 Slug = news.Title.GenerateSlug(),
                 Title = news.Title,
-                Image = news.Image,
+                ImageId = news.ImageId,
                 Subtitle = news.Subtitle,
                 Content = news.Content,
                 Type = SectionTypes.News,
@@ -57,7 +62,7 @@ namespace rtmcuz.Data.Models
                 Slug = banner.Title.GenerateSlug(),
                 Subtitle = banner.Subtitle,
                 Content = banner.Content,
-                Image = banner.Image,
+                ImageId = banner.ImageId,
                 Type = SectionTypes.Banner,
             };
         }

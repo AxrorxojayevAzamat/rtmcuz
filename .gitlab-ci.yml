@@ -1,0 +1,12 @@
+stages:
+  - deploy
+deploy_production:
+  stage: deploy
+  script:
+  - rsync -av * /var/www/rtmcuz/
+  - cd /var/www/rtmcuz/
+  environment:
+    name: production
+    url: https://rtmc.uz/
+  only:
+  - master

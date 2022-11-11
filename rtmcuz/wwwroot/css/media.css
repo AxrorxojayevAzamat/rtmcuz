@@ -9,10 +9,10 @@
         width: 1025px;
     }
 
-    .banner-section .bg img {
+    /* .banner-section .bg img {
         width: auto;
         height: 100%;
-    }
+    } */
 
     .feedback .feedback-information .card {
         padding-left: 30px;
@@ -32,6 +32,10 @@
 
     .cards-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .banner-section .banner-content {
+        min-height: auto;
     }
 
     .numbers-about-us-section .numbers {
@@ -88,7 +92,12 @@
     }
 
     .banner-section .bg {
-        /* top: 60px; */
+       justify-content: center;
+    }
+
+    .banner-section .bg img {
+        width: auto;
+        height: 100%;
     }
 
     .news-section .news-grid {

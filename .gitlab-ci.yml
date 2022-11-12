@@ -6,6 +6,7 @@ deploy_production:
   - rsync -av * /var/www/rtmcuz/
   - cd /var/www/rtmcuz/
   - service rtmc stop
+  - dotnet restore
   - dotnet publish -c Release ./ --output /var/www//publish/rtmcuz
   - service rtmc start
   environment:

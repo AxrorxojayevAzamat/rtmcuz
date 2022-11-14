@@ -56,6 +56,12 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 });
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<RtmcUzContext>();
+    //db.Database.EnsureDeleted();
+    db.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -86,9 +92,3 @@ app.MapControllerRoute(
     pattern: "{controller=Banners}/{action=Index}/{id?}");
 
 app.RunAsync();
-
-
-var db = provider.GetRequiredService<RtmcUzContext>();
-
-db.Database.Migrate(); 
-

@@ -95,6 +95,6 @@ app.UseAuthorization();
 //);
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Banners}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.RunAsync();
+await app.RunAsync();

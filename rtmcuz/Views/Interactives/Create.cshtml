@@ -4,6 +4,10 @@
     ViewData["Title"] = "Create";
 }
 
+@section Styles {
+<link href="~/lib/dist/css/bootstrapicons-iconpicker.min.css" rel="stylesheet" />
+}
+
 <h1>@ViewBag.Title</h1>
 
 <h4>Interactive</h4>
@@ -20,4 +24,5 @@
 
 @section Scripts {
 @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script src="~/lib/dist/js/bootstrapicon-iconpicker.js"></script>
 }

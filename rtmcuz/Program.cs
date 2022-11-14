@@ -85,4 +85,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Banners}/{action=Index}/{id?}");
 
-app.Run();
+app.RunAsync();
+
+
+var db = provider.GetRequiredService<RtmcUzContext>();
+
+db.Database.Migrate(); 
+

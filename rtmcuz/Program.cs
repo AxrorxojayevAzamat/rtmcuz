@@ -9,12 +9,18 @@ using System.Globalization;
 using Microsoft.Extensions.Options;
 using rtmcuz.Infrastructure.Filters;
 using rtmcuz.Interfaces;
+using Serilog;
+using Serilog.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Host.UseSerilog((ctx, lc) => lc
+        .Enrich.WithExceptionDetails()
+        .WriteTo.Console()
+        .ReadFrom.Configuration(ctx.Configuration));
 
 // DAL
 builder.Services.AddDbContext<RtmcUzContext>(options =>

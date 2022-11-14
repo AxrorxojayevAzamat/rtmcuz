@@ -35,10 +35,12 @@ namespace rtmcuz.Controllers
             var center = _localizationService.GetLocalizedHtmlString("Center");
             var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync();
             var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync();
+            var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question).ToListAsync();
             if (interactiveServices == null)
                 return NotFound();
             ViewBag.InteractiveServices = interactiveServices;
             ViewBag.Banners = banners;
+            ViewBag.Questions = questions;
             return View();
         }
 

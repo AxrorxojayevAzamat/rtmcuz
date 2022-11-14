@@ -5,7 +5,7 @@
 }
 
 @section Styles {
-<link href="~/lib/dist/css/bootstrapicons-iconpicker.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap-icon-picker/dist/css/bootstrapicons-iconpicker.min.css" rel="stylesheet" />
 }
 
 <h1>@ViewBag.Title</h1>
@@ -24,5 +24,6 @@
 
 @section Scripts {
 @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-<script src="~/lib/dist/js/bootstrapicon-iconpicker.js"></script>
+<script src="~/lib/bootstrap-icon-picker/dist/js/bootstrapicon-iconpicker.min.js"></script>
+<script src="~/lib/bootstrap-icon-picker/icon-picker-custom.js"></script>
 }

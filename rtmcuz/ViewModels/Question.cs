@@ -2,10 +2,8 @@
 
 namespace rtmcuz.ViewModels
 {
-    public class Question
+    public class Question : BaseViewModel
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
         public string Content { get; set; }
 
         public static Question FromSection(Section section)

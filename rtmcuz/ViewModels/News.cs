@@ -3,16 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.ViewModels
 {
-    public class News
+    public class News : BaseViewModel
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        [Required]
-        public int? ImageId { get; set; }
         public string Subtitle { get; set; }
         public string Content { get; set; }
+        [Required]
+        public int? ImageId { get; set; }
         public Attachment? Image { get; set; }
-
         public static News FromSection(Section section)
         {
             return new News()

@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.ViewModels
 {
-    public class Banner
+    public class Banner : BaseViewModel
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Content { get; set; }
         [Required]

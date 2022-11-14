@@ -1,0 +1,3 @@
+$('.iconpicker').iconpicker({
+    placement: "bottomLeft",
+});

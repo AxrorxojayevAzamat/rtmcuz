@@ -2,10 +2,8 @@
 
 namespace rtmcuz.ViewModels
 {
-    public class Department
+    public class Department : BaseViewModel
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
         public string Content { get; set; }
         public static Department FromSection(Section section)
         {

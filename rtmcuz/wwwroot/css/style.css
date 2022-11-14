@@ -123,7 +123,7 @@
     color: var(--white-main);
 }
 
-.interactive-services-section .cards-grid .section-card .icon {
+.interactive-services-section .cards-grid .section-card .bi {
     width: 48px;
     height: 48px;
     display: flex;
@@ -135,7 +135,7 @@
     color: var(--white-main);
 }
 
-.interactive-services-section .cards-grid .section-card:hover .icon {
+.interactive-services-section .cards-grid .section-card:hover .bi {
     background-color: var(--white-main);
     color: var(--primary-main);
 }
@@ -303,6 +303,7 @@
     padding: 11px 24px 17px;
     margin-bottom: 23px;
     cursor: pointer;
+    user-select: none;
 }
 
 .questions-section .questions .question.opened {

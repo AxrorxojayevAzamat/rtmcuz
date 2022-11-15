@@ -77,7 +77,7 @@
 //            if (ModelState.IsValid)
 //            {
 //                _context.Add(page);
-//                await _context.SaveChangesAsync();
+//                _context.SaveChanges();
 //                return RedirectToAction(nameof(Index));
 //            }
 //            return View(page);
@@ -116,7 +116,7 @@
 //                try
 //                {
 //                    _context.Update(page);
-//                    await _context.SaveChangesAsync();
+//                    _context.SaveChanges();
 //                }
 //                catch (DbUpdateConcurrencyException)
 //                {
@@ -167,7 +167,7 @@
 //                _context.Pages.Remove(page);
 //            }
 
-//            await _context.SaveChangesAsync();
+//            _context.SaveChanges();
 //            return RedirectToAction(nameof(Index));
 //        }
 

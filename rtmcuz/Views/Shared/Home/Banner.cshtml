@@ -1,39 +1,14 @@
 <section class="banner-section">
     <div class="swiper banner-swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="slide">
-                    <div class="bg">
-                        <img src="/img/bg.svg">
-                    </div>
-                    <div class="banner-content">
-                        <div class="container">
-                            <h3 class="banner-title">
-                                TELEKOMMUNIKATSIYA
-                                TARMOQLARINI BOSHQARISH
-                                RESPUBLIKA MARKAZI»
-                            </h3>
-                            <div class="sub-title">
-                                «O'ZBEKISTON TELEKOMMUNIKATSIYA TARMOQLARINI BOSHQARISH RESPUBLIKA MARKAZI» DAVLAT
-                                UNITAR
-                                KORXONASI
-                                RASMIY
-                                SAYTI
-                            </div>
-
-                            <button class="btn ">Узнать больше <span class="icon icon-arrow-right"></span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             @foreach (var banner in ViewBag.Banners)
             {
                 <div class="swiper-slide">
                     <div class="slide">
-                        <div class="bg">
-                            <img src="~/uploads/@banner.Image.Path">
-                        </div>
-                        <div class="banner-content">
+                        @* <div class="bg">
+                            <img src="~">
+                        </div> *@
+                        <div class="banner-content" style="background-image: url('/uploads/@banner.Image.Path');">
                             <div class="container">
                                 <h3 class="banner-title">
                                     @banner.Title

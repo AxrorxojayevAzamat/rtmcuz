@@ -69,7 +69,7 @@ namespace rtmcuz.Controllers
                 }
 
                 _context.Add(Section.FromBanner(banner));
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
 
@@ -121,7 +121,7 @@ namespace rtmcuz.Controllers
                     }
 
                     _context.Update(Section.FromBanner(banner));
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -173,7 +173,7 @@ namespace rtmcuz.Controllers
                 _context.Sections.Remove(banner);
             }
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 

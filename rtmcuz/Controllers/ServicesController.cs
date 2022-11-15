@@ -13,13 +13,12 @@ using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
 {
-    [Route("dashboard/{controller}/{action}")]
-    public class NewsController : Controller
+    public class ServicesController : Controller
     {
         private readonly RtmcUzContext _context;
         private readonly IAttachmentService _attachmentService;
 
-        public NewsController(RtmcUzContext context, IAttachmentService attachmentService)
+        public ServicesController(RtmcUzContext context, IAttachmentService attachmentService)
         {
             _context = context;
             _attachmentService = attachmentService;
@@ -27,23 +26,24 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.News).ToListAsync());
+            var rtmcUzContext = await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.Service).ToListAsync();
+            return View(rtmcUzContext);
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
             {
                 return NotFound();
             }
 
-            var news = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
-            if (news == null)
+            var service = await _context.Sections.Include(s => s.Image).FirstOrDefaultAsync(m => m.Id == id);
+            if (service == null)
             {
                 return NotFound();
             }
 
-            return View(news);
+            return View(service);
         }
 
         public IActionResult Create()
@@ -53,7 +53,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(News news, IFormFile image)
+        public async Task<IActionResult> Create(Service service, IFormFile image)
         {
             if (ModelState.IsValid)
             {
@@ -66,40 +66,36 @@ namespace rtmcuz.Controllers
 
                 if (imageId > -1)
                 {
-                    news.ImageId = imageId;
+                    service.ImageId = imageId;
                 }
 
-                _context.Add(Section.FromNews(news));
+                _context.Add(Section.FromService(service));
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
-
-            return View(news);
+            return View(service);
         }
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
             {
                 return NotFound();
             }
 
-            var news = await _context.Sections.Include(s => s.Image)
-                .Where(a => a.Id == id)
-                .FirstOrDefaultAsync();
-            if (news == null)
+            var service = await _context.Sections.FindAsync(id);
+            if (service == null)
             {
                 return NotFound();
             }
-
-            return View(News.FromSection(news));
+            return View(Service.FromSection(service));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, News news, IFormFile image)
+        public async Task<IActionResult> Edit(int id, Service service, IFormFile image)
         {
-            if (id != news.Id)
+            if (id != service.Id)
             {
                 return NotFound();
             }
@@ -117,15 +113,15 @@ namespace rtmcuz.Controllers
 
                     if (imageId > -1)
                     {
-                        news.ImageId = imageId;
+                        service.ImageId = imageId;
                     }
 
-                    _context.Update(Section.FromNews(news));
+                    _context.Update(Section.FromService(service));
                     _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!NewsExists(news.Id))
+                    if (!ServiceExists(service.Id))
                     {
                         return NotFound();
                     }
@@ -134,49 +130,46 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
-
                 return RedirectToAction(nameof(Index));
             }
-
-            return View(news);
+            return View(service);
         }
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
             {
                 return NotFound();
             }
 
-            var news = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
-            if (news == null)
+            var service = await _context.Sections.Include(s => s.Image).FirstOrDefaultAsync(m => m.Id == id);
+            if (service == null)
             {
                 return NotFound();
             }
 
-            return View(news);
+            return View(service);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (_context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
             {
-                return Problem("Entity set 'RtmcUzContext.News'  is null.");
+                return Problem("Entity set 'RtmcUzContext.Service'  is null.");
             }
-
-            var news = await _context.Sections.FindAsync(id);
-            if (news != null)
+            var service = await _context.Sections.FindAsync(id);
+            if (service != null)
             {
-                _context.Sections.Remove(news);
+                _context.Sections.Remove(service);
             }
 
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool NewsExists(int id)
+        private bool ServiceExists(int id)
         {
             return _context.Sections.Any(e => e.Id == id);
         }

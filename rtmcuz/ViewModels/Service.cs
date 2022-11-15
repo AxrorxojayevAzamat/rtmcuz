@@ -3,22 +3,20 @@ using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.ViewModels
 {
-    public class Banner : BaseViewModel
+    public class Service : BaseViewModel
     {
         public string Subtitle { get; set; }
-        public string? Url{ get; set; }
-        public string Content { get; set; }
+        public string Url { get; set; }
         [Required]
         public int? ImageId { get; set; }
         public Attachment? Image { get; set; }
-        public static Banner FromSection(Section section)
+        public static Service FromSection(Section section)
         {
-            return new Banner()
+            return new Service()
             {
                 Id = section.Id,
                 Title = section.Title,
                 Subtitle = section.Subtitle,
-                Content = section.Content,
                 ImageId = section.ImageId,
                 Image = section.Image,
             };

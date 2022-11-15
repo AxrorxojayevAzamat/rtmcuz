@@ -30,12 +30,14 @@
             <a href="/" class="logo">
                 <img src="~/img/telegram-cloud-document-2-5300996950533872448 1.svg" class="logo-img">
             </a>
-            <nav>
+            <nav class="navbar">
                 @await Html.PartialAsync("Menu")
-                <div class="searching">
-                    <span class="icon icon-search"></span>
-                </div>
+                <span class="searching-icon icon icon-search"></span>
             </nav>
+            <div class="searching" style="display: none;">
+                <input type="text" class="search-input" placeholder="Qidiruv...">
+                <span class="closing-icon icon icon-close"></span>
+            </div>
         </div>
     </div>
 </header>

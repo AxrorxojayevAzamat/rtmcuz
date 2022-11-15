@@ -30,12 +30,21 @@
         font: var(--body-regular-3);
     }
 
+    /* .header-bottom .searching {
+        width: 70%;
+    } */
+
     .cards-grid {
         grid-template-columns: 1fr 1fr;
     }
 
     .banner-section .banner-content {
+        height: 400px;
         min-height: auto;
+    }
+
+    .banner-section .banner-content .container {
+        width: 680px;
     }
 
     .numbers-about-us-section .numbers {
@@ -75,12 +84,20 @@
         height: 30px;
     }
 
+    .header-bottom.media {
+        justify-content: end;
+    }
+
+    .header-bottom.media .logo {
+        display: none;
+    }
+
     .header-bottom nav ul.menu__box {
         display: none;
     }
 
-    .header-bottom nav .searching {
-        margin-right: 10px;
+    .header-bottom .searching {
+        width: 88%;
     }
 
     .banner-section {
@@ -92,12 +109,26 @@
     }
 
     .banner-section .bg {
-       justify-content: center;
+        justify-content: center;
+        height: auto;
     }
 
     .banner-section .bg img {
         width: auto;
         height: 100%;
+    }
+
+    .banner-section .banner-content h3.banner-title {
+        text-align: center;
+    }
+
+    .banner-section .banner-content .sub-title {
+        text-align: center;
+    }
+
+    .banner-content .btn {
+        display: block;
+        margin: 0 auto;
     }
 
     .news-section .news-grid {
@@ -286,21 +317,21 @@
 
 
     .banner-section .banner-content h3.banner-title {
-        text-align: center;
         margin: 0;
         font: var(--heading-bold-6);
     }
 
     .banner-section .banner-content .sub-title {
-        text-align: center;
         font: var(--body-light-3);
         margin: 20px 0 30px;
     }
 
+    .banner-section .banner-content {
+        height: 300px;
+    }
+
     .banner-content .btn {
         font: var(--body-light-3);
-        display: block;
-        margin: 0 auto;
         padding: 8px 16px;
     }
 

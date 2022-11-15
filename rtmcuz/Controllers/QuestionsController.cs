@@ -54,7 +54,7 @@ namespace rtmcuz.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(Section.FromQuestion(question));
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
 
@@ -91,7 +91,7 @@ namespace rtmcuz.Controllers
                 try
                 {
                     _context.Update(Section.FromQuestion(question));
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -142,7 +142,7 @@ namespace rtmcuz.Controllers
                 _context.Sections.Remove(question);
             }
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 

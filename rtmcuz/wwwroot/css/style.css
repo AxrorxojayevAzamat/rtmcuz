@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     z-index: -1;
-    /* height: 100%; */
+    height: 100%;
     overflow: hidden;
 }
 
@@ -37,6 +37,9 @@
     min-height: 530px;
     display: flex;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .banner-section .banner-content h3.banner-title {
@@ -54,6 +57,19 @@
     margin-bottom: 46px;
 }
 
+.banner-section .banner-content .btn a {
+    display: flex;
+    align-items: center;
+}
+
+.banner-section .banner-content .btn a span {
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.banner-section .banner-content .btn:hover a {
+    color: var(--white-light);
+}
 
 /* OUR SERVICES SECTION*/
 .our-services-section .service-card {

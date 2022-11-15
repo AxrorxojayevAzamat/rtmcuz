@@ -36,11 +36,14 @@ namespace rtmcuz.Controllers
             var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync();
             var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync();
             var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question).ToListAsync();
-            if (interactiveServices == null)
+            var news = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.News)
+                .OrderByDescending(n => n.CreatedDate).Take(4).ToListAsync();
+            if (interactiveServices == null || banners == null || questions == null || news == null)
                 return NotFound();
             ViewBag.InteractiveServices = interactiveServices;
             ViewBag.Banners = banners;
             ViewBag.Questions = questions;
+            ViewBag.News = news;
             return View();
         }
 

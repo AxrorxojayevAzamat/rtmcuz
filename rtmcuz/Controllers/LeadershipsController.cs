@@ -69,7 +69,7 @@ namespace rtmcuz.Controllers
                 }
 
                 _context.Add(Section.FromLeadership(leadership));
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
 
@@ -120,7 +120,7 @@ namespace rtmcuz.Controllers
                     }
 
                     _context.Update(Section.FromLeadership(leadership));
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -171,7 +171,7 @@ namespace rtmcuz.Controllers
                 _context.Sections.Remove(leadership);
             }
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 

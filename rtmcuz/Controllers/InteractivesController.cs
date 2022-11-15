@@ -59,7 +59,7 @@ namespace rtmcuz.Controllers
             {
                 _context.Add(Section.FromInteractive(interactive));
 
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
 
@@ -96,7 +96,7 @@ namespace rtmcuz.Controllers
                 try
                 {
                     _context.Update(Section.FromInteractive(interactive));
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -147,7 +147,7 @@ namespace rtmcuz.Controllers
                 _context.Sections.Remove(interactive);
             }
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 

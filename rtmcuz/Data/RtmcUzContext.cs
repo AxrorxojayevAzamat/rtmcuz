@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
+using rtmcuz.ViewModels;
 
 namespace rtmcuz.Data
 {
@@ -39,6 +40,27 @@ namespace rtmcuz.Data
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Sections_fk0");
             });
+        }
+
+        public override int SaveChanges()
+        {
+            var entries = ChangeTracker
+                .Entries()
+                .Where(e =>
+                        e.State == EntityState.Added
+                        || e.State == EntityState.Modified);
+
+            foreach (var entityEntry in entries)
+            {
+                entityEntry.Property("UpdatedDate").CurrentValue = DateTimeOffset.UtcNow;
+
+                if (entityEntry.State == EntityState.Added)
+                {
+                    entityEntry.Property("CreatedDate").CurrentValue = DateTimeOffset.UtcNow;
+                }
+            }
+
+            return base.SaveChanges();
         }
 
         //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

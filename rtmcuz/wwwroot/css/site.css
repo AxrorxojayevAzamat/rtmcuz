@@ -222,13 +222,14 @@ header {
 .header-bottom {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
 .header-bottom .logo {
   display: flex;
   align-items: center;
   height: 35px;
+  margin: 10px 0;
 }
 
 .header-bottom nav {
@@ -251,16 +252,29 @@ header {
   font: var(--body-regular-2);
 }
 
-.header-bottom nav .searching {
+/* .header-bottom nav .searching {
   display: flex;
   align-items: center;
   color: var(--custom-grey-4);
-}
+} */
 
-.header-bottom nav .searching .icon {
+.header-bottom nav span.searching-icon {
   font: 900 20px/24px "Awesome 5 Free";
   border-left: 2px solid var(--custom-grey-4);
   padding-left: 30px;
+}
+
+.header-bottom .searching {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  /* color: var(--custom-grey-4); */
+}
+
+.header-bottom .searching input.search-input {
+  width: calc(100% - 32px);
+  user-select: none;
 }
 
 footer {
@@ -389,6 +403,7 @@ footer .footer-bottom .subtitle {
 
 .hamburger-menu #menu__toggle:checked~.menu__box {
   left: 0 !important;
+  opacity: 1;
 }
 
 .hamburger-menu .menu__btn {
@@ -436,6 +451,7 @@ footer .footer-bottom .subtitle {
   background-color: var(--custom-grey-6);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
+  opacity: 0;
 }
 
 .hamburger-menu .menu__item {
@@ -451,4 +467,10 @@ footer .footer-bottom .subtitle {
 
 .hamburger-menu .menu__item:hover {
   background-color: #CFD8DC;
+}
+
+header .searching .search-input {
+  position: relative;
+  right: 0;
+  top: 0;
 }

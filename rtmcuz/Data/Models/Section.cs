@@ -62,6 +62,7 @@ namespace rtmcuz.Data.Models
                 Slug = banner.Title.GenerateSlug(),
                 Subtitle = banner.Subtitle,
                 Content = banner.Content,
+                Url = banner.Url,
                 ImageId = banner.ImageId,
                 Type = SectionTypes.Banner,
             };
@@ -113,6 +114,20 @@ namespace rtmcuz.Data.Models
                 Slug = question.Title.GenerateSlug(),
                 Content = question.Content,
                 Type = SectionTypes.Question,
+            };
+        }
+
+        public static Section FromService(Service service)
+        {
+            return new Section()
+            {
+                Id = service.Id,
+                Title = service.Title,
+                Url = service.Url,
+                Slug = service.Title.GenerateSlug(),
+                Subtitle = service.Subtitle,
+                ImageId = service.ImageId,
+                Type = SectionTypes.Service,
             };
         }
     }

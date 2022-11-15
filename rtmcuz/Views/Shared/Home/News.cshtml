@@ -1,3 +1,5 @@
+@model IEnumerable<rtmcuz.Data.Models.Section>
+
 <section class="news-section">
     <div class="container">
         <div class="head">
@@ -5,13 +7,33 @@
             <a href="" class="see-all">See all</a>
         </div>
         <div class="news-grid">
-            <a class="news-item  main">
-                <div class="bg">
-                    <div class="bg-linear"></div>
-                    <img src="/img/Background.png">
-                </div>
-                <div class="title">“O‘zTTBRM” DUK ichki turizmni rivojlantirishda faol ishtirok etmoqda</div>
-            </a>
+            @foreach (var item in Model.Select((value, i) => new { i, value }))
+            {
+                @if (item.i == 0)
+                {
+                    <a class="news-item main">
+                        <div class="bg">
+                            <div class="bg-linear"></div>
+                            <img src="/uploads/@item.value.Image.Path">
+                        </div>
+                        <div class="title">@item.value.Title</div>
+                    </a>
+                }
+                else
+                {
+                    <a class="news-item">
+                        <div class="bg">
+                            <div class="bg-linear"></div>
+                            <img src="/uploads/@item.value.Image.Path">
+                        </div>
+                        <div class="title">@item.value.Title</div>
+                    </a>
+                }
+
+            }
+
+
+@* 
             <a class="news-item">
                 <div class="bg">
                     <div class="bg-linear"></div>
@@ -32,7 +54,7 @@
                     <img src="/img/Background3.png">
                 </div>
                 <div class="title">Уважаемые соотечественники!</div>
-            </a>
+            </a> *@
         </div>
     </div>
 </section>

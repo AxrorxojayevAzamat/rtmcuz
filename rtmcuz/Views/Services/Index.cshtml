@@ -7,16 +7,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Subtitle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Content)
+                @Html.DisplayNameFor(model => model.Url)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageId)
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
             </th>
             <th></th>
         </tr>
@@ -26,16 +26,16 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.Subtitle)
                 </td>
                 <td>
-                    @Html.Raw(item.Content)
+                    @Html.DisplayFor(modelItem => item.Url)
                 </td>
                 <td>
-                    <a href="~/uploads/@item.Image.Path" target="_blank" class="attachment-name">@item.Image.OriginName</a>
+                    @Html.DisplayFor(modelItem => item.Image.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

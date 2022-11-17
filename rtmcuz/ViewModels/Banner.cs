@@ -18,6 +18,7 @@ namespace rtmcuz.ViewModels
                 Title = section.Title,
                 Subtitle = section.Subtitle,
                 ImageId = section.ImageId,
+                Url = section.Url,
                 Image = section.Image,
             };
         }

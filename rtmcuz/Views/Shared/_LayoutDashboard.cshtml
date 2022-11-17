@@ -1,4 +1,7 @@
-﻿<html lang="en">
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+<html lang="en">
 
 
 <meta charset="utf-8" />
@@ -29,7 +32,22 @@
                 <li class="menu_item"><a asp-controller="Departments" asp-action="Index">Departments</a></li>
             </ul>
             <div class="profile">
-                <span class="icon icon-user"></span>
+                <input type="checkbox" id="showDropdown">
+                <label for="showDropdown">
+                    @UserManager.GetUserName(User) <span class="icon icon-user"></span>
+                </label>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                            asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                            <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+
+                        </form>
+
+                        @* <a class="nav-link" id="login" asp-area="Identity" asp-page="/Account/Logout" *@
+                            @* asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">Logout</a> *@
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>

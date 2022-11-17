@@ -10,6 +10,7 @@ using rtmcuz.Data.Models;
 using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
 using rtmcuz.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
@@ -23,6 +24,7 @@ namespace rtmcuz.Controllers
             _context = context;
             _attachmentService = attachmentService;
         }
+    [Authorize]
 
         public async Task<IActionResult> Index()
         {

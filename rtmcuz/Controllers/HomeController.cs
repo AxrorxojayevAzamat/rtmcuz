@@ -5,9 +5,11 @@ using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using rtmcuz.Resources;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

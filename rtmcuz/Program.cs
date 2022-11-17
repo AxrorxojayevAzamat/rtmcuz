@@ -11,12 +11,14 @@ using rtmcuz.Infrastructure.Filters;
 using rtmcuz.Interfaces;
 using Serilog;
 using Serilog.Exceptions;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("IdentityRtmcUzContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityRtmcUzContextConnection' not found.");
 var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
 builder.Host.UseSerilog((ctx, lc) => lc
         .Enrich.WithExceptionDetails()
         .WriteTo.Console()
@@ -27,6 +29,10 @@ builder.Services.AddDbContext<RtmcUzContext>(options =>
               //options.UseMySql("server=localhost;port=3306;database=callcentercrm;uid=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.33-mysql"), x => x.UseNetTopologySuite())
               options.UseNpgsql(configuration.GetConnectionString("RtmcUzContext"), (x) => { })
               );
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<RtmcUzContext>();
+builder.Services.AddControllersWithViews();
 
 // localization
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -65,7 +71,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<RtmcUzContext>();
-    //db.Database.EnsureDeleted();
+    db.Database.EnsureDeleted();
     db.Database.Migrate();
 }
 
@@ -84,9 +90,9 @@ app.UseRouting();
 
 var requestLocalizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
 app.UseRequestLocalization(requestLocalizationOptions.Value);
+app.UseAuthentication();;
 
 app.UseAuthorization();
-
 //app.MapControllerRoute(
 //    name: "CmsRoute",
 //    pattern: "{*permalink}",
@@ -95,6 +101,7 @@ app.UseAuthorization();
 //);
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}").RequireAuthorization();
+app.MapRazorPages();
 
-await app.RunAsync();
+app.Run();

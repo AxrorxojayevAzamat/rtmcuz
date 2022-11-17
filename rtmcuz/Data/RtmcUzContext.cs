@@ -1,11 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using rtmcuz.Areas.Identity.Pages.Account;
 using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
 using rtmcuz.ViewModels;
+using System.Security.Cryptography;
 
 namespace rtmcuz.Data
 {
-    public partial class RtmcUzContext : DbContext
+    public partial class RtmcUzContext : IdentityDbContext<IdentityUser>
     {
         public RtmcUzContext(DbContextOptions<RtmcUzContext> options) : base(options)
         {
@@ -16,22 +21,23 @@ namespace rtmcuz.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            const string email = "rtmcuz@admin1";
+
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Section>().Property(u => u.Status).HasDefaultValue(SectionStatus.Active);
             modelBuilder.Entity<Section>().Property(u => u.Lang).HasDefaultValue(Locales.UZ);
-            //modelBuilder.Entity<Page>(entity =>
-            //{
-            //    entity.HasOne(d => d.Parent)
-            //        .WithMany(p => p.Children)
-            //        .HasForeignKey(d => d.ParentId)
-            //        .OnDelete(DeleteBehavior.ClientSetNull)
-            //        .HasConstraintName("Page_fk0");
-            //});
-            // ef identity tables renamed
-            //modelBuilder.Entity<Page>().ToTable("Pages");
+            modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser[] {
+                new IdentityUser{
+                    UserName = email,
+                    Email = email,
+                    NormalizedEmail = email.ToUpper(),
+                    NormalizedUserName = email.ToUpper(),
+                    EmailConfirmed = true,
+                    LockoutEnabled = true,
+                    PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "rtmcuzAdmin12345+"),
+                },
+            });
 
-            //new BasketMap().Map(builder);
-            //OnModelCreatingPartial(modelBuilder);
             modelBuilder.Entity<Section>(entity =>
             {
                 entity.HasOne(d => d.Image)

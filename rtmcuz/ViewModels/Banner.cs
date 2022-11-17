@@ -7,7 +7,6 @@ namespace rtmcuz.ViewModels
     {
         public string Subtitle { get; set; }
         public string? Url{ get; set; }
-        public string Content { get; set; }
         [Required]
         public int? ImageId { get; set; }
         public Attachment? Image { get; set; }
@@ -18,7 +17,6 @@ namespace rtmcuz.ViewModels
                 Id = section.Id,
                 Title = section.Title,
                 Subtitle = section.Subtitle,
-                Content = section.Content,
                 ImageId = section.ImageId,
                 Image = section.Image,
             };

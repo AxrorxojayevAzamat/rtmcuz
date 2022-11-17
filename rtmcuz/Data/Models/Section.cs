@@ -61,7 +61,6 @@ namespace rtmcuz.Data.Models
                 Title = banner.Title,
                 Slug = banner.Title.GenerateSlug(),
                 Subtitle = banner.Subtitle,
-                Content = banner.Content,
                 Url = banner.Url,
                 ImageId = banner.ImageId,
                 Type = SectionTypes.Banner,

@@ -10,7 +10,8 @@
 
 //namespace rtmcuz.Controllers
 //{
-//    //[Route("dashboard/{controller}")]
+    //[Authorize]
+//    //[Route("dashboard/{controller}/{action}")]
 //    public class PagesController : Controller
 //    {
 //        private readonly RtmcUzContext _context;

@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
+    [Authorize]
+    [Route("dashboard/{controller}/{action}")]
     public class BannersController : Controller
     {
         private readonly RtmcUzContext _context;
@@ -24,7 +26,6 @@ namespace rtmcuz.Controllers
             _context = context;
             _attachmentService = attachmentService;
         }
-    [Authorize]
 
         public async Task<IActionResult> Index()
         {

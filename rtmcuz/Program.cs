@@ -93,15 +93,10 @@ app.UseRequestLocalization(requestLocalizationOptions.Value);
 app.UseAuthentication();;
 
 app.UseAuthorization();
-//app.MapControllerRoute(
-//    name: "CmsRoute",
-//    pattern: "{*permalink}",
-//    defaults: new { controller = "Page", action = "Index" },
-//    constraints: new { permalink = new CmsUrlConstraint() }
-//);
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}").RequireAuthorization();
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

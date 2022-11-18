@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,8 @@ using rtmcuz.ViewModels;
 
 namespace rtmcuz.Controllers
 {
+    [Authorize]
+    [Route("dashboard/{controller}/{action}")]
     public class DepartmentsController : Controller
     {
         private readonly RtmcUzContext _context;

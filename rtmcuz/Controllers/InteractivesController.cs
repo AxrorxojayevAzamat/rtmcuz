@@ -11,9 +11,11 @@ using rtmcuz.Data.Models;
 using rtmcuz.ViewModels;
 using rtmcuz.Infrastructure.Exceptions;
 using SlugGenerator;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
+    [Authorize]
     [Route("dashboard/{controller}/{action}")]
     public class InteractivesController : Controller
     {

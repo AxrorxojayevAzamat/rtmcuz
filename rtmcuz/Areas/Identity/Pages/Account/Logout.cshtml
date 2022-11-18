@@ -1,16 +1,21 @@
 ﻿@page
 @model LogoutModel
 @{
+    Layout = "_LayoutDashboard";
     ViewData["Title"] = "Log out";
 }
 
-<header>
+<header style="padding: 30px">
     <h1>@ViewData["Title"]</h1>
     @{
         if (User.Identity.IsAuthenticated)
         {
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-white">Click here to Logout</button>
+                <p>Вы действительно хотите выйти?</p>
+                <div class="d-flex justify-content-between" style="width: 130px">
+                    <button type="submit" class="nav-link btn btn-danger text-white">Да</button>
+                    <a href="javascript:history.back()" class="nav-link btn btn-success text-white d-inline">Нет</a>
+                </div>
             </form>
         }
         else

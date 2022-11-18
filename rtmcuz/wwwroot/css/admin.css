@@ -23,6 +23,10 @@ li.menu_item a {
     color: black;
 }
 
+li.menu_item a.active {
+    color: #1D9BD8;
+}
+
 .form-group {
     margin: .5em 0;
 }

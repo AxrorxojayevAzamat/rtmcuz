@@ -1,26 +1,29 @@
 ﻿@page
 @model LogoutModel
 @{
-    Layout = "_LayoutDashboard";
     ViewData["Title"] = "Log out";
 }
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/logout.css" />
 
-<header style="padding: 30px">
-    <h1>@ViewData["Title"]</h1>
-    @{
-        if (User.Identity.IsAuthenticated)
-        {
-            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <p>Вы действительно хотите выйти?</p>
-                <div class="d-flex justify-content-between" style="width: 130px">
-                    <button type="submit" class="nav-link btn btn-danger text-white">Да</button>
-                    <a href="javascript:history.back()" class="nav-link btn btn-success text-white d-inline">Нет</a>
-                </div>
-            </form>
+<body>
+    <div class="logout">
+        @* <h1>@ViewData["Title"]</h1> *@
+        @{
+            if (User.Identity.IsAuthenticated)
+            {
+                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                    <p>Вы действительно хотите выйти?</p>
+                    <div class="buttons-wrap d-flex justify-content-center">
+                        <button type="submit" class="yes-btn nav-link btn btn-danger text-white">Да</button>
+                        <a href="javascript:history.back()" class="nav-link btn btn-success text-white d-inline">Нет</a>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <p>You have successfully logged out of the application.</p>
+            }
         }
-        else
-        {
-            <p>You have successfully logged out of the application.</p>
-        }
-    }
-</header>
+    </div>
+</body>

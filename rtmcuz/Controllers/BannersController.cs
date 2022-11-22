@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using rtmcuz.Data;
 using rtmcuz.Data.Models;
 using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
@@ -15,31 +9,29 @@ using Microsoft.AspNetCore.Authorization;
 namespace rtmcuz.Controllers
 {
     [Authorize]
-    [Route("dashboard/{controller}/{action}")]
+    //[Route("dashboard/{controller}/{action}")]
     public class BannersController : Controller
     {
-        private readonly RtmcUzContext _context;
-        private readonly IAttachmentService _attachmentService;
+        private readonly ISectionRepository _sectionRepository;
 
-        public BannersController(RtmcUzContext context, IAttachmentService attachmentService)
+        public BannersController(ISectionRepository sectionRepository)
         {
-            _context = context;
-            _attachmentService = attachmentService;
+            _sectionRepository = sectionRepository;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync());
+            return View(await _sectionRepository.ListItemsAsync(SectionTypes.Banner));
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Banner) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Banner))
             {
                 return NotFound();
             }
 
-            var banner = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var banner = await _sectionRepository.GetItemAsync(id);
             if (banner == null)
             {
                 return NotFound();
@@ -59,20 +51,7 @@ namespace rtmcuz.Controllers
         {
             if (ModelState.IsValid)
             {
-                int imageId = -1;
-
-                if (image != null)
-                {
-                    imageId = _attachmentService.UploadFileToStorage(image);
-                }
-
-                if (imageId > -1)
-                {
-                    banner.ImageId = imageId;
-                }
-
-                _context.Add(Section.FromBanner(banner));
-                _context.SaveChanges();
+                _sectionRepository.Create(Section.FromBanner(banner), image);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -81,14 +60,14 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Banner) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Banner))
             {
                 return NotFound();
             }
 
-            var banner = await _context.Sections.Include(s => s.Image)
-                .Where(a => a.Id == id)
-                .FirstOrDefaultAsync();
+            var banner = await _sectionRepository.GetItemAsync(id);
+
+            ViewData["Variants"] = _sectionRepository.VariantsList((int)banner.GroupId);
 
             if (banner == null)
             {
@@ -111,20 +90,46 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    int imageId = -1;
-
-                    if (image != null)
+                    _sectionRepository.Save(Section.FromBanner(banner), image);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!BannersExists(banner.Id))
                     {
-                        imageId = _attachmentService.UploadFileToStorage(image);
+                        return NotFound();
                     }
-
-                    if (imageId > -1)
+                    else
                     {
-                        banner.ImageId = imageId;
+                        throw;
                     }
+                }
 
-                    _context.Update(Section.FromBanner(banner));
-                    _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(banner);
+        }
+        public async Task<IActionResult> Variant(int groupId, Locales langValue)
+        {
+            ViewData["Variants"] = _sectionRepository.VariantsList(groupId);
+
+            return View(new Banner() { GroupId = groupId, Lang = langValue });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Variant(int id, Banner banner, IFormFile image)
+        {
+            if (id != banner.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _sectionRepository.Save(Section.FromBanner(banner), image);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -146,12 +151,12 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Banner) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Banner))
             {
                 return NotFound();
             }
 
-            var banner = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var banner = await _sectionRepository.GetItemAsync(id);
             if (banner == null)
             {
                 return NotFound();
@@ -165,24 +170,18 @@ namespace rtmcuz.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.Banner) == null)
+            if (_sectionRepository.IsNull(SectionTypes.Banner))
             {
                 return Problem("Entity set 'RtmcUzContext.Banners'  is null.");
             }
 
-            var banner = await _context.Sections.FindAsync(id);
-            if (banner != null)
-            {
-                _context.Sections.Remove(banner);
-            }
-
-            _context.SaveChanges();
+            await _sectionRepository.DeleteConfirmed(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool BannersExists(int id)
         {
-            return _context.Sections.Any(e => e.Id == id);
+            return _sectionRepository.Any(id);
         }
     }
 }

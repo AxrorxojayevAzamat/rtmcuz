@@ -6,6 +6,8 @@ using rtmcuz.Data.Enums;
 using rtmcuz.Resources;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace rtmcuz.Controllers
 {
@@ -15,13 +17,6 @@ namespace rtmcuz.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly RtmcUzContext _context;
         private readonly LocalizationService _localizationService;
-
-        //public List<MenuItem> TodoItems = new()
-        //{
-        //    new MenuItem() { Id = 0, Name = "Ab done", Slug = "ab-done" },
-        //    new MenuItem() { Id = 1, Name = "Cd as", Slug = "cd-as" },
-        //    new MenuItem() { Id = 2, Name = "Ef like", Slug = "ef-like" },
-        //};
 
         public HomeController(ILogger<HomeController> logger, RtmcUzContext context,
             LocalizationService localizationService)
@@ -33,9 +28,9 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //var pages = _context.Pages.ToList();
+            CultureInfo culture = CultureInfo.GetCultureInfo("uz-Latn-Uz");
             var center = _localizationService.GetLocalizedHtmlString("Center");
-            var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync();
+            var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.Interactive).ToListAsync();
             var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync();
             var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question).ToListAsync();
             var news = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.News)
@@ -52,14 +47,6 @@ namespace rtmcuz.Controllers
         [Route("{controller}/{action}/{slug}")]
         public IActionResult Privacy(string slug)
         {
-            //MenuItem item = new();
-            //foreach (var ti in TodoItems)
-            //{
-            //    if (ti.Slug == slug) item = ti;
-
-            //}
-
-            //ViewBag.Slug = slug;
             return View();
         }
 

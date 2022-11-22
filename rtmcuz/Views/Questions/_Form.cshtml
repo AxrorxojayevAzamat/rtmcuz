@@ -1,22 +1,35 @@
 @model rtmcuz.ViewModels.Question
 
-<form asp-action=@ViewBag.Title>
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    @if (ViewBag.Title == "Edit")
+<div class="row justify-content-between">
+    <div class=@(ViewBag.Title != "Create" ? "col-7" : "col-12")>
+        <form asp-action=@ViewBag.Title enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (ViewBag.Title == "Edit")
+            {
+                <input type="hidden" asp-for="Id" />
+            }
+            @if (ViewBag.Title != "Create")
+            {
+                <input type="hidden" asp-for="Lang" />
+                <input type="hidden" asp-for="GroupId" />
+            }
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value=@ViewBag.Title class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    @if (ViewBag.Title != "Create")
     {
-        <input type="hidden" asp-for="Id" />
+        @await Html.PartialAsync("Variants", Model)
     }
-    <div class="form-group">
-        <label asp-for="Title" class="control-label"></label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Content" class="control-label"></label>
-        <textarea asp-for="Content" class="form-control"></textarea>
-        <span asp-validation-for="Content" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value=@ViewBag.Title class="btn btn-primary" />
-    </div>
-</form>
+</div>

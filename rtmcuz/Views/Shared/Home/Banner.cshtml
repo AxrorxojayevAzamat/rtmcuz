@@ -5,9 +5,6 @@
             {
                 <div class="swiper-slide">
                     <div class="slide">
-                        @* <div class="bg">
-                            <img src="~">
-                        </div> *@
                         <div class="banner-content" style="background-image: url('/uploads/@banner.Image.Path');">
                             <div class="container">
                                 <h3 class="banner-title">
@@ -18,7 +15,7 @@
                                 </div>
 
                                 <button class="btn">
-                                    <a asp-action="Banner" asp-route-id=@banner.Id>
+                                    <a href="@banner.Url">
                                         Узнать больше <span class="icon icon-arrow-right"></span>
                                     </a>
                                 </button>
@@ -28,7 +25,7 @@
                 </div>
             }
         </div>
-        <div class="banner-slide-prev swiper-button-prev">@* <img src="/img/ToPrevIcon.svg"> *@</div>
-        <div class="banner-slide-next swiper-button-next">@* <img src="/img/ToNextIcon.svg"> *@</div>
+        <div class="banner-slide-prev swiper-button-prev"></div>
+        <div class="banner-slide-next swiper-button-next"></div>
     </div>
 </section>

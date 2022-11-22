@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using rtmcuz.Data;
-using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.Interfaces;
+using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
+using rtmcuz.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
@@ -18,28 +12,26 @@ namespace rtmcuz.Controllers
     [Route("dashboard/{controller}/{action}")]
     public class LeadershipsController : Controller
     {
-        private readonly RtmcUzContext _context;
-        private readonly IAttachmentService _attachmentService;
+        private readonly ISectionRepository _sectionRepository;
 
-        public LeadershipsController(RtmcUzContext context, IAttachmentService attachmentService)
+        public LeadershipsController(ISectionRepository sectionRepository)
         {
-            _context = context;
-            _attachmentService = attachmentService;
+            _sectionRepository = sectionRepository;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.Leadership).ToListAsync());
+            return View(await _sectionRepository.ListItemsAsync(SectionTypes.Leadership));
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Leadership))
             {
                 return NotFound();
             }
 
-            var leadership = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var leadership = await _sectionRepository.GetItemAsync(id);
             if (leadership == null)
             {
                 return NotFound();
@@ -59,20 +51,7 @@ namespace rtmcuz.Controllers
         {
             if (ModelState.IsValid)
             {
-                int imageId = -1;
-
-                if (image != null)
-                {
-                    imageId = _attachmentService.UploadFileToStorage(image);
-                }
-
-                if (imageId > -1)
-                {
-                    leadership.ImageId = imageId;
-                }
-
-                _context.Add(Section.FromLeadership(leadership));
-                _context.SaveChanges();
+                _sectionRepository.Create(Section.FromLeadership(leadership), image);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -81,14 +60,15 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Leadership))
             {
                 return NotFound();
             }
 
-            var leadership = await _context.Sections.Include(s => s.Image)
-                .Where(a => a.Id == id)
-                .FirstOrDefaultAsync();
+            var leadership = await _sectionRepository.GetItemAsync(id);
+
+            ViewData["Variants"] = _sectionRepository.VariantsList((int)leadership.GroupId);
+
             if (leadership == null)
             {
                 return NotFound();
@@ -110,24 +90,50 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    int imageId = -1;
-
-                    if (image != null)
-                    {
-                        imageId = _attachmentService.UploadFileToStorage(image);
-                    }
-
-                    if (imageId > -1)
-                    {
-                        leadership.ImageId = imageId;
-                    }
-
-                    _context.Update(Section.FromLeadership(leadership));
-                    _context.SaveChanges();
+                    _sectionRepository.Save(Section.FromLeadership(leadership), image);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LeadershipExists(leadership.Id))
+                    if (!LeadershipsExists(leadership.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(leadership);
+        }
+        public async Task<IActionResult> Variant(int groupId, Locales langValue)
+        {
+            ViewData["Variants"] = _sectionRepository.VariantsList(groupId);
+
+            return View(new Leadership() { GroupId = groupId, Lang = langValue });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Variant(int id, Leadership leadership, IFormFile image)
+        {
+            if (id != leadership.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _sectionRepository.Save(Section.FromLeadership(leadership), image);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!LeadershipsExists(leadership.Id))
                     {
                         return NotFound();
                     }
@@ -145,12 +151,12 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Leadership))
             {
                 return NotFound();
             }
 
-            var leadership = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var leadership = await _sectionRepository.GetItemAsync(id);
             if (leadership == null)
             {
                 return NotFound();
@@ -159,28 +165,23 @@ namespace rtmcuz.Controllers
             return View(leadership);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.Leadership) == null)
+            if (_sectionRepository.IsNull(SectionTypes.Leadership))
             {
-                return Problem("Entity set 'RtmcUzContext.Leadership'  is null.");
+                return Problem("Entity set 'RtmcUzContext.Leaderships'  is null.");
             }
 
-            var leadership = await _context.Sections.FindAsync(id);
-            if (leadership != null)
-            {
-                _context.Sections.Remove(leadership);
-            }
-
-            _context.SaveChanges();
+            await _sectionRepository.DeleteConfirmed(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LeadershipExists(int id)
+        private bool LeadershipsExists(int id)
         {
-            return _context.Sections.Any(e => e.Id == id);
+            return _sectionRepository.Any(id);
         }
     }
 }

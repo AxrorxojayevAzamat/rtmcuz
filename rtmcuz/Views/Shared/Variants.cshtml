@@ -1,0 +1,38 @@
+@using System.Globalization
+@using rtmcuz.Data.Enums
+@model rtmcuz.ViewModels.BaseViewModel
+
+@{
+    //Locales currentCulture = (Locales)(ViewBag.Title == "Edit" ? Enum.Parse(typeof(Locales), CultureInfo.CurrentCulture.Name.Replace('-', '_')) : Model.Lang);
+    Locales currentCulture = (Locales) Model.Lang;
+    Dictionary<string, Section> variants = ViewBag.Variants;
+}
+
+<div class="col-4">
+    <h3>Языковые версии</h3>
+    @foreach (string localeName in Enum.GetNames(typeof(Locales)))
+    {
+        <div class="row">
+            <div class="col-4">@CultureInfo.GetCultureInfo(localeName.Replace('_', '-')).Name</div>
+            <div class="col-8">
+                @if (localeName == currentCulture.ToString())
+                {
+                    <p>current language</p>
+                }
+                else
+                {
+                    @if (variants[localeName] != null)
+                    {
+                        <a asp-action="Edit" asp-route-id=@variants[localeName].Id>@variants[localeName].Title</a>
+                    }
+                    else
+                    {
+                        <a asp-action="Variant" asp-route-groupId=@Model.GroupId asp-route-langValue=@Enum.Parse(typeof(Locales), localeName)>
+                            @CultureInfo.GetCultureInfo(localeName.Replace('_', '-')).DisplayName
+                        </a>
+                    }
+                }
+            </div>
+        </div>
+    }
+</div>

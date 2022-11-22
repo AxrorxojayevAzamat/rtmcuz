@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using rtmcuz.Data;
-using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
+using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
-using rtmcuz.Infrastructure.Exceptions;
-using SlugGenerator;
+using rtmcuz.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
@@ -19,26 +12,26 @@ namespace rtmcuz.Controllers
     [Route("dashboard/{controller}/{action}")]
     public class InteractivesController : Controller
     {
-        private readonly RtmcUzContext _context;
+        private readonly ISectionRepository _sectionRepository;
 
-        public InteractivesController(RtmcUzContext context)
+        public InteractivesController(ISectionRepository sectionRepository)
         {
-            _context = context;
+            _sectionRepository = sectionRepository;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.InterActive).ToListAsync());
+            return View(await _sectionRepository.ListItemsAsync(SectionTypes.Interactive));
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Interactive))
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var interactive = await _sectionRepository.GetItemAsync(id);
             if (interactive == null)
             {
                 return NotFound();
@@ -52,16 +45,13 @@ namespace rtmcuz.Controllers
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Interactive interactive)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(Section.FromInteractive(interactive));
-
-                _context.SaveChanges();
+                _sectionRepository.Create(Section.FromInteractive(interactive));
                 return RedirectToAction(nameof(Index));
             }
 
@@ -70,12 +60,15 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Interactive))
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FindAsync(id);
+            var interactive = await _sectionRepository.GetItemAsync(id);
+
+            ViewData["Variants"] = _sectionRepository.VariantsList((int)interactive.GroupId);
+
             if (interactive == null)
             {
                 return NotFound();
@@ -97,12 +90,50 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _context.Update(Section.FromInteractive(interactive));
-                    _context.SaveChanges();
+                    _sectionRepository.Save(Section.FromInteractive(interactive));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InteractiveExists(interactive.Id))
+                    if (!InteractivesExists(interactive.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(interactive);
+        }
+        public async Task<IActionResult> Variant(int groupId, Locales langValue)
+        {
+            ViewData["Variants"] = _sectionRepository.VariantsList(groupId);
+
+            return View(new Interactive() { GroupId = groupId, Lang = langValue });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Variant(int id, Interactive interactive)
+        {
+            if (id != interactive.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _sectionRepository.Save(Section.FromInteractive(interactive));
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!InteractivesExists(interactive.Id))
                     {
                         return NotFound();
                     }
@@ -120,12 +151,12 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Interactive))
             {
                 return NotFound();
             }
 
-            var interactive = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var interactive = await _sectionRepository.GetItemAsync(id);
             if (interactive == null)
             {
                 return NotFound();
@@ -134,28 +165,23 @@ namespace rtmcuz.Controllers
             return View(interactive);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.InterActive) == null)
+            if (_sectionRepository.IsNull(SectionTypes.Interactive))
             {
-                return Problem("Entity set 'RtmcUzContext.Interactive'  is null.");
+                return Problem("Entity set 'RtmcUzContext.Interactives'  is null.");
             }
 
-            var interactive = await _context.Sections.FindAsync(id);
-            if (interactive != null)
-            {
-                _context.Sections.Remove(interactive);
-            }
-
-            _context.SaveChanges();
+            await _sectionRepository.DeleteConfirmed(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InteractiveExists(int id)
+        private bool InteractivesExists(int id)
         {
-            return _context.Sections.Any(e => e.Id == id);
+            return _sectionRepository.Any(id);
         }
     }
 }

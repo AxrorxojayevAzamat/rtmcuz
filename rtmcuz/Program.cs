@@ -12,6 +12,7 @@ using rtmcuz.Interfaces;
 using Serilog;
 using Serilog.Exceptions;
 using Microsoft.AspNetCore.Identity;
+using rtmcuz.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IdentityRtmcUzContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityRtmcUzContextConnection' not found.");
@@ -38,6 +39,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddSingleton<LocalizationService>();
 builder.Services.AddScoped<IAttachmentService, AttachmentService>();
+builder.Services.AddScoped<ISectionRepository, SectionRespository>();
 builder.Services.AddMvc(mvc =>
 {
     mvc.Filters.Add<NotFoundExceptionFilter>();
@@ -56,9 +58,9 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
     {
-        new CultureInfo("uz"),
+        new CultureInfo("uz-Latn-UZ"),
+        new CultureInfo("uz-Cyrl-UZ"),
         new CultureInfo("ru"),
-        new CultureInfo("en"),
     };
     options.DefaultRequestCulture = new RequestCulture(supportedCultures[0]);
     options.SupportedCultures = supportedCultures;
@@ -90,13 +92,13 @@ app.UseRouting();
 
 var requestLocalizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
 app.UseRequestLocalization(requestLocalizationOptions.Value);
-app.UseAuthentication();;
+app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Banners}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

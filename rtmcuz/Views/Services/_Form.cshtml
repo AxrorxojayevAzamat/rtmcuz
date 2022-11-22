@@ -1,47 +1,59 @@
 ﻿@model rtmcuz.ViewModels.Service
-
-<form asp-action=@ViewBag.Title enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="ImageId" />
-    @if (ViewBag.Title == "Edit")
-    {
-        <input type="hidden" asp-for="Id" />
-    }
-    <div class="form-group">
-        <label asp-for="Title" class="control-label"></label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Subtitle" class="control-label"></label>
-        <input asp-for="Subtitle" class="form-control" />
-        <span asp-validation-for="Subtitle" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Url" class="control-label"></label>
-        <input asp-for="Url" class="form-control" />
-        <span asp-validation-for="Url" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <div>
-            <label asp-for="ImageId" class="control-label"></label>
+<div class="row justify-content-between">
+    <div class=@(ViewBag.Title != "Create" ? "col-7" : "col-12")>
+        <form asp-action=@ViewBag.Title enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ImageId" />
             @if (ViewBag.Title == "Edit")
             {
-
-                @if (Model.Image != null)
-                {
-                    <span id="attachmentUpdate">
-                        :
-                        <a href="~/uploads/@Model.Image.Path" target="_blank"
-                   class="attachment-name">@Model.Image.OriginName</a>
-                    </span>
-                }
+                <input type="hidden" asp-for="Id" />
             }
-        </div>
-        <input type="file" name="image" id="image" class="form-control" />
-        <span asp-validation-for="ImageId" class="text-danger"></span>
+            @if (ViewBag.Title != "Create")
+            {
+                <input type="hidden" asp-for="Lang" />
+                <input type="hidden" asp-for="GroupId" />
+            }
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subtitle" class="control-label"></label>
+                <input asp-for="Subtitle" class="form-control" />
+                <span asp-validation-for="Subtitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label asp-for="ImageId" class="control-label"></label>
+                    @if (ViewBag.Title == "Edit")
+                    {
+
+                        @if (Model.Image != null)
+                        {
+                            <span id="attachmentUpdate">
+                                :
+                                <a href="~/uploads/@Model.Image.Path" target="_blank"
+                            class="attachment-name">@Model.Image.OriginName</a>
+                            </span>
+                        }
+                    }
+                </div>
+                <input type="file" name="image" id="image" class="form-control" />
+                <span asp-validation-for="ImageId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value=@ViewBag.Title class="btn btn-primary" />
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <input type="submit" value=@ViewBag.Title class="btn btn-primary" />
-    </div>
-</form>
+    @if (ViewBag.Title != "Create")
+    {
+        @await Html.PartialAsync("Variants", Model)
+    }
+</div>

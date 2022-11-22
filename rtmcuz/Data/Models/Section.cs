@@ -9,8 +9,8 @@ namespace rtmcuz.Data.Models
     public partial class Section : BaseEntity
     {
         public string Slug { get; set; }
-        public Locales Lang { get; set; }
-        public int GroupId { get; set; }
+        public Locales? Lang { get; set; }
+        public int? GroupId { get; set; }
         public string? Content { get; set; }
         public string? Icon { get; set; }
         public string? Subtitle { get; set; }
@@ -31,11 +31,13 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = interactive.Id,
+                GroupId = interactive.GroupId,
+                Lang = interactive.Lang,
                 Slug = interactive.Title.GenerateSlug(),
                 Title = interactive.Title,
                 Subtitle = interactive.Subtitle,
                 Icon = interactive.Icon,
-                Type = SectionTypes.InterActive,
+                Type = SectionTypes.Interactive,
             };
         }
 
@@ -44,6 +46,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = news.Id,
+                GroupId = news.GroupId,
+                Lang = news.Lang,
                 Slug = news.Title.GenerateSlug(),
                 Title = news.Title,
                 ImageId = news.ImageId,
@@ -58,6 +62,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = banner.Id,
+                GroupId = banner.GroupId,
+                Lang = banner.Lang,
                 Title = banner.Title,
                 Slug = banner.Title.GenerateSlug(),
                 Subtitle = banner.Subtitle,
@@ -72,6 +78,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = department.Id,
+                GroupId = department.GroupId,
+                Lang = department.Lang,
                 Title = department.Title,
                 Slug = department.Title.GenerateSlug(),
                 Content = department.Content,
@@ -84,6 +92,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = document.Id,
+                GroupId = document.GroupId,
+                Lang = document.Lang,
                 Title = document.Title,
                 Slug = document.Title.GenerateSlug(),
                 Content = document.Content,
@@ -96,6 +106,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = leadership.Id,
+                GroupId = leadership.GroupId,
+                Lang = leadership.Lang,
                 Title = leadership.Title,
                 Slug = leadership.Title.GenerateSlug(),
                 Subtitle = leadership.Subtitle,
@@ -109,6 +121,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = question.Id,
+                GroupId = question.GroupId,
+                Lang = question.Lang,
                 Title = question.Title,
                 Slug = question.Title.GenerateSlug(),
                 Content = question.Content,
@@ -121,6 +135,8 @@ namespace rtmcuz.Data.Models
             return new Section()
             {
                 Id = service.Id,
+                GroupId = service.GroupId,
+                Lang = service.Lang,
                 Title = service.Title,
                 Url = service.Url,
                 Slug = service.Title.GenerateSlug(),

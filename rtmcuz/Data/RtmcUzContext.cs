@@ -25,7 +25,7 @@ namespace rtmcuz.Data
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Section>().Property(u => u.Status).HasDefaultValue(SectionStatus.Active);
-            modelBuilder.Entity<Section>().Property(u => u.Lang).HasDefaultValue(Locales.UZ);
+            //modelBuilder.Entity<Section>().Property(u => u.Lang).HasDefaultValue(Locales.uz_Latn_UZ);
             modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser[] {
                 new IdentityUser{
                     UserName = email,

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using rtmcuz.Data;
-using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.Interfaces;
+using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
+using rtmcuz.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
@@ -18,29 +12,26 @@ namespace rtmcuz.Controllers
     [Route("dashboard/{controller}/{action}")]
     public class ServicesController : Controller
     {
-        private readonly RtmcUzContext _context;
-        private readonly IAttachmentService _attachmentService;
+        private readonly ISectionRepository _sectionRepository;
 
-        public ServicesController(RtmcUzContext context, IAttachmentService attachmentService)
+        public ServicesController(ISectionRepository sectionRepository)
         {
-            _context = context;
-            _attachmentService = attachmentService;
+            _sectionRepository = sectionRepository;
         }
 
         public async Task<IActionResult> Index()
         {
-            var rtmcUzContext = await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.Service).ToListAsync();
-            return View(rtmcUzContext);
+            return View(await _sectionRepository.ListItemsAsync(SectionTypes.Service));
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Service))
             {
                 return NotFound();
             }
 
-            var service = await _context.Sections.Include(s => s.Image).FirstOrDefaultAsync(m => m.Id == id);
+            var service = await _sectionRepository.GetItemAsync(id);
             if (service == null)
             {
                 return NotFound();
@@ -56,47 +47,39 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Service service, IFormFile image)
+        public async Task<IActionResult> Create(Service service)
         {
             if (ModelState.IsValid)
             {
-                int imageId = -1;
-
-                if (image != null)
-                {
-                    imageId = _attachmentService.UploadFileToStorage(image);
-                }
-
-                if (imageId > -1)
-                {
-                    service.ImageId = imageId;
-                }
-
-                _context.Add(Section.FromService(service));
-                _context.SaveChanges();
+                _sectionRepository.Create(Section.FromService(service));
                 return RedirectToAction(nameof(Index));
             }
+
             return View(service);
         }
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Service))
             {
                 return NotFound();
             }
 
-            var service = await _context.Sections.FindAsync(id);
+            var service = await _sectionRepository.GetItemAsync(id);
+
+            ViewData["Variants"] = _sectionRepository.VariantsList((int)service.GroupId);
+
             if (service == null)
             {
                 return NotFound();
             }
+
             return View(Service.FromSection(service));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Service service, IFormFile image)
+        public async Task<IActionResult> Edit(int id, Service service)
         {
             if (id != service.Id)
             {
@@ -107,24 +90,11 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    int imageId = -1;
-
-                    if (image != null)
-                    {
-                        imageId = _attachmentService.UploadFileToStorage(image);
-                    }
-
-                    if (imageId > -1)
-                    {
-                        service.ImageId = imageId;
-                    }
-
-                    _context.Update(Section.FromService(service));
-                    _context.SaveChanges();
+                    _sectionRepository.Save(Section.FromService(service));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ServiceExists(service.Id))
+                    if (!ServicesExists(service.Id))
                     {
                         return NotFound();
                     }
@@ -133,19 +103,60 @@ namespace rtmcuz.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
+            return View(service);
+        }
+        public async Task<IActionResult> Variant(int groupId, Locales langValue)
+        {
+            ViewData["Variants"] = _sectionRepository.VariantsList(groupId);
+
+            return View(new Service() { GroupId = groupId, Lang = langValue });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Variant(int id, Service service)
+        {
+            if (id != service.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _sectionRepository.Save(Section.FromService(service));
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ServicesExists(service.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
             return View(service);
         }
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Service))
             {
                 return NotFound();
             }
 
-            var service = await _context.Sections.Include(s => s.Image).FirstOrDefaultAsync(m => m.Id == id);
+            var service = await _sectionRepository.GetItemAsync(id);
             if (service == null)
             {
                 return NotFound();
@@ -154,27 +165,23 @@ namespace rtmcuz.Controllers
             return View(service);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.Service) == null)
+            if (_sectionRepository.IsNull(SectionTypes.Service))
             {
-                return Problem("Entity set 'RtmcUzContext.Service'  is null.");
-            }
-            var service = await _context.Sections.FindAsync(id);
-            if (service != null)
-            {
-                _context.Sections.Remove(service);
+                return Problem("Entity set 'RtmcUzContext.Services'  is null.");
             }
 
-            _context.SaveChanges();
+            await _sectionRepository.DeleteConfirmed(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ServiceExists(int id)
+        private bool ServicesExists(int id)
         {
-            return _context.Sections.Any(e => e.Id == id);
+            return _sectionRepository.Any(id);
         }
     }
 }

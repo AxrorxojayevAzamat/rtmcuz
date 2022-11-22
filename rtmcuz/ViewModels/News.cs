@@ -20,6 +20,8 @@ namespace rtmcuz.ViewModels
                 Subtitle = section.Subtitle,
                 Content = section.Content,
                 Image = section.Image,
+                GroupId = section.GroupId,
+                Lang = section.Lang,
             };
         }
     }

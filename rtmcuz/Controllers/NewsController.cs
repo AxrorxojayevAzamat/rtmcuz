@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using rtmcuz.Data;
-using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
-using rtmcuz.Interfaces;
+using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
+using rtmcuz.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
@@ -18,28 +12,26 @@ namespace rtmcuz.Controllers
     [Route("dashboard/{controller}/{action}")]
     public class NewsController : Controller
     {
-        private readonly RtmcUzContext _context;
-        private readonly IAttachmentService _attachmentService;
+        private readonly ISectionRepository _sectionRepository;
 
-        public NewsController(RtmcUzContext context, IAttachmentService attachmentService)
+        public NewsController(ISectionRepository sectionRepository)
         {
-            _context = context;
-            _attachmentService = attachmentService;
+            _sectionRepository = sectionRepository;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Include(s => s.Image).Where(s => s.Type == SectionTypes.News).ToListAsync());
+            return View(await _sectionRepository.ListItemsAsync(SectionTypes.News));
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.News))
             {
                 return NotFound();
             }
 
-            var news = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var news = await _sectionRepository.GetItemAsync(id);
             if (news == null)
             {
                 return NotFound();
@@ -59,20 +51,7 @@ namespace rtmcuz.Controllers
         {
             if (ModelState.IsValid)
             {
-                int imageId = -1;
-
-                if (image != null)
-                {
-                    imageId = _attachmentService.UploadFileToStorage(image);
-                }
-
-                if (imageId > -1)
-                {
-                    news.ImageId = imageId;
-                }
-
-                _context.Add(Section.FromNews(news));
-                _context.SaveChanges();
+                _sectionRepository.Create(Section.FromNews(news), image);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -81,14 +60,15 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.News))
             {
                 return NotFound();
             }
 
-            var news = await _context.Sections.Include(s => s.Image)
-                .Where(a => a.Id == id)
-                .FirstOrDefaultAsync();
+            var news = await _sectionRepository.GetItemAsync(id);
+
+            ViewData["Variants"] = _sectionRepository.VariantsList((int)news.GroupId);
+
             if (news == null)
             {
                 return NotFound();
@@ -110,20 +90,46 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    int imageId = -1;
-
-                    if (image != null)
+                    _sectionRepository.Save(Section.FromNews(news), image);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!NewsExists(news.Id))
                     {
-                        imageId = _attachmentService.UploadFileToStorage(image);
+                        return NotFound();
                     }
-
-                    if (imageId > -1)
+                    else
                     {
-                        news.ImageId = imageId;
+                        throw;
                     }
+                }
 
-                    _context.Update(Section.FromNews(news));
-                    _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(news);
+        }
+        public async Task<IActionResult> Variant(int groupId, Locales langValue)
+        {
+            ViewData["Variants"] = _sectionRepository.VariantsList(groupId);
+
+            return View(new News() { GroupId = groupId, Lang = langValue });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Variant(int id, News news, IFormFile image)
+        {
+            if (id != news.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _sectionRepository.Save(Section.FromNews(news), image);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -145,12 +151,12 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.News))
             {
                 return NotFound();
             }
 
-            var news = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var news = await _sectionRepository.GetItemAsync(id);
             if (news == null)
             {
                 return NotFound();
@@ -159,28 +165,23 @@ namespace rtmcuz.Controllers
             return View(news);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.News) == null)
+            if (_sectionRepository.IsNull(SectionTypes.News))
             {
                 return Problem("Entity set 'RtmcUzContext.News'  is null.");
             }
 
-            var news = await _context.Sections.FindAsync(id);
-            if (news != null)
-            {
-                _context.Sections.Remove(news);
-            }
-
-            _context.SaveChanges();
+            await _sectionRepository.DeleteConfirmed(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool NewsExists(int id)
         {
-            return _context.Sections.Any(e => e.Id == id);
+            return _sectionRepository.Any(id);
         }
     }
 }

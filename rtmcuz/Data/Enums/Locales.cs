@@ -2,6 +2,8 @@
 {
     public enum Locales
     {
-        UZ, RU, EN
+        uz_Latn_UZ,
+        uz_Cyrl_UZ,
+        ru,
     }
 }

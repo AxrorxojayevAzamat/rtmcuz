@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using rtmcuz.Data;
-using rtmcuz.Data.Enums;
 using rtmcuz.Data.Models;
+using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
+using rtmcuz.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace rtmcuz.Controllers
 {
@@ -17,26 +12,26 @@ namespace rtmcuz.Controllers
     [Route("dashboard/{controller}/{action}")]
     public class DocumentsController : Controller
     {
-        private readonly RtmcUzContext _context;
+        private readonly ISectionRepository _sectionRepository;
 
-        public DocumentsController(RtmcUzContext context)
+        public DocumentsController(ISectionRepository sectionRepository)
         {
-            _context = context;
+            _sectionRepository = sectionRepository;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sections.Where(s => s.Type == SectionTypes.Document).ToListAsync());
+            return View(await _sectionRepository.ListItemsAsync(SectionTypes.Document));
         }
 
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Document) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Document))
             {
                 return NotFound();
             }
 
-            var document = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var document = await _sectionRepository.GetItemAsync(id);
             if (document == null)
             {
                 return NotFound();
@@ -52,12 +47,11 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Document document)
+        public async Task<IActionResult> Create(Document document, IFormFile image)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(Section.FromDocument(document));
-                _context.SaveChanges();
+                _sectionRepository.Create(Section.FromDocument(document), image);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -66,12 +60,15 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Document) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Document))
             {
                 return NotFound();
             }
 
-            var document = await _context.Sections.FindAsync(id);
+            var document = await _sectionRepository.GetItemAsync(id);
+
+            ViewData["Variants"] = _sectionRepository.VariantsList((int)document.GroupId);
+
             if (document == null)
             {
                 return NotFound();
@@ -82,7 +79,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Document document)
+        public async Task<IActionResult> Edit(int id, Document document, IFormFile image)
         {
             if (id != document.Id)
             {
@@ -93,12 +90,50 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _context.Update(Section.FromDocument(document));
-                    _context.SaveChanges();
+                    _sectionRepository.Save(Section.FromDocument(document), image);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DocumentExists(document.Id))
+                    if (!DocumentsExists(document.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(document);
+        }
+        public async Task<IActionResult> Variant(int groupId, Locales langValue)
+        {
+            ViewData["Variants"] = _sectionRepository.VariantsList(groupId);
+
+            return View(new Document() { GroupId = groupId, Lang = langValue });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Variant(int id, Document document, IFormFile image)
+        {
+            if (id != document.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _sectionRepository.Save(Section.FromDocument(document), image);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!DocumentsExists(document.Id))
                     {
                         return NotFound();
                     }
@@ -116,12 +151,12 @@ namespace rtmcuz.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Sections.Where(s => s.Type == SectionTypes.Document) == null)
+            if (_sectionRepository.Exists(id, SectionTypes.Document))
             {
                 return NotFound();
             }
 
-            var document = await _context.Sections.FirstOrDefaultAsync(m => m.Id == id);
+            var document = await _sectionRepository.GetItemAsync(id);
             if (document == null)
             {
                 return NotFound();
@@ -130,28 +165,23 @@ namespace rtmcuz.Controllers
             return View(document);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Sections.Where(s => s.Type == SectionTypes.Document) == null)
+            if (_sectionRepository.IsNull(SectionTypes.Document))
             {
-                return Problem("Entity set 'RtmcUzContext.Document'  is null.");
+                return Problem("Entity set 'RtmcUzContext.Documents'  is null.");
             }
 
-            var document = await _context.Sections.FindAsync(id);
-            if (document != null)
-            {
-                _context.Sections.Remove(document);
-            }
-
-            _context.SaveChanges();
+            await _sectionRepository.DeleteConfirmed(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DocumentExists(int id)
+        private bool DocumentsExists(int id)
         {
-            return _context.Sections.Any(e => e.Id == id);
+            return _sectionRepository.Any(id);
         }
     }
 }

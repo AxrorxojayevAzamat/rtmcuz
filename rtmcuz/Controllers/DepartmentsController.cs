@@ -47,11 +47,11 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Department deparment, IFormFile image)
+        public async Task<IActionResult> Create(Department deparment)
         {
             if (ModelState.IsValid)
             {
-                _sectionRepository.Create(Section.FromDepartment(deparment), image);
+                _sectionRepository.Create(Section.FromDepartment(deparment));
                 return RedirectToAction(nameof(Index));
             }
 
@@ -79,7 +79,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Department deparment, IFormFile image)
+        public async Task<IActionResult> Edit(int id, Department deparment)
         {
             if (id != deparment.Id)
             {
@@ -90,7 +90,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _sectionRepository.Save(Section.FromDepartment(deparment), image);
+                    _sectionRepository.Save(Section.FromDepartment(deparment));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -118,7 +118,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Variant(int id, Department deparment, IFormFile image)
+        public async Task<IActionResult> Variant(int id, Department deparment)
         {
             if (id != deparment.Id)
             {
@@ -129,7 +129,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _sectionRepository.Save(Section.FromDepartment(deparment), image);
+                    _sectionRepository.Save(Section.FromDepartment(deparment));
                 }
                 catch (DbUpdateConcurrencyException)
                 {

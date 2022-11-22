@@ -79,7 +79,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Banner banner, IFormFile image)
+        public async Task<IActionResult> Edit(int id, Banner banner, IFormFile? image)
         {
             if (id != banner.Id)
             {

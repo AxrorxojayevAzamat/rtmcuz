@@ -47,11 +47,11 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Document document, IFormFile image)
+        public async Task<IActionResult> Create(Document document)
         {
             if (ModelState.IsValid)
             {
-                _sectionRepository.Create(Section.FromDocument(document), image);
+                _sectionRepository.Create(Section.FromDocument(document));
                 return RedirectToAction(nameof(Index));
             }
 
@@ -79,7 +79,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Document document, IFormFile image)
+        public async Task<IActionResult> Edit(int id, Document document)
         {
             if (id != document.Id)
             {
@@ -90,7 +90,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _sectionRepository.Save(Section.FromDocument(document), image);
+                    _sectionRepository.Save(Section.FromDocument(document));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -118,7 +118,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Variant(int id, Document document, IFormFile image)
+        public async Task<IActionResult> Variant(int id, Document document)
         {
             if (id != document.Id)
             {
@@ -129,7 +129,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _sectionRepository.Save(Section.FromDocument(document), image);
+                    _sectionRepository.Save(Section.FromDocument(document));
                 }
                 catch (DbUpdateConcurrencyException)
                 {

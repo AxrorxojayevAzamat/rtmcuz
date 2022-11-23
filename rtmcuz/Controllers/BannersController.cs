@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace rtmcuz.Controllers
 {
     [Authorize]
-    //[Route("dashboard/{controller}/{action}")]
+    [Route("dashboard/{controller}/{action}")]
     public class BannersController : Controller
     {
         private readonly ISectionRepository _sectionRepository;

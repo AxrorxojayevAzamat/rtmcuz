@@ -35,22 +35,25 @@
                 @foreach (var sectionName in Sections)
                 {
                     <li class="menu_item">
-                        <a asp-controller=@sectionName asp-action="Index"
-                       class=@(IsActiveRoute(sectionName) ? "active" : "")>@sectionName</a>
+                        <a asp-controller=@sectionName asp-action="Index" class=@(IsActiveRoute(sectionName) ? "active" :
+                       "")>@sectionName</a>
                     </li>
                 }
             </ul>
-            <div class="profile">
-                <input type="checkbox" id="showDropdown">
-                <label for="showDropdown">
-                    @UserManager.GetUserName(User) <span class="icon icon-user"></span>
-                </label>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" id="login" asp-area="Identity" asp-page="/Account/Logout"
-                           asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">Logout</a>
-                    </li>
-                </ul>
+            <div class="header-top-right">
+                <partial name="_Culture" />
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        @UserManager.GetUserName(User)
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Logout"
+                               asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">Logout</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>

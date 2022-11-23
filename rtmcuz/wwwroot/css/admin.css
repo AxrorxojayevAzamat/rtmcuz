@@ -77,6 +77,20 @@ li.menu_item a.active {
     display: block;
 }
 
+.header-top-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-top-right form {
+    margin: 0 8px;
+}
+
+.header-top-right .dropdown-toggle {
+    border: none;
+    background-color: transparent;
+}
+
 .table {
     margin: 0 0 40px 0;
     width: 100%;

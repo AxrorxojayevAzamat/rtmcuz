@@ -5,9 +5,14 @@ namespace rtmcuz.ViewModels
 {
     public class Leadership : BaseViewModel
     {
+        [Display(Name = "Subtitle")]
         public string Subtitle { get; set; }
+
+        [Display(Name = "Content")]
         public string Content { get; set; }
+
         [Required]
+        [Display(Name = "ImageId")]
         public int? ImageId { get; set; }
         public Attachment? Image { get; set; }
 

@@ -1,9 +1,11 @@
 ﻿using rtmcuz.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace rtmcuz.ViewModels
 {
     public class Document : BaseViewModel
     {
+        [Display(Name = "Content")]
         public string Content { get; set; }
 
         public static Document FromSection(Section section)

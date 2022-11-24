@@ -6,7 +6,10 @@ namespace rtmcuz.ViewModels
 {
     public class Interactive : BaseViewModel
     {
+        [Display(Name = "Subtitle")]
         public string Subtitle { get; set; }
+
+        [Display(Name = "Icon")]
         public string Icon { get; set; }
 
         public static Interactive FromSection(Section section)

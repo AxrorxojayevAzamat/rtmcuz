@@ -161,10 +161,10 @@ section h3.section-title {
   margin-bottom: 30px;
 }
 
-.social-media-bottom span.icon {
+.social-media-bottom [class*=" ri-"] {
   color: var(--primary-main);
-  font-size: 26px;
-  margin-right: 27px;
+  font-size: 35px;
+  margin-right: 20px;
 }
 
 
@@ -195,7 +195,7 @@ header {
   font: 400 13.49px/20.23px var(--font-family);
 }
 
-.header-top .contacts .contact .icon {
+.header-top .contacts .contact [class*=" ri-"] {
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -214,7 +214,7 @@ header {
   margin-left: 12px;
 }
 
-.header-top .social-media .social-media-link .icon {
+.header-top .social-media .social-media-link [class*=" ri-"] {
   width: 20px;
   height: 20px;
 }
@@ -310,7 +310,7 @@ footer .footer-top .left .copy-right {
   margin-left: 12px;
 } */
 
-footer .footer-top .left .social-media .social-media-link .icon {
+footer .footer-top .left .social-media .social-media-link [class*=" ri-"] {
   width: 23px;
   height: 23px;
 }

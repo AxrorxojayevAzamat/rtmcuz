@@ -10,22 +10,22 @@
         </div>
         <div class="header-top">
             <div class="contacts">
-                <a href="" class="contact"><span class="icon icon-email"></span>
+                <a href="" class="contact"><span class="ri-lg ri-mail-fill"></span>
                     <span class="contact-text"> tmc@rtmc.uz</span>
                 </a>
-                <a href="" class="contact"><span class="icon icon-phone-0"></span>
+                <a href="" class="contact"><span class="ri-lg ri-phone-fill"></span>
                     <span class="contact-text"> (71) 240-27-72</span>
                 </a>
-                <a href="" class="contact"><span class="icon icon-phone-0"></span>
+                <a href="" class="contact"><span class="ri-lg ri-phone-fill"></span>
                     <span class="contact-text"> (71) 240-54-19</span>
                 </a>
             </div>
-                <partial name="_Culture" />
+            <partial name="_Culture" />
 
             <div class="social-media">
-                <a href="" class="social-media-link"><span class="icon icon-tw"></span></a>
-                <a href="" class="social-media-link"><span class="icon icon-fb"></span></a>
-                <a href="" class="social-media-link"><span class="icon icon-instagram"></span></a>
+                <a href="" class="social-media-link"><span class="ri-1x ri-twitter-fill"></span></a>
+                <a href="" class="social-media-link"><span class="ri-1x ri-facebook-fill"></span></a>
+                <a href="" class="social-media-link"><span class="ri-1x ri-instagram-fill"></span></a>
             </div>
         </div>
         <div class="header-bottom">
@@ -34,11 +34,11 @@
             </a>
             <nav class="navbar">
                 @await Html.PartialAsync("Menu")
-                <span class="searching-icon icon icon-search"></span>
+                <span class="searching-icon ri-search-line"></span>
             </nav>
             <div class="searching" style="display: none;">
                 <input type="text" class="search-input" placeholder="@sharedLocalizer["searching"]...">
-                <span class="closing-icon icon icon-close"></span>
+                <span class="closing-icon ri-xl ri-close-fill"></span>
             </div>
         </div>
     </div>

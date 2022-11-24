@@ -311,7 +311,7 @@
         margin-right: 10px;
     }
 
-    .feedback-section .contacts .contact .icon {
+    .feedback-section .contacts .contact [class*=" ri-"] {
         margin-right: 2px;
     }
 

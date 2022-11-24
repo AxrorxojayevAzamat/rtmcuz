@@ -404,7 +404,7 @@
     font: 400 13.49px/20.23px var(--font-family);
 }
 
-.feedback-section .contacts .contact .icon {
+.feedback-section .contacts .contact [class*=" ri-"] {
     display: flex;
     align-items: center;
     margin-right: 10px;
@@ -556,6 +556,7 @@
 
 .news-wrapper .sidebar .last-news .last-news-item .right .title {
     font: var(--body-bold-1);
+    cursor: pointer;
 }
 
 .news-wrapper .sidebar .last-news .last-news-item .right .date {

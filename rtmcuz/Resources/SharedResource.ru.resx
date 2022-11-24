@@ -121,25 +121,28 @@
     <value>О нас в цифрах</value>
   </data>
   <data name="address" xml:space="preserve">
-    <value />
+    <value>Адрес</value>
+  </data>
+  <data name="company_address_1" xml:space="preserve">
+    <value>Республика Узбекистан, город Ташкент, Алмазарский район, Себзорский район, дом 18-А, дом 240-АТС</value>
   </data>
   <data name="company_full_name_1" xml:space="preserve">
-    <value />
+    <value>Государственное унитарное предприятие «Республиканский центр управления сетями электросвязи Узбекистана».</value>
   </data>
   <data name="connection" xml:space="preserve">
-    <value />
+    <value>Связь</value>
   </data>
   <data name="contact_us" xml:space="preserve">
     <value>Свяжитесь с нами</value>
   </data>
   <data name="documents" xml:space="preserve">
-    <value />
+    <value>Документы</value>
   </data>
   <data name="email_address" xml:space="preserve">
-    <value />
+    <value>Адрес электронной почты</value>
   </data>
   <data name="fax" xml:space="preserve">
-    <value />
+    <value>Факс</value>
   </data>
   <data name="feedback" xml:space="preserve">
     <value>Обратная связь</value>
@@ -148,7 +151,7 @@
     <value>Здесь можно оставить комментарии и замечания касаемо деятельности оператора системы и</value>
   </data>
   <data name="firstname_and_surname" xml:space="preserve">
-    <value />
+    <value>Имя и фамилия</value>
   </data>
   <data name="frequently_asked_questions" xml:space="preserve">
     <value>Часто задаваемые вопросы</value>
@@ -160,7 +163,7 @@
     <value>Последние новости</value>
   </data>
   <data name="more" xml:space="preserve">
-    <value />
+    <value>Подробнее</value>
   </data>
   <data name="news" xml:space="preserve">
     <value>Новости</value>
@@ -169,16 +172,16 @@
     <value>Наши услуги</value>
   </data>
   <data name="reception" xml:space="preserve">
-    <value />
+    <value>Прием</value>
   </data>
   <data name="searching" xml:space="preserve">
     <value>Поиск</value>
   </data>
   <data name="select_department" xml:space="preserve">
-    <value />
+    <value>Выберите отдел</value>
   </data>
   <data name="telegramm_bot" xml:space="preserve">
-    <value />
+    <value>Телеграмм бот</value>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
     <value>Ваш e-mail</value>
@@ -187,10 +190,10 @@
     <value>Узнать больше</value>
   </data>
   <data name="web_site" xml:space="preserve">
-    <value />
+    <value>Веб-сайт</value>
   </data>
   <data name="what_are_you_contacting_for" xml:space="preserve">
-    <value />
+    <value>Для чего вы обращаетесь?</value>
   </data>
   <data name="your_email" xml:space="preserve">
     <value>Получить ответ на интересующие вопросы.</value>

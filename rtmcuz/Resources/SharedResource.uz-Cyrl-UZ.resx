@@ -121,25 +121,28 @@
     <value>Рақамларда биз ҳақимизда</value>
   </data>
   <data name="address" xml:space="preserve">
-    <value />
+    <value>Манзил</value>
+  </data>
+  <data name="company_address_1" xml:space="preserve">
+    <value>Ўзбекистон Республикаси, Тошкент шаҳри, Олмазор тумани, Себзор даҳаси, 18-А уй, 240-АЦ биноси</value>
   </data>
   <data name="company_full_name_1" xml:space="preserve">
-    <value />
+    <value>"Ўзбекистон телекоммуникация тармоқларини назорат қилиш республика маркази" давлат унитар корхонаси.</value>
   </data>
   <data name="connection" xml:space="preserve">
-    <value />
+    <value>Боғланиш</value>
   </data>
   <data name="contact_us" xml:space="preserve">
     <value>Биз билан боғланиш</value>
   </data>
   <data name="documents" xml:space="preserve">
-    <value />
+    <value>Ҳужжатлар</value>
   </data>
   <data name="email_address" xml:space="preserve">
-    <value />
+    <value>E-mail манзили</value>
   </data>
   <data name="fax" xml:space="preserve">
-    <value />
+    <value>Факс</value>
   </data>
   <data name="feedback" xml:space="preserve">
     <value>Қайта алоқа</value>
@@ -148,7 +151,7 @@
     <value>Бу ерда сиз тизим оператори фаолиятига оид шарҳ ва мулоҳазаларингизни қолдиришингиз мумкин.</value>
   </data>
   <data name="firstname_and_surname" xml:space="preserve">
-    <value />
+    <value>Исм ва фамилия</value>
   </data>
   <data name="frequently_asked_questions" xml:space="preserve">
     <value>Кўп бериладиган саволлар</value>
@@ -160,7 +163,7 @@
     <value>Сўнги янгиликлар</value>
   </data>
   <data name="more" xml:space="preserve">
-    <value />
+    <value>Кўпроқ</value>
   </data>
   <data name="news" xml:space="preserve">
     <value>Янгиликлар</value>
@@ -169,16 +172,16 @@
     <value>Бизнинг хизматларимиз</value>
   </data>
   <data name="reception" xml:space="preserve">
-    <value />
+    <value>Қабулхона</value>
   </data>
   <data name="searching" xml:space="preserve">
     <value>Қидирув</value>
   </data>
   <data name="select_department" xml:space="preserve">
-    <value />
+    <value>Бўлимни танланг</value>
   </data>
   <data name="telegramm_bot" xml:space="preserve">
-    <value />
+    <value>Telegram боти</value>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
     <value>Сизнинг електрон манзилингиз</value>
@@ -187,10 +190,10 @@
     <value>Қўшимча маълумот</value>
   </data>
   <data name="web_site" xml:space="preserve">
-    <value />
+    <value>Веб сайт</value>
   </data>
   <data name="what_are_you_contacting_for" xml:space="preserve">
-    <value />
+    <value>Нима учун ариза беряпсиз?</value>
   </data>
   <data name="your_email" xml:space="preserve">
     <value>Саволларингизга жавоб олинг</value>

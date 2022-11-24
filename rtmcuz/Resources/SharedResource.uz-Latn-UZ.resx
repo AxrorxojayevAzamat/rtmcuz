@@ -121,25 +121,28 @@
     <value>Raqamlarda biz haqimizda</value>
   </data>
   <data name="address" xml:space="preserve">
-    <value />
+    <value>Manzil</value>
+  </data>
+  <data name="company_address_1" xml:space="preserve">
+    <value>O’zbekiston Respublikasi, Toshkent shahri, Olmazor tumani, Sebzor dahasi, 18-A uy, 240-ATS binosi</value>
   </data>
   <data name="company_full_name_1" xml:space="preserve">
-    <value />
+    <value>«O'zbekiston telekommunikatsiya tarmoqlarini boshqarish Respublika markazi» davlat unitar korxonasi</value>
   </data>
   <data name="connection" xml:space="preserve">
-    <value />
+    <value>Ulanish</value>
   </data>
   <data name="contact_us" xml:space="preserve">
     <value>Biz bilan bog'lanish</value>
   </data>
   <data name="documents" xml:space="preserve">
-    <value />
+    <value>Hujjatlar</value>
   </data>
   <data name="email_address" xml:space="preserve">
-    <value />
+    <value>E-mail manzili</value>
   </data>
   <data name="fax" xml:space="preserve">
-    <value />
+    <value>Faks</value>
   </data>
   <data name="feedback" xml:space="preserve">
     <value>Qayta aloqa</value>
@@ -148,7 +151,7 @@
     <value>Bu yerda siz tizim operatori faoliyatiga oid sharh va mulohazalaringizni qoldirishingiz mumkin.</value>
   </data>
   <data name="firstname_and_surname" xml:space="preserve">
-    <value />
+    <value>Ism va familiya</value>
   </data>
   <data name="frequently_asked_questions" xml:space="preserve">
     <value>Ko'p so'raladigan savollar</value>
@@ -160,7 +163,7 @@
     <value>So’nggi yangiliklar</value>
   </data>
   <data name="more" xml:space="preserve">
-    <value />
+    <value>Ko'proq</value>
   </data>
   <data name="news" xml:space="preserve">
     <value>Yangiliklar</value>
@@ -169,16 +172,16 @@
     <value>Bizning xizmatlarimiz</value>
   </data>
   <data name="reception" xml:space="preserve">
-    <value />
+    <value>Qabulxona</value>
   </data>
   <data name="searching" xml:space="preserve">
     <value>Qidiruv</value>
   </data>
   <data name="select_department" xml:space="preserve">
-    <value />
+    <value>Bo'limni tanlang</value>
   </data>
   <data name="telegramm_bot" xml:space="preserve">
-    <value />
+    <value>Telegram boti</value>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
     <value>Sizning elektron manzilingiz</value>
@@ -187,10 +190,10 @@
     <value>Qo'shimcha ma'lumot</value>
   </data>
   <data name="web_site" xml:space="preserve">
-    <value />
+    <value>Veb sayt</value>
   </data>
   <data name="what_are_you_contacting_for" xml:space="preserve">
-    <value />
+    <value>Nima uchun ariza beryapsiz?</value>
   </data>
   <data name="your_email" xml:space="preserve">
     <value>Savollaringizga javob oling</value>

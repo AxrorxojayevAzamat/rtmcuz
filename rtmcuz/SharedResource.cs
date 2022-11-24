@@ -1,4 +1,4 @@
-﻿namespace rtmcuz.Resources
+﻿namespace rtmcuz
 {
     public class SharedResource
     {

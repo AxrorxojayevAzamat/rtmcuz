@@ -2,7 +2,7 @@
 
 <section class="interactive-services-section">
     <div class="container">
-        <h3 class="section-title">Интерактивные услуги</h3>
+        <h3 class="section-title">@sharedLocalizer["interactive_services"]</h3>
         <div class="cards-grid">
             @foreach (var item in Model)
             {
@@ -12,7 +12,7 @@
                     <div class="subtitle">
                         @item.Subtitle
                     </div>
-                    <span class="details" href="">Подробнее</span>
+                    <span class="details" href="">@sharedLocalizer["more"]</span>
                 </a>
             }
         </div>

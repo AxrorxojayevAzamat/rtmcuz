@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Something" xml:space="preserve">
-    <value>Что-нибудь</value>
+  <data name="Banner" xml:space="preserve">
+    <value>Banner cyrl</value>
   </data>
 </root>

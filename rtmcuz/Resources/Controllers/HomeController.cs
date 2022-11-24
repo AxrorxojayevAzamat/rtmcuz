@@ -1,6 +1,6 @@
 ﻿namespace rtmcuz.Resources
 {
-    public class ApplicationResource
+    public class HomeController
     {
     }
 }

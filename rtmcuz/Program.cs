@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Localization;
 using System.Reflection;
 using rtmcuz.Data;
-using rtmcuz.Resources;
 using rtmcuz.Services;
 using System.Globalization;
 using Microsoft.Extensions.Options;
@@ -13,6 +12,8 @@ using Serilog;
 using Serilog.Exceptions;
 using Microsoft.AspNetCore.Identity;
 using rtmcuz.Repositories;
+using Microsoft.Extensions.Localization;
+using rtmcuz;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IdentityRtmcUzContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityRtmcUzContextConnection' not found.");
@@ -48,11 +49,10 @@ builder.Services.AddMvc(mvc =>
     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
     .AddDataAnnotationsLocalization(options =>
     {
-        options.DataAnnotationLocalizerProvider = (type, factory) =>
-        {
-            var assemblyName = new AssemblyName(typeof(ApplicationResource).GetTypeInfo().Assembly.FullName);
-            return factory.Create("ApplicationResource", assemblyName.Name);
-        };
+        var assemblyName = new AssemblyName(typeof(SharedResource).GetTypeInfo().Assembly.FullName);
+        var factory = builder.Services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
+        var localizer = factory.Create("SharedResource", assemblyName.Name);
+        options.DataAnnotationLocalizerProvider = (t, f) => localizer;
     });
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
@@ -65,8 +65,6 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.DefaultRequestCulture = new RequestCulture(supportedCultures[0]);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
-
-
 });
 
 var app = builder.Build();

@@ -29,28 +29,30 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3 justify-content-between">
             <div class="header-logo">
-                <img src="~/img/telegram-cloud-document-2-5300996950533872448 1.svg" class="logo-img" />
+                <a href="/dashboard">
+                    <img src="~/img/telegram-cloud-document-2-5300996950533872448 1.svg" class="logo-img" />
+                </a>
             </div>
             <ul class="menu_box m-2">
                 @foreach (var sectionName in Sections)
                 {
                     <li class="menu_item">
                         <a asp-controller=@sectionName asp-action="Index" class=@(IsActiveRoute(sectionName) ? "active" :
-                       "")>@sectionName</a>
+                        "")>@sectionName</a>
                     </li>
                 }
             </ul>
             <div class="header-top-right">
                 <partial name="_Culture" />
                 <div class="dropdown">
-                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         @UserManager.GetUserName(User)
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li>
                             <a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Logout"
-                               asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">Logout</a>
+                                asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">Logout</a>
                         </li>
                     </ul>
                 </div>

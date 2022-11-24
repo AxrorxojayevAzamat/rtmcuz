@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Localization;
 using System.Reflection;
+using rtmcuz.Resources;
 
-namespace rtmcuz.Resources
+namespace rtmcuz.Services
 {
     public class LocalizationService
     {
@@ -9,8 +10,8 @@ namespace rtmcuz.Resources
 
         public LocalizationService(IStringLocalizerFactory factory)
         {
-            var assemblyName = new AssemblyName(typeof(ApplicationResource).GetTypeInfo().Assembly.FullName);
-            _localizer = factory.Create("ApplicationResource", assemblyName.Name);
+            var assemblyName = new AssemblyName(typeof(HomeController).GetTypeInfo().Assembly.FullName);
+            _localizer = factory.Create("HomeController", assemblyName.Name);
         }
 
         public LocalizedString GetLocalizedHtmlString(string key)

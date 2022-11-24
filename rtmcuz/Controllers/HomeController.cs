@@ -3,7 +3,7 @@ using rtmcuz.Data.Models;
 using System.Diagnostics;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
-using rtmcuz.Resources;
+using rtmcuz.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
@@ -43,6 +43,7 @@ namespace rtmcuz.Controllers
             ViewBag.News = news;
             return View();
         }
+
 
         [Route("{controller}/{action}/{slug}")]
         public IActionResult Privacy(string slug)

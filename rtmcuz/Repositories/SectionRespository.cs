@@ -11,23 +11,17 @@ namespace rtmcuz.Repositories
     {
         private readonly RtmcUzContext _context;
         private readonly IAttachmentService _attachmentService;
-        private readonly Locales currentLocale;
+        private readonly Locales _locale;
         public SectionRespository(RtmcUzContext context, IAttachmentService attachmentService)
         {
             _context = context;
             _attachmentService = attachmentService;
-            currentLocale = (Locales)Enum.Parse(typeof(Locales), CultureInfo.CurrentCulture.Name.Replace('-', '_'));
+            _locale = (Locales)Enum.Parse(typeof(Locales), CultureInfo.CurrentCulture.Name.Replace('-', '_'));
         }
 
-        public List<Section> ListItems(SectionTypes type)
-        {
-            return _context.Sections.Where(s => s.Type == type && s.Lang == currentLocale).ToList();
-        }
+        public List<Section> ListItems(SectionTypes type) => _context.Sections.Where(s => s.Type == type && s.Lang == _locale).ToList();
 
-        public async Task<List<Section>> ListItemsAsync(SectionTypes type)
-        {
-            return await _context.Sections.Include(s => s.Image).Where(s => s.Type == type && s.Lang == currentLocale).ToListAsync();
-        }
+        public async Task<List<Section>> ListItemsAsync(SectionTypes type) => await _context.Sections.Include(s => s.Image).Where(s => s.Type == type && s.Lang == _locale).ToListAsync();
 
         public void Create(Section section, IFormFile? image = null)
         {
@@ -36,8 +30,8 @@ namespace rtmcuz.Repositories
                 section.ImageId = _attachmentService.UploadFileToStorage(image);
             }
 
-            section.Lang = currentLocale;
-            section.GroupId = GetGroupId(section);
+            section.Lang = _locale;
+            section.GroupId = _GetGroupId(section);
             _context.Update(section);
             _context.SaveChanges();
         }
@@ -52,15 +46,9 @@ namespace rtmcuz.Repositories
             _context.SaveChanges();
         }
 
-        public Section GetItem(int? id)
-        {
-            return _context.Sections.Include(s => s.Image).Where(a => a.Id == id).FirstOrDefault();
-        }
+        public Section GetItem(int? id) => _context.Sections.Include(s => s.Image).Where(a => a.Id == id).FirstOrDefault();
 
-        public async Task<Section> GetItemAsync(int? id)
-        {
-            return await _context.Sections.Include(s => s.Image).Where(a => a.Id == id).FirstOrDefaultAsync();
-        }
+        public async Task<Section> GetItemAsync(int? id) => await _context.Sections.Include(s => s.Image).Where(a => a.Id == id).FirstOrDefaultAsync();
 
         public async Task DeleteConfirmed(int id)
         {
@@ -72,21 +60,11 @@ namespace rtmcuz.Repositories
             _context.SaveChanges();
         }
 
-        public bool Exists(int? id, SectionTypes type)
-        {
-            return id == null || _context.Sections.Where(s => s.Type == type) == null;
-        }
+        public bool Exists(int? id, SectionTypes type) => id == null || _context.Sections.Where(s => s.Type == type) == null;
 
-        public bool IsNull(SectionTypes type)
-        {
-            return _context.Sections.Where(s => s.Type == type) == null;
-        }
+        public bool IsNull(SectionTypes type) => _context.Sections.Where(s => s.Type == type) == null;
 
-
-        public bool Any(int id)
-        {
-            return _context.Sections.Any(s => s.Id == id);
-        }
+        public bool Any(int id) => _context.Sections.Any(s => s.Id == id);
 
         public Dictionary<string, Section> VariantsList(int groupId)
         {
@@ -100,7 +78,7 @@ namespace rtmcuz.Repositories
             return variants;
         }
 
-        private int GetGroupId(Section section)
+        private int _GetGroupId(Section section)
         {
             _context.Add(section);
             _context.SaveChanges();

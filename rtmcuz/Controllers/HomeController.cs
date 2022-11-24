@@ -3,51 +3,38 @@ using rtmcuz.Data.Models;
 using System.Diagnostics;
 using rtmcuz.Data;
 using rtmcuz.Data.Enums;
-using rtmcuz.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
-using System.Collections.Generic;
 using System.Globalization;
 
 namespace rtmcuz.Controllers
 {
-    //[AllowAnonymous]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly RtmcUzContext _context;
-        private readonly LocalizationService _localizationService;
+        private readonly Locales _locale;
 
-        public HomeController(ILogger<HomeController> logger, RtmcUzContext context,
-            LocalizationService localizationService)
+
+        public HomeController(RtmcUzContext context)
         {
-            _logger = logger;
             _context = context;
-            _localizationService = localizationService;
+            _locale = (Locales)Enum.Parse(typeof(Locales), CultureInfo.CurrentCulture.Name.Replace('-', '_'));
         }
 
         public async Task<IActionResult> Index()
         {
-            CultureInfo culture = CultureInfo.GetCultureInfo("uz-Latn-Uz");
-            var center = _localizationService.GetLocalizedHtmlString("Center");
-            var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.Interactive).ToListAsync();
-            var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner).ToListAsync();
-            var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question).ToListAsync();
-            var news = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.News)
+            var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.Interactive && s.Lang == _locale).ToListAsync();
+            var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner && s.Lang == _locale).ToListAsync();
+            var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question && s.Lang == _locale).ToListAsync();
+            var news = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.News && s.Lang == _locale)
                 .OrderByDescending(n => n.CreatedDate).Take(4).ToListAsync();
-            if (interactiveServices == null || banners == null || questions == null || news == null)
-                return NotFound();
+
+            if (interactiveServices == null || banners == null || questions == null || news == null) return NotFound();
+
             ViewBag.InteractiveServices = interactiveServices;
             ViewBag.Banners = banners;
             ViewBag.Questions = questions;
             ViewBag.News = news;
-            return View();
-        }
 
-
-        [Route("{controller}/{action}/{slug}")]
-        public IActionResult Privacy(string slug)
-        {
             return View();
         }
 

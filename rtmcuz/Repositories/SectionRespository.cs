@@ -31,7 +31,7 @@ namespace rtmcuz.Repositories
             }
 
             section.Lang = _locale;
-            section.GroupId = _GetGroupId(section);
+            section.GroupId = getGroupId(section);
             _context.Update(section);
             _context.SaveChanges();
         }
@@ -78,7 +78,7 @@ namespace rtmcuz.Repositories
             return variants;
         }
 
-        private int _GetGroupId(Section section)
+        private int getGroupId(Section section)
         {
             _context.Add(section);
             _context.SaveChanges();

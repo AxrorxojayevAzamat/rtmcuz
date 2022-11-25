@@ -187,7 +187,7 @@
     <value>Телеграмм бот</value>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
-    <value>Получить ответ на интересующие вопросы.</value>
+    <value>Текст обрашения</value>
   </data>
   <data name="to_know_more" xml:space="preserve">
     <value>Узнать больше</value>

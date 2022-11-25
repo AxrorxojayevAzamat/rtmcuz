@@ -25,14 +25,16 @@ namespace rtmcuz.Controllers
             var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.Interactive && s.Lang == _locale).ToListAsync();
             var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner && s.Lang == _locale).ToListAsync();
             var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question && s.Lang == _locale).ToListAsync();
+            var services = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Service && s.Lang == _locale).ToListAsync();
             var news = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.News && s.Lang == _locale)
                 .OrderByDescending(n => n.CreatedDate).Take(4).ToListAsync();
 
-            if (interactiveServices == null || banners == null || questions == null || news == null) return NotFound();
+            if (interactiveServices == null || banners == null || questions == null || services == null || news == null) return NotFound();
 
             ViewBag.InteractiveServices = interactiveServices;
             ViewBag.Banners = banners;
             ViewBag.Questions = questions;
+            ViewBag.Services = services;
             ViewBag.News = news;
 
             return View();

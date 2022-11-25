@@ -95,6 +95,10 @@
     height: 236px;
 }
 
+.our-services-section .service-card .img-wrapper img {
+    max-width: 200px;
+}
+
 .our-services-section .service-card .card-content {
     padding: 30px 36px;
     /* color: var(--dark-main); */

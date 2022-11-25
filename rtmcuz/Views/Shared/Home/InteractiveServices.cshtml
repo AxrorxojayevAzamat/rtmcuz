@@ -6,13 +6,13 @@
         <div class="cards-grid">
             @foreach (var item in Model)
             {
-                <a class="section-card">
+                <a class="section-card" href="@item.Url">
                     <span class="@item.Icon"></span>
                     <h2 class="title">@item.Title</h2>
                     <div class="subtitle">
                         @item.Subtitle
                     </div>
-                    <span class="details" href="">@sharedLocalizer["more"]</span>
+                    <span class="details">@sharedLocalizer["more"]</span>
                 </a>
             }
         </div>

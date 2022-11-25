@@ -210,6 +210,21 @@ header {
   display: flex;
 }
 
+/* .header-top .social-media, .header-top .culture {
+  display: flex;
+  align-items: center;
+} */
+
+.header-top .culture form {
+  margin: 0;
+}
+
+.header-top .culture form select {
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}
+
 .header-top .social-media .social-media-link {
   margin-left: 12px;
 }

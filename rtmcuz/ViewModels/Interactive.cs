@@ -9,6 +9,9 @@ namespace rtmcuz.ViewModels
         [Display(Name = "Subtitle")]
         public string Subtitle { get; set; }
 
+        [Display(Name = "Url")]
+        public string Url { get; set; }
+
         [Display(Name = "Icon")]
         public string Icon { get; set; }
 
@@ -20,6 +23,7 @@ namespace rtmcuz.ViewModels
                 Title = section.Title,
                 Subtitle = section.Subtitle,
                 Icon = section.Icon,
+                Url = section.Url,
                 GroupId = section.GroupId,
                 Lang = section.Lang,
             };

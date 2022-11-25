@@ -8,43 +8,43 @@ namespace rtmcuz.Data.Models
 {
     public partial class Section : BaseEntity
     {
-        
+
         [Display(Name = "Slug")]
         public string Slug { get; set; }
-        
+
         [Display(Name = "Lang")]
         public Locales? Lang { get; set; }
-        
+
         [Display(Name = "GroupId")]
         public int? GroupId { get; set; }
-        
+
         [Display(Name = "Content")]
         public string? Content { get; set; }
-        
+
         [Display(Name = "Icon")]
         public string? Icon { get; set; }
-        
+
         [Display(Name = "Subtitle")]
         public string? Subtitle { get; set; }
-        
+
         [Display(Name = "Title")]
         public string? Title { get; set; }
-        
+
         [Display(Name = "Template")]
         public string? Template { get; set; }
-        
+
         [Display(Name = "Type")]
         public SectionTypes Type { get; set; }
-        
+
         [Display(Name = "Status")]
         public SectionStatus Status { get; set; }
-        
+
         [Display(Name = "Url")]
         public string? Url { get; set; }
-        
+
         [Display(Name = "ParentId")]
         public int? ParentId { get; set; }
-        
+
         [Display(Name = "ImageId")]
         public int? ImageId { get; set; }
 
@@ -62,6 +62,7 @@ namespace rtmcuz.Data.Models
                 Slug = interactive.Title.GenerateSlug(),
                 Title = interactive.Title,
                 Subtitle = interactive.Subtitle,
+                Url = interactive.Url,
                 Icon = interactive.Icon,
                 Type = SectionTypes.Interactive,
             };

@@ -2,44 +2,21 @@
     <div class="container">
         <h3 class="section-title">@sharedLocalizer["our_services"]</h3>
         <div class="cards-grid">
-            <div class="service-card">
-                <div class="wrapper">
-                    <div class="img-wrapper">
-                        <img src="~/img/uzime 2.svg" alt="">
+            @foreach (var service in ViewBag.Services)
+            {
+                <div class="service-card">
+                    <div class="wrapper">
+                        <div class="img-wrapper">
+                            <img src="/uploads/@service.Image.Path">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="card-title">@service.Title </h5>
+                        <p class="card-subtitle">@service.Subtitle</p>
+                        <a href="@service.Url" class="details">@sharedLocalizer["more"]</a>
                     </div>
                 </div>
-                <div class="card-content">
-                    <h5 class="card-title">Qisqa raqamlar </h5>
-                    <p class="card-subtitle">Qisqa raqamlar haqida ma’lumotlar </p>
-                    <a href="" class="details">@sharedLocalizer["more"]</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="wrapper">
-                    <div class="img-wrapper">
-                        <img src="~/img/uzime 2.svg" alt="">
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h5 class="card-title">Система - UZIMEI.UZ </h5>
-                    <p class="card-subtitle">Услуга переноса номера телефона от одного мобильного оператора к другому
-                    </p>
-                    <a href="" class="details">@sharedLocalizer["more"]</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="wrapper">
-                    <div class="img-wrapper">
-                        <img src="~/img/logo-alt.3ac081a.svg" alt="">
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h5 class="card-title">Система - UZIMEI.UZ </h5>
-                    <p class="card-subtitle">Система регистрации IMEI-кодов мобильных устройств в Республике Узбекистан
-                    </p>
-                    <a href="" class="details">@sharedLocalizer["more"]</a>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

@@ -12,7 +12,7 @@
 
 <div class="text-center">
     @await Html.PartialAsync("Home/Banner", ViewData["Banners"])
-    @await Html.PartialAsync("Home/OurServices")
+    @await Html.PartialAsync("Home/OurServices", ViewData["Services"])
     @await Html.PartialAsync("Home/InteractiveServices", ViewData["InteractiveServices"])
     @await Html.PartialAsync("Home/News", ViewData["News"])
     @await Html.PartialAsync("Home/NumbersAboutUs")

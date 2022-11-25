@@ -14,6 +14,6 @@ namespace rtmcuz.ViewModels
         public Locales? Lang { get; set; }
 
         [Display(Name = "Title")]
-        public virtual string Title { get; set; }
+        public string Title { get; set; }
     }
 }

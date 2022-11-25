@@ -130,7 +130,7 @@
     <value>«O'zbekiston telekommunikatsiya tarmoqlarini boshqarish Respublika markazi» davlat unitar korxonasi</value>
   </data>
   <data name="connection" xml:space="preserve">
-    <value>Ulanish</value>
+    <value>Bog‘lanish</value>
   </data>
   <data name="contact_us" xml:space="preserve">
     <value>Biz bilan bog'lanish</value>
@@ -177,6 +177,9 @@
   <data name="searching" xml:space="preserve">
     <value>Qidiruv</value>
   </data>
+  <data name="see_all" xml:space="preserve">
+    <value>Hammasini ko'rish</value>
+  </data>
   <data name="select_department" xml:space="preserve">
     <value>Bo'limni tanlang</value>
   </data>
@@ -184,7 +187,7 @@
     <value>Telegram boti</value>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
-    <value>Sizning elektron manzilingiz</value>
+    <value>Savollaringizga javob oling</value>
   </data>
   <data name="to_know_more" xml:space="preserve">
     <value>Qo'shimcha ma'lumot</value>
@@ -196,6 +199,6 @@
     <value>Nima uchun ariza beryapsiz?</value>
   </data>
   <data name="your_email" xml:space="preserve">
-    <value>Savollaringizga javob oling</value>
+    <value>Sizning elektron manzilingiz</value>
   </data>
 </root>

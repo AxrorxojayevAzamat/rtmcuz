@@ -161,7 +161,7 @@ section h3.section-title {
   margin-bottom: 30px;
 }
 
-.social-media-bottom [class*=" ri-"] {
+.social-media-bottom [class*="ri-"] {
   color: var(--primary-main);
   font-size: 35px;
   margin-right: 20px;

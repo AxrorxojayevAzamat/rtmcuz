@@ -4,7 +4,7 @@
     <div class="container">
         <div class="head">
             <h3 class="title">@sharedLocalizer["news"]</h3>
-            <a href="" class="see-all">See all</a>
+            <a asp-action="News" class="see-all">@sharedLocalizer["see_all"]</a>
         </div>
         <div class="news-grid">
             @foreach (var item in Model.Select((value, i) => new { i, value }))

@@ -177,6 +177,9 @@
   <data name="searching" xml:space="preserve">
     <value>Қидирув</value>
   </data>
+  <data name="see_all" xml:space="preserve">
+    <value>Ҳаммасини кўриш</value>
+  </data>
   <data name="select_department" xml:space="preserve">
     <value>Бўлимни танланг</value>
   </data>
@@ -184,7 +187,7 @@
     <value>Telegram боти</value>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
-    <value>Сизнинг електрон манзилингиз</value>
+    <value>Саволларингизга жавоб олинг</value>
   </data>
   <data name="to_know_more" xml:space="preserve">
     <value>Қўшимча маълумот</value>
@@ -196,6 +199,6 @@
     <value>Нима учун ариза беряпсиз?</value>
   </data>
   <data name="your_email" xml:space="preserve">
-    <value>Саволларингизга жавоб олинг</value>
+    <value>Сизнинг електрон манзилингиз</value>
   </data>
 </root>

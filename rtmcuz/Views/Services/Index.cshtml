@@ -15,7 +15,7 @@
                 @Html.DisplayNameFor(model => model.Url)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Image)
+                @Html.DisplayNameFor(model => model.ImageId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Title)
@@ -34,7 +34,7 @@
                     @Html.DisplayFor(modelItem => item.Url)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Image.Id)
+                    <a href="~/uploads/@item.Image.Path" target="_blank" class="attachment-name">@item.Image.OriginName</a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Title)

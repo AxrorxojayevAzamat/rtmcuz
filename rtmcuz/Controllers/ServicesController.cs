@@ -47,11 +47,11 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Service service)
+        public async Task<IActionResult> Create(Service service, IFormFile image)
         {
             if (ModelState.IsValid)
             {
-                _sectionRepository.Create(Section.FromService(service));
+                _sectionRepository.Create(Section.FromService(service), image);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -79,7 +79,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Service service)
+        public async Task<IActionResult> Edit(int id, Service service, IFormFile? image)
         {
             if (id != service.Id)
             {
@@ -90,7 +90,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _sectionRepository.Save(Section.FromService(service));
+                    _sectionRepository.Save(Section.FromService(service), image);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -118,7 +118,7 @@ namespace rtmcuz.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Variant(int id, Service service)
+        public async Task<IActionResult> Variant(int id, Service service, IFormFile image)
         {
             if (id != service.Id)
             {
@@ -129,7 +129,7 @@ namespace rtmcuz.Controllers
             {
                 try
                 {
-                    _sectionRepository.Save(Section.FromService(service));
+                    _sectionRepository.Save(Section.FromService(service), image);
                 }
                 catch (DbUpdateConcurrencyException)
                 {

@@ -1,23 +1,16 @@
 @using System.Globalization
-@model IEnumerable<Section>
+@model Section
 
 <div class="news">
     <div class="container">
         <div class="news-wrapper">
             <div class="content">
-                <div class="items">
-                    @foreach (var item in Model)
-                    {
-                        <div class="news-item">
-                            <img src="/uploads/@item.Image.Path" class="news-img">
-                            <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
-                            <a asp-action="NewsShow" asp-route-id=@item.Id class="title">@item.Title</a>
-                            <div class="text">@Html.Raw(item.Content)</div>
-                        </div>
-                    }
+                <div class="show">
+                    <h1>@Model.Title</h1>
+                    <img src="/uploads/@Model.Image.Path" class="news-img">
+                    <div class="date">@Model.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
+                    <div class="text">@Html.Raw(Model.Content)</div>
                 </div>
-                @await Html.PartialAsync("Pagination", Model)
-
             </div>
             <div class="sidebar">
                 <div class="last-news">
@@ -36,7 +29,6 @@
                         </div>
                     }
                 </div>
-                @await Html.PartialAsync("SocialMedia")
             </div>
         </div>
     </div>

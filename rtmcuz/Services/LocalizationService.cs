@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Localization;
 using System.Reflection;
-using rtmcuz.Resources;
+using rtmcuz.Resources.Controllers;
 
 namespace rtmcuz.Services
 {

@@ -5,28 +5,32 @@ using rtmcuz.Data;
 using rtmcuz.Data.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using PagedList;
+using Microsoft.Extensions.Localization;
 
 namespace rtmcuz.Controllers
 {
+    // [Route("{culture}")]
     public class HomeController : Controller
     {
         private readonly RtmcUzContext _context;
         private readonly Locales _locale;
+        private readonly IStringLocalizer<rtmcuz.Resources.Controllers.HomeController> _localizer;
 
-
-        public HomeController(RtmcUzContext context)
+        public HomeController(RtmcUzContext context, IStringLocalizer<rtmcuz.Resources.Controllers.HomeController> localizer)
         {
             _context = context;
+            _localizer = localizer;
             _locale = (Locales)Enum.Parse(typeof(Locales), CultureInfo.CurrentCulture.Name.Replace('-', '_'));
         }
 
         public async Task<IActionResult> Index()
         {
-            var interactiveServices = await _context.Sections.Where(s => s.Type == SectionTypes.Interactive && s.Lang == _locale).ToListAsync();
-            var banners = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Banner && s.Lang == _locale).ToListAsync();
-            var questions = await _context.Sections.Where(s => s.Type == SectionTypes.Question && s.Lang == _locale).ToListAsync();
-            var services = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.Service && s.Lang == _locale).ToListAsync();
-            var news = await _context.Sections.Include(b => b.Image).Where(s => s.Type == SectionTypes.News && s.Lang == _locale)
+            var interactiveServices = await QueryForSections(SectionTypes.Interactive).ToListAsync();
+            var banners = await QueryForSections(SectionTypes.Banner).ToListAsync();
+            var questions = await QueryForSections(SectionTypes.Question).ToListAsync();
+            var services = await QueryForSections(SectionTypes.Service).ToListAsync();
+            var news = await QueryForSections(SectionTypes.News)
                 .OrderByDescending(n => n.CreatedDate).Take(4).ToListAsync();
 
             if (interactiveServices == null || banners == null || questions == null || services == null || news == null) return NotFound();
@@ -40,16 +44,44 @@ namespace rtmcuz.Controllers
             return View();
         }
 
+        // [Route("o-nas")]
+        // [Route("biz-haqimizda")]
         public IActionResult AboutCenter()
         {
             return View();
         }
 
-        public IActionResult News()
+        //[Route("{slug}")]
+        public IActionResult News(int? page)
         {
-            return View();
+            const int PAGE_SIZE = 5;
+
+            var query = QueryForSections(SectionTypes.News).OrderByDescending(n => n.UpdatedDate);
+            var news = query.ToList();
+            var lastNews = query.Take(7).ToList();
+
+            ViewBag.PageSize = PAGE_SIZE;
+            ViewBag.LastNews = lastNews;
+            ViewBag.TotalItems = news.Count;
+            ViewBag.CurrentPage = page;
+
+            return View(news.ToPagedList(page ?? 1, PAGE_SIZE));
         }
 
+        public IActionResult NewsShow(int? id)
+        {
+            var news = _context.Sections.Include(s => s.Image).Where(s => s.Id == id).First();
+            var query = QueryForSections(SectionTypes.News).OrderByDescending(n => n.UpdatedDate);
+            var lastNews = query.Take(7).ToList();
+            ViewBag.LastNews = lastNews;
+
+            if (news == null)
+            {
+                return NotFound();
+            }
+
+            return View(news);
+        }
         public IActionResult Documents()
         {
             return View();
@@ -115,5 +147,7 @@ namespace rtmcuz.Controllers
             };
             return Json(rUpload);
         }
+
+        private IQueryable<Section> QueryForSections(SectionTypes type) => _context.Sections.Include(b => b.Image).Where(s => s.Type == type && s.Lang == _locale);
     }
 }

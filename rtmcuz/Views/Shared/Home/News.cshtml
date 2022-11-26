@@ -11,7 +11,7 @@
             {
                 @if (item.i == 0)
                 {
-                    <a class="news-item main">
+                    <a asp-action="NewsShow" asp-route-id=@item.value.Id class="news-item main">
                         <div class="bg">
                             <div class="bg-linear"></div>
                             <img src="/uploads/@item.value.Image.Path">
@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    <a class="news-item">
+                    <a asp-action="NewsShow" asp-route-id=@item.value.Id class="news-item">
                         <div class="bg">
                             <div class="bg-linear"></div>
                             <img src="/uploads/@item.value.Image.Path">

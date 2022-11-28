@@ -1,27 +1,4 @@
-﻿@model IEnumerable<Section>
-
-@{
-    @* const int MAX_PAGES = 10;
-        int currentPage = ViewBag.PageNumber ?? 1;
-        int totalItems = ViewBag.searchedCount;
-        int totalItems = ;
-        int startPage = currentPage - 5;
-        int endPage = currentPage + 4;
-        if (startPage <= 0)
-        {
-        endPage = endPage - (startPage - 1);
-        startPage = 1;
-        }
-
-        if (endPage > totalPages)
-        {
-        endPage = totalPages;
-        if (endPage > MAX_PAGES)
-        {
-        startPage = endPage - MAX_PAGES - 1;
-        }
-        } *@
-
+﻿@{
     int currentPage = (int)(ViewBag.CurrentPage ?? 1);
     int totalPages = (int)Math.Ceiling((decimal)ViewBag.TotalItems / ViewBag.PageSize);
     List<int> pages = new();
@@ -29,14 +6,12 @@
     for (var i = currentPage - 2; i < currentPage + 3; i++)
         if (i > 0 && i <= totalPages)
             pages.Add(i);
-
-    int number_1 = 0;
 }
 
 <div class="pagination">
     @if (currentPage > 1)
     {
-        <a asp-action="News" asp-route-page="1" class="pagination-item">
+        <a asp-action="News" asp-route-page="@(currentPage - 1)" class="pagination-item">
             <span class="ri-lg ri-arrow-left-s-line"></span>
         </a>
     }
@@ -54,12 +29,8 @@
     }
     @if (currentPage < totalPages)
     {
-        <a asp-action="News" asp-route-page="@totalPages" class="pagination-item">
+        <a asp-action="News" asp-route-page="@(currentPage + 1)" class="pagination-item">
             <span class="ri-lg ri-arrow-right-s-line"></span>
         </a>
     }
 </div>
-
-
-@* <a class="pagination-item">2</a>
-    <a class="pagination-item">3</a> *@

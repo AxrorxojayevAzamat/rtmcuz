@@ -219,11 +219,28 @@ header {
   margin: 0;
 }
 
-.header-top .culture form select {
-  -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
-  appearance:none;
+.header-top .culture form.culture-form select.culture-select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  box-shadow: 0px 0px 5px rgb(24 47 67 / 20%);
+  padding: 2px 6px;
+  outline: none;
+  border: none;
 }
+
+.header-top .culture form.culture-form select.culture-select option {
+  padding: 6px 12px;
+}
+
+.header-top .culture form.culture-form select.culture-select option[selected="selected"],
+.header-top .culture form.culture-form select.culture-select option:hover {
+  background-color: var(--custom-green);
+  color: var(--white-main);
+}
+
 
 .header-top .social-media .social-media-link {
   margin-left: 12px;

@@ -1,4 +1,11 @@
-﻿$('.question').click(function () {
+﻿$(document).ready(function () {
+    for (const el of $("select.culture-select option")) {
+        var ac = el.innerHTML.split(' ');
+        el.innerHTML = ac[0]
+    }
+})
+
+$('.question').click(function () {
     $(this).toggleClass("opened")
     $(this).children(".icon").toggleClass("icon-chevrone-bottom").toggleClass("icon-chevrone-top")
 });

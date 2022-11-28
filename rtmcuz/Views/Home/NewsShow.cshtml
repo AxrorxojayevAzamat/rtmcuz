@@ -22,7 +22,7 @@
                                 <img src="/uploads/@item.Image.Path" class="last-news-img">
                             </div>
                             <div class="right">
-                                <a class="title">@item.Title</a>
+                                <a asp-action="NewsShow" asp-route-id=@item.Id class="title">@item.Title</a>
                                 <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)
                                 </div>
                             </div>

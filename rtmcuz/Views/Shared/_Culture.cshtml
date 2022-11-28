@@ -5,11 +5,11 @@
 
 @{
     var culture = Context.Features.Get<IRequestCultureFeature>();
-    var cultureList = locOptions.Value.SupportedUICultures.Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName }).ToList();
+    var cultureList = locOptions.Value.SupportedUICultures.Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName }).ToList();
     var returnUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
 }
 
-<form asp-action="SetLanguage" asp-controller="Culture" method="post" asp-route-returnUrl="@returnUrl">
-    <select name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList"
+<form asp-action="SetLanguage" asp-controller="Culture" method="post" asp-route-returnUrl="@returnUrl" class="culture-form">
+    <select name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" class="culture-select"
             onchange="this.form.submit();"></select>
 </form>

@@ -483,14 +483,16 @@
 
 .news-wrapper .content .items .news-item .text {
     font: var(--body-light-1);
-    max-height: 76.8px;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-align: justify;
 }
 
 .news-wrapper .content .items .news-item .text>* {
     margin: 0;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
 }
 
 .news-wrapper .content .pagination {
@@ -555,8 +557,8 @@
 }
 
 .news-wrapper .sidebar .last-news .last-news-item .news-img .last-news-img {
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     border-radius: 8px;
 }
 
@@ -585,10 +587,12 @@
 
 .news-wrapper .show .date {
     font: var(--body-light-3);
+    margin: 6px 0;
 }
 
 .news-wrapper .show .text {
     font: var(--body-light-1);
+    text-align: justify;
 }
 
 

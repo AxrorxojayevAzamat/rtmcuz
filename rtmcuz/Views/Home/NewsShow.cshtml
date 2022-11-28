@@ -6,7 +6,7 @@
         <div class="news-wrapper">
             <div class="content">
                 <div class="show">
-                    <h1>@Model.Title</h1>
+                    <h1 class="title">@Model.Title</h1>
                     <img src="/uploads/@Model.Image.Path" class="news-img">
                     <div class="date">@Model.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
                     <div class="text">@Html.Raw(Model.Content)</div>

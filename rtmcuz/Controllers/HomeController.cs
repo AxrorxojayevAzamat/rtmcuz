@@ -70,15 +70,15 @@ namespace rtmcuz.Controllers
 
         public IActionResult NewsShow(int? id)
         {
-            var news = _context.Sections.Include(s => s.Image).Where(s => s.Id == id).First();
+            var news = _context.Sections.Include(s => s.Image).Where(s => s.GroupId == id && s.Lang == _locale).FirstOrDefault();
+            if (news == null)
+            {
+                return Redirect("/Home/News");
+            }
+            
             var query = QueryForSections(SectionTypes.News).OrderByDescending(n => n.UpdatedDate);
             var lastNews = query.Take(7).ToList();
             ViewBag.LastNews = lastNews;
-
-            if (news == null)
-            {
-                return NotFound();
-            }
 
             return View(news);
         }

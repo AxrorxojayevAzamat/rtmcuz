@@ -11,7 +11,7 @@
             {
                 @if (item.i == 0)
                 {
-                    <a asp-action="NewsShow" asp-route-id=@item.value.Id class="news-item main">
+                    <a asp-action="NewsShow" asp-route-id=@item.value.GroupId class="news-item main">
                         <div class="bg">
                             <div class="bg-linear"></div>
                             <img src="/uploads/@item.value.Image.Path">
@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    <a asp-action="NewsShow" asp-route-id=@item.value.Id class="news-item">
+                    <a asp-action="NewsShow" asp-route-id=@item.value.GroupId class="news-item">
                         <div class="bg">
                             <div class="bg-linear"></div>
                             <img src="/uploads/@item.value.Image.Path">
@@ -31,30 +31,6 @@
                 }
 
             }
-
-
-@* 
-            <a class="news-item">
-                <div class="bg">
-                    <div class="bg-linear"></div>
-                    <img src="/img/Background1.png">
-                </div>
-                <div class="title">Ehtiyojmand nuroniylar Samarqand shahriga olib borildi</div>
-            </a>
-            <a class="news-item">
-                <div class="bg">
-                    <div class="bg-linear"></div>
-                    <img src="/img/Background2.png">
-                </div>
-                <div class="title">TenderNatijalari E’lon qilindi</div>
-            </a>
-            <a class="news-item">
-                <div class="bg">
-                    <div class="bg-linear"></div>
-                    <img src="/img/Background3.png">
-                </div>
-                <div class="title">Уважаемые соотечественники!</div>
-            </a> *@
         </div>
     </div>
 </section>

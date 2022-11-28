@@ -42,6 +42,7 @@ namespace rtmcuz.Repositories
             {
                 section.ImageId = _attachmentService.UploadFileToStorage(image);
             }
+            section.Slug = GetSlug(section.Slug);
             _context.Update(section);
             _context.SaveChanges();
         }
@@ -80,9 +81,18 @@ namespace rtmcuz.Repositories
 
         private int GetGroupId(Section section)
         {
+            section.Slug = GetSlug(section.Slug);
             _context.Add(section);
             _context.SaveChanges();
             return section.Id;
+        }
+
+        private string GetSlug(string slug, int? i = 0)
+        {
+            string nextSlug = (i > 0 ? $"{slug}-{i}" : slug);
+            var section = _context.Sections.Where(s => s.Slug == nextSlug).FirstOrDefault();
+            if (section == null) return nextSlug;
+            return GetSlug(slug, ++i);
         }
     }
 }

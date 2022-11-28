@@ -9,7 +9,7 @@
     var returnUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
 }
 
-<form asp-action="SetLanguage" asp-controller="Culture" method="post" asp-route-returnUrl="@returnUrl" class="culture-form">
+<form asp-action="SetLanguage" asp-controller="Culture" asp-route-returnUrl="@returnUrl" class="culture-form">
     <select name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" class="culture-select"
             onchange="this.form.submit();"></select>
 </form>

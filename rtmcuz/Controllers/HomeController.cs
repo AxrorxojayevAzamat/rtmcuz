@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using PagedList;
 using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Localization;
 
 namespace rtmcuz.Controllers
 {
@@ -44,14 +45,28 @@ namespace rtmcuz.Controllers
             return View();
         }
 
-        // [Route("o-nas")]
-        // [Route("biz-haqimizda")]
-        public IActionResult AboutCenter()
+        [Route("/{slugGroup}/{slug}")]
+        public async Task<IActionResult> Show(string slugGroup, string slug)
         {
-            return View();
+            var item = _context.Sections.Include(s => s.Image).Where(s => s.Slug.Equals(slug)).FirstOrDefault();
+            if (item == null)
+            {
+                return Redirect("/");
+            }
+
+            if (item.Type == SectionTypes.News)
+            {
+                ViewBag.LastNews = QueryForSections(SectionTypes.News).OrderByDescending(n => n.UpdatedDate).Take(7).ToList();
+            }
+
+            if (!item.Lang.Equals(_locale)) await SetCookie((Locales)item.Lang);
+
+            string viewName = $"{item.Type.ToString()}Show";
+
+            return View(viewName, item);
         }
 
-        //[Route("{slug}")]
+        [Route("news")]
         public IActionResult News(int? page)
         {
             const int PAGE_SIZE = 5;
@@ -68,29 +83,40 @@ namespace rtmcuz.Controllers
             return View(news.ToPagedList(page ?? 1, PAGE_SIZE));
         }
 
-        public IActionResult NewsShow(int? id)
+        [Route("about-center")]
+        public IActionResult AboutCenter()
         {
-            var news = _context.Sections.Include(s => s.Image).Where(s => s.GroupId == id && s.Lang == _locale).FirstOrDefault();
-            if (news == null)
-            {
-                return Redirect("/Home/News");
-            }
-            
-            var query = QueryForSections(SectionTypes.News).OrderByDescending(n => n.UpdatedDate);
-            var lastNews = query.Take(7).ToList();
-            ViewBag.LastNews = lastNews;
-
-            return View(news);
+            return View();
         }
+
+        [Route("documents")]
         public IActionResult Documents()
         {
             return View();
         }
 
+        [Route("feedback")]
         public IActionResult Feedback()
         {
             return View();
         }
+
+        //public IActionResult NewsShow(int? id)
+        //{
+        //    var news = QueryForSection(id ?? 0).FirstOrDefault();
+        //    if (news == null)
+        //    {
+        //        return Redirect("/Home/News");
+        //    }
+
+        //    var query = QueryForSections(SectionTypes.News).OrderByDescending(n => n.UpdatedDate);
+        //    var lastNews = query.Take(7).ToList();
+        //    ViewBag.LastNews = lastNews;
+
+        //    return View(news);
+        //}
+
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -149,5 +175,21 @@ namespace rtmcuz.Controllers
         }
 
         private IQueryable<Section> QueryForSections(SectionTypes type) => _context.Sections.Include(b => b.Image).Where(s => s.Type == type && s.Lang == _locale);
+        private IQueryable<Section> QueryForSection(int groupId) => _context.Sections.Include(b => b.Image).Where(s => s.GroupId == groupId && s.Lang == _locale);
+
+        private string GetParentViewName(string parentSlug) => parentSlug switch
+        {
+            "news" => "News",
+            "documents" => "Documents",
+            _ => "Index"
+        };
+
+        public async Task SetCookie(Locales lang)
+        {
+            Response.Cookies.Append(
+             CookieRequestCultureProvider.DefaultCookieName,
+             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(lang.ToString().Replace('_', '-'))),
+             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) });
+        }
     }
 }

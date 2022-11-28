@@ -486,7 +486,10 @@
 }
 
 .news-wrapper .content .items .news-item .text>* {
-    margin: 0;
+    display: none;
+}
+
+.news-wrapper .content .items .news-item .text>*:first-child {
     -webkit-line-clamp: 5;
     display: -webkit-box;
     -webkit-box-orient: vertical;

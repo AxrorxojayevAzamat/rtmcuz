@@ -102,6 +102,10 @@
 .our-services-section .service-card .card-content {
     padding: 30px 36px;
     /* color: var(--dark-main); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 236px;
 }
 
 .our-services-section .service-card .card-content .card-title {

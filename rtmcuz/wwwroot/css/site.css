@@ -210,38 +210,54 @@ header {
   display: flex;
 }
 
-/* .header-top .social-media, .header-top .culture {
+.culture-wrapper {
+  position: relative;
+}
+
+.culture-wrapper .current-culture {
   display: flex;
   align-items: center;
-} */
-
-.header-top .culture form {
-  margin: 0;
+  font: var(--body-regular-2);
+  padding: 2px 10px;
+  cursor: pointer;
 }
 
-.header-top .culture form.culture-form select.culture-select {
-  -moz-appearance: none;
-  /* Firefox */
-  -webkit-appearance: none;
-  /* Safari and Chrome */
-  appearance: none;
-  box-shadow: 0px 0px 5px rgb(24 47 67 / 20%);
-  padding: 2px 6px;
-  outline: none;
-  border: none;
+.culture-wrapper .current-culture span {
+  color: var(--primary-main);
+  margin-right: 7px;
 }
 
-.header-top .culture form.culture-form select.culture-select option {
-  padding: 6px 12px;
+.culture-wrapper .culture-list-dropdown {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  transition: 0.3s ease-in-out opacity;
+  box-shadow: 0px 0px 10px rgb(24 47 67 / 10%);
+  z-index: 99999;
+  width: 100%;
 }
 
-.header-top .culture form.culture-form select.culture-select option[selected="selected"],
-.header-top .culture form.culture-form select.culture-select option:hover {
-  background-color: var(--custom-green);
-  color: var(--white-main);
+.culture-wrapper:hover .culture-list-dropdown {
+  opacity: 1;
+  display: block;
 }
 
+.culture-wrapper .culture-list-dropdown .culture-link {
+  display: block;
+  padding: 3px 10px;
+  color: var(--custom-grey-3);
+  font: var(--body-regular-3);
+  background-color: var(--white-main);
+}
 
+.culture-wrapper .culture-list-dropdown .culture-link:hover {
+  background-color: var(--dark-variant-5);
+  color: var(--custom-grey-3);
+}
+
+/* 
 .header-top .social-media .social-media-link {
   margin-left: 12px;
 }
@@ -249,7 +265,7 @@ header {
 .header-top .social-media .social-media-link [class*=" ri-"] {
   width: 20px;
   height: 20px;
-}
+} */
 
 .header-bottom {
   display: flex;
@@ -307,6 +323,10 @@ header {
 .header-bottom .searching input.search-input {
   width: calc(100% - 32px);
   user-select: none;
+}
+
+.header-bottom .culture-wrapper {
+  display: none;
 }
 
 footer {
@@ -445,7 +465,7 @@ footer .footer-bottom .subtitle {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 
 .menu__btn>span,
@@ -484,6 +504,7 @@ footer .footer-bottom .subtitle {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
   opacity: 0;
+  z-index: 1;
 }
 
 .hamburger-menu .menu__item {

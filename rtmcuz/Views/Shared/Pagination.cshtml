@@ -2,6 +2,7 @@
     int currentPage = (int)(ViewBag.CurrentPage ?? 1);
     int totalPages = (int)Math.Ceiling((decimal)ViewBag.TotalItems / ViewBag.PageSize);
     List<int> pages = new();
+    var currentPath = Context.Request.Path.Value;
 
     for (var i = currentPage - 2; i < currentPage + 3; i++)
         if (i > 0 && i <= totalPages)
@@ -11,7 +12,7 @@
 <div class="pagination">
     @if (currentPage > 1)
     {
-        <a asp-action="News" asp-route-page="@(currentPage - 1)" class="pagination-item">
+        <a href="@currentPath?page=@(currentPage - 1)" class="pagination-item">
             <span class="ri-lg ri-arrow-left-s-line"></span>
         </a>
     }
@@ -21,7 +22,7 @@
     }
     @foreach (int pageNumber in pages)
     {
-        <a asp-action="News" asp-route-page="@pageNumber" class="pagination-item @(pageNumber == currentPage ? "active" : "")">@pageNumber</a>
+        <a href="@currentPath?page=@pageNumber" class="pagination-item @(pageNumber == currentPage ? "active" : "")">@pageNumber</a>
     }
     @if (currentPage + 2 < totalPages)
     {
@@ -29,7 +30,7 @@
     }
     @if (currentPage < totalPages)
     {
-        <a asp-action="News" asp-route-page="@(currentPage + 1)" class="pagination-item">
+        <a href="@currentPath?page=@(currentPage + 1)" class="pagination-item">
             <span class="ri-lg ri-arrow-right-s-line"></span>
         </a>
     }

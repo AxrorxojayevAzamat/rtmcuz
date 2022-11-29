@@ -4,12 +4,29 @@
 @inject IOptions<RequestLocalizationOptions> locOptions
 
 @{
+    IDictionary<string, string> customCultureList = new Dictionary<string, string>(){
+        { "uz-Latn-UZ", "O'zbek" },
+        { "uz-Cyrl-UZ", "Ўзбек" },
+        { "ru", "Русский" },
+    };
     var culture = Context.Features.Get<IRequestCultureFeature>();
-    var cultureList = locOptions.Value.SupportedUICultures.Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName }).ToList();
-    var returnUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+    var cultureList = locOptions.Value.SupportedUICultures.Select(c => new SelectListItem
+            {
+                Value = c.Name,
+                Text = customCultureList[c.Name]
+            }).ToList();
+    var currentUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" :
+    $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
 }
 
-<form asp-action="SetLanguage" asp-controller="Culture" asp-route-returnUrl="@returnUrl" class="culture-form">
-    <select name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" class="culture-select"
-            onchange="this.form.submit();"></select>
-</form>
+<div class="culture-wrapper">
+    <div class="current-culture"> <span class="ri-lg ri-global-line"></span> @customCultureList[culture.RequestCulture.UICulture.Name]</div>
+    <div class="culture-list-dropdown">
+        @foreach (var cultureItem in cultureList)
+        {
+            <a asp-action="SetLanguage" asp-controller="Home" asp-route-culture=@cultureItem.Value asp-route-currentUrl=@currentUrl class="culture-link">
+                @cultureItem.Text
+            </a>
+        }
+    </div>
+</div>

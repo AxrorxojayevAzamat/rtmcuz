@@ -96,6 +96,10 @@
         display: none;
     }
 
+    .header-bottom .culture-wrapper {
+        display: block;
+    }
+
     .header-bottom .searching {
         width: 88%;
     }

@@ -11,7 +11,7 @@
                         <div class="news-item">
                             <img src="/uploads/@item.Image.Path" class="news-img">
                             <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
-                            <a asp-action="NewsShow" asp-route-id=@item.GroupId class="title">@item.Title</a>
+                            <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.Slug" class="title">@item.Title</a>
                             <div class="text">@Html.Raw(item.Content)</div>
                         </div>
                     }
@@ -29,7 +29,7 @@
                                 <img src="/uploads/@item.Image.Path" class="last-news-img">
                             </div>
                             <div class="right">
-                                <a asp-action="NewsShow" asp-route-id=@item.GroupId class="title">@item.Title</a>
+                                <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.Slug" class="title">@item.Title</a>
                                 <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)
                                 </div>
                             </div>

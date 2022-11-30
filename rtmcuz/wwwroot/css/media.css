@@ -303,6 +303,13 @@
         grid-template-columns: 1fr;
     }
 
+    .about-center .report {
+        display: block;
+    }
+
+    .about-center .report .report-img {
+        margin: 0;
+    }
 }
 
 @media (max-width: 480px) {

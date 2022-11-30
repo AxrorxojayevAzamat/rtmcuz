@@ -452,6 +452,28 @@
     /* columns: 2; */
 }
 
+.about-center .report {
+    display: flex;
+}
+
+.about-center .report .report-img {
+    /* width: 50%; */
+    margin-right: 30px;
+}
+
+.about-center .report .report-img img {
+    width: 100%;
+}
+
+.about-center .report .text a {
+    color: var(--primary-main);
+}
+
+.about-center .report .text a:hover {
+    color: var(--custom-grey-1);
+}
+
+
 
 /* NEWS */
 .news {

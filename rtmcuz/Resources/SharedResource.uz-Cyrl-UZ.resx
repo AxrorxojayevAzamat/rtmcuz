@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,79 +26,79 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -119,126 +119,101 @@
   </resheader>
   <data name="about_center" xml:space="preserve">
     <value>Марказ ҳақида</value>
-    <comment/>
   </data>
   <data name="about_us_in_numbers" xml:space="preserve">
     <value>Биз ҳақимизда рақамларда </value>
-    <comment/>
   </data>
   <data name="address" xml:space="preserve">
     <value>Манзил</value>
-    <comment/>
   </data>
   <data name="company_address_1" xml:space="preserve">
     <value>Ўзбекистон Республикаси, Тошкент шаҳри, Олмазор тумани, Себзор даҳаси, 18-А уй, 240-АЦ биноси</value>
-    <comment/>
   </data>
   <data name="company_full_name_1" xml:space="preserve">
     <value>"Ўзбекистон телекоммуникация тармоқларини назорат қилиш республика маркази" давлат унитар корхонаси.</value>
-    <comment/>
   </data>
   <data name="connection" xml:space="preserve">
     <value>Боғланиш</value>
-    <comment/>
   </data>
   <data name="contact_us" xml:space="preserve">
     <value>Биз билан боғланиш</value>
-    <comment/>
   </data>
   <data name="documents" xml:space="preserve">
     <value>Ҳужжатлар</value>
-    <comment/>
   </data>
   <data name="email_address" xml:space="preserve">
     <value>E-mail манзили</value>
-    <comment/>
   </data>
   <data name="fax" xml:space="preserve">
     <value>Факс</value>
-    <comment/>
   </data>
   <data name="feedback" xml:space="preserve">
     <value>Қайта алоқа</value>
-    <comment/>
   </data>
   <data name="feedback_text_1" xml:space="preserve">
     <value>Бу ерда сиз тизим оператори фаолиятига оид шарҳ ва мулоҳазаларингизни қолдиришингиз мумкин.</value>
-    <comment/>
   </data>
   <data name="firstname_and_surname" xml:space="preserve">
     <value>Исм ва фамилия</value>
-    <comment/>
   </data>
   <data name="frequently_asked_questions" xml:space="preserve">
     <value>Кўп бериладиган саволлар</value>
-    <comment/>
   </data>
   <data name="home_page" xml:space="preserve">
     <value>Бош саҳифа</value>
-    <comment/>
   </data>
   <data name="interactive_services" xml:space="preserve">
     <value>Интерактив хизматлар</value>
-    <comment/>
   </data>
   <data name="lastest_news" xml:space="preserve">
     <value>Сўнги янгиликлар</value>
-    <comment/>
   </data>
   <data name="more" xml:space="preserve">
     <value>Кўпроқ</value>
-    <comment/>
   </data>
   <data name="news" xml:space="preserve">
     <value>Янгиликлар</value>
-    <comment/>
   </data>
   <data name="our_services" xml:space="preserve">
     <value>Бизнинг хизматларимиз</value>
-    <comment/>
   </data>
   <data name="reception" xml:space="preserve">
     <value>Қабулхона</value>
-    <comment/>
   </data>
   <data name="searching" xml:space="preserve">
     <value>Қидирув</value>
-    <comment/>
   </data>
   <data name="see_all" xml:space="preserve">
     <value>Ҳаммасини кўриш</value>
-    <comment/>
   </data>
   <data name="select_department" xml:space="preserve">
     <value>Бўлимни танланг</value>
-    <comment/>
   </data>
   <data name="telegramm_bot" xml:space="preserve">
     <value>Telegram боти</value>
-    <comment/>
   </data>
   <data name="text_of_the_appeal" xml:space="preserve">
     <value>Мурожаат матни</value>
-    <comment/>
   </data>
   <data name="to_know_more" xml:space="preserve">
     <value>Қўшимча маълумот</value>
-    <comment/>
   </data>
   <data name="web_site" xml:space="preserve">
     <value>Веб сайт</value>
-    <comment/>
   </data>
   <data name="what_are_you_contacting_for" xml:space="preserve">
     <value>Нима учун ариза беряпсиз?</value>
-    <comment/>
   </data>
   <data name="your_email" xml:space="preserve">
     <value>Электрон манзилингиз</value>
-    <comment/>
   </data>
   <data name="history_of_center" xml:space="preserve">
     <value>Марказ тарихи</value>
-    <comment/>
+  </data>
+  <data name="report" xml:space="preserve">
+    <value>Ҳисобот</value>
+  </data>
+  <data name="vacancy" xml:space="preserve">
+    <value>Бўш иш ўринлари</value>
   </data>
 </root>

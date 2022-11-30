@@ -1,0 +1,104 @@
+@using System.Globalization
+@{
+    string currentCulture = CultureInfo.CurrentCulture.Name;
+}
+
+<div class="about-center">
+    <div class="container">
+        <h4 class="title">@sharedLocalizer["report"]</h4>
+        <div class="report">
+            <div class="report-img">
+                <img src="~/img/report-img.png" alt="">
+            </div>
+            <div class="text">
+                @if (currentCulture == "uz-Latn-UZ")
+                {
+                    <div class="entry-content">
+
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2017/13/Отчёт о проведении инспекционного аудита СМК ГУП РЦУСТУз 2019.pdf">“O’zTTBRM”
+                                DUK SMT &nbsp;auditi o’tkazilganligi haqida hisobot. 2019y.</a></p>
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2017/07/Отчет-о-проведении-инспекционного-аудита-СМК-ГУП-РЦУСТУз-в-2017г.pdf">“O’zTTBRM”
+                                DUK SMT &nbsp;auditi o’tkazilganligi haqida hisobot. 2017y.</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/otchot2016.pdf"> “O’zTTBRM” DUK SMT
+                                qayta sertifikatlash auditi o’tkazilganligi haqida hisobot. 2016y.</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/resheniye2016.pdf">“ЎзТТБРМ” ДУК СМТ
+                                қайта сертификатлаш аудити ўтказилганлиги натижалари бўйича қарори. 2016й</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2021(1).pdf">2020 йил учун
+                                самарадорликнинг муҳим кўрсаткичлари СМК ва бизнес</a></p>
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2016/10/2021(2).pdf">Давлат_мулки_объектлари_тўғрисидаги_маълумотлар</a>
+                        </p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2021-1.pdf">Бухгалтерия баланси ва
+                                молиявий натижалар тўғрисидаги 2021 йил 1-чорак якунлари бўйича</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/hisob.pdf">2021 yil 1 yarim yillik
+                                yakuni bo’yicha davlat mulki obyektlari to’g’risidagi ma’lumotlar</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2chorak.PDF">Бухгалтерия баланси ва
+                                молиявий натижалар тўғрисидаги 2021 йил 2-чорак якунлари бўйича</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/3chorak.jpg">9-ойлик якунлари бўйича
+                                давлат мулки объектларининг ҳисобини юритиш тартиби тўғрисида маълумот</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/3-chorak.pdf">Бухгалтерия баланси ва
+                                молиявий натижалар тўғрисидаги 2021 йил 9 ойлик якунлари бўйича</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2022/02/БУХГАЛТЕР БАЛАНСИ - ФОРМА № 1.xltx">БУХГАЛТЕРИЯ
+                                БАЛАНСИ – ФОРМА № 1</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2022/02/БУХГАЛТЕР БАЛАНСИ - ФОРМА № 2.xltx">БУХГАЛТЕРИЯ
+                                БАЛАНСИ – ФОРМА № 2</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2022.pdf">
+                                Бизнес режа 2022</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2022/02/2022-1.PDF">KPI 2021 йил</a></p>
+                    </div>
+                }
+                else if (currentCulture == "uz-Cyrl-UZ")
+                {
+                    <div class="entry-content">
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2017/13/Отчёт о проведении инспекционного аудита СМК ГУП РЦУСТУз 2019.pdf">“ЎзТТБРМ”
+                                ДУК СМТ &nbsp;аудити ўтказилганлиги ҳақида ҳисобот. 2019й.</a></p>
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2017/07/Отчет-о-проведении-инспекционного-аудита-СМК-ГУП-РЦУСТУз-в-2017г.pdf">“ЎзТТБРМ”
+                                ДУК СМТ &nbsp;аудити ўтказилганлиги ҳақида ҳисобот. 2017й.</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/otchot2016.pdf">“ЎзТТБРМ” ДУК СМТ қайта
+                                сертификатлаш аудити ўтказилганлиги ҳақида ҳисобот. 2016й.</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/resheniye2016.pdf">“ЎзТТБРМ” ДУК СМТ
+                                қайта сертификатлаш аудити ўтказилганлиги натижалари бўйича қарори. 2016й<br>
+                            </a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2021(1).pdf">2020 йил учун
+                                самарадорликнинг муҳим кўрсаткичлари СМК ва бизнес</a></p>
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2016/10/2021(2).pdf">Давлат_мулки_объектлари_тўғрисидаги_маълумотлар</a>
+                        </p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2021-1.pdf">Бухгалтерия баланси ва
+                                молиявий натижалар тўғрисидаги 2021 йил 1-чорак якунлари бўйича</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/hisob.pdf">2021 йил 1 ярим йиллик якуни
+                                бўйича давлат мулки объектлари тўғрисидаги маълумотлар</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/2chorak.PDF">Бухгалтерия баланси ва
+                                молиявий натижалар тўғрисидаги 2021 йил 2-чорак якунлари бўйича</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/3chorak.jpg">9-ойлик якунлари бўйича
+                                давлат мулки объектларининг ҳисобини юритиш тартиби тўғрисида маълумот</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/3-chorak.pdf">Бухгалтерия баланси ва
+                                молиявий натижалар тўғрисидаги 2021 йил 9 ойлик якунлари бўйича</a></p>
+
+                    </div>
+                }
+                else if (currentCulture == "ru")
+                {
+                    <div class="entry-content">
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2017/13/Отчёт о проведении инспекционного аудита СМК ГУП РЦУСТУз 2019.pdf">Отчёт
+                                о проведении инспекционного аудита СМК ГУП РЦУСТУз 2019г</a></p>
+                        <p><a
+                            href="http://www.rtmc.uz/wp-content/uploads/2017/07/Отчет-о-проведении-инспекционного-аудита-СМК-ГУП-РЦУСТУз-в-2017г.pdf">Отчет
+                                о проведении инспекционного аудита СМК ГУП РЦУСТУз в 2017г</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/otchot2016.pdf">Отчет о проведении
+                                ресертификационного аудита СМК ГУП «РЦУСТУз» — 2016г.</a></p>
+                        <p><a href="http://www.rtmc.uz/wp-content/uploads/2016/10/resheniye2016.pdf">Решение по
+                                результатам проведения ресертификационного аудита СМК ГУП «РЦУСТУз» — 2016г.</a></p>
+                    </div>
+                }
+
+            </div>
+        </div>
+        @await Html.PartialAsync("SocialMedia")
+    </div>
+</div>

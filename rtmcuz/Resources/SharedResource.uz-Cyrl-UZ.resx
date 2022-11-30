@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="about_center" xml:space="preserve">
+    <value>Марказ ҳақида</value>
+  </data>
   <data name="about_us_in_numbers" xml:space="preserve">
     <value>Рақамларда биз ҳақимизда</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="frequently_asked_questions" xml:space="preserve">
     <value>Кўп бериладиган саволлар</value>
+  </data>
+  <data name="home_page" xml:space="preserve">
+    <value>Бош саҳифа</value>
   </data>
   <data name="interactive_services" xml:space="preserve">
     <value>Интерактив хизматлар</value>

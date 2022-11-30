@@ -246,7 +246,7 @@ header {
 
 .culture-wrapper .culture-list-dropdown .culture-link {
   display: block;
-  padding: 3px 10px;
+  padding: 6px 15px;
   color: var(--custom-grey-3);
   font: var(--body-regular-3);
   background-color: var(--white-main);

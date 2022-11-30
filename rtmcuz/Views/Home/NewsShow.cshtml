@@ -12,24 +12,7 @@
                     <div class="text">@Html.Raw(Model.Content)</div>
                 </div>
             </div>
-            <div class="sidebar">
-                <div class="last-news">
-                    <h5 class="head-title">@sharedLocalizer["lastest_news"]</h5>
-                    @foreach (var item in ViewBag.LastNews)
-                    {
-                        <div class="last-news-item">
-                            <div class="news-img">
-                                <img src="/uploads/@item.Image.Path" class="last-news-img">
-                            </div>
-                            <div class="right">
-                                <a asp-action="NewsShow" asp-route-id=@item.GroupId class="title">@item.Title</a>
-                                <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)
-                                </div>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
+            @await Html.PartialAsync("NewsSidebar")
         </div>
     </div>
 </div>

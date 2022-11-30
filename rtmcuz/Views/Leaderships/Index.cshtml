@@ -37,7 +37,10 @@
                     @Html.Raw(item.Content)
                 </td>
                 <td>
-                    <a href="~/uploads/@item.Image.Path" target="_blank" class="attachment-name">@item.Image.OriginName</a>
+                    @if(item.Image != null)
+                    {
+                        <a href="~/uploads/@item.Image.Path" target="_blank" class="attachment-name">@item.Image.OriginName</a>
+                    }
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

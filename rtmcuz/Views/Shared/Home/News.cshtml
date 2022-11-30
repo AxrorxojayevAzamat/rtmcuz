@@ -4,14 +4,14 @@
     <div class="container">
         <div class="head">
             <h3 class="title">@sharedLocalizer["news"]</h3>
-            <a asp-action="News" class="see-all">@sharedLocalizer["see_all"]</a>
+            <a asp-action="Section" asp-route-slug="news" class="see-all">@sharedLocalizer["see_all"]</a>
         </div>
         <div class="news-grid">
             @foreach (var item in Model.Select((value, i) => new { i, value }))
             {
                 @if (item.i == 0)
                 {
-                    <a asp-action="NewsShow" asp-route-id=@item.value.GroupId class="news-item main">
+                    <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class="news-item main">
                         <div class="bg">
                             <div class="bg-linear"></div>
                             <img src="/uploads/@item.value.Image.Path">
@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    <a asp-action="NewsShow" asp-route-id=@item.value.GroupId class="news-item">
+                    <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class="news-item">
                         <div class="bg">
                             <div class="bg-linear"></div>
                             <img src="/uploads/@item.value.Image.Path">

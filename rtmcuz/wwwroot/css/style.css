@@ -105,7 +105,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 236px;
+    min-height: 236px;
 }
 
 .our-services-section .service-card .card-content .card-title {
@@ -438,7 +438,7 @@
 
 /* ABOUT CENTER */
 .about-center {
-    margin: 100px 0;
+    margin: 60px 0;
 }
 
 .about-center .title {
@@ -448,7 +448,8 @@
 
 .about-center .text {
     font: var(--body-regular-1);
-    columns: 2;
+    text-align: justify;
+    /* columns: 2; */
 }
 
 
@@ -620,12 +621,13 @@
     margin: 0 auto;
 }
 
-.documents .documents-categories .document-category {
+.documents .documents-categories .document-category h6.document-title {
     display: flex;
     justify-content: space-between;
     padding: 20px 25px;
     font: var(--heading-bold-6);
     border-bottom: 1px solid var(--white-light);
+    margin: 6px 0;
 }
 
 .documents .documents-categories .document-category:last-child {
@@ -638,6 +640,27 @@
     font-size: 24px;
 }
 
+.documents .documents-categories .document-category .documents-content {
+    display: none;
+    padding: 20px 25px;
+    user-select: none;
+}
+
+.documents .documents-categories .document-category .documents-content a {
+    color: var(--primary-main);
+}
+
+.documents .documents-categories .document-category .documents-content a:hover {
+    color: var(--custom-grey-1);
+}
+
+.documents .documents-categories .document-category.opened .documents-content {
+    display: block;
+}
+
+.documents .documents-categories .document-category.opened .documents-content {
+    font: var(--body-regular-2);
+}
 
 /* FEEDBACK */
 .feedback {

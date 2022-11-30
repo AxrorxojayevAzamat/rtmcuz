@@ -1,0 +1,78 @@
+@using System.Globalization
+@{
+    string currentCulture = CultureInfo.CurrentCulture.Name;
+}
+
+<div class="about-center">
+    <div class="container">
+        <h4 class="title">@sharedLocalizer["history_of_center"]</h4>
+        <div class="text">
+            @if (currentCulture == "uz-Latn-UZ")
+            {
+                <div class="entry-content">
+                    <p>1992 yil</p>
+                    <p>1992 yil 1 avgustda O’zbekiston Respublikasi Aloqa Vazirliginigining 1992 yil 29 iyuldagi №168-son
+                        buyrug’iga muvofiq Operativ boshqaruv xizmati va Hududiy ishlab chiqarish birlashmasi bazasida
+                        Xalqaro va Shaharlararo tarmoqlarni boshqarish markazi tashkil etildi.</p>
+                    <p>2004 yil</p>
+                    <p>O’zbekiston Respublikasi Vazirlar Mahkamasining 2004 yil 7 mayda qabul qilingan “O’zbekiston aloqa va
+                        axborotlashtirish agentligi faoliyatini takomillashtirish chora-tadbirlari to’g’risida”gi №215-son
+                        qaroriga muvofiq Xalqaro va Shaharlararo tarmoqlarni boshqarish markazi O’zbekiston
+                        telekommunikatsiya tarmoqlarini boshqarish Respublika markazi(O’zTTBRM)ga o’zgartirildi. O’zTTBRM
+                        O’zbekiston aloqa va axborotlashtirish agentligi tarkibiga kiruvchi korxonadir.</p>
+                    <p>2007 yil</p>
+                    <p>O’zbekiston Respublikasi Vazirlar Mahkamasining 2006 yil 16 oktyabrda qabul qilingan “Ustav fondida
+                        Davlat ulushi bo’lgan korhonalarning samarali boshqarilishini va Davlat mulkining zarur darajada
+                        hisobga olinishini ta’minlash chora-tadbirlari to’g’risida”gi №215-son qarori bilan tasdiqlangan
+                        Davlat korxonalari to’g’risidagi Nizomiga muvofiq O’zbekiston telekommunikatsiya tarmoqlarini
+                        boshqarish Respublika markazi “O’zbekiston telekommunikatsiya tarmoqlarini boshqarish Respublika
+                        markazi” Davlat unitar korxonasiga o’zgartirildi.</p>
+                </div>
+            }
+            else if (currentCulture == "uz-Cyrl-UZ")
+            {
+                <div class="entry-content">
+                    <p>1992 йил</p>
+                    <p>1992 йил 1 августда Ўзбекистон Республикаси Алоқа Вазирлигинигининг 1992 йил 29 июлдаги №168-сон
+                        буйруғига мувофиқ Оператив бошқарув хизмати ва Ҳудудий ишлаб чиқариш бирлашмаси базасида Халқаро ва
+                        Шаҳарлараро тармоқларни бошқариш маркази ташкил этилди.</p>
+                    <p>2004 йил</p>
+                    <p>Ўзбекистон Республикаси Вазирлар Маҳкамасининг 2004 йил 7 майда қабул қилинган “Ўзбекистон алоқа ва
+                        ахборотлаштириш агентлиги фаолиятини такомиллаштириш чора-тадбирлари тўғрисида”ги №215-сон қарорига
+                        мувофиқ Халқаро ва Шаҳарлараро тармоқларни бошқариш маркази Ўзбекистон телекоммуникация тармоқларини
+                        бошқариш Республика маркази(ЎзТТБРМ)га ўзгартирилди. ЎзТТБРМ Ўзбекистон алоқа ва ахборотлаштириш
+                        агентлиги таркибига кирувчи корхонадир.</p>
+                    <p>2007 йил</p>
+                    <p>Ўзбекистон Республикаси Вазирлар Маҳкамасининг 2006 йил 16 октябрда қабул қилинган “Устав фондида
+                        Давлат улуши бўлган корҳоналарнинг самарали бошқарилишини ва Давлат мулкининг зарур даражада ҳисобга
+                        олинишини таъминлаш чора-тадбирлари тўғрисида”ги №215-сон қарори билан тасдиқланган Давлат
+                        корхоналари тўғрисидаги Низомига мувофиқ Ўзбекистон телекоммуникация тармоқларини бошқариш
+                        Республика маркази “Ўзбекистон телекоммуникация тармоқларини бошқариш Республика маркази” Давлат
+                        унитар корхонасига ўзгартирилди.</p>
+                </div>
+            }
+            else if (currentCulture == "ru")
+            {
+                <div class="entry-content">
+                    <p><strong>1992 год</strong></p>
+                    <p>1 августа 1992 года приказом Министерства связи Республики Узбекистан № 168 от 29.07.1992г на базе
+                        службы оперативного управления Территориального производственного объединения и службы оперативного
+                        управления Республики создан Центр управления междугородными международными сетями (ЦУММС).</p>
+                    <p><strong>2004 год</strong></p>
+                    <p>7 мая 2004 года, в соответствии с постановлением Кабинета Министров Республики Узбекистан от 7 мая
+                        2004 г. № 215 «О мерах по совершенствованию деятельности Узбекского агентства связи и
+                        информатизации», ЦУММС переименован в Республиканский центр управления сетями телекоммуникаций
+                        Узбекистана (РЦУСТУз). РЦУСТУз является структурным подразделением Узбекского агентства связи и
+                        информатизации.</p>
+                    <p><strong>2007 год</strong></p>
+                    <p>3 декабря 2007 года РЦУСТУз переименован в Государственное унитарное предприятие «Республиканский
+                        центр управления сетями телекоммуникаций Узбекистана» на основании Положения о государственных
+                        предприятиях, утвержденного Постановлением кабинета Министров Республики Узбекистан от 16.10.2006
+                        года № 215. «О мерах по обеспечению эффективного управления предприятиями с государственной долей в
+                        уставном фонде и надлежащего учета государственного имущества».</p>
+                </div>
+            }
+        </div>
+        @await Html.PartialAsync("SocialMedia")
+    </div>
+</div>

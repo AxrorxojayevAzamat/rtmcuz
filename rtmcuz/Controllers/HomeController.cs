@@ -56,9 +56,9 @@ namespace rtmcuz.Controllers
         }
 
         [Route("/{slug}")]
-        public IActionResult? Section(string slug, int? page)
+        public IActionResult Section(string slug, int? page)
         {
-            if (slug.Contains(".css") || slug.Contains(".js")) return null;
+            // if (slug.Contains(".css") || slug.Contains(".js")) return null;
             //var searchKey = GetLocaleKey(slug);
 
             SectionTypes? sectionType = GetSectionType(slug ?? "/", out string sectionName);

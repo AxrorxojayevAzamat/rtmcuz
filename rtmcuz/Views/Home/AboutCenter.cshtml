@@ -1,53 +1,117 @@
+@using System.Globalization
+@{
+    string currentCulture = CultureInfo.CurrentCulture.Name;
+}
+
 <div class="about-center">
     <div class="container">
-        <h4 class="title">Markaz haqida</h4>
-        <div class="text">Telekommunikatsiya sohasini rivojlantirishning asosiy vazifasi aholini, xalq xo’jaligi
-            ob’ektlarini va davlat boshqaruv organlarini barqaror zamonaviy telekommunikatsiya xizmatlari bilan
-            ta’minlashdir. O’zbekiston telekommunikatsiya tarmoqlarini boshqarish Respublika markazi asosiy vazifalari
-            quyidagilardir:
+        <h4 class="title">@sharedLocalizer["about_center"]</h4>
+        <div class="text">
+            @if (currentCulture == "uz-Latn-UZ")
+            {
+                <div class="entry-content">
+                    <p>Telekommunikatsiya sohasini rivojlantirishning asosiy vazifasi aholini, xalq xo’jaligi ob’ektlarini va davlat boshqaruv organlarini barqaror zamonaviy telekommunikatsiya xizmatlari bilan ta’minlashdir. O’zbekiston telekommunikatsiya tarmoqlarini boshqarish Respublika markazi asosiy vazifalari quyidagilardir:</p>
+                    <p>– Telekommunakatsiya tarmoqlarini samarali ishlashini ta’minlash va muvofiqlashtirish;</p>
+                    <p>– Davlat boshqaruv organlari manfaatlarini ko’zlagan holda telekommunikatsiya xizmatlariga bo’lgan talablarni to’laqonli qondirish, tarmoqlardan samarali foydalanishni ta’minlash maqsadida operatorlarning telekommunikatsiya tarmoqlarini muvofiqlashtirilgan boshqarish tizimini yaratish;</p>
+                    <p>Hozirgi vaqtda O’zTTBRM quyidagilarni ta’minlab kelmoqda:</p>
+                    <p>-“O’zbektelekom” AKsi telekomunikatsiya tarmog’I holatimi real vaqt davomida monitoring qilib borish;</p>
+                    <p>-O’zbekiston telekommunikatsiya tarmoqlari sifati hamda barqororligini ta’minlash maqsadida amalga oshirilayotgan loyihalarni kelishish; -Telekommunikatsiya tarmoqlarida sodir bo’ladigan avariya holatlarini oldini olish va ularni o’z vaqtida qayta tiklashni nazorat qilish; -Telekommunikatsiya tarmoqlarida olib boriladigan ta’mirlash-sozlash ishlari rejasini kelishish va o’z vaqtida bajarilishini nazorat qilish;</p>
+                    <p>-Davlat boshqaruv organlari bilan umimiy foydalanish telekommunikatsiya tarmoqlari kanallari va traktlarini ijaraga olish bo’yicha shartnomalar tuzish;</p>
+                    <p>-Yuridik shaxslar bilan kanallar va traktlarni ijaraga olish yuzasidan talablarni o’rganib chiqish va shartnomalar tuzish.</p>
+                    <p>-Televizion signallarni Respublika hududi va tashqarisiga uzatish bo’yicha kanallar tashkil etish;</p>
+                    <p>O’zTTBRM quyidagi yo’nalishlar bo’yicha ma’lumotlar bazasi tashkil etilgan:</p>
+                    <p>-Shaxarlararo va zona ichi telekommunikatsiya tarmoqlari bo’yicha;</p>
+                    <p>-Signalizatsiya tizimini ishlatilishi bo’yicha;</p>
+                    <p>-O’zbekiston, MDH va uzoq xorij daylatlari raqamlash rejasi bo’yicha</p>
+                    <p>Markaz shaharlararo va xalqaro kodlardagi o’zgarishlar, O’zbekiston Respublikasi raqamlash rejasidagi o’zgarishlar bo’yicha xabardor qiladi va boshqa davlatlar operativ-texnik boshqaruv markazlari bilan hamkorlik qiladi.</p>
+                    <p>O’zbekiston Respublikasi Prezidentining 2007 yil 20 fevraldagi “O’zbekiston Respublikasi telekommunikatsiya tarmoqlarini boshqarish tizimini takomillashtirishga oid qo’shimcha chora-tadbirlar to’g’risida”gi 589-son qaroriga muvofiq, O’zbekiston Respublikasi telekommunikatsiya tarmoqlarini avtomatlashtirilgan boshqarish tizimini yaratish, yaratilgan tizimga operatorlarning telekommunikatsiya tarmoqlarini ulash “O’zTTBRM” DUKga yuklatilgan.</p>
+                    <p>Avtomatlashtirilgan boshqaruv tizimini yaratish quyidagilarni amalga oshirish imkonini beradi:</p>
+                    <p>– Transport va kommutatsiyalanuvchi tarmoq qurilmalari to’g’risidagi ma’lumotlarni to’plash;</p>
+                    <p>– Foydalanuvchilar ish o’rinlarida Respublika telekommunikatsiya tarmog’i yoki uni tashkil etuvchilari haqida aniq ma’lumotlar ko’rinish;</p>
+                    <p>– Real vaqt rejimida transport tarmoqi va kommutatsiyalanuvchi tarmoqlar holati haqida ma’lumot olish;</p>
+                    <p>O’zbekiston Respublikasi telekommunikatiya tarmoqlarini avtomatlashtirilgan boshqaruv tizimini yaratish telekommunikatsiya tizimlarida sodir bo’layotgan uzilishlarni o’z vaqtida bartaraf etish va barqaror ishlashini ta’minlash, favqulotta vaziyatlarda va har qanday sharoitda O’zbekiston Respublikasi aholisini uzliksiz aloqa xizmatlari bilan ta’minlashga hizmat qiladi.</p>
+                </div>
+            }
+            else if (currentCulture == "uz-Cyrl-UZ")
+            {
+                <div class="entry-content">
+                    <p>Телекоммуникация соҳасини ривожлантиришнинг асосий вазифаси аҳолини, халқ хўжалиги объектларини ва давлат бошқарув органларини барқарор замонавий телекоммуникация хизматлари билан таъминлашдир. Ўзбекистон телекоммуникация тармоқларини бошқариш Республика маркази асосий вазифалари қуйидагилардир:</p>
+                    <p>– Телекоммунакация тармоқларини самарали ишлашини таъминлаш ва мувофиқлаштириш;</p>
+                    <p>– Давлат бошқарув органлари манфаатларини кўзлаган ҳолда телекоммуникация хизматларига бўлган талабларни тўлақонли қондириш, тармоқлардан самарали фойдаланишни таъминлаш мақсадида операторларнинг телекоммуникация тармоқларини мувофиқлаштирилган бошқариш тизимини яратиш;</p>
+                    <p>Ҳозирги вақтда ЎзТТБРМ қуйидагиларни таъминлаб келмоқда:</p>
+                    <p>-“Ўзбектелеком” АК телекомуникация тармоғи ҳолатини реал вақт давомида мониторинг қилиб бориш;</p>
+                    <p>-Ўзбекистон телекоммуникация тармоқлари сифати ҳамда барқорорлигини таъминлаш мақсадида амалга оширилаётган лойиҳаларни келишиш; -Телекоммуникация тармоқларида содир бўладиган авария ҳолатларини олдини олиш ва уларни ўз вақтида қайта тиклашни назорат қилиш; -Телекоммуникация тармоқларида олиб бориладиган таъмирлаш-созлаш ишлари режасини келишиш ва ўз вақтида бажарилишини назорат қилиш;</p>
+                    <p>-Давлат бошқарув органлари билан умимий фойдаланиш телекоммуникация тармоқлари каналлари ва трактларини ижарага олиш бўйича шартномалар тузиш;</p>
+                    <p>-Юридик шахслар билан каналлар ва трактларни ижарага олиш юзасидан талабларни ўрганиб чиқиш ва шартномалар тузиш.</p>
+                    <p>-Телевизион сигналларни Республика ҳудуди ва ташқарисига узатиш бўйича каналлар ташкил этиш;</p>
+                    <p>ЎзТТБРМ қуйидаги йўналишлар бўйича маълумотлар базаси ташкил этилган:</p>
+                    <p>-Шахарлараро ва зона ичи телекоммуникация тармоқлари бўйича;</p>
+                    <p>-Сигнализация тизимини ишлатилиши бўйича;</p>
+                    <p>-Ўзбекистон, МДҲ ва узоқ хориж дайлатлари рақамлаш режаси бўйича</p>
+                    <p>Марказ шаҳарлараро ва халқаро кодлардаги ўзгаришлар, Ўзбекистон Республикаси рақамлаш режасидаги ўзгаришлар бўйича хабардор қилади ва бошқа давлатлар оператив-техник бошқарув марказлари билан ҳамкорлик қилади.</p>
+                    <p>Ўзбекистон Республикаси Президентининг 2007 йил 20 февралдаги “Ўзбекистон Республикаси телекоммуникация тармоқларини бошқариш тизимини такомиллаштиришга оид қўшимча чора-тадбирлар тўғрисида”ги 589-сон қарорига мувофиқ, Ўзбекистон Республикаси телекоммуникация тармоқларини автоматлаштирилган бошқариш тизимини яратиш, яратилган тизимга операторларнинг телекоммуникация тармоқларини улаш “ЎзТТБРМ” ДУКга юклатилган.</p>
+                    <p>Автоматлаштирилган бошқарув тизимини яратиш қуйидагиларни амалга ошириш имконини беради:</p>
+                    <p>– Транспорт ва коммутацияланувчи тармоқ қурилмалари тўғрисидаги маълумотларни тўплаш;</p>
+                    <p>– Фойдаланувчилар иш ўринларида Республика телекоммуникация тармоғи ёки уни ташкил этувчилари ҳақида аниқ маълумотлар кўриниш;</p>
+                    <p>– Реал вақт режимида транспорт тармоқи ва коммутацияланувчи тармоқлар ҳолати ҳақида маълумот олиш;</p>
+                    <p>Ўзбекистон Республикаси телекоммуникатия тармоқларини автоматлаштирилган бошқарув тизимини яратиш телекоммуникация тизимларида содир бўлаётган узилишларни ўз вақтида бартараф этиш ва барқарор ишлашини таъминлаш, фавқулотта вазиятларда ва ҳар қандай шароитда Ўзбекистон Республикаси аҳолисини узликсиз алоқа хизматлари билан таъминлашга ҳизмат қилади.</p>
+                </div>
+            }
+            else if (currentCulture == "ru")
+            {
+                <div class="entry-content">
+                    <p><strong>О центре</strong></p>
+                    <p>Основной задачей развития отрасли телекоммуникаций является эффективная система управления сетями телекоммуникаций, обеспечения надежной работы ресурсов телекоммуникаций, централизованного и эффективного их использования, а также создание условий для бесперебойного обеспечения населения, объектов народного хозяйства, органов государственного управления современными услугами телекоммуникаций.</p>
+                    <p><strong>При этом основными задачами Республиканского центра управления сетями телекоммуникаций Узбекистана являются:</strong></p>
+                    <ul>
+                        <li>обеспечение государственного регулирования в сфере телекоммуникаций, а также формирование и эффективного функционирования системы управления сетями телекоммуникаций</li>
+                        <li>создание системы скоординированного управления сетями различных операторов для наиболее полного удовлетворения потребностей в услугах телекоммуникаций, обеспечения приоритетного использования сетей в интересах органов государственной власти и управления.</li>
+                    </ul>
+                    <p>В настоящее время РЦУСТУз обеспечивает:</p>
+                    <ul>
+                        <li>мониторинг состояния сети телекоммуникаций АК «Узбектелеком», ее перестроение в зависимости от обстановки в реальном масштабе времени;</li>
+                        <li>согласование проектов развития сетей телекоммуникаций Узбекистана, в плане обеспечения устойчивости сети, повышения качества услуг;</li>
+                        <li>контроль за устранением последствий и восстановлением сети телекоммуникаций в аварийных ситуациях;</li>
+                        <li>согласование планов проведения ремонтно-настроечных работ и плановых измерений на сетях телекоммуникаций, контролирует их выполнение;</li>
+                        <li>централизованное рассмотрение заявок, заключение и ведение договоров с органами государственной власти и управления, на аренду каналов и трактов на сетях телекоммуникаций общего пользования;</li>
+                        <li>рассмотрение заявок, заключение и ведение договоров с юридическими лицами на аренду каналов и трактов на сетях операторов на договорной основе;</li>
+                        <li>координацию действий операторов при организации телевизионных и вещательных сеансов, как внутри республики, так и со странами СНГ и дальнего зарубежья.</li>
+                        <li></li>
+                    </ul>
+                    <p>РЦУСТУз ведет базы данных ресурсов сети телекоммуникаций Узбекистана:</p>
+                    <ul>
+                        <li>по междугородным и зоновым транспортным телекоммуникационным сетям;</li>
+                        <li>по использованию систем сигнализации;</li>
+                        <li>по плану нумерации Узбекистана, стран СНГ и дальнего зарубежья.</li>
+                    </ul>
+                    <p>РЦУСТУз проводит оперативное оповещение по изменению нумерации ГТС Узбекистана, междугородных и международных кодов, о порядке выхода на нового оператора услуг электросвязи, взаимодействует с системами оперативно-технического управления сетями телекоммуникаций других стран.</p>
+                    <p><strong>В соответствии с постановлением Кабинета Министров «О дополнительных мерах по совершенствованию системы управления сетями телекоммуникаций Республики Узбекистан» от 30 октября 2020 г. № 680,&nbsp; РЦУСТУз определен рабочим органом Мининфоком и дополнительно возложены на него следующие задачи: </strong></p>
+                    <p>осуществление координации работ по эффективному функционированию и рациональному использованию сетей и ресурсов операторов, входящих в систему управления сетями телекоммуникаций Республики Узбекистан, обеспечению в случае необходимости их централизованного использования в интересах безопасности страны, в чрезвычайных ситуациях;</p>
+                    <p>выполнение функции национального центра управления сетями телекоммуникаций Узбекистана при взаимодействии с центрами управления сетями телекоммуникаций зарубежных стран;</p>
+                    <p>осуществление системного мониторинга качества и оценки состояния сетей телекоммуникаций операторов на соответствие установленным специально уполномоченным органом нормативам качества предоставляемых услуг;</p>
+                    <p>осуществление приёма, рассмотрения заявок по выделению номерной емкости, кодов пунктов сигнализации, а также коротких специальных номеров для информационно-справочных служб;</p>
+                    <p>осуществление организации работ по автоматизации процессов механизма выявления и получения данных о фактах нарушения требований законодательства при пропуске международного голосового трафика на сетях телекоммуникаций Республики Узбекистан;</p>
+                    <p>осуществление регистрации мобильных устройств по международным уникальным идентификационным кодам;</p>
+                    <p>обеспечение формирования, ведения, функционирования и сопровождения централизованной базы перенесенных номеров, в том числе сбор, хранение, обработка, передача информации и сведений, содержащихся в ней;</p>
+                    <p>предоставление услуг операторам телекоммуникаций Узбекистана по осуществлению оперативно-технического управления сетями, системного мониторинга состояния сетей и оценки на соответствие показателям качества предоставляемых услуг и функционированию сетей операторов телекоммуникаций.</p>
+                    <p>&nbsp;</p>
+                    <p>На сети телекоммуникаций Узбекистана все более широко применяются средства передачи данных, в том числе Интернет и другие международные информационные услуги. Предоставлением услуг телекоммуникаций занимаются операторы с различной формой собственности.</p>
+                    <p>Сеть телекоммуникаций Узбекистана включает в себя транспортные магистральные, внутризоновые, местные цифровые, волоконно-оптические и радиорелейные линии, цифровое электронное оборудование коммутации.</p>
+                    <p>На сети операторов используется цифровое транспортное и коммутационное оборудование различных фирм производителей. Это оборудование имеет свои особенности и отличия. Оно распределено территориально и управляется различными местными операторами, в связи, с чем на цифровой сети отсутствует четкое и оперативное реагирование на события, неэффективно используются сетевые ресурсы, отсутствует слаженное взаимодействие управляющих и контролирующих структур, что является неприемлемым для такого стратегического объекта как телекоммуникации.</p>
+                    <p>
+                        В соответствии с законами Республики Узбекистан «О телекоммуникациях», «О защите населения и территорий от чрезвычайных ситуаций природного и техногенного характера», в целях повышения эффективности системы управления в сфере телекоммуникаций, обеспечения надежного функционирования, централизованного использования ресурсов и сетей телекоммуникаций в чрезвычайных ситуациях, изначально было принято Постановление Президента Республики Узбекистан «О дополнительных мерах по совершенствованию системы управления сетями телекоммуникаций Республики Узбекистан»<br>
+                        № ПП-589 от 20 февраля 2007 года Данным Постановлением были утверждены «Положение о Системе управления ресурсами и сетями телекоммуникаций Республики Узбекистан» и «Положение о Республиканском центре управления сетями телекоммуникаций Узбекистана», а также принято решение с привлечением средств операторов телекоммуникаций создать и ввести в эксплуатацию автоматизированную систему управления сетями телекоммуникаций Узбекистана (АСУСТУз) с подключением к ней систем управления телекоммуникационных сетей операторов (за исключением сетей специальных потребителей). Реализация проекта АСУСТУз обеспечивает:
+                    </p>
+                    <ul>
+                        <li>Учет (инвентаризацию) всего оборудования транспортной и коммутируемой сетей;</li>
+                        <li>Наглядное представление на рабочих местах операторов сети телекоммуникаций или ее составляющих;</li>
+                        <li>Отображение в режиме реального времени состояния транспортной и коммутируемой сетей, вплоть до отдельных блоков.</li>
+                    </ul>
+                    <p>В результате внедренной РЦУСТУз автоматизированной системы управления сетями телекоммуникаций Узбекистана наблюдается повышение качества и оперативности при решении вопросов замен, обходов, устранения повреждений, получения оперативных данных качества и как следствие, предоставление качественных услуг связи потребителю и населению Узбекистана.</p>
+                </div>
+            }
 
-            – Telekommunakatsiya tarmoqlarini samarali ishlashini ta’minlash va muvofiqlashtirish;
 
-            – Davlat boshqaruv organlari manfaatlarini ko’zlagan holda telekommunikatsiya xizmatlariga bo’lgan
-            talablarni to’laqonli qondirish, tarmoqlardan samarali foydalanishni ta’minlash maqsadida
-            operatorlarning telekommunikatsiya tarmoqlarini muvofiqlashtirilgan boshqarish tizimini yaratish;
-
-            Hozirgi vaqtda O’zTTBRM quyidagilarni ta’minlab kelmoqda:
-
-            -“O’zbektelekom” AKsi telekomunikatsiya tarmog’I holatimi real vaqt davomida monitoring qilib borish;
-
-            -O’zbekiston telekommunikatsiya tarmoqlari sifati hamda barqororligini ta’minlash maqsadida amalga
-            oshirilayotgan loyihalarni kelishish; -Telekommunikatsiya tarmoqlarida sodir bo’ladigan avariya holatlarini
-            oldini olish va ularni o’z vaqtida qayta tiklashni nazorat qilish; -Telekommunikatsiya tarmoqlarida olib
-            boriladigan ta’mirlash-sozlash ishlari rejasini kelishish va o’z vaqtida bajarilishini nazorat qilish;
-
-            -Davlat boshqaruv organlari bilan umimiy foydalanish telekommunikatsiya tarmoqlari kanallari va traktlarini
-            ijaraga olish bo’yicha shartnomalar tuzish;
-
-            -Yuridik shaxslar bilan kanallar va traktlarni ijaraga olish yuzasidan talablarni o’rganib chiqish va
-            shartnomalar tuzish.
-
-            -Televizion signallarni Respublika hududi va tashqarisiga uzatish bo’yicha kanallar tashkil etish;
-
-            O’zbekiston Respublikasi Prezidentining 2007 yil 20 fevraldagi “O’zbekiston Respublikasi telekommunikatsiya
-            tarmoqlarini boshqarish tizimini takomillashtirishga oid qo’shimcha chora-tadbirlar to’g’risida”gi 589-son
-            qaroriga muvofiq, O’zbekiston Respublikasi telekommunikatsiya tarmoqlarini avtomatlashtirilgan boshqarish
-            tizimini yaratish, yaratilgan tizimga operatorlarning telekommunikatsiya tarmoqlarini ulash “O’zTTBRM” DUKga
-            yuklatilgan.
-
-            Avtomatlashtirilgan boshqaruv tizimini yaratish quyidagilarni amalga oshirish imkonini beradi:
-
-            – Transport va kommutatsiyalanuvchi tarmoq qurilmalari to’g’risidagi ma’lumotlarni to’plash;
-
-            – Foydalanuvchilar ish o’rinlarida Respublika telekommunikatsiya tarmog’i yoki uni tashkil etuvchilari
-            haqida aniq ma’lumotlar ko’rinish;
-
-            – Real vaqt rejimida transport tarmoqi va kommutatsiyalanuvchi tarmoqlar holati haqida ma’lumot olish;
-
-            O’zbekiston Respublikasi telekommunikatiya tarmoqlarini avtomatlashtirilgan boshqaruv tizimini yaratish
-            telekommunikatsiya tizimlarida sodir bo’layotgan uzilishlarni o’z vaqtida bartaraf etish va barqaror
-            ishlashini ta’minlash, favqulotta vaziyatlarda va har qanday sharoitda O’zbekiston Respublikasi aholisini
-            uzliksiz aloqa xizmatlari bilan ta’minlashga hizmat qiladi.
         </div>
         @await Html.PartialAsync("SocialMedia")
     </div>

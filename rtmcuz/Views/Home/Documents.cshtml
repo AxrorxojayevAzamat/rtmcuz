@@ -1,32 +1,24 @@
+@model IEnumerable<Section>
+
 <div class="documents">
     <div class="container">
         <div class="title">@sharedLocalizer["documents"]</div>
         <div class="documents-categories">
             <div>
-                <div class="document-category">
-                    O’zbekiston Respublikasi Qonunlari
-                    <span class="icon icon-chevrone-bottom"></span>
-                </div>
-                <div class="document-category">
-                    Prezident qarorlari va farmonlari
-                    <span class="icon icon-chevrone-bottom"></span>
-                </div>
-                <div class="document-category">
-                    Hukumat qarori va farmoyishlari
-                    <span class="icon icon-chevrone-bottom"></span>
-                </div>
-                <div class="document-category">
-                    Hukumat qarori va farmoyishlari
-                    <span class="icon icon-chevrone-bottom"></span>
-                </div>
-                <div class="document-category">
-                    Davlat organlari, yuridik va jismoniy shaxslar bilan o’zaro hamkorlik
-                    <span class="icon icon-chevrone-bottom"></span>
-                </div>
-                <div class="document-category">
-                    O’z kuchini yo’qotgan huquqiy-normativ hujjatlar (stt.unicon.uz)
-                    <span class="icon icon-chevrone-bottom"></span>
-                </div>
+                @foreach (var item in Model)
+                {
+                    <div class="document-category">
+                        <h6 class="document-title">@item.Title<span
+                            class="icon icon-chevrone-bottom"></span></h6>
+                        <div class="documents-content">
+                            @Html.Raw(item.Content)
+                            @* <a href="/">fasdfsdafsadfsdafsadf saf asd f asdf as f asgas g as gas ads a </a>
+                            <a href="/">fasdfsdafsadfsdafsadf saf asd f asdf as f asgas g as gas ads a </a>
+                            <a href="/">fasdfsdafsadfsdafsadf saf asd f asdf as f asgas g as gas ads a </a> *@
+                        </div>
+                    </div>
+                }
+
             </div>
             @await Html.PartialAsync("SocialMedia")
         </div>

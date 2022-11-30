@@ -158,7 +158,7 @@ section h3.section-title {
 .social-media-bottom {
   display: flex;
   margin-top: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .social-media-bottom [class*="ri-"] {

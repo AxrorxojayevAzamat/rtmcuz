@@ -355,4 +355,17 @@
     .feedback-section .sub-title {
         width: 90%;
     }
+
+    .feedback-section .feedback-form {
+        margin-bottom: 30px;
+    }
+
+    .feedback-section .contacts {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .feedback-section .contacts .contact {
+        margin: 8px 0;
+    }
 }

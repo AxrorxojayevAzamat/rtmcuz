@@ -7,7 +7,7 @@
             @foreach (var item in Model)
             {
                 <div class="question" id="question_@item.Id">
-                    <span class="icon icon-chevrone-bottom"></span>
+                    <span class="ri-xl ri-arrow-down-s-line"></span>
                     <div class="question-title">@item.Title</div>
                     <div class="answer">@Html.Raw(item.Content)</div>
                 </div>

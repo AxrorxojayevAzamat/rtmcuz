@@ -63,7 +63,7 @@
 }
 
 .banner-section .banner-content .btn a span {
-    font-size: 16px;
+    /* font-size: 16px; */
     margin-left: 4px;
 }
 
@@ -335,18 +335,16 @@
     background-color: var(--dark-variant-5);
 }
 
-.questions-section .questions .question .icon {
-    /* display: none; */
+.questions-section .questions .question .ri-arrow-down-s-line {
     position: absolute;
     right: 19px;
     top: 11px;
     font-weight: 900;
-    font-size: 14px;
     line-height: 21px;
     cursor: pointer;
 }
 
-.questions-section .questions .question.opened .icon {
+.questions-section .questions .question.opened .ri-arrow-down-s-line {
     display: inline;
 }
 
@@ -399,6 +397,8 @@
     background-color: var(--primary-main);
     color: var(--white-main);
     padding: 10px 24px;
+    display: flex;
+    align-items: center;
 }
 
 .feedback-section .contacts {
@@ -486,7 +486,7 @@
 
 .news-wrapper .content {
     width: 60%;
-    margin: 30px 95px 0 0;
+    margin: 0 95px 0 0;
 }
 
 .news-wrapper .content .items .news-item {
@@ -631,10 +631,10 @@
     border: none;
 }
 
-.documents .documents-categories .document-category .icon {
+.documents .documents-categories .document-category .ri-arrow-down-s-line {
     cursor: pointer;
     color: var(--primary-main);
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 .documents .documents-categories .document-category .documents-content {

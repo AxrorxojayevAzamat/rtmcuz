@@ -1,0 +1,21 @@
+@model IEnumerable<Section>
+
+<div class="documents">
+    <div class="container">
+        <div class="title">@sharedLocalizer["departments"]</div>
+        <div class="documents-categories">
+            <div>
+                @foreach (var item in Model)
+                {
+                    <div class="document-category">
+                        <h6 class="document-title">@item.Title<span class="ri-xl ri-arrow-down-s-line"></span></h6>
+                        <div class="documents-content">
+                            @Html.Raw(item.Content)
+                        </div>
+                    </div>
+                }
+            </div>
+            @await Html.PartialAsync("SocialMedia")
+        </div>
+    </div>
+</div>

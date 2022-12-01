@@ -116,8 +116,12 @@ namespace rtmcuz.Controllers
         }
 
         [Route("/search")]
-        public IActionResult Search(string searching, int? page)
+        public IActionResult Search(string? searching, int? page)
         {
+            if (searching == null)
+            {
+                return Redirect("/");
+            }
             var dbQuery = _context.Sections.Where(s => s.Lang == _locale && (s.Type != SectionTypes.Banner && s.Type != SectionTypes.Question));
             var query = from s in dbQuery
                         where EF.Functions.Like(s.Title, $"%{searching}%")

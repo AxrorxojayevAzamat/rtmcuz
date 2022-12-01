@@ -399,6 +399,7 @@
     padding: 10px 24px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .feedback-section .contacts {
@@ -800,4 +801,40 @@
     font: var(--body-light-2);
     display: flex;
     align-items: center;
+}
+
+.leaderships {
+    margin: 70px 0;
+}
+
+.leaderships .title {
+    font: var(--heading-bold-4);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.leaderships .leadership-card {
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px rgba(24, 47, 67, 0.2);
+    padding: 35px;
+}
+
+.leaderships .leadership-card img {
+    width: 100%;
+}
+
+.leaderships .leadership-card .full-name {
+    margin: 36px 0 12px 10px;
+    font: var(--heading-bold-6);
+}
+
+.leaderships .leadership-card .subtitle {
+    font: var(--body-light-1);
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.leaderships .leadership-card .text {
+    margin-left: 10px;
+    font: var(--body-light-1);
 }

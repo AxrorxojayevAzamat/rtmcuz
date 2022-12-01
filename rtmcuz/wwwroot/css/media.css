@@ -349,9 +349,9 @@
         padding: 8px 16px;
     }
 
-    /* .banner-content .btn [class*="ri-"] {
+    .banner-content .btn [class*="ri-"] {
         font-size: 14px;
-    } */
+    }
 
     .cards-grid, .news-section .news-grid, .numbers-about-us-section .numbers {
         grid-template-columns: 1fr;

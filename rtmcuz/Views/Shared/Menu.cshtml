@@ -1,26 +1,45 @@
 <ul class="menu__box">
     <li><a class="menu__item" href="/">@sharedLocalizer["home_page"]</a></li>
-    <li><a class="menu__item">@sharedLocalizer["about_center"] <span class="ri-xl ri-arrow-down-s-line"></span></a>
+    <li>
+        <a class="menu__item">@sharedLocalizer["about_center"] <span class="ri-xl ri-arrow-down-s-line"></span></a>
         <ul class="children">
             <li>
                 <a asp-controller="Home" asp-action="Section" asp-route-slug="about-center"
-                    class="menu__item">@sharedLocalizer["about_center"]</a>
+                   class="menu__item">@sharedLocalizer["about_center"]</a>
             </li>
-            <li><a asp-controller="Home" asp-action="Section" asp-route-slug="history-of-center"
-                    class="menu__item">@sharedLocalizer["history_of_center"]</a></li>
+            <li>
+                <a asp-controller="Home" asp-action="Section" asp-route-slug="history-of-center"
+                   class="menu__item">@sharedLocalizer["history_of_center"]</a>
+            </li>
+            <li>
+                <a asp-controller="Home" asp-action="Section" asp-route-slug="leaderships"
+                   class="menu__item">@sharedLocalizer["leaderships"]</a>
+            </li>
+            <li>
+                <a asp-controller="Home" asp-action="Section" asp-route-slug="departments"
+                   class="menu__item">@sharedLocalizer["departments"]</a>
+            </li>
             <li>
                 <a asp-controller="Home" asp-action="Section" asp-route-slug="report"
-                    class="menu__item">@sharedLocalizer["report"]</a>
+                   class="menu__item">@sharedLocalizer["report"]</a>
             </li>
 
-            <li><a asp-controller="Home" asp-action="Section" asp-route-slug="vacancy"
-                    class="menu__item">@sharedLocalizer["vacancy"]</a></li>
+            <li>
+                <a asp-controller="Home" asp-action="Section" asp-route-slug="vacancy"
+                   class="menu__item">@sharedLocalizer["vacancy"]</a>
+            </li>
         </ul>
     </li>
-    <li><a asp-controller="Home" asp-action="Section" asp-route-slug="news"
-            class="menu__item">@sharedLocalizer["news"]</a></li>
-    <li><a asp-controller="Home" asp-action="Section" asp-route-slug="documents"
-            class="menu__item">@sharedLocalizer["documents"]</a></li>
-    <li><a asp-controller="Home" asp-action="Section" asp-route-slug="feedback"
-            class="menu__item">@sharedLocalizer["feedback"]</a></li>
+    <li>
+        <a asp-controller="Home" asp-action="Section" asp-route-slug="news"
+           class="menu__item">@sharedLocalizer["news"]</a>
+    </li>
+    <li>
+        <a asp-controller="Home" asp-action="Section" asp-route-slug="documents"
+           class="menu__item">@sharedLocalizer["documents"]</a>
+    </li>
+    <li>
+        <a asp-controller="Home" asp-action="Section" asp-route-slug="feedback"
+           class="menu__item">@sharedLocalizer["feedback"]</a>
+    </li>
 </ul>

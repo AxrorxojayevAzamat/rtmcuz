@@ -1,0 +1,18 @@
+@model IEnumerable<Section>
+
+<div class="leaderships">
+    <div class="container">
+        <h4 class="title">@sharedLocalizer["leaderships"]</h4>
+        <div class="cards-grid">
+            @foreach (var item in Model)
+            {
+                <div class="leadership-card">
+                    <img src="/uploads/@item.Image.Path" alt="">
+                    <div class="full-name">@item.Title</div>
+                    <div class="subtitle">@item.Subtitle</div>
+                    <div class="text">@Html.Raw(item.Content) </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

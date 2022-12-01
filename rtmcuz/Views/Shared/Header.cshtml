@@ -30,10 +30,11 @@
             <nav class="navbar">
                 @await Html.PartialAsync("Menu")
                 @await Html.PartialAsync("_Culture")
-                <span class="searching-icon ri-search-line"></span>
+                <span class="searching-icon ri-search-line" id="open-searching"></span>
             </nav>
-            <form asp-action="Search" class="searching" style="display: none;">
-                <input type="text" name="searching" class="search-input" placeholder="@sharedLocalizer["searching"]...">
+            <form asp-action="Search" class="searching" style="display: none;" id="searching">
+                <span class="searching-icon ri-search-line" onclick="document.getElementById('searching').submit()"></span>
+                <input type="text" name="searching" class="search-input" id="search-input" placeholder="@sharedLocalizer["searching"]...">
                 <span class="closing-icon ri-xl ri-close-fill"></span>
             </form>
         </div>

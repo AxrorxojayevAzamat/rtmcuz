@@ -778,6 +778,7 @@
     box-shadow: 0px 0px 20px rgba(24, 47, 67, 0.2);
     padding: 24px;
     margin-bottom: 24px;
+    border-radius: 6px;
 }
 
 .searched-result .searched-result-container .results .result-item .date {

@@ -216,4 +216,13 @@
   <data name="vacancy" xml:space="preserve">
     <value>Бўш иш ўринлари</value>
   </data>
+  <data name="anything_wasnt_found" xml:space="preserve">
+    <value>Ҳеч нарса топилмади</value>
+  </data>
+  <data name="found_results" xml:space="preserve">
+    <value>"{0}" сўрови {1} натижани топди:</value>
+  </data>
+  <data name="searching_title" xml:space="preserve">
+    <value>Қидирув натижалари</value>
+  </data>
 </root>

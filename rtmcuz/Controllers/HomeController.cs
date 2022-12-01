@@ -14,7 +14,6 @@ using Microsoft.AspNetCore.Mvc.ViewEngines;
 
 namespace rtmcuz.Controllers
 {
-    // [Route("{culture}")]
     public class HomeController : Controller
     {
         private readonly RtmcUzContext _context;
@@ -22,6 +21,7 @@ namespace rtmcuz.Controllers
         private readonly IStringLocalizer<SlugResource> _localizer;
         private readonly ICompositeViewEngine _compositeViewEngine;
         const string DASHBOARD = "dashboard";
+        const string SEARCH = "search";
         const string SHOW = "Show";
         const string NEWS = "news";
 
@@ -34,7 +34,6 @@ namespace rtmcuz.Controllers
         }
 
 
-        //[Route("/{slug}")]
         public async Task<IActionResult> Index()
         {
             var interactiveServices = await QueryForSections(SectionTypes.Interactive).ToListAsync();
@@ -119,7 +118,8 @@ namespace rtmcuz.Controllers
         [Route("/search")]
         public IActionResult Search(string searching, int? page)
         {
-            var query = from s in _context.Sections
+            var dbQuery = _context.Sections.Where(s => s.Lang == _locale && (s.Type != SectionTypes.Banner && s.Type != SectionTypes.Question));
+            var query = from s in dbQuery
                         where EF.Functions.Like(s.Title, $"%{searching}%")
                         select s;
             var items = query.ToList();
@@ -136,15 +136,15 @@ namespace rtmcuz.Controllers
         [Route("SetLanguage")]
         public IActionResult SetLanguage(string culture, string currentUrl)
         {
-
             string[] slugs = currentUrl.Split('?')[0].Split('/').Where((val, i) => i != 0).ToArray();
             SetCookie(culture);
 
             if (slugs[0] == DASHBOARD) return LocalRedirect(currentUrl);
+            else if (slugs[0] == SEARCH) return LocalRedirect("/");
 
             //slugs[0] = GetLocaleKey(slugs[0]);
 
-            string? queryParams = currentUrl.Split('?').Length > 1 ? $"?{currentUrl.Split('?')[1]}" : "";
+            string? queryParams = currentUrl.Split('?').Length > 1 ? $"?{currentUrl.Split('?')[1]}" : String.Empty;
             string returnUrl = $"~/{GetReturnUrl(slugs, culture)}{queryParams}";
 
             return LocalRedirect(returnUrl);
@@ -210,55 +210,5 @@ namespace rtmcuz.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        //[HttpPost]
-        //public JsonResult UploadCKEditorImage()
-        //{
-        //    var files = Request.Form.Files;
-        //    if (files.Count == 0)
-        //    {
-        //        var rError = new
-        //        {
-        //            uploaded = false,
-        //            url = string.Empty
-        //        };
-        //        return Json(rError);
-        //    }
-
-        //    var formFile = files[0];
-        //    var upFileName = formFile.FileName;
-        //    // size, format check....
-        //    var fileName = Guid.NewGuid() + Path.GetExtension(upFileName);
-        //    var saveDir = @".\wwwroot\upload\";
-        //    var savePath = saveDir + fileName;
-        //    var previewPath = "/upload/" + fileName;
-
-        //    bool result = true;
-        //    try
-        //    {
-        //        if (!Directory.Exists(saveDir))
-        //        {
-        //            Directory.CreateDirectory(saveDir);
-        //        }
-
-        //        using (FileStream fs = System.IO.File.Create(savePath))
-        //        {
-        //            formFile.CopyTo(fs);
-        //            fs.Flush();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        result = false;
-        //    }
-
-        //    var rUpload = new
-        //    {
-        //        uploaded = result,
-        //        url = result ? previewPath : string.Empty
-        //    };
-        //    return Json(rUpload);
-        //}
-
     }
 }

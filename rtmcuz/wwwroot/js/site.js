@@ -14,3 +14,9 @@ $('.closing-icon').click(function () {
     $('.searching').hide()
     $('.header-bottom').removeClass('media')
 })
+
+$("#open-searching").click(function () {
+    setTimeout(() => {
+        $("#search-input").focus()
+    })
+})

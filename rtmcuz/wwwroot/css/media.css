@@ -60,6 +60,9 @@
         margin-bottom: 8px;
     }
 
+    .searched-result .searched-result-container {
+        width: 90%;
+    }
 }
 
 @media (max-width: 769px) {

@@ -1,19 +1,38 @@
 @using System.Globalization
+@using rtmcuz.Data.Enums
 @model IEnumerable<Section>
+
+@{
+    string GetResultUrl(SectionTypes type, string slug, string? url) => type switch
+    {
+        SectionTypes.News => type.ToString().ToLower() + $"/{slug}",
+        SectionTypes.Interactive => url,
+        SectionTypes.Service => url,
+        _ => type.ToString().ToLower() + $"s",
+    };
+}
 
 <div class="searched-result">
     <div class="container">
         <div class="searched-result-container">
-            <h3 class="title">Результаты поиска</h3>
-            <p class="sub-text">По запросу «fasdfsadf» найдено X результатов:</p>
+            <h3 class="title">@sharedLocalizer["searching_title"]</h3>
+            <p class="sub-text">@sharedLocalizer["found_results", ViewBag.Searching, ViewBag.TotalItems]</p>
             <div class="results">
+                @if (ViewBag.TotalItems == 0)
+                {
+                    <div class="result-item">
+                        <div class="result-subtitle">@sharedLocalizer["anything_wasnt_found"]</div>
+                    </div>
+                }
                 @foreach (var item in Model)
                 {
                     <div class="result-item">
                         <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
                         <h5 class="result-title"> @item.Title</h5>
                         <div class="result-subtitle">@item.Subtitle</div>
-                        <a href="">READ STORY<span class="ri-lg ri-arrow-right-s-line"></span></a>
+                        <a href="@GetResultUrl(item.Type, item.Slug, item.Url)">
+                            @sharedLocalizer["more"] <span class="ri-lg ri-arrow-right-s-line"></span>
+                        </a>
                     </div>
                 }
             </div>

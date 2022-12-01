@@ -253,8 +253,8 @@ header {
 }
 
 .culture-wrapper .culture-list-dropdown .culture-link:hover {
-  background-color: var(--dark-variant-5);
-  color: var(--custom-grey-3);
+  background-color: var(--white-variant-3);
+  color: var(--primary-main);
 }
 
 /* 
@@ -523,10 +523,25 @@ footer .footer-bottom .subtitle {
   background-color: #CFD8DC;
 }
 
+header .searching {
+  position: relative;
+}
+
 header .searching .search-input {
   position: relative;
   right: 0;
   top: 0;
+  padding-left: 45px;
+}
+
+header .searching .searching-icon {
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  color: var(--dark-variant-4);
+  font-weight: 900;
+  font-size: 18px;
+  z-index: 1;
 }
 
 .pagination {

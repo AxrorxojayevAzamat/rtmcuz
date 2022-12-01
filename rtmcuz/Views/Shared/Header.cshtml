@@ -32,10 +32,10 @@
                 @await Html.PartialAsync("_Culture")
                 <span class="searching-icon ri-search-line"></span>
             </nav>
-            <div class="searching" style="display: none;">
-                <input type="text" class="search-input" placeholder="@sharedLocalizer["searching"]...">
+            <form asp-action="Search" class="searching" style="display: none;">
+                <input type="text" name="searching" class="search-input" placeholder="@sharedLocalizer["searching"]...">
                 <span class="closing-icon ri-xl ri-close-fill"></span>
-            </div>
+            </form>
         </div>
     </div>
 </header>

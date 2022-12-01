@@ -77,8 +77,8 @@ namespace rtmcuz.Controllers
                 const int PAGE_SIZE = 5;
                 var lastNews = query.Take(7).ToList();
 
-                ViewBag.PageSize = PAGE_SIZE;
                 ViewBag.LastNews = lastNews;
+                ViewBag.PageSize = PAGE_SIZE;
                 ViewBag.TotalItems = items.Count;
                 ViewBag.CurrentPage = page;
                 return View(sectionName, items.ToPagedList(page ?? 1, PAGE_SIZE));
@@ -114,6 +114,23 @@ namespace rtmcuz.Controllers
             if (!result.Success) return Redirect("/");
 
             return View(viewName, item);
+        }
+
+        [Route("/search")]
+        public IActionResult Search(string searching, int? page)
+        {
+            var query = from s in _context.Sections
+                        where EF.Functions.Like(s.Title, $"%{searching}%")
+                        select s;
+            var items = query.ToList();
+
+            const int PAGE_SIZE = 5;
+            ViewBag.Searching = searching;
+            ViewBag.PageSize = PAGE_SIZE;
+            ViewBag.TotalItems = items.Count;
+            ViewBag.CurrentPage = page;
+
+            return View(items.ToPagedList(page ?? 1, PAGE_SIZE));
         }
 
         [Route("SetLanguage")]

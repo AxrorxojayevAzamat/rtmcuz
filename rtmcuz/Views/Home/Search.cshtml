@@ -1,0 +1,23 @@
+@using System.Globalization
+@model IEnumerable<Section>
+
+<div class="searched-result">
+    <div class="container">
+        <div class="searched-result-container">
+            <h3 class="title">Результаты поиска</h3>
+            <p class="sub-text">По запросу «fasdfsadf» найдено X результатов:</p>
+            <div class="results">
+                @foreach (var item in Model)
+                {
+                    <div class="result-item">
+                        <div class="date">@item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
+                        <h5 class="result-title"> @item.Title</h5>
+                        <div class="result-subtitle">@item.Subtitle</div>
+                        <a href="">READ STORY<span class="ri-lg ri-arrow-right-s-line"></span></a>
+                    </div>
+                }
+            </div>
+            @await Html.PartialAsync("Pagination", Model)
+        </div>
+    </div>
+</div>

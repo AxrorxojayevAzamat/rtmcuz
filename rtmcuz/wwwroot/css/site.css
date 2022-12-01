@@ -317,6 +317,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 80%;
+  margin: 0;
   /* color: var(--custom-grey-4); */
 }
 
@@ -526,4 +527,30 @@ header .searching .search-input {
   position: relative;
   right: 0;
   top: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.pagination .pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: var(--heading-light-6);
+  width: 50px;
+  height: 50px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: var(--primary-main);
+  border-radius: 8px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .pagination-item.active, .pagination .pagination-item.sign {
+  cursor: default;
+  box-shadow: none;
 }

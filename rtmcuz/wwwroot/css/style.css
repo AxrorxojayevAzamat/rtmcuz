@@ -525,31 +525,6 @@
     text-align: justify;
 }
 
-.news-wrapper .content .pagination {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-.news-wrapper .content .pagination .pagination-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font: var(--heading-light-6);
-    width: 50px;
-    height: 50px;
-    margin-right: 4px;
-    cursor: pointer;
-    color: var(--primary-main);
-    border-radius: 8px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-}
-
-.news-wrapper .content .pagination .pagination-item.active, .news-wrapper .content .pagination .pagination-item.sign {
-    cursor: default;
-    box-shadow: none;
-}
 
 .news-wrapper .sidebar {
     width: 35%;
@@ -772,4 +747,56 @@
 
 .feedback .feedback-information .subtitle {
     font: var(--heading-light-6);
+}
+
+.searched-result {
+    margin: 80px 0 60px;
+}
+
+.searched-result .searched-result-container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.searched-result .searched-result-container .title {
+    font: var(--heading-bold-3);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.searched-result .searched-result-container .sub-text {
+    font: var(--heading-light-6);
+    margin: 0;
+    text-align: center;
+}
+
+.searched-result .searched-result-container .results {
+    margin: 60px 0 0;
+}
+
+.searched-result .searched-result-container .results .result-item {
+    box-shadow: 0px 0px 20px rgba(24, 47, 67, 0.2);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.searched-result .searched-result-container .results .result-item .date {
+    font: var(--body-light-3);
+    margin-bottom: 14px;
+}
+
+.searched-result .searched-result-container .results .result-item .result-title {
+    font: var(--heading-bold-5);
+    margin: 0 0 12px;
+}
+
+.searched-result .searched-result-container .results .result-item .result-subtitle {
+    font: var(--body-light-1);
+    margin-bottom: 28px;
+}
+
+.searched-result .searched-result-container .results .result-item a {
+    font: var(--body-light-2);
+    display: flex;
+    align-items: center;
 }

@@ -3,35 +3,42 @@
     int totalPages = (int)Math.Ceiling((decimal)ViewBag.TotalItems / ViewBag.PageSize);
     List<int> pages = new();
     var currentPath = Context.Request.Path.Value;
-
+    string? searching = ViewBag.Searching;
     for (var i = currentPage - 2; i < currentPage + 3; i++)
         if (i > 0 && i <= totalPages)
             pages.Add(i);
 }
-
-<div class="pagination">
-    @if (currentPage > 1)
-    {
-        <a href="@currentPath?page=@(currentPage - 1)" class="pagination-item">
-            <span class="ri-lg ri-arrow-left-s-line"></span>
-        </a>
-    }
-    @if (currentPage - 2 > 1)
-    {
-        <a class="pagination-item sign">...</a>
-    }
-    @foreach (int pageNumber in pages)
-    {
-        <a href="@currentPath?page=@pageNumber" class="pagination-item @(pageNumber == currentPage ? "active" : "")">@pageNumber</a>
-    }
-    @if (currentPage + 2 < totalPages)
-    {
-        <a class="pagination-item sign">...</a>
-    }
-    @if (currentPage < totalPages)
-    {
-        <a href="@currentPath?page=@(currentPage + 1)" class="pagination-item">
-            <span class="ri-lg ri-arrow-right-s-line"></span>
-        </a>
-    }
-</div>
+@if (totalPages > 1)
+{
+    <div class="pagination">
+        @if (currentPage > 1)
+        {
+            <a href="@currentPath?@(searching != null ? $"searching={searching}&" : "")page=@(currentPage - 1)"
+       class="pagination-item">
+                <span class="ri-lg ri-arrow-left-s-line"></span>
+            </a>
+        }
+        @if (currentPage - 2 > 1)
+        {
+            <a class="pagination-item sign">...</a>
+        }
+        @foreach (int pageNumber in pages)
+        {
+            <a href="@currentPath?@(searching != null ? $"searching={searching}&" : "")page=@pageNumber"
+       class="pagination-item @(pageNumber == currentPage ? "active" : "")">
+                @pageNumber
+            </a>
+        }
+        @if (currentPage + 2 < totalPages)
+        {
+            <a class="pagination-item sign">...</a>
+        }
+        @if (currentPage < totalPages)
+        {
+            <a href="@currentPath?@(searching != null ? $"searching={searching}&" : "")page=@(currentPage + 1)"
+       class="pagination-item">
+                <span class="ri-lg ri-arrow-right-s-line"></span>
+            </a>
+        }
+    </div>
+}

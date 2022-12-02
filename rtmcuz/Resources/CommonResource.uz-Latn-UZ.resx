@@ -123,6 +123,18 @@
   <data name="CreatedDate" xml:space="preserve">
     <value>Yaratilgan sana</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Bo'limlar</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Murojaat matni</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Elektron pochta</value>
+  </data>
+  <data name="Fullname" xml:space="preserve">
+    <value>Ism va familiya</value>
+  </data>
   <data name="GroupId" xml:space="preserve">
     <value>Guruh identifikatori</value>
   </data>
@@ -137,6 +149,12 @@
   </data>
   <data name="ParentId" xml:space="preserve">
     <value>Ota-ona ID</value>
+  </data>
+  <data name="RequiredErrorMessage" xml:space="preserve">
+    <value>{0} toʻldirilishi kerak.</value>
+  </data>
+  <data name="SelectRequiredErrorMessage" xml:space="preserve">
+    <value>{0}dan biri tanlanishi kerak.</value>
   </data>
   <data name="Slug" xml:space="preserve">
     <value>Slug</value>

@@ -18,6 +18,7 @@ namespace rtmcuz.Data
 
         public virtual DbSet<Section> Sections { get; set; } = null!;
         public virtual DbSet<Attachment> Attachments { get; set; } = null!;
+        public virtual DbSet<Feedback> Feedbacks { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,6 +47,15 @@ namespace rtmcuz.Data
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Sections_fk0");
             });
+
+            modelBuilder.Entity<Feedback>(entity =>
+            {
+                entity.HasOne(d => d.Department)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.DepartmentId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("Departments_fk0");
+            });
         }
 
         public override int SaveChanges()
@@ -68,6 +78,8 @@ namespace rtmcuz.Data
 
             return base.SaveChanges();
         }
+
+        public DbSet<rtmcuz.Data.Models.Feedback> Feedback { get; set; }
 
         //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }

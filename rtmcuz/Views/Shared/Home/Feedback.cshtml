@@ -1,10 +1,12 @@
+@model rtmcuz.Data.Models.Feedback
+
 <section class="feedback-section">
     <div class="container">
         <h3 class="section-title">@sharedLocalizer["feedback"]</h3>
         <div class="sub-title">@sharedLocalizer["feedback_text_1"]</div>
-        <form action="" class="feedback-form">
-            <input type="text" id="email" class="feedback-input" placeholder="@sharedLocalizer["your_email"]">
-            <input type="text" id="text-appeal" class="feedback-input" placeholder="@sharedLocalizer["text_of_the_appeal"]">
+        <form action="/feedback" class="feedback-form">
+            <input asp-for="Email" type="text" id="email" class="feedback-input" placeholder="@sharedLocalizer["your_email"]">
+            <input asp-for="Description" type="text" id="text-appeal" class="feedback-input" placeholder="@sharedLocalizer["text_of_the_appeal"]">
             <button class="btn feedback-btn">@sharedLocalizer["contact_us"] <span class="ri-xl ri-arrow-right-s-line"></span></button>
         </form>
         <div class="contacts">

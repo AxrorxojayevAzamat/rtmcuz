@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using rtmcuz.Data;
@@ -11,9 +12,11 @@ using rtmcuz.Data;
 namespace rtmcuz.Data.Migrations
 {
     [DbContext(typeof(RtmcUzContext))]
-    partial class RtmcUzContextModelSnapshot : ModelSnapshot
+    [Migration("20221202054035_AddFeedback")]
+    partial class AddFeedback
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,17 +142,17 @@ namespace rtmcuz.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ad66f928-ea1e-4184-9dd3-24fbe135184c",
+                            Id = "91af7e97-e621-4093-a10c-47dde02ff02e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "be3d2033-f8ca-459c-b3df-d7e08d3db1b4",
+                            ConcurrencyStamp = "43c20db8-87ff-44e1-8f6e-e2f20289b164",
                             Email = "rtmcuz@admin1",
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "RTMCUZ@ADMIN1",
                             NormalizedUserName = "RTMCUZ@ADMIN1",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH2YzraIrEfBsNfIG61gg3VMKqrp6wnGwHAmbCbB7PMIKLm22cvEVb/GFqrKvKT5Xw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHSVqCymNGU9GWI9CucXRRoZuXThIh2wKKeFAon2rMaibTrSnfZJZDWPmf+dfTdCtg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "82fe461b-1843-4c55-880b-3ccb890d22b4",
+                            SecurityStamp = "85e2ebe6-bb15-46b8-a130-26e54f6ad180",
                             TwoFactorEnabled = false,
                             UserName = "rtmcuz@admin1"
                         });
@@ -302,7 +305,6 @@ namespace rtmcuz.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
@@ -310,7 +312,8 @@ namespace rtmcuz.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmentId");
+                    b.HasIndex("DepartmentId")
+                        .IsUnique();
 
                     b.ToTable("Feedback");
                 });
@@ -433,8 +436,8 @@ namespace rtmcuz.Data.Migrations
             modelBuilder.Entity("rtmcuz.Data.Models.Feedback", b =>
                 {
                     b.HasOne("rtmcuz.Data.Models.Section", "Department")
-                        .WithMany("Feedbacks")
-                        .HasForeignKey("DepartmentId")
+                        .WithOne("Feedback")
+                        .HasForeignKey("rtmcuz.Data.Models.Feedback", "DepartmentId")
                         .HasConstraintName("Departments_fk0");
 
                     b.Navigation("Department");
@@ -457,7 +460,7 @@ namespace rtmcuz.Data.Migrations
 
             modelBuilder.Entity("rtmcuz.Data.Models.Section", b =>
                 {
-                    b.Navigation("Feedbacks");
+                    b.Navigation("Feedback");
                 });
 #pragma warning restore 612, 618
         }

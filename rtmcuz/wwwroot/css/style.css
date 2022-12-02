@@ -391,7 +391,7 @@
     margin-right: 15px;
 }
 
-.feedback-section .feedback-btn {
+.feedback-btn {
     text-align: center;
     font: var(--body-light-1);
     background-color: var(--primary-main);
@@ -400,6 +400,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.feedback .feedback-btn {
+    margin-top: 48px;
+    width: 100%;
 }
 
 .feedback-section .contacts {
@@ -718,7 +723,13 @@
 
 .feedback-wrapper .map {
     width: 50%;
-    height: 600px;
+    height: 630px;
+}
+
+.feedback-wrapper .success-message {
+    font: var(--heading-regular-6);
+    color: var(--primary-main);
+    margin: 6px 0;
 }
 
 .feedback .feedback-information {

@@ -2,6 +2,7 @@
 
 :root {
   --black: #000000;
+  --red: #ff0000;
 
   --custom-grey-1: #182F43;
   --custom-grey-2: #424B5A;
@@ -623,4 +624,9 @@ header .searching .searching-icon {
 .pagination .pagination-item.active, .pagination .pagination-item.sign {
   cursor: default;
   box-shadow: none;
+}
+
+.form-control .field-validation-error {
+  font: var(--body-light-3);
+  color: var(--red);
 }

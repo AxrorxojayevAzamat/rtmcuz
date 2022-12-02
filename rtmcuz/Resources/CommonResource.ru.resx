@@ -123,6 +123,18 @@
   <data name="CreatedDate" xml:space="preserve">
     <value>Дата создания</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Отделения</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Текст заявки</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Эл. адрес</value>
+  </data>
+  <data name="Fullname" xml:space="preserve">
+    <value>Имя и фамилия</value>
+  </data>
   <data name="GroupId" xml:space="preserve">
     <value>Идентификатор группы</value>
   </data>
@@ -137,6 +149,12 @@
   </data>
   <data name="ParentId" xml:space="preserve">
     <value>Идентификатор родителя</value>
+  </data>
+  <data name="RequiredErrorMessage" xml:space="preserve">
+    <value>{0} должно быть заполнено.</value>
+  </data>
+  <data name="SelectRequiredErrorMessage" xml:space="preserve">
+    <value>Необходимо выбрать один из {0}.</value>
   </data>
   <data name="Slug" xml:space="preserve">
     <value>Слизняк</value>

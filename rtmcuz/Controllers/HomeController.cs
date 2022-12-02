@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Localization;
 using rtmcuz.Extensions;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace rtmcuz.Controllers
 {
@@ -24,6 +25,7 @@ namespace rtmcuz.Controllers
         const string SEARCH = "search";
         const string SHOW = "Show";
         const string NEWS = "news";
+        const string FEEDBACK = "feedback";
 
         public HomeController(RtmcUzContext context, IStringLocalizer<SlugResource> localizer, ICompositeViewEngine compositeViewEngine)
         {
@@ -82,6 +84,10 @@ namespace rtmcuz.Controllers
                 ViewBag.CurrentPage = page;
                 return View(sectionName, items.ToPagedList(page ?? 1, PAGE_SIZE));
             }
+            else if (slug == FEEDBACK)
+            {
+                ViewBag.Departments = QueryForSections(SectionTypes.Department).ToList();
+            }
 
             return View(sectionName, items);
         }
@@ -115,7 +121,7 @@ namespace rtmcuz.Controllers
             return View(viewName, item);
         }
 
-        [Route("/search")]
+        [Route("search")]
         public IActionResult Search(string? searching, int? page)
         {
             if (searching == null)
@@ -135,6 +141,38 @@ namespace rtmcuz.Controllers
             ViewBag.CurrentPage = page;
 
             return View(items.ToPagedList(page ?? 1, PAGE_SIZE));
+        }
+
+        [Route("feedback")]
+
+        public IActionResult Feedback(string? Email, string? Description)
+        {
+            ViewBag.Departments = new SelectList(QueryForSections(SectionTypes.Department), "Id", "Title");
+            ViewBag.Success = false;
+
+            return View(new Feedback()
+            {
+                Email = Email,
+                Description = Description
+            });
+        }
+
+        [HttpPost]
+        [Route("feedback")]
+
+        public IActionResult FeedbackSave(Feedback feedback)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Feedback.Add(feedback);
+                _context.SaveChanges();
+                
+                ModelState.Clear();
+                
+                ViewBag.Departments = new SelectList(QueryForSections(SectionTypes.Department), "Id", "Title");
+                ViewBag.Success = true;
+            }
+            return View("Feedback");
         }
 
         [Route("SetLanguage")]

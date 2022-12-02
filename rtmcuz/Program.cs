@@ -39,7 +39,6 @@ builder.Services.AddControllersWithViews();
 
 // localization
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-builder.Services.AddSingleton<LocalizationService>();
 builder.Services.AddScoped<IAttachmentService, AttachmentService>();
 builder.Services.AddScoped<ISectionRepository, SectionRespository>();
 builder.Services.AddMvc(mvc =>

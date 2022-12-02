@@ -123,6 +123,18 @@
   <data name="CreatedDate" xml:space="preserve">
     <value>Яратилган сана</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Бўлимлар</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Мурожаат матни</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Электрон почта</value>
+  </data>
+  <data name="Fullname" xml:space="preserve">
+    <value>Исм ва фамилия</value>
+  </data>
   <data name="GroupId" xml:space="preserve">
     <value>Гуруҳ идентификатори</value>
   </data>
@@ -137,6 +149,12 @@
   </data>
   <data name="ParentId" xml:space="preserve">
     <value>Ота-она ИД</value>
+  </data>
+  <data name="RequiredErrorMessage" xml:space="preserve">
+    <value>{0} тўлдирилиши керак.</value>
+  </data>
+  <data name="SelectRequiredErrorMessage" xml:space="preserve">
+    <value>{0}дан бири танланиши керак.</value>
   </data>
   <data name="Slug" xml:space="preserve">
     <value>Слуг</value>

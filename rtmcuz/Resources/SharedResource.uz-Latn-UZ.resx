@@ -231,4 +231,7 @@
   <data name="searching_title" xml:space="preserve">
     <value>Qidiruv natijalari</value>
   </data>
+  <data name="success-sent-feedback" xml:space="preserve">
+    <value>Murojaat yuborildi!</value>
+  </data>
 </root>

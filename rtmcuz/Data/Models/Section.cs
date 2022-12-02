@@ -52,6 +52,9 @@ namespace rtmcuz.Data.Models
         [InverseProperty("Section")]
         public Attachment? Image { get; set; }
 
+        [InverseProperty("Department")]
+        public virtual List<Feedback>? Feedbacks { get; set; }
+
         public static Section FromInteractive(Interactive interactive)
         {
             return new Section()

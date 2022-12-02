@@ -231,4 +231,7 @@
   <data name="leaderships" xml:space="preserve">
     <value>Руководство</value>
   </data>
+  <data name="success-sent-feedback" xml:space="preserve">
+    <value>Запрос отправлен!</value>
+  </data>
 </root>

@@ -219,6 +219,11 @@ a.translation {
 a.translation:hover {
     color: yellowgreen;
 }
+
+form {
+    margin-bottom: .5em;
+}
+
 @media screen and (max-width: 580px) {
     td {
         padding: 2px 16px;

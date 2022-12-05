@@ -2,7 +2,7 @@
 
 
 <div>
-    <h4>Feedback</h4>
+    <h4>@dashboardLocalizer["Feedbacks"]</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -44,6 +44,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-secondary">@dashboardLocalizer["Back_to_List"]</a>
 </div>

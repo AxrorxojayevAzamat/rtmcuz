@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<rtmcuz.Data.Models.Feedback>
 
-<h1>Index</h1>
+<h1>@dashboardLocalizer["Index"]</h1>
 <table class="table">
     <thead>
         <tr>
@@ -43,10 +43,9 @@
                     @Html.DisplayFor(modelItem => item.CreatedDate)
                 </td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">@dashboardLocalizer["Details"]</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-

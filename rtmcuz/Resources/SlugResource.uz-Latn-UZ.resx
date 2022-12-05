@@ -117,16 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="about-center" xml:space="preserve">
-    <value>markaz-haqida</value>
+  <data name="Admin_panel" xml:space="preserve">
+    <value>Administrator paneli</value>
   </data>
-  <data name="documents" xml:space="preserve">
-    <value>hujjatlar</value>
+  <data name="Back_to_List" xml:space="preserve">
+    <value>Roʻyxatga qaytish</value>
   </data>
-  <data name="feedback" xml:space="preserve">
-    <value>boglanish</value>
+  <data name="Banners" xml:space="preserve">
+    <value>Bannerlar</value>
   </data>
-  <data name="news" xml:space="preserve">
-    <value>yangiliklar</value>
+  <data name="Create" xml:space="preserve">
+    <value>Yaratmoq</value>
+  </data>
+  <data name="Create_New" xml:space="preserve">
+    <value>Yangi yaratish</value>
+  </data>
+  <data name="Create_translation" xml:space="preserve">
+    <value>Tarjimasini yaratish</value>
+  </data>
+  <data name="Current_language" xml:space="preserve">
+    <value>Joriy til</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Oʻchirish</value>
+  </data>
+  <data name="Delete_confirmation" xml:space="preserve">
+    <value>Haqiqatan ham buni oʻchirib tashlamoqchimisiz?</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Bo'limlar</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Tafsilot</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Hujjatlar</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>O'zgartirish</value>
+  </data>
+  <data name="Feedbacks" xml:space="preserve">
+    <value>Murojaatlar</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Roʻyxat</value>
+  </data>
+  <data name="Interactives" xml:space="preserve">
+    <value>Interaktiv xizmatlar</value>
+  </data>
+  <data name="Language_versions" xml:space="preserve">
+    <value>Til versiyalari</value>
+  </data>
+  <data name="Leaderships" xml:space="preserve">
+    <value>Rahbariyat</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Chiqish</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Yangiliklar</value>
+  </data>
+  <data name="Questions" xml:space="preserve">
+    <value>Savollar</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Saqlash</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Xizmatlar</value>
   </data>
 </root>

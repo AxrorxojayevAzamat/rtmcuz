@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>@ViewBag.Title</h1>
+<h1>@dashboardLocalizer["Create"]</h1>
 
-<h4>Question</h4>
+<h4>@dashboardLocalizer["Questions"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-12">
@@ -15,7 +15,7 @@
 </div>
 
 <div>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <a asp-action="Index" class="btn btn-secondary">@dashboardLocalizer["Back_to_List"]</a>
 </div>
 
 @section Scripts {

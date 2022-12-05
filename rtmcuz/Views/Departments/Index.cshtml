@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<Section>
 
-<h1>Index</h1>
+<h1>@dashboardLocalizer["Index"]</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-success">Create New</a>
+    <a asp-action="Create" class="btn btn-success">@dashboardLocalizer["Create_New"]</a>
 </p>
 <table class="table">
     <thead>
@@ -28,9 +28,9 @@
                     @Html.Raw(item.Content)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">@dashboardLocalizer["Edit"]</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">@dashboardLocalizer["Details"]</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">@dashboardLocalizer["Delete"]</a> |
                 </td>
             </tr>
         }

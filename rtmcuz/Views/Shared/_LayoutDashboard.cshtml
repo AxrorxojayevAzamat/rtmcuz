@@ -38,7 +38,7 @@
                 {
                     <li class="menu_item">
                         <a asp-controller=@sectionName asp-action="Index" class=@(IsActiveRoute(sectionName) ? "active" :
-                        "")>@sectionName</a>
+                        "")>@dashboardLocalizer[sectionName]</a>
                     </li>
                 }
             </ul>
@@ -52,7 +52,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li>
                             <a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Logout"
-                                asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">Logout</a>
+                                asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">@dashboardLocalizer["Logout"]</a>
                         </li>
                     </ul>
                 </div>

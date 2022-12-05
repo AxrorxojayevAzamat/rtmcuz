@@ -6,7 +6,7 @@ th-logo {}
 
 ul.menu_box {
     display: flex;
-    width: 50%;
+    width: 65%;
     justify-content: space-between;
 }
 
@@ -212,6 +212,13 @@ td {
     color: var(--custom-grey-3);
 }
 
+a.translation {
+    color: #13B31F;
+}
+
+a.translation:hover {
+    color: yellowgreen;
+}
 @media screen and (max-width: 580px) {
     td {
         padding: 2px 16px;

@@ -117,16 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="about-center" xml:space="preserve">
-    <value>markaz-haqida</value>
+  <data name="Admin_panel" xml:space="preserve">
+    <value>Администратор панели</value>
   </data>
-  <data name="documents" xml:space="preserve">
-    <value>hujjatlar</value>
+  <data name="Back_to_List" xml:space="preserve">
+    <value>Рўйхатга қайтиш</value>
   </data>
-  <data name="feedback" xml:space="preserve">
-    <value>boglanish</value>
+  <data name="Banners" xml:space="preserve">
+    <value>Баннерлар</value>
   </data>
-  <data name="news" xml:space="preserve">
-    <value>yangiliklar</value>
+  <data name="Create" xml:space="preserve">
+    <value>Яратмоқ</value>
+  </data>
+  <data name="Create_New" xml:space="preserve">
+    <value>Янги яратиш</value>
+  </data>
+  <data name="Create_translation" xml:space="preserve">
+    <value>Таржимасини яратиш</value>
+  </data>
+  <data name="Current_language" xml:space="preserve">
+    <value>Жорий тил</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Ўчириш</value>
+  </data>
+  <data name="Delete_confirmation" xml:space="preserve">
+    <value>Ҳақиқатан ҳам буни ўчириб ташламоқчимисиз?</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Бўлимлар</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Тафсилот</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Ҳужжатлар</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Ўзгартириш</value>
+  </data>
+  <data name="Feedbacks" xml:space="preserve">
+    <value>Мурожаатлар</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Рўйхат</value>
+  </data>
+  <data name="Interactives" xml:space="preserve">
+    <value>Интерактив хизматлар</value>
+  </data>
+  <data name="Language_versions" xml:space="preserve">
+    <value>Тил версиялари</value>
+  </data>
+  <data name="Leaderships" xml:space="preserve">
+    <value>Раҳбарият</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Чиқиш</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Янгиликлар</value>
+  </data>
+  <data name="Questions" xml:space="preserve">
+    <value>Саволлар</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сақлаш</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Хизматлар</value>
   </data>
 </root>

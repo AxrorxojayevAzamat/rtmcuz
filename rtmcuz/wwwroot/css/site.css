@@ -277,8 +277,15 @@ header {
 .header-bottom .logo {
   display: flex;
   align-items: center;
-  height: 35px;
   margin: 10px 0;
+}
+
+.header-bottom .logo img {
+  height: 35px;
+}
+
+.header-bottom .logo img.logo-img-mobile {
+  display: none;
 }
 
 .header-bottom nav {

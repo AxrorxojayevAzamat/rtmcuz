@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using rtmcuz.Data;
+using PagedList;
 
 namespace rtmcuz.Controllers
 {
@@ -17,10 +18,14 @@ namespace rtmcuz.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
             var feedbacks = await _context.Feedback.Include(f => f.Department).ToListAsync();
-            return View(feedbacks);
+            const int PAGE_SIZE = 30;
+            ViewBag.PageSize = PAGE_SIZE;
+            ViewBag.TotalItems = feedbacks.Count;
+            ViewBag.CurrentPage = page;
+            return View(feedbacks.ToPagedList(page ?? 1, PAGE_SIZE));
         }
 
         public async Task<IActionResult> Details(int? id)

@@ -5,6 +5,7 @@ using rtmcuz.Data.Enums;
 using rtmcuz.ViewModels;
 using rtmcuz.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using PagedList;
 
 namespace rtmcuz.Controllers
 {
@@ -19,9 +20,14 @@ namespace rtmcuz.Controllers
             _sectionRepository = sectionRepository;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            return View(await _sectionRepository.ListItemsAsync(SectionTypes.Question));
+            var items = await _sectionRepository.ListItemsAsync(SectionTypes.Question);
+            const int PAGE_SIZE = 10;
+            ViewBag.PageSize = PAGE_SIZE;
+            ViewBag.TotalItems = items.Count;
+            ViewBag.CurrentPage = page;
+            return View(items.ToPagedList(page ?? 1, PAGE_SIZE));
         }
 
         public async Task<IActionResult> Details(int? id)

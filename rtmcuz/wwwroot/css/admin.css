@@ -224,6 +224,30 @@ form {
     margin-bottom: .5em;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.pagination .pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.pagination .pagination-item.active, .pagination .pagination-item.sign {
+    cursor: default;
+    box-shadow: none;
+}
+
 @media screen and (max-width: 580px) {
     td {
         padding: 2px 16px;

@@ -221,8 +221,7 @@
 }
 
 .news-section .news-grid .news-item:hover .bg img {
-    width: 110%;
-    height: 110%;
+    scale: 1.05;
 }
 
 .news-section .news-grid .news-item .bg {
@@ -258,8 +257,7 @@
 }
 
 .news-section .news-grid .news-item.main:hover .bg img {
-    width: 110%;
-    height: 110%;
+    scale: 1.05;
 }
 
 .news-section .news-grid .news-item .title {

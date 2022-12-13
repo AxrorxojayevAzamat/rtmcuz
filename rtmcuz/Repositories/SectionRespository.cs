@@ -42,8 +42,7 @@ namespace rtmcuz.Repositories
             {
                 section.ImageId = _attachmentService.UploadFileToStorage(image);
             }
-            section.Slug = GetSlug(section.Slug);
-            _context.Update(section);
+            _context.Update(GetEntity(section));
             _context.SaveChanges();
         }
 
@@ -77,6 +76,29 @@ namespace rtmcuz.Repositories
             }
 
             return variants;
+        }
+
+        private Section GetEntity(Section section)
+        {
+            var sectionEntity = _context.Sections.Find(section.Id);
+
+            sectionEntity.Slug = GetSlug(section.Slug);
+            sectionEntity.Lang = section.Lang;
+            sectionEntity.GroupId = section.GroupId;
+            sectionEntity.Content = section.Content;
+            sectionEntity.Icon = section.Icon;
+            sectionEntity.Subtitle = section.Subtitle;
+            sectionEntity.Title = section.Title;
+            sectionEntity.Template = section.Template;
+            sectionEntity.Type = section.Type;
+            sectionEntity.Status = section.Status;
+            sectionEntity.Url = section.Url;
+            sectionEntity.ParentId = section.ParentId;
+            sectionEntity.ImageId = section.ImageId;
+            sectionEntity.Image = section.Image;
+            sectionEntity.Feedbacks = section.Feedbacks;
+
+            return sectionEntity;
         }
 
         private int GetGroupId(Section section)

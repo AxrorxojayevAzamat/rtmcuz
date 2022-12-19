@@ -80,6 +80,8 @@ body {
   margin: 0;
   padding: 0;
   color: var(--dark-main);
+  background-image: url(../img/background-pattern.png);
+
 }
 
 a {
@@ -117,7 +119,8 @@ input::placeholder {
 
 section {
   padding: 60px 0 100px;
-  background-color: var(--white-main);
+  /* background-color: var(--white-main); */
+
 }
 
 section h3.section-title {
@@ -177,6 +180,8 @@ header {
   background-color: var(--white-main);
   z-index: 9999;
   box-shadow: 0px 0px 10px rgba(24, 47, 67, 0.1);
+  background-image: url(../img/background-pattern.png);
+
 }
 
 
@@ -377,6 +382,7 @@ header {
 footer {
   padding: 33px 0;
   box-shadow: 0px 0px 10px rgb(24 47 67 / 10%);
+  background-color: var(--white-main);
 }
 
 footer .footer-top {
@@ -626,11 +632,13 @@ header .searching .searching-icon {
   color: var(--primary-main);
   border-radius: 8px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-main);
 }
 
 .pagination .pagination-item.active, .pagination .pagination-item.sign {
   cursor: default;
   box-shadow: none;
+  background-color: transparent;
 }
 
 .form-control .field-validation-error {

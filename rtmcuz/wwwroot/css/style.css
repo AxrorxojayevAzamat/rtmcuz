@@ -245,8 +245,8 @@
 
 
 .news-section .news-grid .news-item .bg img {
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     transition: 0.3s ease-in all;
 }
 
@@ -312,6 +312,10 @@
 
 
 /* QUESTIONS SECTION*/
+.questions-section {
+    background-color: var(--white-main);
+}
+
 .questions-section .questions {
     max-width: 700px;
     margin: 0 auto;
@@ -326,6 +330,7 @@
     margin-bottom: 23px;
     cursor: pointer;
     user-select: none;
+    background-color: var(--white-main);
 }
 
 .questions-section .questions .question.opened {
@@ -369,6 +374,7 @@
 
 /* FEEDBACK SECTION*/
 .feedback-section {
+    background-color: var(--white-main);
     /* color: var(--dark-main); */
 }
 
@@ -539,6 +545,7 @@
     padding: 0 20px;
     border: 1px solid var(--white-light);
     border-radius: 6px;
+    background-color: var(--white-main);
 }
 
 .news-wrapper .sidebar .last-news .head-title {
@@ -789,6 +796,7 @@
     padding: 24px;
     margin-bottom: 24px;
     border-radius: 6px;
+    background-color: var(--white-main);
 }
 
 .searched-result .searched-result-container .results .result-item .date {
@@ -826,6 +834,7 @@
     border-radius: 6px;
     box-shadow: 0px 0px 20px rgba(24, 47, 67, 0.2);
     padding: 35px;
+    background-color: var(--white-main);
 }
 
 .leaderships .leadership-card img {

@@ -43,7 +43,7 @@ namespace rtmcuz.Controllers
             var questions = await QueryForSections(SectionTypes.Question).ToListAsync();
             var services = await QueryForSections(SectionTypes.Service).ToListAsync();
             var news = await QueryForSections(SectionTypes.News)
-                .OrderByDescending(n => n.CreatedDate).Take(4).ToListAsync();
+                .OrderByDescending(n => n.UpdatedDate).Take(4).ToListAsync();
 
             if (interactiveServices == null || banners == null || questions == null || services == null || news == null) return NotFound();
 

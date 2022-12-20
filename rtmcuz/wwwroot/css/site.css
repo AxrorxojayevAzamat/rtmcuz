@@ -13,6 +13,8 @@
 
   --custom-green: #19A547;
   --custom-yellow: #F1EA4D;
+  --custom-blue: #1D9BD8;
+  --custom-blue-1: #312C7F;
 
 
   --primary-main: #13B31F;
@@ -32,9 +34,9 @@
   --white-variant-2: #F3FAFF;
   --white-variant-3: #DFF2FF;
 
-  --linear-green: linear-gradient(to right, #019D4E, #E7E706);
-  --linear-blue: linear-gradient(to right, #1D9BD8, #312C7F);
-
+  --linear-green: linear-gradient(292.52deg, var(--custom-yellow) 16.18%, var(--primary-main) 84.11%);
+  --linear-blue: linear-gradient(216.28deg, var(--custom-blue) 35%, var(--primary-main) 65%);
+  
   --font-family: 'Poppins', sans-serif;
 
   --heading-light-1: 300 70px/84px var(--font-family);
@@ -635,7 +637,8 @@ header .searching .searching-icon {
   background-color: var(--white-main);
 }
 
-.pagination .pagination-item.active, .pagination .pagination-item.sign {
+.pagination .pagination-item.active,
+.pagination .pagination-item.sign {
   cursor: default;
   box-shadow: none;
   background-color: transparent;

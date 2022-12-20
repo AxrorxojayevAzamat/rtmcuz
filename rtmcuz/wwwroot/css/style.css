@@ -84,10 +84,7 @@
 
 .our-services-section .service-card .img-wrapper {
     width: 100%;
-}
-
-.our-services-section .service-card .img-wrapper {
-    background-image: var(--linear-green);
+    background-image: var(--linear-blue);
     border-radius: 6px;
     display: flex;
     align-items: center;

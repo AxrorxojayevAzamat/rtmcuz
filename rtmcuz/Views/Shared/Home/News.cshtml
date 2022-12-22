@@ -14,7 +14,7 @@
                     <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class="news-item main">
                         <div class="bg">
                             <div class="bg-linear"></div>
-                            <img src="/uploads/@item.value.Image.Path">
+                            <img class="home-news" src="/uploads/@item.value.Image.Path">
                         </div>
                         <div class="title">@item.value.Title</div>
                     </a>
@@ -24,7 +24,7 @@
                     <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class="news-item">
                         <div class="bg">
                             <div class="bg-linear"></div>
-                            <img src="/uploads/@item.value.Image.Path">
+                            <img class="home-news" src="/uploads/@item.value.Image.Path">
                         </div>
                         <div class="title">@item.value.Title</div>
                     </a>

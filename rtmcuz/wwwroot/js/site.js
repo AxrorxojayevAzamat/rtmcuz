@@ -22,12 +22,7 @@ $("#open-searching").click(function () {
 })
 
 let $images = $(".home-news, .last-news-img");
-console.log($images);
 for (const img of $images) {
-    console.log(img.offsetWidth, img.offsetHeight);
-    let className = img.offsetWidth > img.offsetHeight ? 'longer-width' : img.offsetWidth < img.offsetHeight ? 'longer-height' : '';
-    if (className) {
-        console.log(className);
-        img.classList.add(className);
-    }
+    let className = img.offsetWidth > img.offsetHeight ? 'longer-width' : 'longer-height';
+    if (className) img.classList.add(className);
 }

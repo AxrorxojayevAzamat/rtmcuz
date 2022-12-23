@@ -6,11 +6,14 @@
         @foreach (var item in ViewBag.LastNews)
         {
             <div class="last-news-item">
-                <div class="news-img">
-                    <img src="/uploads/@item.Image.Path" class="last-news-img">
+                <div class="left">
+                    <div class="news-img">
+                        <img src="/uploads/@item.Image.Path" class="last-news-img">
+                    </div>
                 </div>
                 <div class="right">
-                    <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.Slug" class="title">@item.Title</a>
+                    <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.Slug"
+                    class="title">@item.Title</a>
                     <div class="date">
                         @item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)
                     </div>

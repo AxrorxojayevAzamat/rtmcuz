@@ -1,84 +1,25 @@
-@using System.Globalization
-@{
-    string currentCulture = CultureInfo.CurrentCulture.Name;
-}
+@model IEnumerable<Section>
 
-<div class="about-center">
+<div class="documents">
     <div class="container">
-        <h4 class="title">@sharedLocalizer["vacancy"]</h4>
-        <div class="text">
-            @if (currentCulture == "uz-Latn-UZ")
-            {
-                <div class="entry-content">
-                    <p>Rezumeni na’munadagi shakl asosida to’ldirib <a>depkadr@rtmc.uz</a> electron manziliga yo’llang. <a
-                        href="http://www.rtmc.uz/wp-content/uploads/2016/10/rezume.doc">Shu yerdan yuklab oling</a><br>
-                        Yuborilgan rezume bir xafta mobaynida ko’rib chiqiladi va talablarga mos nomzod qo’shimcha suxbat
-                        uchun taklif etiladi.<br>
-                        Nomzodlar oliy texnik ma’lumotga ega bo’lishi shart.</p>
-                    <p>&nbsp;</p>
-                    <p><strong>“O‘zbekiston telekommunikatsiya tarmoqlarini boshqarish respublika markazi” davlat unitar
-                            korxonasi telekommunikatsiya yo‘nalishi bo‘yicha yuqori malakali mutaxassislarni ishga qabul
-                            qilish uchun tanlov e’lon qiladi.</strong></p>
-                    <p>Nomzodlar o‘zi haqidagi ma’lumotlar (rezyume)ni tmc@rtmc.uz elektron manzil orqali taqdim etishi
-                        so‘raladi.</p>
-                    <p>Axborot va tushuntirishlar berish bo‘yicha qo‘shimcha so‘rovlar quyidagi telefon raqam bilan
-                        bog‘lanishi mumkin.</p>
-                    <p>Aloqa uchun (Kadrlar bo‘limi): +99871-240-53-56<br>
-                        Elektron manzil: www.rtmc.uz</p>
-                </div>
-            }
-            else if (currentCulture == "uz-Cyrl-UZ")
-            {
-                <div class="entry-content">
-                    <p>Резумени наъмунадаги шакл асосида тўлдириб depkadr@rtmc.uz&nbsp;электрон манзилига йўлланг.<br>
-                        Юборилган резуме бир хафта мобайнида кўриб чиқилади ва талабларга мос номзод қўшимча сухбат учун
-                        таклиф этилади.<a href="http://www.rtmc.uz/wp-content/uploads/2016/10/rezume-1.doc">Резюме шаклини
-                            юклаб олиш</a><br>
-                        Номзодлар олий техник маълумотга эга бўлиши шарт.</p>
-                    <p><strong>“Ўзбекистон телекоммуникация тармоқларини бошқариш республика маркази” давлат унитар
-                            корхонаси телекоммуникация йўналиши бўйича юқори малакали мутахассисларни ишга қабул қилиш учун
-                            танлов эълон қилади.</strong></p>
-                    <p>Номзодлар ўзи ҳақидаги маълумотлар (резюме)ни tmc@rtmc.uz электрон манзил орқали тақдим этиши
-                        сўралади.</p>
-                    <p>Ахборот ва тушунтиришлар бериш бўйича қўшимча сўровлар қуйидаги телефон рақам билан боғланиши мумкин.
-                    </p>
-                    <p>Aлоқа учун (Кадрлар бўлими): +99871-240-53-56<br>
-                        Электрон манзил: www.rtmc.uz</p>
-                </div>
-            }
-            else if (currentCulture == "ru")
-            {
-                <div class="entry-content">
-                    <p>Заполните резюме по форме — <a href="http://www.rtmc.uz/wp-content/uploads/2016/10/rezume-1.doc">
-                            Скачать </a> , и отправьте на электронный адрес: <a>depkadr@rtmc.uz</a><br>
-                        Присланное резюме рассматривается в течение одной недели.<br>
-                        В случае соответствия требованиям, кандидат вызывается на собеседование.<br>
-                        P. S. Основное требование к соискателям — наличие высшего технического образования.</p>
-                    <p>&nbsp;</p>
-                    <p><strong>Отдел управления сетями телекоммуникаций (ОУСТ)</strong></p>
-                    <ol>
-                        <li>инженер 1 категории</li>
-                    </ol>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p><strong>Информация о вакансиях, условия приема на работу</strong><strong> для лиц с ограниченными
-                            возможностями</strong><strong>.</strong></p>
-                    <p>&nbsp;</p>
-                    <p>ГУП «РЦУСТУз».предусмотрен определенный перечень документов:<br>
-                        1. Пасспорт<br>
-                        2. Диплом<br>
-                        3. Свидетельство о повышении квалификации желательно сертификат прохождения курсов<br>
-                        4. Объективка<br>
-                        5. Справка с “ВТЭК”</p>
-                    <p>В обязательном порядке требуется справка о прохождении &nbsp;&nbsp;медико-санитарной экспертизы
-                        “ВТЭК” (врачебно-трудовой экспертной комиссии) с указанием группы инвалидности.<br>
-                        <strong>&nbsp;</strong>
-                    </p>
-                </div>
-            }
+        <div class="title">@sharedLocalizer["vacancy"]</div>
+        <div class="documents-categories">
+            <div>
+                @foreach (var item in Model)
+                {
+                    <div class="document-category">
+                        <h6 class="document-title">@item.Title<span
+                            class="ri-xl ri-arrow-down-s-line"></span></h6>
+                        <div class="documents-content">
+                            @Html.Raw(item.Content)
+                        </div>
+                    </div>
+                }
+
+            </div>
+            @await Html.PartialAsync("SocialMedia")
         </div>
-        @await Html.PartialAsync("SocialMedia")
+
+
     </div>
 </div>

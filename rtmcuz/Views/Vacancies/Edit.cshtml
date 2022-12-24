@@ -1,0 +1,23 @@
+﻿@model rtmcuz.ViewModels.Vacancy
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@dashboardLocalizer["Edit"]</h1>
+
+<h4>@dashboardLocalizer["Vacancies"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        @await Html.PartialAsync("_Form", Model)
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">@dashboardLocalizer["Back_to_List"]</a>
+</div>
+
+@section Scripts {
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

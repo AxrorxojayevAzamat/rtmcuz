@@ -15,7 +15,7 @@
                     <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.Slug"
                     class="title">@item.Title</a>
                     <div class="date">
-                        @item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)
+                        @(item.Subtitle ?? item.UpdatedDate?.ToString("dd.MM.yyyy", CultureInfo.CurrentCulture))
                     </div>
                 </div>
             </div>

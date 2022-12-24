@@ -1,0 +1,27 @@
+﻿@model rtmcuz.Data.Models.Section
+<h1>@dashboardLocalizer["Details"]</h1>
+
+<div>
+    <h4>@dashboardLocalizer["Vacancies"]</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.Raw(Model.Content)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">@dashboardLocalizer["Edit"]</a> |
+    <a asp-action="Index" class="btn btn-secondary">@dashboardLocalizer["Back_to_List"]</a>
+</div>
+
+

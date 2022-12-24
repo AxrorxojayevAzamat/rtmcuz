@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace rtmcuz.Controllers
 {
-    [Route("dashboard/{sectionType}/{action}")]
+    //[Route("dashboard/{sectionType}/{action}")]
     public class DashboardController : Controller
     {
         public string _sectionType;

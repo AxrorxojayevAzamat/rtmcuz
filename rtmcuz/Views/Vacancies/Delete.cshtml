@@ -1,0 +1,30 @@
+﻿@model Section
+<h1>@dashboardLocalizer["Delete"]</h1>
+
+<h3>@dashboardLocalizer["Delete_confirmation"]</h3>
+<div>
+    <h4>@dashboardLocalizer["Vacancies"]</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.Raw(Model.Content)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="@dashboardLocalizer["Delete"]" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">@dashboardLocalizer["Back_to_List"]</a>
+    </form>
+</div>
+
+

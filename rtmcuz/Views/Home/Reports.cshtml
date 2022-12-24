@@ -1,0 +1,22 @@
+@using System.Globalization
+@model IEnumerable<Section>
+
+<div class="about-center">
+        <div class="container">
+                <h4 class="title">@sharedLocalizer["report"]</h4>
+                <div class="report">
+                        <div class="report-img">
+                                <img src="~/img/report-img.png" alt="">
+                        </div>
+                        <div class="text">
+                                <div class="entry-content">
+                                        @foreach (var item in Model)
+                                        {
+                                                <p><a href=@item.Url>@item.Title</a></p>
+                                        }
+                                </div>
+                        </div>
+                </div>
+                @await Html.PartialAsync("SocialMedia")
+        </div>
+</div>

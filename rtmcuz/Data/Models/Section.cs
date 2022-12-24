@@ -175,5 +175,33 @@ namespace rtmcuz.Data.Models
                 Type = SectionTypes.Service,
             };
         }
+
+        public static Section FromVacancy(Vacancy vacancy)
+        {
+            return new Section()
+            {
+                Id = vacancy.Id,
+                GroupId = vacancy.GroupId,
+                Lang = vacancy.Lang,
+                Title = vacancy.Title,
+                Slug = vacancy.Title.GenerateSlug(),
+                Content = vacancy.Content,
+                Type = SectionTypes.Vacancy,
+            };
+        }
+
+        public static Section FromReport(Report report)
+        {
+            return new Section()
+            {
+                Id = report.Id,
+                GroupId = report.GroupId,
+                Lang = report.Lang,
+                Title = report.Title,
+                Url = report.Url,
+                Slug = report.Title.GenerateSlug(),
+                Type = SectionTypes.Report,
+            };
+        }
     }
 }

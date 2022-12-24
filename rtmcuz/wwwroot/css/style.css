@@ -47,6 +47,7 @@
     color: var(--white-main);
     width: 50%;
     text-transform: uppercase;
+    margin-bottom: 90px;
 }
 
 .banner-section .banner-content .sub-title {
@@ -257,7 +258,7 @@
 .news-section .news-grid .news-item.main {
     grid-row: 1 / span 3;
     grid-column: 1 / span 3;
-    height: 800px;
+    height: 820px;
 }
 
 .news-section .news-grid .news-item.main:hover .bg img {

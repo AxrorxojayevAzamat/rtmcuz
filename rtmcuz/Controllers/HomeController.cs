@@ -25,6 +25,7 @@ namespace rtmcuz.Controllers
         const string SEARCH = "search";
         const string SHOW = "Show";
         const string NEWS = "news";
+        const string VACANCY = "vacancy";
         const string FEEDBACK = "feedback";
 
         public HomeController(RtmcUzContext context, IStringLocalizer<SlugResource> localizer, ICompositeViewEngine compositeViewEngine)
@@ -63,6 +64,7 @@ namespace rtmcuz.Controllers
             //var searchKey = GetLocaleKey(slug);
 
             SectionTypes? sectionType = GetSectionType(slug ?? "/", out string sectionName);
+            Console.WriteLine("vacancy: " + sectionName);
             if (sectionType == SectionTypes.Static)
             {
                 var result = ExistsView(sectionName);
@@ -217,7 +219,7 @@ namespace rtmcuz.Controllers
         private SectionTypes GetSectionType(string slug, out string sectionName)
         {
             sectionName = string.Join(string.Empty, slug.Split("-").Select(s => s.FirstCharToUpper()).ToArray());
-            string checkingSection = slug == NEWS ? sectionName : sectionName.Substring(0, sectionName.Length - 1);
+            string checkingSection = slug == NEWS || slug == VACANCY ? sectionName : sectionName.Substring(0, sectionName.Length - 1);
 
             if (Enum.TryParse(checkingSection, out SectionTypes type))
             {

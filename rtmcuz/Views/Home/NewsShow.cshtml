@@ -8,7 +8,9 @@
                 <div class="show">
                     <h3 class="title">@Model.Title</h3>
                     <img src="/uploads/@Model.Image.Path" class="news-img">
-                    <div class="date">@Model.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)</div>
+                    <div class="date"> @(Model.Subtitle ?? Model.UpdatedDate?.ToString("dd.MM.yyyy",
+                        CultureInfo.CurrentCulture))
+                    </div>
                     <div class="text">@Html.Raw(Model.Content)</div>
                 </div>
             </div>

@@ -1,0 +1,34 @@
+﻿@model rtmcuz.ViewModels.Report
+<div class="row justify-content-between">
+    <div class=@(ViewBag.Title != "Create" ? "col-7" : "col-12")>
+        <form asp-action=@ViewBag.Title enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (ViewBag.Title == "Edit")
+            {
+                <input type="hidden" asp-for="Id" />
+            }
+            @if (ViewBag.Title != "Create")
+            {
+                <input type="hidden" asp-for="Lang" />
+                <input type="hidden" asp-for="GroupId" />
+            }
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="@dashboardLocalizer["Save"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    @if (ViewBag.Title != "Create")
+    {
+        @await Html.PartialAsync("Variants", Model)
+    }
+</div>

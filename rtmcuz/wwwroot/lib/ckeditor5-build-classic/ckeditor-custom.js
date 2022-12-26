@@ -47,7 +47,23 @@ function setCkEditor() {
             Ckfinder: { //Set the upload path
                 uploadUrl: '/Home/UploadCKEditorImage'
                 // Back-end processing upload logic returns json data, including uploaded (option true / false) and url two fields
+            },
+            link: {
+                // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+                addTargetToExternalLinks: true,
+    
+                // Let the users control the "download" attribute of each link.
+                decorators: [
+                    {
+                        mode: 'manual',
+                        label: 'Downloadable',
+                        attributes: {
+                            download: 'download'
+                        }
+                    }
+                ]
             }
+    
         })
         .then(editor => {
             myEditor = editor;

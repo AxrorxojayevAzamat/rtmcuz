@@ -314,23 +314,27 @@ header {
 }
 
 .header-bottom nav ul.menu__box li a .ri-arrow-down-s-line {
-  display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
 }
 
 .header-bottom nav ul.menu__box li a.menu__item {
-  font: var(--body-regular-2);
+    font: var(--body-regular-2);
 }
 
 .header-bottom nav ul.children {
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  width: max-content;
-  left: 0;
-  top: 45px;
-  box-shadow: 0px 8px 20px rgba(24, 47, 67, 0.2);
-  background-color: var(--white-main);
-  padding: 0;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    flex-direction: column;
+    width: max-content;
+    left: 0;
+    top: 45px;
+    box-shadow: 0px 8px 20px rgba(24, 47, 67, 0.2);
+    background-color: var(--white-main);
+    padding: 0;
 }
 
 .header-bottom nav ul.children li {

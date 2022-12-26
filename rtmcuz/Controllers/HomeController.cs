@@ -45,6 +45,7 @@ namespace rtmcuz.Controllers
             var services = await QueryForSections(SectionTypes.Service).ToListAsync();
             var news = await QueryForSections(SectionTypes.News)
                 .OrderByDescending(n => n.UpdatedDate).Take(4).ToListAsync();
+            var stats = await QueryForSections(SectionTypes.Stat).ToListAsync();
 
             if (interactiveServices == null || banners == null || questions == null || services == null || news == null) return NotFound();
 
@@ -53,6 +54,7 @@ namespace rtmcuz.Controllers
             ViewBag.Questions = questions;
             ViewBag.Services = services;
             ViewBag.News = news;
+            ViewBag.Stats = stats;
 
             return View();
         }
@@ -78,17 +80,18 @@ namespace rtmcuz.Controllers
             if (slug == NEWS)
             {
                 const int PAGE_SIZE = 5;
-                var lastNews = query.Take(7).ToList();
-
+                var lastNews = QueryForSections((SectionTypes)sectionType).OrderByDescending(n => n.Subtitle).Take(7).ToList();
+                var news =  QueryForSections((SectionTypes)sectionType).OrderByDescending(n => n.Subtitle).ToList();
+                // items = items.OrderByDescending(n => n.Subtitle).ThenBy(n => n.UpdatedDate).ToList();
                 ViewBag.LastNews = lastNews;
                 ViewBag.PageSize = PAGE_SIZE;
-                ViewBag.TotalItems = items.Count;
+                ViewBag.TotalItems = news.Count;
                 ViewBag.CurrentPage = page;
-                return View(sectionName, items.ToPagedList(page ?? 1, PAGE_SIZE));
+                return View(sectionName, news.ToPagedList(page ?? 1, PAGE_SIZE));
             }
             else if (slug == FEEDBACK)
             {
-                ViewBag.Departments = QueryForSections(SectionTypes.Department).ToList();
+                ViewBag.Departments = QueryForSections(SectionTypes.Department).OrderByDescending(n => n.UpdatedDate).ToList();
             }
 
             return View(sectionName, items);
@@ -168,9 +171,9 @@ namespace rtmcuz.Controllers
             {
                 _context.Feedback.Add(feedback);
                 _context.SaveChanges();
-                
+
                 ModelState.Clear();
-                
+
                 ViewBag.Departments = new SelectList(QueryForSections(SectionTypes.Department), "Id", "Title");
                 ViewBag.Success = true;
             }

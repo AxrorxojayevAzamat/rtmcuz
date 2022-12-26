@@ -294,16 +294,18 @@
 
 .numbers-about-us-section .numbers .item {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     padding: 7px 40px;
 }
 
-.numbers-about-us-section .numbers .item .icon {
+.numbers-about-us-section .numbers .item .bi {
     width: 54px;
     height: 54px;
-    margin-right: 14px;
-    background-image: var(--linear-green);
-    border-radius: 50%;
+    margin: 14px;
+    color: var(--primary-main);
+    font-size: 50px;
+    /* background-image: var(--linear-green); */
+    /* border-radius: 50%; */
 }
 
 .numbers-about-us-section .numbers .item .number {

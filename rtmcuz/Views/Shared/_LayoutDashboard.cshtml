@@ -3,7 +3,21 @@
 
 @{
     List<string> Sections =
-            new() { "Feedbacks","Banners", "News", "Interactives", "Services", "Questions", "Vacancies", "Leaderships", "Departments", "Reports","Documents"};
+            new()
+            {
+                "Feedbacks",
+                "Banners",
+                "News",
+                "Interactives",
+                "Services",
+                "Questions",
+                "Vacancies",
+                "Leaderships",
+                "Departments",
+                "Reports",
+                "Documents",
+                "Stats"
+            };
 
     bool IsActiveRoute(string section)
     {
@@ -53,7 +67,8 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li>
                             <a class="dropdown-item" id="login" asp-area="Identity" asp-page="/Account/Logout"
-                                asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">@dashboardLocalizer["Logout"]</a>
+                                asp-route-returnUrl="@Url.Page("/", new { area = "" })"
+                                method="post">@dashboardLocalizer["Logout"]</a>
                         </li>
                     </ul>
                 </div>

@@ -1,6 +1,9 @@
 @model IEnumerable<rtmcuz.Data.Models.Section>
 
 <section class="news-section">
+    <a href="/uploads/2022/12/2/3bebed3f/maxresdefault.jpg" download="download"> “O’zTTBRM” DUK
+            SMT
+            qayta sertifikatlash auditi o’tkazilganligi haqida hisobot. 2016y.</a>
     <div class="container">
         <div class="head">
             <h3 class="title">@sharedLocalizer["news"]</h3>
@@ -9,27 +12,14 @@
         <div class="news-grid">
             @foreach (var item in Model.Select((value, i) => new { i, value }))
             {
-                @if (item.i == 0)
-                {
-                    <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class="news-item main">
-                        <div class="bg">
-                            <div class="bg-linear"></div>
-                            <img class="home-news" src="/uploads/@item.value.Image.Path">
-                        </div>
-                        <div class="title">@item.value.Title</div>
-                    </a>
-                }
-                else
-                {
-                    <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class="news-item">
-                        <div class="bg">
-                            <div class="bg-linear"></div>
-                            <img class="home-news" src="/uploads/@item.value.Image.Path">
-                        </div>
-                        <div class="title">@item.value.Title</div>
-                    </a>
-                }
-
+                <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.value.Slug" class=@(item.i == 0 ?
+                "news-item main" : "news-item")>
+                    <div class="bg">
+                        <div class="bg-linear"></div>
+                        <img class="home-news" src="/uploads/@item.value.Image.Path">
+                    </div>
+                    <div class="title">@item.value.Title</div>
+                </a>
             }
         </div>
     </div>

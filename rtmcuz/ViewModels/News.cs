@@ -5,8 +5,8 @@ namespace rtmcuz.ViewModels
 {
     public class News : BaseViewModel
     {
-        [Display(Name = "Subtitle")]
-        public string? Subtitle { get; set; }
+        [Display(Name = "UpdatedDate")]
+        public string Subtitle { get; set; }
 
         [Display(Name = "Content")]
         public string Content { get; set; }

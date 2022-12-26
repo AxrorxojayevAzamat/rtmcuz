@@ -10,8 +10,8 @@
                     {
                         <div class="news-item">
                             <img src="/uploads/@item.Image.Path" class="news-img">
-                            <div class="date"> @(item.Subtitle ?? item.UpdatedDate?.ToString("dd.MM.yyyy",
-                            CultureInfo.CurrentCulture)) </div>
+                            <div class="date"> @(item.Subtitle != null ? DateTime.Parse(item.Subtitle).ToString("MMM dd yyyy",CultureInfo.CurrentCulture)
+                        :item.UpdatedDate?.ToString("MMM dd yyyy", CultureInfo.CurrentCulture)) </div>
                             <a asp-action="Show" asp-route-slugGroup="news" asp-route-slug="@item.Slug"
                             class="title">@item.Title</a>
                             <div class="text">@Html.Raw(item.Content)</div>

@@ -1,0 +1,29 @@
+﻿@model rtmcuz.ViewModels.Stat
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@section Styles {
+<link href="~/lib/bootstrap-icon-picker/dist/css/bootstrapicons-iconpicker.min.css" rel="stylesheet" />
+}
+
+<h1>@dashboardLocalizer["Edit"]</h1>
+
+<h4>@dashboardLocalizer["Stats"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        @await Html.PartialAsync("_Form", Model)
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">@dashboardLocalizer["Back_to_List"]</a>
+</div>
+
+@section Scripts {
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script src="~/lib/bootstrap-icon-picker/dist/js/bootstrapicon-iconpicker.min.js"></script>
+<script src="~/lib/bootstrap-icon-picker/icon-picker-custom.js"></script>
+}

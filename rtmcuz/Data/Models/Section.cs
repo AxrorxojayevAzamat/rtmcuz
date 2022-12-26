@@ -203,5 +203,19 @@ namespace rtmcuz.Data.Models
                 Type = SectionTypes.Report,
             };
         }
+                public static Section FromStat(Stat stat)
+        {
+            return new Section()
+            {
+                Id = stat.Id,
+                GroupId = stat.GroupId,
+                Lang = stat.Lang,
+                Slug = stat.Title.GenerateSlug(),
+                Title = stat.Title,
+                Subtitle = stat.Subtitle,
+                Icon = stat.Icon,
+                Type = SectionTypes.Stat,
+            };
+        }
     }
 }

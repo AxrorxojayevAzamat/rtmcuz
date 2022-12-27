@@ -80,8 +80,8 @@ namespace rtmcuz.Controllers
             if (slug == NEWS)
             {
                 const int PAGE_SIZE = 5;
-                var lastNews = QueryForSections((SectionTypes)sectionType).OrderByDescending(n => n.Subtitle).Take(7).ToList();
-                var news =  QueryForSections((SectionTypes)sectionType).OrderByDescending(n => n.Subtitle).ToList();
+                var lastNews = QueryForSections((SectionTypes)sectionType).OrderByDescending(n => n.Subtitle).ThenByDescending(n => n.UpdatedDate).Take(7).ToList();
+                var news =  QueryForSections((SectionTypes)sectionType).OrderByDescending(n => n.Subtitle).ThenByDescending(n => n.UpdatedDate).ToList();
                 // items = items.OrderByDescending(n => n.Subtitle).ThenBy(n => n.UpdatedDate).ToList();
                 ViewBag.LastNews = lastNews;
                 ViewBag.PageSize = PAGE_SIZE;

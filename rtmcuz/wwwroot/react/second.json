@@ -1,0 +1,1633 @@
+[
+    {
+        "country_ru": "Абхазия",
+        "country_uz": "Абхазия",
+        "country_code": "+ 7",
+        "phone_number_by_city_phone": "00 7      <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 7       <номер абонента>"
+    },
+    {
+        "country_ru": "Австралия",
+        "country_uz": "Австралия",
+        "country_code": "+ 61",
+        "phone_number_by_city_phone": "00 61     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 61     <номер абонента>"
+    },
+    {
+        "country_ru": "Австрия",
+        "country_uz": "Австрия",
+        "country_code": "+ 43",
+        "phone_number_by_city_phone": "00 43     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 43     <номер абонента>"
+    },
+    {
+        "country_ru": "Азербайджан",
+        "country_uz": "Озарбайжон",
+        "country_code": "+ 994",
+        "phone_number_by_city_phone": "00 994   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 994   <номер абонента>"
+    },
+    {
+        "country_ru": "Албания",
+        "country_uz": "Албания",
+        "country_code": "+ 355",
+        "phone_number_by_city_phone": "00 355   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 355   <номер абонента>"
+    },
+    {
+        "country_ru": "Алжир",
+        "country_uz": "Алжир",
+        "country_code": "+ 213",
+        "phone_number_by_city_phone": "00 213   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 213   <номер абонента>"
+    },
+    {
+        "country_ru": "Аляска",
+        "country_uz": "Аляска",
+        "country_code": "+ 1907",
+        "phone_number_by_city_phone": "00 1907 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1907 <номер абонента>"
+    },
+    {
+        "country_ru": "Ангила",
+        "country_uz": "Англия",
+        "country_code": "+ 1264",
+        "phone_number_by_city_phone": "00 1264 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1264 <номер абонента>"
+    },
+    {
+        "country_ru": "Ангола",
+        "country_uz": "Ангола",
+        "country_code": "+ 244",
+        "phone_number_by_city_phone": "00 244   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 244   <номер абонента>"
+    },
+    {
+        "country_ru": "Андорра",
+        "country_uz": "Андорра",
+        "country_code": "+ 376",
+        "phone_number_by_city_phone": "00 376   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 376   <номер абонента>"
+    },
+    {
+        "country_ru": "Антигуа и барбуда",
+        "country_uz": "Антигуа ва Барбуда",
+        "country_code": "+ 1268",
+        "phone_number_by_city_phone": "00 1268 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1268 <номер абонента>"
+    },
+    {
+        "country_ru": "Антильские острова",
+        "country_uz": "Антил Ороллари",
+        "country_code": "+ 599",
+        "phone_number_by_city_phone": "00 599   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 599   <номер абонента>"
+    },
+    {
+        "country_ru": "Аргентина",
+        "country_uz": "Аргентина",
+        "country_code": "+ 54",
+        "phone_number_by_city_phone": "00 54     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 54     <номер абонента>"
+    },
+    {
+        "country_ru": "Армения",
+        "country_uz": "Арманистон",
+        "country_code": "+ 374",
+        "phone_number_by_city_phone": "00 374   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 374   <номер абонента>"
+    },
+    {
+        "country_ru": "Аруба",
+        "country_uz": "Аруба",
+        "country_code": "+ 297",
+        "phone_number_by_city_phone": "00 297   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 297   <номер абонента>"
+    },
+    {
+        "country_ru": "Афганистан",
+        "country_uz": "Афғонистон",
+        "country_code": "+ 93",
+        "phone_number_by_city_phone": "00 93     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 93     <номер абонента>"
+    },
+    {
+        "country_ru": "Багамские острова",
+        "country_uz": "Багама Ороллари",
+        "country_code": "+ 1242",
+        "phone_number_by_city_phone": "00 1242 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1242 <номер абонента>"
+    },
+    {
+        "country_ru": "Бангладеш",
+        "country_uz": "Бангладеш",
+        "country_code": "+ 880",
+        "phone_number_by_city_phone": "00 880   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 880   <номер абонента>"
+    },
+    {
+        "country_ru": "Барбадос",
+        "country_uz": "Барбадос",
+        "country_code": "+ 1246",
+        "phone_number_by_city_phone": "00 1246 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1246 <номер абонента>"
+    },
+    {
+        "country_ru": "Бахрейн",
+        "country_uz": "Баҳрайн",
+        "country_code": "+ 973",
+        "phone_number_by_city_phone": "00 973   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 973   <номер абонента>"
+    },
+    {
+        "country_ru": "Белоруссия",
+        "country_uz": "Белоруссия",
+        "country_code": "+ 375",
+        "phone_number_by_city_phone": "00 375   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 375  <номер абонента>"
+    },
+    {
+        "country_ru": "Белиз",
+        "country_uz": "Белиз",
+        "country_code": "+ 501",
+        "phone_number_by_city_phone": "00 501   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 501   <номер абонента>"
+    },
+    {
+        "country_ru": "Бельгия",
+        "country_uz": "Белгия",
+        "country_code": "+ 32",
+        "phone_number_by_city_phone": "00 32     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 32     <номер абонента>"
+    },
+    {
+        "country_ru": "Бенин",
+        "country_uz": "Бенин",
+        "country_code": "+ 229",
+        "phone_number_by_city_phone": "00 229   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 229   <номер абонента>"
+    },
+    {
+        "country_ru": "Бермудские острова",
+        "country_uz": "Бермуд Ороллари",
+        "country_code": "+ 1441",
+        "phone_number_by_city_phone": "00 1441 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1441 <номер абонента>"
+    },
+    {
+        "country_ru": "Болгария",
+        "country_uz": "Болгария",
+        "country_code": "+ 359",
+        "phone_number_by_city_phone": "00 359   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 359   <номер абонента>"
+    },
+    {
+        "country_ru": "Боливия",
+        "country_uz": "Боливия",
+        "country_code": "+ 591",
+        "phone_number_by_city_phone": "00 591   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 591   <номер абонента>"
+    },
+    {
+        "country_ru": "Босния и герцеговина",
+        "country_uz": "Босния ва Гертсоговина",
+        "country_code": "+ 387",
+        "phone_number_by_city_phone": "00 387   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 387   <номер абонента>"
+    },
+    {
+        "country_ru": "Ботсвана",
+        "country_uz": "Ботсвана",
+        "country_code": "+ 267",
+        "phone_number_by_city_phone": "00 267   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 267   <номер абонента>"
+    },
+    {
+        "country_ru": "Бразилия",
+        "country_uz": "Бразилия",
+        "country_code": "+ 55",
+        "phone_number_by_city_phone": "00 55     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 55     <номер абонента>"
+    },
+    {
+        "country_ru": "Бруней",
+        "country_uz": "Бруней",
+        "country_code": "+ 673",
+        "phone_number_by_city_phone": "00 673   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 673   <номер абонента>"
+    },
+    {
+        "country_ru": "Буркина фасо",
+        "country_uz": "Буркино фасо",
+        "country_code": "+ 226",
+        "phone_number_by_city_phone": "00 226   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 226   <номер абонента>"
+    },
+    {
+        "country_ru": "Бурунди",
+        "country_uz": "Бурунди",
+        "country_code": "+ 257",
+        "phone_number_by_city_phone": "00 257   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 257   <номер абонента>"
+    },
+    {
+        "country_ru": "Бутан",
+        "country_uz": "Бутан",
+        "country_code": "+ 975",
+        "phone_number_by_city_phone": "00 975   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 975   <номер абонента>"
+    },
+    {
+        "country_ru": "Вануату",
+        "country_uz": "Вануату",
+        "country_code": "+ 678",
+        "phone_number_by_city_phone": "00 678   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 678   <номер абонента>"
+    },
+    {
+        "country_ru": "Ватикан",
+        "country_uz": "Ватикан",
+        "country_code": "+ 396",
+        "phone_number_by_city_phone": "00 396   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 396   <номер абонента>"
+    },
+    {
+        "country_ru": "Великобритания",
+        "country_uz": "Буюк Британия",
+        "country_code": "+ 44",
+        "phone_number_by_city_phone": "00 44     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 44     <номер абонента>"
+    },
+    {
+        "country_ru": "Венгрия",
+        "country_uz": "Венгрия",
+        "country_code": "+ 36",
+        "phone_number_by_city_phone": "00 36     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 36     <номер абонента>"
+    },
+    {
+        "country_ru": "Венесуэла",
+        "country_uz": "Венесуэла",
+        "country_code": "+ 58",
+        "phone_number_by_city_phone": "00 58     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 58     <номер абонента>"
+    },
+    {
+        "country_ru": "Виргинские острова (британские)",
+        "country_uz": "Виргин Ороллари (британияники)",
+        "country_code": "+ 1284",
+        "phone_number_by_city_phone": "00 1284 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1284 <номер абонента>"
+    },
+    {
+        "country_ru": "Виргинские острова (сша)",
+        "country_uz": "Виргин Ороллари (АҚШ)",
+        "country_code": "+ 1340",
+        "phone_number_by_city_phone": "00 1340 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1340 <номер абонента>"
+    },
+    {
+        "country_ru": "Вознесения (остров)",
+        "country_uz": "Вознесия (орол)",
+        "country_code": "+ 247",
+        "phone_number_by_city_phone": "00 247   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 247   <номер абонента>"
+    },
+    {
+        "country_ru": "Восточный тимор",
+        "country_uz": "Шарқий Тимор",
+        "country_code": "+ 670",
+        "phone_number_by_city_phone": "00 670   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 670   <номер абонента>"
+    },
+    {
+        "country_ru": "Вьетнам",
+        "country_uz": "Ветнам",
+        "country_code": "+ 84",
+        "phone_number_by_city_phone": "00 84     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 84     <номер абонента>"
+    },
+    {
+        "country_ru": "Габон",
+        "country_uz": "Габон",
+        "country_code": "+ 241",
+        "phone_number_by_city_phone": "00 241   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 241   <номер абонента>"
+    },
+    {
+        "country_ru": "Гавайские острова",
+        "country_uz": "Гавая Ороллари",
+        "country_code": "+ 1808",
+        "phone_number_by_city_phone": "00 1808 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1808 <номер абонента>"
+    },
+    {
+        "country_ru": "Гаити",
+        "country_uz": "Гаити",
+        "country_code": "+ 509",
+        "phone_number_by_city_phone": "00 509   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 509   <номер абонента>"
+    },
+    {
+        "country_ru": "Гайана",
+        "country_uz": "Гайана",
+        "country_code": "+ 592",
+        "phone_number_by_city_phone": "00 592   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 592   <номер абонента>"
+    },
+    {
+        "country_ru": "Гамбия",
+        "country_uz": "Гамбия",
+        "country_code": "+ 220",
+        "phone_number_by_city_phone": "00 220   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 220   <номер абонента>"
+    },
+    {
+        "country_ru": "Гана",
+        "country_uz": "Гана",
+        "country_code": "+ 233",
+        "phone_number_by_city_phone": "00 233   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 233   <номер абонента>"
+    },
+    {
+        "country_ru": "Гваделупа (французская)",
+        "country_uz": "Гваделупа (Франсия)",
+        "country_code": "+ 590",
+        "phone_number_by_city_phone": "00 590   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 590   <номер абонента>"
+    },
+    {
+        "country_ru": "Гватемала",
+        "country_uz": "Гватемала",
+        "country_code": "+ 502",
+        "phone_number_by_city_phone": "00 502   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 502   <номер абонента>"
+    },
+    {
+        "country_ru": "Гвиана (французская)",
+        "country_uz": "Гвиана (Франсия)",
+        "country_code": "+ 594",
+        "phone_number_by_city_phone": "00 594   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 594   <номер абонента>"
+    },
+    {
+        "country_ru": "Гвинея",
+        "country_uz": "Гвинея",
+        "country_code": "+ 224",
+        "phone_number_by_city_phone": "00 224   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 224   <номер абонента>"
+    },
+    {
+        "country_ru": "Гвинея-бисау",
+        "country_uz": "Гвинея-биссау",
+        "country_code": "+ 245",
+        "phone_number_by_city_phone": "00 245   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 245   <номер абонента>"
+    },
+    {
+        "country_ru": "Германия",
+        "country_uz": "Германия",
+        "country_code": "+ 49",
+        "phone_number_by_city_phone": "00 49     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 49     <номер абонента>"
+    },
+    {
+        "country_ru": "Гибралтар",
+        "country_uz": "Гибралтар",
+        "country_code": "+ 350",
+        "phone_number_by_city_phone": "00 350   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 350   <номер абонента>"
+    },
+    {
+        "country_ru": "Гондурас",
+        "country_uz": "Гондурас",
+        "country_code": "+ 504",
+        "phone_number_by_city_phone": "00 504   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 504   <номер абонента>"
+    },
+    {
+        "country_ru": "Гонконг",
+        "country_uz": "Гонконг",
+        "country_code": "+ 852",
+        "phone_number_by_city_phone": "00 852   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 852   <номер абонента>"
+    },
+    {
+        "country_ru": "Гренада",
+        "country_uz": "Гренада",
+        "country_code": "+ 1473",
+        "phone_number_by_city_phone": "00 1473 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1473 <номер абонента>"
+    },
+    {
+        "country_ru": "Гренландия",
+        "country_uz": "Гренландия",
+        "country_code": "+ 299",
+        "phone_number_by_city_phone": "00 299   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 299   <номер абонента>"
+    },
+    {
+        "country_ru": "Греция",
+        "country_uz": "Греция",
+        "country_code": "+ 30",
+        "phone_number_by_city_phone": "00 30     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 30     <номер абонента>"
+    },
+    {
+        "country_ru": "Грузия",
+        "country_uz": "Грузия",
+        "country_code": "+ 995",
+        "phone_number_by_city_phone": "00 995   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 995  <номер абонента>"
+    },
+    {
+        "country_ru": "Гуам",
+        "country_uz": "Гуам",
+        "country_code": "+ 1671",
+        "phone_number_by_city_phone": "00 1671 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1671 <номер абонента>"
+    },
+    {
+        "country_ru": "Дания",
+        "country_uz": "Дания",
+        "country_code": "+ 45",
+        "phone_number_by_city_phone": "00 45     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 45     <номер абонента>"
+    },
+    {
+        "country_ru": "Джибути",
+        "country_uz": "Жибути",
+        "country_code": "+ 253",
+        "phone_number_by_city_phone": "00 253   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 253   <номер абонента>"
+    },
+    {
+        "country_ru": "Диего гарсия",
+        "country_uz": "Диего гарсия",
+        "country_code": "+ 246",
+        "phone_number_by_city_phone": "00 246   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 246   <номер абонента>"
+    },
+    {
+        "country_ru": "Доминика",
+        "country_uz": "Доминика",
+        "country_code": "+ 1767",
+        "phone_number_by_city_phone": "00 1767 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1767 <номер абонента>"
+    },
+    {
+        "country_ru": "Доминиканская республика",
+        "country_uz": "Доминика Республикаси",
+        "country_code": "+ 1809",
+        "phone_number_by_city_phone": "00 1809 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1809 <номер абонента>"
+    },
+    {
+        "country_ru": "Египет",
+        "country_uz": "Миср",
+        "country_code": "+ 20",
+        "phone_number_by_city_phone": "00 20      <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 20     <номер абонента>"
+    },
+    {
+        "country_ru": "Заир",
+        "country_uz": "Заир",
+        "country_code": "+ 243",
+        "phone_number_by_city_phone": "00 243   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 243   <номер абонента>"
+    },
+    {
+        "country_ru": "Замбия",
+        "country_uz": "Замбия",
+        "country_code": "+ 260",
+        "phone_number_by_city_phone": "00 260   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 260   <номер абонента>"
+    },
+    {
+        "country_ru": "Зимбабве",
+        "country_uz": "Зимбабве",
+        "country_code": "+ 263",
+        "phone_number_by_city_phone": "00 263   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 263   <номер абонента>"
+    },
+    {
+        "country_ru": "Израиль",
+        "country_uz": "Исроил",
+        "country_code": "+ 972",
+        "phone_number_by_city_phone": "00 972   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 972   <номер абонента>"
+    },
+    {
+        "country_ru": "Индия",
+        "country_uz": "Ҳиндистон",
+        "country_code": "+ 91",
+        "phone_number_by_city_phone": "00 91     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 91     <номер абонента>"
+    },
+    {
+        "country_ru": "Индонезия",
+        "country_uz": "Индонезия",
+        "country_code": "+ 62",
+        "phone_number_by_city_phone": "00 62     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 62     <номер абонента>"
+    },
+    {
+        "country_ru": "Иордания",
+        "country_uz": "Иордания",
+        "country_code": "+ 962",
+        "phone_number_by_city_phone": "00 962   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 962   <номер абонента>"
+    },
+    {
+        "country_ru": "Ирак",
+        "country_uz": "Ирақ",
+        "country_code": "+ 964",
+        "phone_number_by_city_phone": "00 964   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 964   <номер абонента>"
+    },
+    {
+        "country_ru": "Иран",
+        "country_uz": "Эрон",
+        "country_code": "+ 98",
+        "phone_number_by_city_phone": "00 98     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 98     <номер абонента>"
+    },
+    {
+        "country_ru": "Ирландия",
+        "country_uz": "Ирландия",
+        "country_code": "+ 353",
+        "phone_number_by_city_phone": "00 353   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 353   <номер абонента>"
+    },
+    {
+        "country_ru": "Исландия",
+        "country_uz": "Исландия",
+        "country_code": "+ 354",
+        "phone_number_by_city_phone": "00 354   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 354   <номер абонента>"
+    },
+    {
+        "country_ru": "Испания",
+        "country_uz": "Испания",
+        "country_code": "+ 34",
+        "phone_number_by_city_phone": "00 34     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 34     <номер абонента>"
+    },
+    {
+        "country_ru": "Италия",
+        "country_uz": "Италия",
+        "country_code": "+ 39",
+        "phone_number_by_city_phone": "00 39     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 39     <номер абонента>"
+    },
+    {
+        "country_ru": "Йемен",
+        "country_uz": "Яман",
+        "country_code": "+ 967",
+        "phone_number_by_city_phone": "00 967   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 967   <номер абонента>"
+    },
+    {
+        "country_ru": "Кабо-верде",
+        "country_uz": "Кабо-верде",
+        "country_code": "+ 238",
+        "phone_number_by_city_phone": "00 238   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 238   <номер абонента>"
+    },
+    {
+        "country_ru": "Казахстан",
+        "country_uz": "Қозоғистон",
+        "country_code": "+ 7",
+        "phone_number_by_city_phone": "00 7      <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 7      <номер абонента>"
+    },
+    {
+        "country_ru": "Каймановы острова",
+        "country_uz": "Қайман Ороллари",
+        "country_code": "+ 1345",
+        "phone_number_by_city_phone": "00 1345 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1345 <номер абонента>"
+    },
+    {
+        "country_ru": "Камбоджа",
+        "country_uz": "Камбоджа",
+        "country_code": "+ 855",
+        "phone_number_by_city_phone": "00 855   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 855   <номер абонента>"
+    },
+    {
+        "country_ru": "Камерун",
+        "country_uz": "Камерун",
+        "country_code": "+ 237",
+        "phone_number_by_city_phone": "00 237   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 237   <номер абонента>"
+    },
+    {
+        "country_ru": "Канада",
+        "country_uz": "Канада",
+        "country_code": "+ 1",
+        "phone_number_by_city_phone": "00 1      <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1       <номер абонента>"
+    },
+    {
+        "country_ru": "Канарские острова",
+        "country_uz": "Канар Ороллари",
+        "country_code": "+ 3428",
+        "phone_number_by_city_phone": "00 3428 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 3428 <номер абонента>"
+    },
+    {
+        "country_ru": "Катар",
+        "country_uz": "Қатар",
+        "country_code": "+ 974",
+        "phone_number_by_city_phone": "00 974   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 974   <номер абонента>"
+    },
+    {
+        "country_ru": "Кения",
+        "country_uz": "Кения",
+        "country_code": "+ 254",
+        "phone_number_by_city_phone": "00 254   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 254   <номер абонента>"
+    },
+    {
+        "country_ru": "Кипр",
+        "country_uz": "Кипр",
+        "country_code": "+ 357",
+        "phone_number_by_city_phone": "00 357   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 357   <номер абонента>"
+    },
+    {
+        "country_ru": "Киргизия",
+        "country_uz": "Қирғизистон",
+        "country_code": "+ 996",
+        "phone_number_by_city_phone": "00 996   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 996   <номер абонента>"
+    },
+    {
+        "country_ru": "Кирибати",
+        "country_uz": "Кирибати",
+        "country_code": "+ 686",
+        "phone_number_by_city_phone": "00 686   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 686   <номер абонента>"
+    },
+    {
+        "country_ru": "Китай",
+        "country_uz": "Хитой",
+        "country_code": "+ 86",
+        "phone_number_by_city_phone": "00 86     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 86     <номер абонента>"
+    },
+    {
+        "country_ru": "Код-д,ивуар",
+        "country_uz": "Код-д,ивуар",
+        "country_code": "+ 225",
+        "phone_number_by_city_phone": "00 225   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 225   <номер абонента>"
+    },
+    {
+        "country_ru": "Колумбия",
+        "country_uz": "Колумбия",
+        "country_code": "+ 57",
+        "phone_number_by_city_phone": "00 57     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 57     <номер абонента>"
+    },
+    {
+        "country_ru": "Коморские острова",
+        "country_uz": "Комор Ороллари",
+        "country_code": "+ 269",
+        "phone_number_by_city_phone": "00 269   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 269   <номер абонента>"
+    },
+    {
+        "country_ru": "Конго",
+        "country_uz": "Конго",
+        "country_code": "+ 242",
+        "phone_number_by_city_phone": "00 242   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 242   <номер абонента>"
+    },
+    {
+        "country_ru": "Коста-Рика",
+        "country_uz": "Коста-Рика",
+        "country_code": "+ 506",
+        "phone_number_by_city_phone": "00 506   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 506   <номер абонента>"
+    },
+    {
+        "country_ru": "Куба",
+        "country_uz": "Куба",
+        "country_code": "+ 53",
+        "phone_number_by_city_phone": "00 53     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 53     <номер абонента>"
+    },
+    {
+        "country_ru": "Кувейт",
+        "country_uz": "Қувайт",
+        "country_code": "+ 965",
+        "phone_number_by_city_phone": "00 965   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 965   <номер абонента>"
+    },
+    {
+        "country_ru": "Кука (остров)",
+        "country_uz": "Кук Ороллари",
+        "country_code": "+ 682",
+        "phone_number_by_city_phone": "00 682   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 682   <номер абонента>"
+    },
+    {
+        "country_ru": "Кыргызстан",
+        "country_uz": "Қирғизистон",
+        "country_code": "+ 996",
+        "phone_number_by_city_phone": "00 996   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 996  <номер абонента>"
+    },
+    {
+        "country_ru": "Лаос",
+        "country_uz": "Лаос",
+        "country_code": "+ 856",
+        "phone_number_by_city_phone": "00 856   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 856   <номер абонента>"
+    },
+    {
+        "country_ru": "Латвия",
+        "country_uz": "Латвия",
+        "country_code": "+ 371",
+        "phone_number_by_city_phone": "00 371   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 371   <номер абонента>"
+    },
+    {
+        "country_ru": "Лесото",
+        "country_uz": "Лесото",
+        "country_code": "+ 266",
+        "phone_number_by_city_phone": "00 266   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 266   <номер абонента>"
+    },
+    {
+        "country_ru": "Либерия",
+        "country_uz": "Либерия",
+        "country_code": "+ 231",
+        "phone_number_by_city_phone": "00 231   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 231   <номер абонента>"
+    },
+    {
+        "country_ru": "Ливан",
+        "country_uz": "Ливан",
+        "country_code": "+ 961",
+        "phone_number_by_city_phone": "00 961   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 961   <номер абонента>"
+    },
+    {
+        "country_ru": "Ливия",
+        "country_uz": "Ливия",
+        "country_code": "+ 218",
+        "phone_number_by_city_phone": "00 218   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 218   <номер абонента>"
+    },
+    {
+        "country_ru": "Литва",
+        "country_uz": "Литва",
+        "country_code": "+ 370",
+        "phone_number_by_city_phone": "00 370   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 370   <номер абонента>"
+    },
+    {
+        "country_ru": "Лихтенштейн",
+        "country_uz": "Лихтенштейн",
+        "country_code": "+ 423",
+        "phone_number_by_city_phone": "00 423   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 423   <номер абонента>"
+    },
+    {
+        "country_ru": "Люксембург",
+        "country_uz": "Люксембург",
+        "country_code": "+ 352",
+        "phone_number_by_city_phone": "00 352   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 352   <номер абонента>"
+    },
+    {
+        "country_ru": "Маврикий",
+        "country_uz": "Мавритсия",
+        "country_code": "+ 230",
+        "phone_number_by_city_phone": "00 230   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 230   <номер абонента>"
+    },
+    {
+        "country_ru": "Мавритания",
+        "country_uz": "Мавритания",
+        "country_code": "+ 222",
+        "phone_number_by_city_phone": "00 222   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 222   <номер абонента>"
+    },
+    {
+        "country_ru": "Мадагаскар",
+        "country_uz": "Мадагаскар",
+        "country_code": "+ 261",
+        "phone_number_by_city_phone": "00 261   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 261   <номер абонента>"
+    },
+    {
+        "country_ru": "Маймар",
+        "country_uz": "Маймар",
+        "country_code": "+ 95",
+        "phone_number_by_city_phone": "00 95     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 95     <номер абонента>"
+    },
+    {
+        "country_ru": "Макао",
+        "country_uz": "Макао",
+        "country_code": "+ 853",
+        "phone_number_by_city_phone": "00 853   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 853   <номер абонента>"
+    },
+    {
+        "country_ru": "Македония",
+        "country_uz": "Македония",
+        "country_code": "+ 389",
+        "phone_number_by_city_phone": "00 389   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 389   <номер абонента>"
+    },
+    {
+        "country_ru": "Малави",
+        "country_uz": "Малави",
+        "country_code": "+ 265",
+        "phone_number_by_city_phone": "00 265   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 265   <номер абонента>"
+    },
+    {
+        "country_ru": "Малайзия",
+        "country_uz": "Малайзия",
+        "country_code": "+ 60",
+        "phone_number_by_city_phone": "00 60     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 60     <номер абонента>"
+    },
+    {
+        "country_ru": "Мали",
+        "country_uz": "Мали",
+        "country_code": "+ 223",
+        "phone_number_by_city_phone": "00 223   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 223   <номер абонента>"
+    },
+    {
+        "country_ru": "Мальдивы",
+        "country_uz": "Малдиви ",
+        "country_code": "+ 960",
+        "phone_number_by_city_phone": "00 960   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 960   <номер абонента>"
+    },
+    {
+        "country_ru": "Мальта",
+        "country_uz": "Малта",
+        "country_code": "+ 356",
+        "phone_number_by_city_phone": "00 356   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 356   <номер абонента>"
+    },
+    {
+        "country_ru": "Марианские острова",
+        "country_uz": "Шимолий Мариана Ороллаи",
+        "country_code": "+ 1670",
+        "phone_number_by_city_phone": "00 1670 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1670 <номер абонента>"
+    },
+    {
+        "country_ru": "Марокко",
+        "country_uz": "Марокко",
+        "country_code": "+ 212",
+        "phone_number_by_city_phone": "00 212   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 212   <номер абонента>"
+    },
+    {
+        "country_ru": "Мартиника (французская)",
+        "country_uz": "Мартиника",
+        "country_code": "+ 596",
+        "phone_number_by_city_phone": "00 596   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 596   <номер абонента>"
+    },
+    {
+        "country_ru": "Маршалловы острова",
+        "country_uz": "Маршалл Ороллари",
+        "country_code": "+ 692",
+        "phone_number_by_city_phone": "00 692   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 692   <номер абонента>"
+    },
+    {
+        "country_ru": "Мексика",
+        "country_uz": "Мексика",
+        "country_code": "+ 52",
+        "phone_number_by_city_phone": "00 52     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 52     <номер абонента>"
+    },
+    {
+        "country_ru": "Микронезия",
+        "country_uz": "Микронезия",
+        "country_code": "+ 691",
+        "phone_number_by_city_phone": "00 691   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 691   <номер абонента>"
+    },
+    {
+        "country_ru": "Мозамбик",
+        "country_uz": "Мозамбик",
+        "country_code": "+ 258",
+        "phone_number_by_city_phone": "00 258   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 258   <номер абонента>"
+    },
+    {
+        "country_ru": "Молдова",
+        "country_uz": "Молдова",
+        "country_code": "+ 373",
+        "phone_number_by_city_phone": "00 373  <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 373   <номер абонента>"
+    },
+    {
+        "country_ru": "Монако",
+        "country_uz": "Монако",
+        "country_code": "+ 377",
+        "phone_number_by_city_phone": "00 377   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 377   <номер абонента>"
+    },
+    {
+        "country_ru": "Монголия",
+        "country_uz": "Монголия",
+        "country_code": "+ 976",
+        "phone_number_by_city_phone": "00 976   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 976   <номер абонента>"
+    },
+    {
+        "country_ru": "Монтенегро",
+        "country_uz": "Монтенегро",
+        "country_code": "+ 382",
+        "phone_number_by_city_phone": "00 382   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 382   <номер абонента>"
+    },
+    {
+        "country_ru": "Монтсеррат",
+        "country_uz": "Монтсеррат",
+        "country_code": "+ 1664",
+        "phone_number_by_city_phone": "00 1664 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1664 <номер абонента>"
+    },
+    {
+        "country_ru": "Намибия",
+        "country_uz": "Намибия",
+        "country_code": "+ 264",
+        "phone_number_by_city_phone": "00 264   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 264   <номер абонента>"
+    },
+    {
+        "country_ru": "Науру",
+        "country_uz": "Науру",
+        "country_code": "+ 674",
+        "phone_number_by_city_phone": "00 674   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 674   <номер абонента>"
+    },
+    {
+        "country_ru": "Непал",
+        "country_uz": "Непал",
+        "country_code": "+ 977",
+        "phone_number_by_city_phone": "00 977   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 977   <номер абонента>"
+    },
+    {
+        "country_ru": "Нигер",
+        "country_uz": "Нигер",
+        "country_code": "+ 227",
+        "phone_number_by_city_phone": "00 227   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 227   <номер абонента>"
+    },
+    {
+        "country_ru": "Нигерия",
+        "country_uz": "Нигерия",
+        "country_code": "+ 234",
+        "phone_number_by_city_phone": "00 234   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 234   <номер абонента>"
+    },
+    {
+        "country_ru": "Нидерланды",
+        "country_uz": "Нидерланлдия",
+        "country_code": "+ 31",
+        "phone_number_by_city_phone": "00 31     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 31     <номер абонента>"
+    },
+    {
+        "country_ru": "Никарагуа",
+        "country_uz": "Никарагуа",
+        "country_code": "+ 505",
+        "phone_number_by_city_phone": "00 505   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 505   <номер абонента>"
+    },
+    {
+        "country_ru": "Ниуэ (остров)",
+        "country_uz": "Ниуе (орол)",
+        "country_code": "+ 683",
+        "phone_number_by_city_phone": "00 683   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 683   <номер абонента>"
+    },
+    {
+        "country_ru": "Новая Зеландия",
+        "country_uz": "Янги Зеландия",
+        "country_code": "+ 64",
+        "phone_number_by_city_phone": "00 64     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 64     <номер абонента>"
+    },
+    {
+        "country_ru": "Новая Каледония",
+        "country_uz": "Янги Каледония",
+        "country_code": "+ 687",
+        "phone_number_by_city_phone": "00 687   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 687   <номер абонента>"
+    },
+    {
+        "country_ru": "Норвегия",
+        "country_uz": "Норвегия",
+        "country_code": "+ 47",
+        "phone_number_by_city_phone": "00 47     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 47     <номер абонента>"
+    },
+    {
+        "country_ru": "Норфолкские острова",
+        "country_uz": "Норфолк ороллари",
+        "country_code": "+ 6723",
+        "phone_number_by_city_phone": "00 6723 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 6723 <номер абонента>"
+    },
+    {
+        "country_ru": "ОАЭ",
+        "country_uz": "Бирлашкан Араб Амирлиги",
+        "country_code": "+ 971",
+        "phone_number_by_city_phone": "00 971   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 971   <номер абонента>"
+    },
+    {
+        "country_ru": "Оман",
+        "country_uz": "Уммон",
+        "country_code": "+ 968",
+        "phone_number_by_city_phone": "00 968   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 968   <номер абонента>"
+    },
+    {
+        "country_ru": "Пакистан",
+        "country_uz": "Покистон",
+        "country_code": "+ 92",
+        "phone_number_by_city_phone": "00 92     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 92     <номер абонента>"
+    },
+    {
+        "country_ru": "Палау острова",
+        "country_uz": "Палау ороллари",
+        "country_code": "+ 680",
+        "phone_number_by_city_phone": "00 680   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 680   <номер абонента>"
+    },
+    {
+        "country_ru": "Палестина",
+        "country_uz": "Фаластин",
+        "country_code": "+ 970",
+        "phone_number_by_city_phone": "00 970   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 970   <номер абонента>"
+    },
+    {
+        "country_ru": "Панама",
+        "country_uz": "Панама",
+        "country_code": "+ 507",
+        "phone_number_by_city_phone": "00 507   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 507   <номер абонента>"
+    },
+    {
+        "country_ru": "Папуа-Новая Гвинея",
+        "country_uz": "Папуа-Янги Гвинея",
+        "country_code": "+ 675",
+        "phone_number_by_city_phone": "00 675   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 675   <номер абонента>"
+    },
+    {
+        "country_ru": "Парагвай",
+        "country_uz": "Парагвай",
+        "country_code": "+ 595",
+        "phone_number_by_city_phone": "00 595   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 595   <номер абонента>"
+    },
+    {
+        "country_ru": "Перу",
+        "country_uz": "Перу",
+        "country_code": "+ 51",
+        "phone_number_by_city_phone": "00 51     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 51     <номер абонента>"
+    },
+    {
+        "country_ru": "Полинезия  (французская)",
+        "country_uz": "Полинезия  (франсия)",
+        "country_code": "+ 689",
+        "phone_number_by_city_phone": "00 689   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 689   <номер абонента>"
+    },
+    {
+        "country_ru": "Польша",
+        "country_uz": "Полша",
+        "country_code": "+ 48",
+        "phone_number_by_city_phone": "00 48     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 48     <номер абонента>"
+    },
+    {
+        "country_ru": "Португалия",
+        "country_uz": "Португалия",
+        "country_code": "+ 351",
+        "phone_number_by_city_phone": "00 351   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 351   <номер абонента>"
+    },
+    {
+        "country_ru": "Пуэрто-Рико",
+        "country_uz": "Пуэрто-Рико",
+        "country_code": "+ 1787",
+        "phone_number_by_city_phone": "00 1787 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1787 <номер абонента>"
+    },
+    {
+        "country_ru": "Реюньон (французская)",
+        "country_uz": "Реюньон (франсия)",
+        "country_code": "+ 262",
+        "phone_number_by_city_phone": "00 262   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 262   <номер абонента>"
+    },
+    {
+        "country_ru": "Россия",
+        "country_uz": "Россия",
+        "country_code": "+ 7",
+        "phone_number_by_city_phone": "00 7      <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 7      <номер абонента>"
+    },
+    {
+        "country_ru": "Руанда",
+        "country_uz": "Руанда",
+        "country_code": "+ 250",
+        "phone_number_by_city_phone": "00 250   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 250   <номер абонента>"
+    },
+    {
+        "country_ru": "Румыния",
+        "country_uz": "Руминия",
+        "country_code": "+ 40",
+        "phone_number_by_city_phone": "00 40     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 40     <номер абонента>"
+    },
+    {
+        "country_ru": "Сальвадор",
+        "country_uz": "Салвадор",
+        "country_code": "+ 503",
+        "phone_number_by_city_phone": "00 503   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 503   <номер абонента>"
+    },
+    {
+        "country_ru": "Самао",
+        "country_uz": "Самао",
+        "country_code": "+ 685",
+        "phone_number_by_city_phone": "00 685   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 685   <номер абонента>"
+    },
+    {
+        "country_ru": "Самоа Американское",
+        "country_uz": "Самоа (АҚШ)",
+        "country_code": "+ 684",
+        "phone_number_by_city_phone": "00 684   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 684   <номер абонента>"
+    },
+    {
+        "country_ru": "Сан-Марино",
+        "country_uz": "Сан-Марино",
+        "country_code": "+ 378",
+        "phone_number_by_city_phone": "00 378   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 378   <номер абонента>"
+    },
+    {
+        "country_ru": "Сан-томе и принсипи",
+        "country_uz": "Сан-томе ва принсипи",
+        "country_code": "+ 239",
+        "phone_number_by_city_phone": "00 239   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 239   <номер абонента>"
+    },
+    {
+        "country_ru": "Саудовская Аравия",
+        "country_uz": "Саудия Арабистон",
+        "country_code": "+ 966",
+        "phone_number_by_city_phone": "00 966   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 966   <номер абонента>"
+    },
+    {
+        "country_ru": "Свазиленд",
+        "country_uz": "Свазиленд",
+        "country_code": "+ 268",
+        "phone_number_by_city_phone": "00 268   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 268   <номер абонента>"
+    },
+    {
+        "country_ru": "Святой елены (остров)",
+        "country_uz": "Муқаддас елена (орол)",
+        "country_code": "+ 290",
+        "phone_number_by_city_phone": "00 290   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 290   <номер абонента>"
+    },
+    {
+        "country_ru": "Северная Корея",
+        "country_uz": "Шимолий Карея",
+        "country_code": "+ 850",
+        "phone_number_by_city_phone": "00 850   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 850   <номер абонента>"
+    },
+    {
+        "country_ru": "Сейшельские острова",
+        "country_uz": "Сейшеллес ороллари",
+        "country_code": "+ 248",
+        "phone_number_by_city_phone": "00 248   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 248   <номер абонента>"
+    },
+    {
+        "country_ru": "Сенегал",
+        "country_uz": "Сенегал",
+        "country_code": "+ 221",
+        "phone_number_by_city_phone": "00 221   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 221   <номер абонента>"
+    },
+    {
+        "country_ru": "Сен-пьер и микелон (французская)",
+        "country_uz": "Сен-пер ва микелон (франсия)",
+        "country_code": "+ 508",
+        "phone_number_by_city_phone": "00 508   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 508   <номер абонента>"
+    },
+    {
+        "country_ru": "Сент-Винсент",
+        "country_uz": "Сент-Винсент",
+        "country_code": "+ 1784",
+        "phone_number_by_city_phone": "00 1784 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1784 <номер абонента>"
+    },
+    {
+        "country_ru": "Сент-Китс и Невис",
+        "country_uz": "Сент-Киттс ва Невис",
+        "country_code": "+ 1869",
+        "phone_number_by_city_phone": "00 1869 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1869 <номер абонента>"
+    },
+    {
+        "country_ru": "Сент-Люсия",
+        "country_uz": "Сент-Люсия",
+        "country_code": "+ 1758",
+        "phone_number_by_city_phone": "00 1758 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1758 <номер абонента>"
+    },
+    {
+        "country_ru": "Сербия",
+        "country_uz": "Сербия",
+        "country_code": "+ 381",
+        "phone_number_by_city_phone": "00 381   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 381   <номер абонента>"
+    },
+    {
+        "country_ru": "Сингапур",
+        "country_uz": "Сингапур",
+        "country_code": "+ 65",
+        "phone_number_by_city_phone": "00 65     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 65     <номер абонента>"
+    },
+    {
+        "country_ru": "Сирия",
+        "country_uz": "Сурия",
+        "country_code": "+ 963",
+        "phone_number_by_city_phone": "00 963   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 963   <номер абонента>"
+    },
+    {
+        "country_ru": "Словакия",
+        "country_uz": "Словакия",
+        "country_code": "+ 421",
+        "phone_number_by_city_phone": "00 421   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 421   <номер абонента>"
+    },
+    {
+        "country_ru": "Словения",
+        "country_uz": "Словения",
+        "country_code": "+ 386",
+        "phone_number_by_city_phone": "00 386   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 386   <номер абонента>"
+    },
+    {
+        "country_ru": "Соломоновы острова",
+        "country_uz": "Соломон ороллари",
+        "country_code": "+ 677",
+        "phone_number_by_city_phone": "00 677   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 677   <номер абонента>"
+    },
+    {
+        "country_ru": "Сомали",
+        "country_uz": "Сомали",
+        "country_code": "+ 252",
+        "phone_number_by_city_phone": "00 252   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 252   <номер абонента>"
+    },
+    {
+        "country_ru": "Судан",
+        "country_uz": "Судан",
+        "country_code": "+ 249",
+        "phone_number_by_city_phone": "00 249   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 249   <номер абонента>"
+    },
+    {
+        "country_ru": "Суринам",
+        "country_uz": "Суринам",
+        "country_code": "+ 597",
+        "phone_number_by_city_phone": "00 597   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 597   <номер абонента>"
+    },
+    {
+        "country_ru": "США",
+        "country_uz": "АҚШ",
+        "country_code": "+ 1",
+        "phone_number_by_city_phone": "00 1      <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1       <номер абонента>"
+    },
+    {
+        "country_ru": "Сьерра-леоне",
+        "country_uz": "Серра-леоне",
+        "country_code": "+ 232",
+        "phone_number_by_city_phone": "00 232   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 232   <номер абонента>"
+    },
+    {
+        "country_ru": "Таджикистан",
+        "country_uz": "Тожикистон",
+        "country_code": "+ 992",
+        "phone_number_by_city_phone": "00 992  <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 992   <номер абонента>"
+    },
+    {
+        "country_ru": "Таиланд",
+        "country_uz": "Таиланд",
+        "country_code": "+ 66",
+        "phone_number_by_city_phone": "00 66     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 66     <номер абонента>"
+    },
+    {
+        "country_ru": "Тайвань",
+        "country_uz": "Тайван",
+        "country_code": "+ 886",
+        "phone_number_by_city_phone": "00 886   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 886   <номер абонента>"
+    },
+    {
+        "country_ru": "Танзания",
+        "country_uz": "Танзания",
+        "country_code": "+ 255",
+        "phone_number_by_city_phone": "00 255   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 255   <номер абонента>"
+    },
+    {
+        "country_ru": "Теркс и Кайкос острова",
+        "country_uz": "Теркс ва Кайкос ороллари",
+        "country_code": "+ 1649",
+        "phone_number_by_city_phone": "00 1649 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1649 <номер абонента>"
+    },
+    {
+        "country_ru": "Того",
+        "country_uz": "Того",
+        "country_code": "+ 228",
+        "phone_number_by_city_phone": "00 228   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 228   <номер абонента>"
+    },
+    {
+        "country_ru": "Токелау",
+        "country_uz": "Токелау",
+        "country_code": "+ 690",
+        "phone_number_by_city_phone": "00 690   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 690   <номер абонента>"
+    },
+    {
+        "country_ru": "Тонга",
+        "country_uz": "Тонга",
+        "country_code": "+ 676",
+        "phone_number_by_city_phone": "00 676   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 676   <номер абонента>"
+    },
+    {
+        "country_ru": "Тринидад и Табого",
+        "country_uz": "Тринидад ва Табого",
+        "country_code": "+ 1868",
+        "phone_number_by_city_phone": "00 1868 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1868 <номер абонента>"
+    },
+    {
+        "country_ru": "Тувалу",
+        "country_uz": "Тувалу",
+        "country_code": "+ 688",
+        "phone_number_by_city_phone": "00 688   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 688   <номер абонента>"
+    },
+    {
+        "country_ru": "Тунис",
+        "country_uz": "Тунис",
+        "country_code": "+ 216",
+        "phone_number_by_city_phone": "00 216   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 216   <номер абонента>"
+    },
+    {
+        "country_ru": "Туркмения",
+        "country_uz": "Туркманистон",
+        "country_code": "+ 993",
+        "phone_number_by_city_phone": "00 993  <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 993   <номер абонента>"
+    },
+    {
+        "country_ru": "Турция",
+        "country_uz": "Туркия",
+        "country_code": "+ 90",
+        "phone_number_by_city_phone": "00 90     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 90     <номер абонента>"
+    },
+    {
+        "country_ru": "Уганда",
+        "country_uz": "Уганда",
+        "country_code": "+ 256",
+        "phone_number_by_city_phone": "00 256   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 256   <номер абонента>"
+    },
+    {
+        "country_ru": "Украина",
+        "country_uz": "Украина",
+        "country_code": "+ 380",
+        "phone_number_by_city_phone": "00 380  <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 380   <номер абонента>"
+    },
+    {
+        "country_ru": "Уоллис и футуна (острова)",
+        "country_uz": "Уоллис ва футуна (ороллар)",
+        "country_code": "+ 681",
+        "phone_number_by_city_phone": "00 681   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 681   <номер абонента>"
+    },
+    {
+        "country_ru": "Уругвай",
+        "country_uz": "Уругвай",
+        "country_code": "+ 598",
+        "phone_number_by_city_phone": "00 598   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 598   <номер абонента>"
+    },
+    {
+        "country_ru": "Фарерские острова",
+        "country_uz": "ферер ороллари",
+        "country_code": "+ 298",
+        "phone_number_by_city_phone": "00 298   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 298   <номер абонента>"
+    },
+    {
+        "country_ru": "Фиджи",
+        "country_uz": "Фижи",
+        "country_code": "+ 679",
+        "phone_number_by_city_phone": "00 679   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 679   <номер абонента>"
+    },
+    {
+        "country_ru": "Филиппины",
+        "country_uz": "Филиппин",
+        "country_code": "+ 63",
+        "phone_number_by_city_phone": "00 63     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 63     <номер абонента>"
+    },
+    {
+        "country_ru": "Финляндия",
+        "country_uz": "Финляндия",
+        "country_code": "+ 358",
+        "phone_number_by_city_phone": "00 358   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 358   <номер абонента>"
+    },
+    {
+        "country_ru": "Фолкледские острова",
+        "country_uz": "Фолкледя ороллари",
+        "country_code": "+ 500",
+        "phone_number_by_city_phone": "00 500   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 500   <номер абонента>"
+    },
+    {
+        "country_ru": "Франция",
+        "country_uz": "Франция",
+        "country_code": "+ 33",
+        "phone_number_by_city_phone": "00 33     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 33     <номер абонента>"
+    },
+    {
+        "country_ru": "Хорватия",
+        "country_uz": "Хорватия",
+        "country_code": "+ 385",
+        "phone_number_by_city_phone": "00 385   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 385   <номер абонента>"
+    },
+    {
+        "country_ru": "Центральноафриканская Республика",
+        "country_uz": "Марказий Африка Республикаси",
+        "country_code": "+ 236",
+        "phone_number_by_city_phone": "00 236   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 236   <номер абонента>"
+    },
+    {
+        "country_ru": "Чад",
+        "country_uz": "Чад",
+        "country_code": "+ 235",
+        "phone_number_by_city_phone": "00 235   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 235   <номер абонента>"
+    },
+    {
+        "country_ru": "Чехия",
+        "country_uz": "Чехия",
+        "country_code": "+ 420",
+        "phone_number_by_city_phone": "00 420   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 420   <номер абонента>"
+    },
+    {
+        "country_ru": "Чили",
+        "country_uz": "Чили",
+        "country_code": "+ 56",
+        "phone_number_by_city_phone": "00 56     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 56     <номер абонента>"
+    },
+    {
+        "country_ru": "Швейцария",
+        "country_uz": "Швецария",
+        "country_code": "+ 41",
+        "phone_number_by_city_phone": "00 41     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 41     <номер абонента>"
+    },
+    {
+        "country_ru": "Швеция",
+        "country_uz": "Швеция",
+        "country_code": "+ 46",
+        "phone_number_by_city_phone": "00 46     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 46     <номер абонента>"
+    },
+    {
+        "country_ru": "Шри-ланка",
+        "country_uz": "Шри-ланка",
+        "country_code": "+ 94",
+        "phone_number_by_city_phone": "00 94     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 94     <номер абонента>"
+    },
+    {
+        "country_ru": "Эквадор",
+        "country_uz": "Эквадор",
+        "country_code": "+ 593",
+        "phone_number_by_city_phone": "00 593   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 593   <номер абонента>"
+    },
+    {
+        "country_ru": "Экваториальная Гвинея",
+        "country_uz": "Экватор Гвинеяси",
+        "country_code": "+ 240",
+        "phone_number_by_city_phone": "00 240   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 240   <номер абонента>"
+    },
+    {
+        "country_ru": "Эритрея",
+        "country_uz": "Эритрея",
+        "country_code": "+ 291",
+        "phone_number_by_city_phone": "00 291   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 291   <номер абонента>"
+    },
+    {
+        "country_ru": "Эстония",
+        "country_uz": "Эстония",
+        "country_code": "+ 372",
+        "phone_number_by_city_phone": "00 372   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 372   <номер абонента>"
+    },
+    {
+        "country_ru": "Эфиопия",
+        "country_uz": "Эфиопия",
+        "country_code": "+ 251",
+        "phone_number_by_city_phone": "00 251   <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 251   <номер абонента>"
+    },
+    {
+        "country_ru": "ЮАР",
+        "country_uz": "Жанубий Африка Республикаси",
+        "country_code": "+ 27",
+        "phone_number_by_city_phone": "00 27     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 27     <номер абонента>"
+    },
+    {
+        "country_ru": "Южная Корея",
+        "country_uz": "Жанубий Карея ",
+        "country_code": "+ 27",
+        "phone_number_by_city_phone": "00 82     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 82     <номер абонента>"
+    },
+    {
+        "country_ru": "Ямайка",
+        "country_uz": "Ямайка",
+        "country_code": "+ 1876",
+        "phone_number_by_city_phone": "00 1876 <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 1876 <номер абонента>"
+    },
+    {
+        "country_ru": "Япония",
+        "country_uz": "Япония",
+        "country_code": "+ 81",
+        "phone_number_by_city_phone": "00 81     <номер абонента>",
+        "phone_number_by_mobile_phone": "+ 81     <номер абонента>"
+    }
+]

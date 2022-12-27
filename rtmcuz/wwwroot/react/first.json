@@ -1,0 +1,1610 @@
+ [
+        {
+            "region_ru": "Ташкент",
+            "region_uz": "Тошкент",
+            "city_ru": "г.Ташкент",
+            "city_uz": "Тошкент ш.",
+            "phone_number": "71 ХХХХХХХ",
+            "international_phone_number": "+ 998 71 ХХХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "г.Андижан",
+            "city_uz": "Андижон ш.",
+            "phone_number": "74 2ХХХХХХ",
+            "international_phone_number": "+ 998 74 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Aкалтын",
+            "city_uz": "Оқолтин",
+            "phone_number": "74 76ХХХХХ",
+            "international_phone_number": "+ 998 74 76ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Aхунбабаев",
+            "city_uz": "Охунбобоев",
+            "phone_number": "74 75ХХХХХ",
+            "international_phone_number": "+ 998 74 75ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Aлтынкуль",
+            "city_uz": "Олтинкўл",
+            "phone_number": "74 35ХХХХХ",
+            "international_phone_number": "+ 998 74 35ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Aсака",
+            "city_uz": "Асака",
+            "phone_number": "74 23ХХХХХ",
+            "international_phone_number": "+ 998 74 23ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Бaлыкчи",
+            "city_uz": "Балиқчи",
+            "phone_number": "74 32ХХХХХ",
+            "international_phone_number": "+ 998 74 32ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Булакбаши",
+            "city_uz": "Булоқбоши",
+            "phone_number": "74 77ХХХХХ",
+            "international_phone_number": "+ 998 74 77ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Боз",
+            "city_uz": "Боз",
+            "phone_number": "74 33ХХХХХ",
+            "international_phone_number": "+ 998 74 33ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Kарасув",
+            "city_uz": "Қорасув",
+            "phone_number": "74 79ХХХХХ",
+            "international_phone_number": "+ 998 74 79ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Ходжаабад",
+            "city_uz": "Хўжобод",
+            "phone_number": "74 74ХХХХХ",
+            "international_phone_number": "+ 998 74 74ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Ханабад",
+            "city_uz": "Хонабод",
+            "phone_number": "74 73ХХХХХ",
+            "international_phone_number": "+ 998 74 73ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Kургантепа",
+            "city_uz": "Қўрғонтепа",
+            "phone_number": "74 72ХХХХХ",
+            "international_phone_number": "+ 998 74 72ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Kуйганьяр",
+            "city_uz": "Куйганёр",
+            "phone_number": "74 37ХХХХХ",
+            "international_phone_number": "+ 998 74 37ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Mархамат",
+            "city_uz": "Мархамат",
+            "phone_number": "74 39ХХХХХ",
+            "international_phone_number": "+ 998 74 39ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Пахтаабад",
+            "city_uz": "Пахтаобод",
+            "phone_number": "74 71ХХХХХ",
+            "international_phone_number": "+ 998 74 71ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Пайтуг",
+            "city_uz": "Пойтут",
+            "phone_number": "74 31ХХХХХ",
+            "international_phone_number": "+ 998 74 31ХХХХХ"
+        },
+        {
+            "region_ru": "Андижанская область",
+            "region_uz": "Андижон вилояти",
+            "city_ru": "Шахрихан",
+            "city_uz": "Шахрихон",
+            "phone_number": "74 34ХХХХХ",
+            "international_phone_number": "+ 998 74 34ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "г.Бухара",
+            "city_uz": "Бухоро ш.",
+            "phone_number": "65 2ХХХХХХ",
+            "international_phone_number": "+ 998 65 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Aлат",
+            "city_uz": "Олот",
+            "phone_number": "65 34ХХХХХ",
+            "international_phone_number": "+ 998 65 34ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Галаасия",
+            "city_uz": "Галаосиё",
+            "phone_number": "65 54ХХХХХ",
+            "international_phone_number": "+ 998 65 54ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Газли",
+            "city_uz": "Газли",
+            "phone_number": "65 37ХХХХХ",
+            "international_phone_number": "+ 998 65 37ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Гиждуван",
+            "city_uz": "Ғиждивон",
+            "phone_number": "65 57ХХХХХ",
+            "international_phone_number": "+ 998 65 57ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Жондор",
+            "city_uz": "Жондор",
+            "phone_number": "65 58ХХХХХ",
+            "international_phone_number": "+ 998 65 58ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Kаган",
+            "city_uz": "Когон",
+            "phone_number": "65 52ХХХХХ",
+            "international_phone_number": "+ 998 65 52ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Kаракуль",
+            "city_uz": "Қоракўл",
+            "phone_number": "65 56ХХХХХ",
+            "international_phone_number": "+ 998 65 56ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Kараулбазар",
+            "city_uz": "Қоравулбозор",
+            "phone_number": "65 36ХХХХХ",
+            "international_phone_number": "+ 998 65 36ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Ромитан",
+            "city_uz": "Ромитон",
+            "phone_number": "65 55ХХХХХ",
+            "international_phone_number": "+ 998 65 55ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Шафиркан",
+            "city_uz": "Шофиркон",
+            "phone_number": "65 50ХХХХХ",
+            "international_phone_number": "+ 998 65 50ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Вабкент",
+            "city_uz": "Вобкент",
+            "phone_number": "65 33ХХХХХ",
+            "international_phone_number": "+ 998 65 33ХХХХХ"
+        },
+        {
+            "region_ru": "Бухарская область",
+            "region_uz": "Бухоро вилояти",
+            "city_ru": "Янгибазар",
+            "city_uz": "Янгибозор",
+            "phone_number": "65 35ХХХХХ",
+            "international_phone_number": "+ 998 65 35ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "г.Гулистан",
+            "city_uz": "Гулистон ш.",
+            "phone_number": "67 2ХХХХХХ",
+            "international_phone_number": "+ 998 67 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Бахт",
+            "city_uz": "Бахт",
+            "phone_number": "67 37ХХХХХ",
+            "international_phone_number": "+ 998 67 37ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Боевут",
+            "city_uz": "Боёвут",
+            "phone_number": "67 39ХХХХХ",
+            "international_phone_number": "+ 998 67 39ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Дехконобод",
+            "city_uz": "Дехқонобод",
+            "phone_number": "67 79ХХХХХ",
+            "international_phone_number": "+ 998 67 79ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Фархад",
+            "city_uz": "Фарход",
+            "phone_number": "67 36ХХХХХ",
+            "international_phone_number": "+ 998 67 36ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Хаваст",
+            "city_uz": "Хаваст",
+            "phone_number": "67 36ХХХХХ",
+            "international_phone_number": "+ 998 67 36ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Кахраман",
+            "city_uz": "Қахрамон",
+            "phone_number": "67 39ХХХХХ",
+            "international_phone_number": "+ 998 67 39ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Навруз",
+            "city_uz": "Навруз",
+            "phone_number": "67 31ХХХХХ",
+            "international_phone_number": "+ 998 67 31ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Пахтаабад",
+            "city_uz": "Пахтаобод",
+            "phone_number": "67 3441XXX",
+            "international_phone_number": "+ 998 67 3441XXX"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Сардаба",
+            "city_uz": "Сардоба",
+            "phone_number": "67 24ХХХХХ",
+            "international_phone_number": "+ 998 67 24ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Сайхун",
+            "city_uz": "Сайхун",
+            "phone_number": "67 33ХХХХХ",
+            "international_phone_number": "+ 998 67 33ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Ширин",
+            "city_uz": "Ширин",
+            "phone_number": "67 76ХХХХХ",
+            "international_phone_number": "+ 998 67 76ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Сырдарья",
+            "city_uz": "Сирдарё",
+            "phone_number": "67 37ХХХХХ",
+            "international_phone_number": "+ 998 67 37ХХХХХ"
+        },
+        {
+            "region_ru": "Сырдарьинская область ",
+            "region_uz": "Сирдарё вилояти",
+            "city_ru": "Янгиер",
+            "city_uz": "Янгиер",
+            "phone_number": "67 35ХХХХХ",
+            "international_phone_number": "+ 998 67 35ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "г.Джизак ",
+            "city_uz": "Жиззах ш.",
+            "phone_number": "72 22ХХХХХ",
+            "international_phone_number": "+ 998 72 22ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Баландчакир",
+            "city_uz": "Баландчақир",
+            "phone_number": "72 54ХХХХХ",
+            "international_phone_number": "+ 998 72 54ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Богарное",
+            "city_uz": "Богарний",
+            "phone_number": "72 42ХХХХХ",
+            "international_phone_number": "+ 998 72 42ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Бустан",
+            "city_uz": "Бўстон",
+            "phone_number": "72 51ХХХХХ",
+            "international_phone_number": "+ 998 72 51ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Даштобад",
+            "city_uz": "Даштобод",
+            "phone_number": "72 38ХХХХХ",
+            "international_phone_number": "+ 998 72 38ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Дустлик",
+            "city_uz": "Дўстлик",
+            "phone_number": "72 33ХХХХХ",
+            "international_phone_number": "+ 998 72 33ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Гагарин",
+            "city_uz": "Гагарин",
+            "phone_number": "72 31ХХХХХ",
+            "international_phone_number": "+ 998 72 31ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Галляарал",
+            "city_uz": "Ғаллаорол",
+            "phone_number": "72 43ХХХХХ",
+            "international_phone_number": "+ 998 72 43ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Голиблар",
+            "city_uz": "Ғолиблар",
+            "phone_number": "72 37ХХХХХ",
+            "international_phone_number": "+ 998 72 37ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Пахтакор",
+            "city_uz": "Пахтакор",
+            "phone_number": "72 35ХХХХХ",
+            "international_phone_number": "+ 998 72 35ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Учтепа",
+            "city_uz": "Учтепа",
+            "phone_number": "72 34ХХXXX",
+            "international_phone_number": "+ 998 72 34ХХXXX"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Усмат",
+            "city_uz": "Усмат",
+            "phone_number": "72 41ХХХХХ",
+            "international_phone_number": "+ 998 72 41ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Янгикишлак",
+            "city_uz": "Янгиқишлоқ",
+            "phone_number": "72 45ХХХХХ",
+            "international_phone_number": "+ 998 72 45ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Зафарабад",
+            "city_uz": "Зафаробод",
+            "phone_number": "72 47ХХXXX",
+            "international_phone_number": "+ 998 72 47ХХXXX"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Заамин",
+            "city_uz": "Зомин",
+            "phone_number": "72 39ХХХХХ",
+            "international_phone_number": "+ 998 72 39ХХХХХ"
+        },
+        {
+            "region_ru": "Джизакская область ",
+            "region_uz": "Жиззах вилояти",
+            "city_ru": "Зарбдар",
+            "city_uz": "Зарбдор",
+            "phone_number": "72 49ХХХХХ",
+            "international_phone_number": "+ 998 72 49ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "г. Карши",
+            "city_uz": "Қарши ш.",
+            "phone_number": "75 2ХХХХХХ",
+            "international_phone_number": "+ 998 75 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Бешкент",
+            "city_uz": "Бешкент",
+            "phone_number": "75 57ХХХХХ",
+            "international_phone_number": "+ 998 75 57ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Чиракчи",
+            "city_uz": "Чироқчи",
+            "phone_number": "75 56ХХХХХ",
+            "international_phone_number": "+ 998 75 56ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Гузар",
+            "city_uz": "Гузар",
+            "phone_number": "75 55ХХХХХ",
+            "international_phone_number": "+ 998 75 55ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Камаши",
+            "city_uz": "Қамаши",
+            "phone_number": "75 53ХХХХХ",
+            "international_phone_number": "+ 998 75 53ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Карашина",
+            "city_uz": "Қамаши",
+            "phone_number": "75 61ХХХХХ",
+            "international_phone_number": "+ 998 75 61ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Касан",
+            "city_uz": "Косон",
+            "phone_number": "75 59ХХХХХ",
+            "international_phone_number": "+ 998 75 59ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Касби",
+            "city_uz": "Касби",
+            "phone_number": "75 64ХХХХХ",
+            "international_phone_number": "+ 998 75 64ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Китаб",
+            "city_uz": "Китоб",
+            "phone_number": "75 54ХХХХХ",
+            "international_phone_number": "+ 998 75 54ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Мубарек",
+            "city_uz": "Муборак",
+            "phone_number": "75 67ХХХХХ",
+            "international_phone_number": "+ 998 75 67ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Памук",
+            "city_uz": "Помуқ",
+            "phone_number": "75 62ХХXXX",
+            "international_phone_number": "+ 998 75 62ХХXXX"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Шахрисабз",
+            "city_uz": "Шахрисабз",
+            "phone_number": "75 52ХХХХХ",
+            "international_phone_number": "+ 998 75 52ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Яккабаг",
+            "city_uz": "Яккабоғ",
+            "phone_number": "75 58ХХХХХ",
+            "international_phone_number": "+ 998 75 58ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Янги–Миришкар",
+            "city_uz": "Янги-Миришкор",
+            "phone_number": "75 65ХХХХХ",
+            "international_phone_number": "+ 998 75 65ХХХХХ"
+        },
+        {
+            "region_ru": "Кашкадарьинская область",
+            "region_uz": "Қашқадарё вилояти",
+            "city_ru": "Янги–Нишан",
+            "city_uz": "Янги-Нишон",
+            "phone_number": "75 51ХХХХХ",
+            "international_phone_number": "+ 998 75 51ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "г.Навои",
+            "city_uz": "Новоий ш.",
+            "phone_number": "79 2ХХХХХХ",
+            "international_phone_number": "+ 998 79 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Бешрабат",
+            "city_uz": "Бешробот",
+            "phone_number": "79 56ХХХХХ",
+            "international_phone_number": "+ 998 79 56ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Кармана",
+            "city_uz": "Кармана",
+            "phone_number": "79 53ХХХХХ",
+            "international_phone_number": "+ 998 79 53ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Кызылтепа",
+            "city_uz": "Қизилтепа",
+            "phone_number": "79 55ХХХХХ",
+            "international_phone_number": "+ 998 79 55ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Канимех",
+            "city_uz": "Қанимех",
+            "phone_number": "79 51ХХХХХ",
+            "international_phone_number": "+ 998 79 51ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Нурата",
+            "city_uz": "Нурота",
+            "phone_number": "79 52ХХХХХ",
+            "international_phone_number": "+ 998 79 52ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Тамдыбулак",
+            "city_uz": "Томдибулоқ",
+            "phone_number": "79 58ХХХХХ",
+            "international_phone_number": "+ 998 79 58ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Учкудук",
+            "city_uz": "Учқудуқ",
+            "phone_number": "79 59ХХХХХ",
+            "international_phone_number": "+ 998 79 59ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Янгирабад",
+            "city_uz": "Янгибозор",
+            "phone_number": "79 54ХХХХХ",
+            "international_phone_number": "+ 998 79 54ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Зарафшан",
+            "city_uz": "Зарафшон",
+            "phone_number": "79 57ХХХХХ",
+            "international_phone_number": "+ 998 79 57ХХХХХ"
+        },
+        {
+            "region_ru": "Навоийская область",
+            "region_uz": "Новоий вилояти",
+            "city_ru": "Зафарабад",
+            "city_uz": "Зафаробод",
+            "phone_number": "79 51ХХХХХ",
+            "international_phone_number": "+ 998 79 51ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "г.Наманган",
+            "city_uz": "Наманган ш.",
+            "phone_number": "69 2ХХХХХХ",
+            "international_phone_number": "+ 998 69 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Чартак",
+            "city_uz": "Чортоқ",
+            "phone_number": "69 41ХХХХХ",
+            "international_phone_number": "+ 998 69 41ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Чуст",
+            "city_uz": "Чуст",
+            "phone_number": "69 42ХХХХХ",
+            "international_phone_number": "+ 998 69 42ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Хаккулабад",
+            "city_uz": "Ҳаққулобод",
+            "phone_number": "69 61ХХХХХ",
+            "international_phone_number": "+ 998 69 61ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Джумашуй",
+            "city_uz": "Жомашуй",
+            "phone_number": "69 45ХХХХХ",
+            "international_phone_number": "+ 998 69 45ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Касансай",
+            "city_uz": "Косонсой",
+            "phone_number": "69 65ХХХХХ",
+            "international_phone_number": "+ 998 69 65ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Пап",
+            "city_uz": "Поп",
+            "phone_number": "69 43ХХХХХ",
+            "international_phone_number": "+ 998 69 43ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Ташбулак",
+            "city_uz": "Тошбулоқ",
+            "phone_number": "69 47ХХХХХ",
+            "international_phone_number": "+ 998 69 47ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Туракурган",
+            "city_uz": "Тўрақорғон",
+            "phone_number": "69 44ХХХХХ",
+            "international_phone_number": "+ 998 69 44ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Учкурган",
+            "city_uz": "Учқўрғон",
+            "phone_number": "69 46ХХХХХ",
+            "international_phone_number": "+ 998 69 46ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Уйчи",
+            "city_uz": "Уйчи",
+            "phone_number": "69 48ХХХХХ",
+            "international_phone_number": "+ 998 69 48ХХХХХ"
+        },
+        {
+            "region_ru": "Наманганская область",
+            "region_uz": "Наманган вилояти",
+            "city_ru": "Янгикурган",
+            "city_uz": "Янгиқорғон",
+            "phone_number": "69 63ХХХХХ",
+            "international_phone_number": "+ 998 69 63ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "г.Нукус",
+            "city_uz": "Нукус ш.",
+            "phone_number": "61 22ХХХХХ",
+            "international_phone_number": "+ 998 61 22ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Акмангит",
+            "city_uz": "Оқманғит",
+            "phone_number": "61 42ХХХХХ",
+            "international_phone_number": "+ 998 61 42ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Беруни",
+            "city_uz": "Беруний",
+            "phone_number": "61 52ХХХХХ",
+            "international_phone_number": "+ 998 61 52ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Бозатау",
+            "city_uz": "Бозатоу",
+            "phone_number": "61 41ХХХХХ",
+            "international_phone_number": "+ 998 61 41ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Бустан",
+            "city_uz": "Бўстон",
+            "phone_number": "61 58ХХХХХ",
+            "international_phone_number": "+ 998 61 58ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Чимбай",
+            "city_uz": "Чимбой",
+            "phone_number": "61 44ХХХХХ",
+            "international_phone_number": "+ 998 61 44ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Канлыкуль",
+            "city_uz": "Қонликўл",
+            "phone_number": "61 33ХХХХХ",
+            "international_phone_number": "+ 998 61 33ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Караузяк",
+            "city_uz": "Қораузак",
+            "phone_number": "61 46ХХХХХ",
+            "international_phone_number": "+ 998 61 46ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Keгейли",
+            "city_uz": "Кегейли",
+            "phone_number": "61 41ХХХХХ",
+            "international_phone_number": "+ 998 61 41ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Ходжейли",
+            "city_uz": "Ходжейли",
+            "phone_number": "61 55ХХХХХ",
+            "international_phone_number": "+ 998 61 55ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Кунград",
+            "city_uz": "Қўнғирот",
+            "phone_number": "61 31ХХХХХ",
+            "international_phone_number": "+ 998 61 31ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Мангит",
+            "city_uz": "Манғит",
+            "phone_number": "61 51ХХХХХ",
+            "international_phone_number": "+ 998 61 51ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Муйнак",
+            "city_uz": "Мўйноқ",
+            "phone_number": "61 32ХХХХХ",
+            "international_phone_number": "+ 998 61 32ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Шуманай",
+            "city_uz": "Шуманой",
+            "phone_number": "61 34ХХХХХ",
+            "international_phone_number": "+ 998 61 34ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Тахиаташ",
+            "city_uz": "Тахиатош",
+            "phone_number": "61 57ХХХХХ",
+            "international_phone_number": "+ 998 61 57ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Тахтакупыр",
+            "city_uz": "Тахтакўпир",
+            "phone_number": "61 43ХХХХХ",
+            "international_phone_number": "+ 998 61 43ХХХХХ"
+        },
+        {
+            "region_ru": "Республика Каракалпакстан",
+            "region_uz": "Қорақалпоғистон Республикаси",
+            "city_ru": "Турткуль",
+            "city_uz": "Тўрткўл",
+            "phone_number": "61 53ХХХХХ",
+            "international_phone_number": "+ 998 61 53ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "г.Самарканд",
+            "city_uz": "Самарқанд ш.",
+            "phone_number": "66 2ХХХХХХ",
+            "international_phone_number": "+ 998 66 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Акташ",
+            "city_uz": "Оқтош",
+            "phone_number": "66 43ХХХХХ",
+            "international_phone_number": "+ 998 66 43ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Булунгур",
+            "city_uz": "Булунғур",
+            "phone_number": "66 44ХХХХХ",
+            "international_phone_number": "+ 998 66 44ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Челек",
+            "city_uz": "Челак",
+            "phone_number": "66 67ХХХХХ",
+            "international_phone_number": "+ 998 66 67ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Гульабад",
+            "city_uz": "Гулобод",
+            "phone_number": "66 61ХХХХХ",
+            "international_phone_number": "+ 998 66 61ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Иштыхан",
+            "city_uz": "Иштихон",
+            "phone_number": "66 62ХХХХХ",
+            "international_phone_number": "+ 998 66 62ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Джамбай",
+            "city_uz": "Жомбой",
+            "phone_number": "66 47ХХХХХ",
+            "international_phone_number": "+ 998 66 47ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Джума",
+            "city_uz": "Жума",
+            "phone_number": "66 46ХХХХХ",
+            "international_phone_number": "+ 998 66 46ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Каттакурган",
+            "city_uz": "Каттақўрғон",
+            "phone_number": "66 45ХХХХХ",
+            "international_phone_number": "+ 998 66 45ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Кошрабад",
+            "city_uz": "Қўшробод",
+            "phone_number": "66 64ХХХХХ",
+            "international_phone_number": "+ 998 66 64ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Лаиш",
+            "city_uz": "Лойиш",
+            "phone_number": "66 49ХХХХХ",
+            "international_phone_number": "+ 998 66 49ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Нурабад",
+            "city_uz": "Нуробод",
+            "phone_number": "66 63ХХХХХ",
+            "international_phone_number": "+ 998 66 63ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Пайарык",
+            "city_uz": "Пайариқ",
+            "phone_number": "66 42ХХХХХ",
+            "international_phone_number": "+ 998 66 42ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Пайшанба",
+            "city_uz": "Пайшанба",
+            "phone_number": "66 41ХХХХХ",
+            "international_phone_number": "+ 998 66 41ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Тайлак",
+            "city_uz": "Тойлоқ",
+            "phone_number": "66 66ХХХХХ",
+            "international_phone_number": "+ 998 66 66ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Ургут",
+            "city_uz": "Ургут",
+            "phone_number": "66 48ХХХХХ",
+            "international_phone_number": "+ 998 66 48ХХХХХ"
+        },
+        {
+            "region_ru": "Самаркандская область",
+            "region_uz": "Самарқанд вилояти",
+            "city_ru": "Зиадин",
+            "city_uz": "Зиадин",
+            "phone_number": "66 40ХХХХХ",
+            "international_phone_number": "+ 998 66 40ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "г.Термез",
+            "city_uz": "Термиз ш.",
+            "phone_number": "76 22ХХХХХ",
+            "international_phone_number": "+ 998 76 22ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Ангор",
+            "city_uz": "Анғор",
+            "phone_number": "76 31ХХХХХ",
+            "international_phone_number": "+ 998 76 31ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Бандихан",
+            "city_uz": "Бандихон",
+            "phone_number": "76 37ХХХХХ",
+            "international_phone_number": "+ 998 76 37ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Байсун",
+            "city_uz": "Бойсун",
+            "phone_number": "76 33ХХХХХ",
+            "international_phone_number": "+ 998 76 33ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Денау",
+            "city_uz": "Денов",
+            "phone_number": "76 41ХХХХХ",
+            "international_phone_number": "+ 998 76 41ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Джаркурган",
+            "city_uz": "Жарқорғон",
+            "phone_number": "76 43ХХХХХ",
+            "international_phone_number": "+ 998 76 43ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Карлук",
+            "city_uz": "Қарлуқ",
+            "phone_number": "76 47ХХХХХ",
+            "international_phone_number": "+ 998 76 47ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Халкабад",
+            "city_uz": "Халқобод",
+            "phone_number": "76 34ХХХХХ",
+            "international_phone_number": "+ 998 76 34ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Кумкурган",
+            "city_uz": "Қумқорғон",
+            "phone_number": "76 46ХХХХХ",
+            "international_phone_number": "+ 998 76 46ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Сариасия",
+            "city_uz": "Соросиё",
+            "phone_number": "76 48ХХХХХ",
+            "international_phone_number": "+ 998 76 48ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Сарык",
+            "city_uz": "Сариқ",
+            "phone_number": "76 35ХХХХХ",
+            "international_phone_number": "+ 998 76 35ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Шерабад",
+            "city_uz": "Шеробод",
+            "phone_number": "76 32ХХХХХ",
+            "international_phone_number": "+ 998 76 32ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Шурчи",
+            "city_uz": "Шўрчи",
+            "phone_number": "76 45ХХХХХ",
+            "international_phone_number": "+ 998 76 45ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Учкызыл",
+            "city_uz": "Учқизил",
+            "phone_number": "76 36ХХХХХ, 22ХХХХХ",
+            "international_phone_number": "+ 998 76 36ХХХХХ, 22ХХХХХ"
+        },
+        {
+            "region_ru": "Сурхандарьинская область",
+            "region_uz": "Сурахандарё вилояти ",
+            "city_ru": "Узун",
+            "city_uz": "Узун",
+            "phone_number": "76 44ХХХХХ",
+            "international_phone_number": "+ 998 76 44ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "г.Ургенч",
+            "city_uz": "Урганч ш.",
+            "phone_number": "62 22ХХХХХ",
+            "international_phone_number": "+ 998 62 22ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Багат",
+            "city_uz": "Боғот",
+            "phone_number": "62 31ХХХХХ",
+            "international_phone_number": "+ 998 62 31ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Гурлен",
+            "city_uz": "Гурлан",
+            "phone_number": "62 36ХХХХХ",
+            "international_phone_number": "+ 998 62 36ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Караул",
+            "city_uz": "Қоравул",
+            "phone_number": "62 35ХХХХХ",
+            "international_phone_number": "+ 998 62 35ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Ханки",
+            "city_uz": "Хонқа",
+            "phone_number": "62 39ХХХХХ",
+            "international_phone_number": "+ 998 62 39ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Хива",
+            "city_uz": "Хива",
+            "phone_number": "62 37ХХХХХ",
+            "international_phone_number": "+ 998 62 37ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Кошкупыр",
+            "city_uz": "Қўшкўпир",
+            "phone_number": "62 32ХХХХХ",
+            "international_phone_number": "+ 998 62 32ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Питняк",
+            "city_uz": "Питнак",
+            "phone_number": "62 30ХХХХХ",
+            "international_phone_number": "+ 998 62 30ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Шават",
+            "city_uz": "Шовот",
+            "phone_number": "62 34ХХХХХ",
+            "international_phone_number": "+ 998 62 34ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Хазарасп",
+            "city_uz": "Хозорасп",
+            "phone_number": "62 33ХХХХХ",
+            "international_phone_number": "+ 998 62 33ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Янгиарык",
+            "city_uz": "Янгиариқ",
+            "phone_number": "62 38ХХХХХ",
+            "international_phone_number": "+ 998 62 38ХХХХХ"
+        },
+        {
+            "region_ru": "Хорезмская область",
+            "region_uz": "Хоразм вилояти",
+            "city_ru": "Янгибазар",
+            "city_uz": "Янгибозор",
+            "phone_number": "62 41ХХХХХ",
+            "international_phone_number": "+ 998 62 41ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "г.Фергана",
+            "city_uz": "Фарғона ш.",
+            "phone_number": "73 2ХХХХХХ",
+            "international_phone_number": "+ 998 73 2ХХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Алтыарык",
+            "city_uz": "Олтиариқ",
+            "phone_number": "73 43ХХХХХ",
+            "international_phone_number": "+ 998 73 43ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Багдад",
+            "city_uz": "Боғдод",
+            "phone_number": "73 47ХХХХХ",
+            "international_phone_number": "+ 998 73 47ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Бешарык",
+            "city_uz": "Бешариқ",
+            "phone_number": "73 61ХХХХХ",
+            "international_phone_number": "+ 998 73 61ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Дангара",
+            "city_uz": "Данғара",
+            "phone_number": "73 57ХХХХХ",
+            "international_phone_number": "+ 998 73 57ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Коканд",
+            "city_uz": "Қўқон",
+            "phone_number": "73 54ХХХХХ, 55ХХХХХ",
+            "international_phone_number": "+ 998 73 54ХХХХХ, 55ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Кува",
+            "city_uz": "Қува",
+            "phone_number": "73 31ХХХХХ",
+            "international_phone_number": "+ 998 73 31ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Кувасай",
+            "city_uz": "Қувасой",
+            "phone_number": "73 37ХХХХХ",
+            "international_phone_number": "+ 998 73 37ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Лангар",
+            "city_uz": "Лангар",
+            "phone_number": "73 42ХХХХХ",
+            "international_phone_number": "+ 998 73 42ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Маргилан",
+            "city_uz": "Марғилон",
+            "phone_number": "73 23ХХХХХ, 25ХХХХХ",
+            "international_phone_number": "+ 998 73 23ХХХХХ, 25ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Навбахор",
+            "city_uz": "Новбаҳор",
+            "phone_number": "73 54ХХХХХ",
+            "international_phone_number": "+ 998 73 54ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Раван",
+            "city_uz": "Раван",
+            "phone_number": "73 46ХХХХХ",
+            "international_phone_number": "+ 998 73 46ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Риштан",
+            "city_uz": "Риштон",
+            "phone_number": "73 45ХХХХХ",
+            "international_phone_number": "+ 998 73 45ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Ташлак",
+            "city_uz": "Тошлоқ",
+            "phone_number": "73 23ХХХХХ",
+            "international_phone_number": "+ 998 73 23ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Учкуприк",
+            "city_uz": "Учкўприк",
+            "phone_number": "73 51ХХХХХ",
+            "international_phone_number": "+ 998 73 51ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Вуадиль",
+            "city_uz": "Ваудил",
+            "phone_number": "73 35ХХХХХ",
+            "international_phone_number": "+ 998 73 35ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Янгикурган",
+            "city_uz": "Янгиқўрғон",
+            "phone_number": "73 52ХХХХХ",
+            "international_phone_number": "+ 998 73 52ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Яйпан",
+            "city_uz": "Яйпан",
+            "phone_number": "73 53ХХХХХ",
+            "international_phone_number": "+ 998 73 53ХХХХХ"
+        },
+        {
+            "region_ru": "Ферганская область",
+            "region_uz": "Фарғона вилояти",
+            "city_ru": "Язъяван",
+            "city_uz": "Ёзёвон",
+            "phone_number": "73 41ХХХХХ",
+            "international_phone_number": "+ 998 73 41ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Ахангаран",
+            "city_uz": "Охонгорон",
+            "phone_number": "70 00ХХХХХ, 64ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 64ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Аккурган",
+            "city_uz": "Оққўрғон",
+            "phone_number": "70 00ХХХХХ, 55ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 55ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Алмалык",
+            "city_uz": "Олмалиқ",
+            "phone_number": "70 00ХХХХХ, 61ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 61ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Ангрен",
+            "city_uz": "Ангрен",
+            "phone_number": "70 00ХХХХХ, 66ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 66ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Бекабад",
+            "city_uz": "Бекобод",
+            "phone_number": "70 00ХХХХХ, 21ХXXXX, 91ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 21ХXXXX, 91ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Бука",
+            "city_uz": "Бўка",
+            "phone_number": "70 00ХХХХХ, 57ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 57ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Чиназ",
+            "city_uz": "Чиноз",
+            "phone_number": "70 00ХХХХХ, 59ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 59ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Чирчик",
+            "city_uz": "Чирчиқ",
+            "phone_number": "70 00ХХХХХ, 71ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 71ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Достабад",
+            "city_uz": "Дўстобод",
+            "phone_number": "70 00ХХХХХ, 56ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 56ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Эшангузар",
+            "city_uz": "Эшонгузар",
+            "phone_number": "70 00ХХХХХ, 97ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 97ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Газалкент",
+            "city_uz": "Ғазалкент",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 74ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 74ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Гульбахар",
+            "city_uz": "Гулбаҳор",
+            "phone_number": "70 00ХХХХХ, 60ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 60ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Келес",
+            "city_uz": "Келес",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 96ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 96ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Красногорск",
+            "city_uz": "Красногорск",
+            "phone_number": "70 75ХХХХХ",
+            "international_phone_number": "+ 998 70 75ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Паркент",
+            "city_uz": "Паркент",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 72ХХХХХ, 98ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 72ХХХХХ, 98ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Пскент",
+            "city_uz": "Пскент",
+            "phone_number": "70 00ХХХХХ, 54ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 54ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Кибрай",
+            "city_uz": "Қибрай",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 95ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 95ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "г.Нурафшон",
+            "city_uz": "Нурафшон ш.",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 76ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 76ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Уртачирчик",
+            "city_uz": "Ўртачирчиқ",
+            "phone_number": "70 00ХХХХХ, 76ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 76ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Янгибазар",
+            "city_uz": "Янгибозор",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 98ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 98ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Янгиюль",
+            "city_uz": "Янгиёл",
+            "phone_number": "70 00ХХХХХ, 60ХХХХХ, 70ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 60ХХХХХ, 70ХХХХХ"
+        },
+        {
+            "region_ru": "Ташкентская область",
+            "region_uz": "Тошкент вилояти",
+            "city_ru": "Зафар",
+            "city_uz": "Зафар",
+            "phone_number": "70 00ХХХХХ, 70ХХХХХ, 93ХХХХХ",
+            "international_phone_number": "+ 998 70 00ХХХХХ, 70ХХХХХ, 93ХХХХХ"
+        }
+    ]

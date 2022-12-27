@@ -314,7 +314,9 @@ header {
 }
 
 .header-bottom nav ul.menu__box li a .ri-arrow-down-s-line {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
 }
 
 .header-bottom nav ul.menu__box li a.menu__item {
@@ -323,7 +325,9 @@ header {
 
 .header-bottom nav ul.children {
   position: absolute;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
   flex-direction: column;
   width: max-content;
   left: 0;
@@ -348,7 +352,8 @@ header {
 }
 
 .header-bottom nav li:hover ul.children {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* .header-bottom nav .searching {

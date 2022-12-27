@@ -274,7 +274,7 @@
     <comment/>
   </data>
   <data name="working_on_test_mode" xml:space="preserve">
-    <value>Сайт в тестовом режиме.</value>
+    <value>Сайт работает в тестовом режиме</value>
     <comment/>
   </data>
 </root>
